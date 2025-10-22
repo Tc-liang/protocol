@@ -54,3 +54,23 @@ func (x *GetUserTokenReq) Check() error {
 	}
 	return nil
 }
+
+func (x *GetIMTokenReq) Check() error {
+	if x.GrantType == "" {
+		errors.New("GrantTypegit  is empty")
+	}
+
+	if x.ClientId == "" {
+		errors.New("ClientId is empty")
+	}
+
+	if x.ClientSecret == "" {
+		errors.New("ClientSecret is empty")
+	}
+
+	if x.Code == "" {
+		errors.New("authCode is empty")
+	}
+
+	return nil
+}

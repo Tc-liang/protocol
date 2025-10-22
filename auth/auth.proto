@@ -51,6 +51,19 @@ message getUserTokenResp {
   int64 expireTimeSeconds = 2;
 }
 
+message getIMTokenReq {
+  string grantType = 1;
+  string clientId = 2;
+  string clientSecret = 3;
+  string code = 4;
+}
+
+message getIMTokenResp {
+  string token = 1;
+  int64 expireTimeSeconds = 2;
+}
+
+
 message invalidateTokenReq {
   string preservedToken = 1;
   string userID = 2;
@@ -77,6 +90,8 @@ service Auth {
   rpc getAdminToken(getAdminTokenReq) returns (getAdminTokenResp);
   // Admin retrieves user token
   rpc getUserToken(getUserTokenReq) returns (getUserTokenResp);
+  // get im token
+  rpc getIMToken(getIMTokenReq) returns (getIMTokenResp);
   // Force logout
   rpc forceLogout(forceLogoutReq) returns (forceLogoutResp);
   // Parse token

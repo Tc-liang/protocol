@@ -35,6 +35,7 @@ const _ = grpc.SupportPackageIsVersion9
 const (
 	Auth_GetAdminToken_FullMethodName    = "/openim.auth.Auth/getAdminToken"
 	Auth_GetUserToken_FullMethodName     = "/openim.auth.Auth/getUserToken"
+	Auth_GetIMToken_FullMethodName       = "/openim.auth.Auth/getIMToken"
 	Auth_ForceLogout_FullMethodName      = "/openim.auth.Auth/forceLogout"
 	Auth_ParseToken_FullMethodName       = "/openim.auth.Auth/parseToken"
 	Auth_InvalidateToken_FullMethodName  = "/openim.auth.Auth/invalidateToken"
@@ -50,6 +51,8 @@ type AuthClient interface {
 	GetAdminToken(ctx context.Context, in *GetAdminTokenReq, opts ...grpc.CallOption) (*GetAdminTokenResp, error)
 	// Admin retrieves user token
 	GetUserToken(ctx context.Context, in *GetUserTokenReq, opts ...grpc.CallOption) (*GetUserTokenResp, error)
+	// get im token
+	GetIMToken(ctx context.Context, in *GetIMTokenReq, opts ...grpc.CallOption) (*GetIMTokenResp, error)
 	// Force logout
 	ForceLogout(ctx context.Context, in *ForceLogoutReq, opts ...grpc.CallOption) (*ForceLogoutResp, error)
 	// Parse token
@@ -84,6 +87,16 @@ func (c *authClient) GetUserToken(ctx context.Context, in *GetUserTokenReq, opts
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserTokenResp)
 	err := c.cc.Invoke(ctx, Auth_GetUserToken_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authClient) GetIMToken(ctx context.Context, in *GetIMTokenReq, opts ...grpc.CallOption) (*GetIMTokenResp, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetIMTokenResp)
+	err := c.cc.Invoke(ctx, Auth_GetIMToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -148,6 +161,8 @@ type AuthServer interface {
 	GetAdminToken(context.Context, *GetAdminTokenReq) (*GetAdminTokenResp, error)
 	// Admin retrieves user token
 	GetUserToken(context.Context, *GetUserTokenReq) (*GetUserTokenResp, error)
+	// get im token
+	GetIMToken(context.Context, *GetIMTokenReq) (*GetIMTokenResp, error)
 	// Force logout
 	ForceLogout(context.Context, *ForceLogoutReq) (*ForceLogoutResp, error)
 	// Parse token
@@ -173,6 +188,9 @@ func (UnimplementedAuthServer) GetAdminToken(context.Context, *GetAdminTokenReq)
 }
 func (UnimplementedAuthServer) GetUserToken(context.Context, *GetUserTokenReq) (*GetUserTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserToken not implemented")
+}
+func (UnimplementedAuthServer) GetIMToken(context.Context, *GetIMTokenReq) (*GetIMTokenResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetIMToken not implemented")
 }
 func (UnimplementedAuthServer) ForceLogout(context.Context, *ForceLogoutReq) (*ForceLogoutResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ForceLogout not implemented")
@@ -242,6 +260,24 @@ func _Auth_GetUserToken_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AuthServer).GetUserToken(ctx, req.(*GetUserTokenReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Auth_GetIMToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetIMTokenReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServer).GetIMToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Auth_GetIMToken_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServer).GetIMToken(ctx, req.(*GetIMTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -350,6 +386,10 @@ var Auth_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "getUserToken",
 			Handler:    _Auth_GetUserToken_Handler,
+		},
+		{
+			MethodName: "getIMToken",
+			Handler:    _Auth_GetIMToken_Handler,
 		},
 		{
 			MethodName: "forceLogout",
