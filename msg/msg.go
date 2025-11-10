@@ -77,6 +77,19 @@ func (x *RevokeEmojiReq) Check() error {
 	return nil
 }
 
+func (x *BotReadMsgsNotificationReq) Check() error {
+	if x.ConversationID == "" {
+		return errors.New("ConversationID is empty")
+	}
+	if x.UserID == "" {
+		return errors.New("UserID is empty")
+	}
+	if x.Seq < 0 {
+		return errors.New("Seq is empty")
+	}
+	return nil
+}
+
 //func (x *ModifyMessageReactionExtensionsReq) Check() error {
 //	if x.ConversationID == "" {
 //		return errs.ErrArgs.Wrap("conversationID is empty")

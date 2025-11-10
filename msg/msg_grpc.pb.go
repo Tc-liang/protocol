@@ -69,6 +69,7 @@ const (
 	Msg_GetLastMessage_FullMethodName                   = "/openim.msg.msg/GetLastMessage"
 	Msg_AddEmoji_FullMethodName                         = "/openim.msg.msg/AddEmoji"
 	Msg_RevokeEmoji_FullMethodName                      = "/openim.msg.msg/RevokeEmoji"
+	Msg_BotReadMsgsNotification_FullMethodName          = "/openim.msg.msg/BotReadMsgsNotification"
 )
 
 // MsgClient is the client API for Msg service.
@@ -125,6 +126,7 @@ type MsgClient interface {
 	GetLastMessage(ctx context.Context, in *GetLastMessageReq, opts ...grpc.CallOption) (*GetLastMessageResp, error)
 	AddEmoji(ctx context.Context, in *AddEmojiReq, opts ...grpc.CallOption) (*AddEmojiResp, error)
 	RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ...grpc.CallOption) (*RevokeEmojiResp, error)
+	BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error)
 }
 
 type msgClient struct {
@@ -485,6 +487,16 @@ func (c *msgClient) RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ..
 	return out, nil
 }
 
+func (c *msgClient) BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(BotReadMsgsNotificationResp)
+	err := c.cc.Invoke(ctx, Msg_BotReadMsgsNotification_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MsgServer is the server API for Msg service.
 // All implementations must embed UnimplementedMsgServer
 // for forward compatibility.
@@ -539,6 +551,7 @@ type MsgServer interface {
 	GetLastMessage(context.Context, *GetLastMessageReq) (*GetLastMessageResp, error)
 	AddEmoji(context.Context, *AddEmojiReq) (*AddEmojiResp, error)
 	RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error)
+	BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error)
 	mustEmbedUnimplementedMsgServer()
 }
 
@@ -653,6 +666,9 @@ func (UnimplementedMsgServer) AddEmoji(context.Context, *AddEmojiReq) (*AddEmoji
 }
 func (UnimplementedMsgServer) RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RevokeEmoji not implemented")
+}
+func (UnimplementedMsgServer) BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BotReadMsgsNotification not implemented")
 }
 func (UnimplementedMsgServer) mustEmbedUnimplementedMsgServer() {}
 func (UnimplementedMsgServer) testEmbeddedByValue()             {}
@@ -1305,6 +1321,24 @@ func _Msg_RevokeEmoji_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Msg_BotReadMsgsNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BotReadMsgsNotificationReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MsgServer).BotReadMsgsNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Msg_BotReadMsgsNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MsgServer).BotReadMsgsNotification(ctx, req.(*BotReadMsgsNotificationReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Msg_ServiceDesc is the grpc.ServiceDesc for Msg service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1451,6 +1485,10 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RevokeEmoji",
 			Handler:    _Msg_RevokeEmoji_Handler,
+		},
+		{
+			MethodName: "BotReadMsgsNotification",
+			Handler:    _Msg_BotReadMsgsNotification_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
