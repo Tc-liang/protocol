@@ -81,8 +81,11 @@ func (x *BotReadMsgsNotificationReq) Check() error {
 	if x.ConversationID == "" {
 		return errors.New("ConversationID is empty")
 	}
-	if x.UserID == "" {
-		return errors.New("UserID is empty")
+	if x.SendID == "" {
+		return errors.New("SendID is empty")
+	}
+	if x.RecvID == "" {
+		return errors.New("RecvID is empty")
 	}
 	if x.Seq < 0 {
 		return errors.New("Seq is empty")

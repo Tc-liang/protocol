@@ -424,9 +424,10 @@ message RevokeEmojiResp {
 }
 
 message BotReadMsgsNotificationReq{
-  string userID = 1;
-  string conversationID = 2;
-  int64 seq = 3;
+  string sendID = 1;
+  string recvID = 2;
+  string conversationID = 3;
+  int64 seq = 4;
 }
 
 message BotReadMsgsNotificationResp {

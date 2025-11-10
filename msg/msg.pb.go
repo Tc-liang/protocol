@@ -4467,9 +4467,10 @@ func (*RevokeEmojiResp) Descriptor() ([]byte, []int) {
 
 type BotReadMsgsNotificationReq struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
-	UserID         string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
-	ConversationID string                 `protobuf:"bytes,2,opt,name=conversationID,proto3" json:"conversationID"`
-	Seq            int64                  `protobuf:"varint,3,opt,name=seq,proto3" json:"seq"`
+	SendID         string                 `protobuf:"bytes,1,opt,name=sendID,proto3" json:"sendID"`
+	RecvID         string                 `protobuf:"bytes,2,opt,name=recvID,proto3" json:"recvID"`
+	ConversationID string                 `protobuf:"bytes,3,opt,name=conversationID,proto3" json:"conversationID"`
+	Seq            int64                  `protobuf:"varint,4,opt,name=seq,proto3" json:"seq"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -4504,9 +4505,16 @@ func (*BotReadMsgsNotificationReq) Descriptor() ([]byte, []int) {
 	return file_msg_msg_proto_rawDescGZIP(), []int{85}
 }
 
-func (x *BotReadMsgsNotificationReq) GetUserID() string {
+func (x *BotReadMsgsNotificationReq) GetSendID() string {
 	if x != nil {
-		return x.UserID
+		return x.SendID
+	}
+	return ""
+}
+
+func (x *BotReadMsgsNotificationReq) GetRecvID() string {
+	if x != nil {
+		return x.RecvID
 	}
 	return ""
 }
@@ -4879,11 +4887,12 @@ const file_msg_msg_proto_rawDesc = "" +
 	"\x0econversationID\x18\x02 \x01(\tR\x0econversationID\x12\x10\n" +
 	"\x03seq\x18\x03 \x01(\x03R\x03seq\x12\x14\n" +
 	"\x05emoji\x18\x04 \x01(\tR\x05emoji\"\x11\n" +
-	"\x0fRevokeEmojiResp\"n\n" +
+	"\x0fRevokeEmojiResp\"\x86\x01\n" +
 	"\x1aBotReadMsgsNotificationReq\x12\x16\n" +
-	"\x06userID\x18\x01 \x01(\tR\x06userID\x12&\n" +
-	"\x0econversationID\x18\x02 \x01(\tR\x0econversationID\x12\x10\n" +
-	"\x03seq\x18\x03 \x01(\x03R\x03seq\"\x1d\n" +
+	"\x06sendID\x18\x01 \x01(\tR\x06sendID\x12\x16\n" +
+	"\x06recvID\x18\x02 \x01(\tR\x06recvID\x12&\n" +
+	"\x0econversationID\x18\x03 \x01(\tR\x0econversationID\x12\x10\n" +
+	"\x03seq\x18\x04 \x01(\x03R\x03seq\"\x1d\n" +
 	"\x1bBotReadMsgsNotificationResp2\xfb\x18\n" +
 	"\x03msg\x12D\n" +
 	"\tGetMaxSeq\x12\x1a.openim.sdkws.GetMaxSeqReq\x1a\x1b.openim.sdkws.GetMaxSeqResp\x12A\n" +
