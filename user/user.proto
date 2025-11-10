@@ -379,6 +379,13 @@ message clientConfig {
   string value = 3;
 }
 
+message getBotUserReq {
+  repeated string userIDs = 1;
+}
+message getBotUserResp {
+  repeated string userIDs = 1;
+}
+
 service user {
   //Get the specified user information full field
   rpc getDesignateUsers(getDesignateUsersReq) returns (getDesignateUsersResp);
@@ -439,5 +446,7 @@ service user {
   rpc delUserClientConfig(delUserClientConfigReq) returns (delUserClientConfigResp);
 
   rpc pageUserClientConfig(pageUserClientConfigReq) returns (pageUserClientConfigResp);
+
+  rpc GetBotUser(getBotUserReq) returns (getBotUserResp);
 
 }
