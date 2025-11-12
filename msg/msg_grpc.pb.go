@@ -70,6 +70,7 @@ const (
 	Msg_AddEmoji_FullMethodName                         = "/openim.msg.msg/AddEmoji"
 	Msg_RevokeEmoji_FullMethodName                      = "/openim.msg.msg/RevokeEmoji"
 	Msg_BotReadMsgsNotification_FullMethodName          = "/openim.msg.msg/BotReadMsgsNotification"
+	Msg_AIStreamMsgNotification_FullMethodName          = "/openim.msg.msg/AIStreamMsgNotification"
 )
 
 // MsgClient is the client API for Msg service.
@@ -127,6 +128,7 @@ type MsgClient interface {
 	AddEmoji(ctx context.Context, in *AddEmojiReq, opts ...grpc.CallOption) (*AddEmojiResp, error)
 	RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ...grpc.CallOption) (*RevokeEmojiResp, error)
 	BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error)
+	AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error)
 }
 
 type msgClient struct {
@@ -497,6 +499,16 @@ func (c *msgClient) BotReadMsgsNotification(ctx context.Context, in *BotReadMsgs
 	return out, nil
 }
 
+func (c *msgClient) AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(AIStreamNotificationResp)
+	err := c.cc.Invoke(ctx, Msg_AIStreamMsgNotification_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MsgServer is the server API for Msg service.
 // All implementations must embed UnimplementedMsgServer
 // for forward compatibility.
@@ -552,6 +564,7 @@ type MsgServer interface {
 	AddEmoji(context.Context, *AddEmojiReq) (*AddEmojiResp, error)
 	RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error)
 	BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error)
+	AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error)
 	mustEmbedUnimplementedMsgServer()
 }
 
@@ -669,6 +682,9 @@ func (UnimplementedMsgServer) RevokeEmoji(context.Context, *RevokeEmojiReq) (*Re
 }
 func (UnimplementedMsgServer) BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BotReadMsgsNotification not implemented")
+}
+func (UnimplementedMsgServer) AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AIStreamMsgNotification not implemented")
 }
 func (UnimplementedMsgServer) mustEmbedUnimplementedMsgServer() {}
 func (UnimplementedMsgServer) testEmbeddedByValue()             {}
@@ -1339,6 +1355,24 @@ func _Msg_BotReadMsgsNotification_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Msg_AIStreamMsgNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AIStreamNotificationReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MsgServer).AIStreamMsgNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: Msg_AIStreamMsgNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MsgServer).AIStreamMsgNotification(ctx, req.(*AIStreamNotificationReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // Msg_ServiceDesc is the grpc.ServiceDesc for Msg service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1489,6 +1523,10 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BotReadMsgsNotification",
 			Handler:    _Msg_BotReadMsgsNotification_Handler,
+		},
+		{
+			MethodName: "AIStreamMsgNotification",
+			Handler:    _Msg_AIStreamMsgNotification_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
