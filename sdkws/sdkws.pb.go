@@ -5755,29 +5755,31 @@ func (x *RevokeEmojiTips) GetUserID() string {
 	return ""
 }
 
-type BotReadMsgsTips struct {
+type AIStreamMsgTips struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	ConversationID string                 `protobuf:"bytes,1,opt,name=conversationID,proto3" json:"conversationID"`
 	Seq            int64                  `protobuf:"varint,2,opt,name=seq,proto3" json:"seq"`
-	UserID         string                 `protobuf:"bytes,3,opt,name=userID,proto3" json:"userID"`
+	Content        string                 `protobuf:"bytes,3,opt,name=content,proto3" json:"content"`
+	PartIndex      int32                  `protobuf:"varint,4,opt,name=partIndex,proto3" json:"partIndex"`
+	IsFinal        bool                   `protobuf:"varint,5,opt,name=isFinal,proto3" json:"isFinal"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
 
-func (x *BotReadMsgsTips) Reset() {
-	*x = BotReadMsgsTips{}
+func (x *AIStreamMsgTips) Reset() {
+	*x = AIStreamMsgTips{}
 	mi := &file_sdkws_sdkws_proto_msgTypes[77]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *BotReadMsgsTips) String() string {
+func (x *AIStreamMsgTips) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*BotReadMsgsTips) ProtoMessage() {}
+func (*AIStreamMsgTips) ProtoMessage() {}
 
-func (x *BotReadMsgsTips) ProtoReflect() protoreflect.Message {
+func (x *AIStreamMsgTips) ProtoReflect() protoreflect.Message {
 	mi := &file_sdkws_sdkws_proto_msgTypes[77]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -5789,30 +5791,44 @@ func (x *BotReadMsgsTips) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use BotReadMsgsTips.ProtoReflect.Descriptor instead.
-func (*BotReadMsgsTips) Descriptor() ([]byte, []int) {
+// Deprecated: Use AIStreamMsgTips.ProtoReflect.Descriptor instead.
+func (*AIStreamMsgTips) Descriptor() ([]byte, []int) {
 	return file_sdkws_sdkws_proto_rawDescGZIP(), []int{77}
 }
 
-func (x *BotReadMsgsTips) GetConversationID() string {
+func (x *AIStreamMsgTips) GetConversationID() string {
 	if x != nil {
 		return x.ConversationID
 	}
 	return ""
 }
 
-func (x *BotReadMsgsTips) GetSeq() int64 {
+func (x *AIStreamMsgTips) GetSeq() int64 {
 	if x != nil {
 		return x.Seq
 	}
 	return 0
 }
 
-func (x *BotReadMsgsTips) GetUserID() string {
+func (x *AIStreamMsgTips) GetContent() string {
 	if x != nil {
-		return x.UserID
+		return x.Content
 	}
 	return ""
+}
+
+func (x *AIStreamMsgTips) GetPartIndex() int32 {
+	if x != nil {
+		return x.PartIndex
+	}
+	return 0
+}
+
+func (x *AIStreamMsgTips) GetIsFinal() bool {
+	if x != nil {
+		return x.IsFinal
+	}
+	return false
 }
 
 var File_sdkws_sdkws_proto protoreflect.FileDescriptor
@@ -6350,11 +6366,13 @@ const file_sdkws_sdkws_proto_rawDesc = "" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12\x10\n" +
 	"\x03seq\x18\x02 \x01(\x03R\x03seq\x12\x14\n" +
 	"\x05emoji\x18\x03 \x01(\tR\x05emoji\x12\x16\n" +
-	"\x06userID\x18\x04 \x01(\tR\x06userID\"c\n" +
-	"\x0fBotReadMsgsTips\x12&\n" +
+	"\x06userID\x18\x04 \x01(\tR\x06userID\"\x9d\x01\n" +
+	"\x0fAIStreamMsgTips\x12&\n" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12\x10\n" +
-	"\x03seq\x18\x02 \x01(\x03R\x03seq\x12\x16\n" +
-	"\x06userID\x18\x03 \x01(\tR\x06userID*0\n" +
+	"\x03seq\x18\x02 \x01(\x03R\x03seq\x12\x18\n" +
+	"\acontent\x18\x03 \x01(\tR\acontent\x12\x1c\n" +
+	"\tpartIndex\x18\x04 \x01(\x05R\tpartIndex\x12\x18\n" +
+	"\aisFinal\x18\x05 \x01(\bR\aisFinal*0\n" +
 	"\tPullOrder\x12\x10\n" +
 	"\fPullOrderAsc\x10\x00\x12\x11\n" +
 	"\rPullOrderDesc\x10\x01B%Z#github.com/openimsdk/protocol/sdkwsb\x06proto3"
@@ -6452,7 +6470,7 @@ var file_sdkws_sdkws_proto_goTypes = []any{
 	(*ConversationDeleteTips)(nil),        // 75: openim.sdkws.ConversationDeleteTips
 	(*AddEmojiTips)(nil),                  // 76: openim.sdkws.AddEmojiTips
 	(*RevokeEmojiTips)(nil),               // 77: openim.sdkws.RevokeEmojiTips
-	(*BotReadMsgsTips)(nil),               // 78: openim.sdkws.BotReadMsgsTips
+	(*AIStreamMsgTips)(nil),               // 78: openim.sdkws.AIStreamMsgTips
 	nil,                                   // 79: openim.sdkws.PullMessageBySeqsResp.MsgsEntry
 	nil,                                   // 80: openim.sdkws.PullMessageBySeqsResp.NotificationMsgsEntry
 	nil,                                   // 81: openim.sdkws.GetMaxSeqResp.MaxSeqsEntry
