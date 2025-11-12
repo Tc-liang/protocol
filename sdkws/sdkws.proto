@@ -632,8 +632,10 @@ message RevokeEmojiTips {
   string userID = 4;
 }
 
-message BotReadMsgsTips {
+message AIStreamMsgTips {
   string conversationID = 1;
   int64 seq = 2;
-  string userID = 3;
+  string content = 3;
+  int32  partIndex = 4;
+  bool isFinal = 5;
 }
