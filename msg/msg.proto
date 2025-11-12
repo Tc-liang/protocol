@@ -433,6 +433,17 @@ message BotReadMsgsNotificationReq{
 message BotReadMsgsNotificationResp {
 }
 
+
+
+message AIStreamNotificationReq{
+  sdkws.MsgData msgData = 1;
+  int64  partIndex = 2;
+  bool  isFinal = 3;
+}
+
+message AIStreamNotificationResp {
+}
+
 service msg {
   //获取最小最大seq（包括用户的，以及指定群组的）
   rpc GetMaxSeq(sdkws.GetMaxSeqReq) returns (sdkws.GetMaxSeqResp);
@@ -493,6 +504,7 @@ service msg {
   rpc AddEmoji(AddEmojiReq) returns (AddEmojiResp);
   rpc RevokeEmoji(RevokeEmojiReq) returns (RevokeEmojiResp);
   rpc BotReadMsgsNotification(BotReadMsgsNotificationReq) returns (BotReadMsgsNotificationResp);
+  rpc AIStreamMsgNotification(AIStreamNotificationReq) returns (AIStreamNotificationResp);
 
 
 }

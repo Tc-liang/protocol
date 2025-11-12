@@ -120,7 +120,7 @@ const (
 
 	EmojiAddNotification        = 2301
 	EmojiRevocationNotification = 2302
-	BotReadMsgsNotification     = 2303
+	AIStreamMsgNotification     = 2303
 
 	NotificationEnd = 5000
 
