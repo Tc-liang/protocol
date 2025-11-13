@@ -634,7 +634,7 @@ message RevokeEmojiTips {
 
 message AIStreamMsgTips {
   string conversationID = 1;
-  int64 seq = 2;
+  string clientMsgID = 2;
   string content = 3;
   int32  partIndex = 4;
   bool isFinal = 5;
