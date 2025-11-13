@@ -638,4 +638,6 @@ message AIStreamMsgTips {
   string content = 3;
   int32  partIndex = 4;
   bool isFinal = 5;
+  int32  seq = 6;
+
 }

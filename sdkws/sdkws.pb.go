@@ -5762,6 +5762,7 @@ type AIStreamMsgTips struct {
 	Content        string                 `protobuf:"bytes,3,opt,name=content,proto3" json:"content"`
 	PartIndex      int32                  `protobuf:"varint,4,opt,name=partIndex,proto3" json:"partIndex"`
 	IsFinal        bool                   `protobuf:"varint,5,opt,name=isFinal,proto3" json:"isFinal"`
+	Seq            int32                  `protobuf:"varint,6,opt,name=seq,proto3" json:"seq"`
 	unknownFields  protoimpl.UnknownFields
 	sizeCache      protoimpl.SizeCache
 }
@@ -5829,6 +5830,13 @@ func (x *AIStreamMsgTips) GetIsFinal() bool {
 		return x.IsFinal
 	}
 	return false
+}
+
+func (x *AIStreamMsgTips) GetSeq() int32 {
+	if x != nil {
+		return x.Seq
+	}
+	return 0
 }
 
 var File_sdkws_sdkws_proto protoreflect.FileDescriptor
@@ -6366,13 +6374,14 @@ const file_sdkws_sdkws_proto_rawDesc = "" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12\x10\n" +
 	"\x03seq\x18\x02 \x01(\x03R\x03seq\x12\x14\n" +
 	"\x05emoji\x18\x03 \x01(\tR\x05emoji\x12\x16\n" +
-	"\x06userID\x18\x04 \x01(\tR\x06userID\"\xad\x01\n" +
+	"\x06userID\x18\x04 \x01(\tR\x06userID\"\xbf\x01\n" +
 	"\x0fAIStreamMsgTips\x12&\n" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12 \n" +
 	"\vclientMsgID\x18\x02 \x01(\tR\vclientMsgID\x12\x18\n" +
 	"\acontent\x18\x03 \x01(\tR\acontent\x12\x1c\n" +
 	"\tpartIndex\x18\x04 \x01(\x05R\tpartIndex\x12\x18\n" +
-	"\aisFinal\x18\x05 \x01(\bR\aisFinal*0\n" +
+	"\aisFinal\x18\x05 \x01(\bR\aisFinal\x12\x10\n" +
+	"\x03seq\x18\x06 \x01(\x05R\x03seq*0\n" +
 	"\tPullOrder\x12\x10\n" +
 	"\fPullOrderAsc\x10\x00\x12\x11\n" +
 	"\rPullOrderDesc\x10\x01B%Z#github.com/openimsdk/protocol/sdkwsb\x06proto3"
