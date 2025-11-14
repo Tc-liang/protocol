@@ -311,6 +311,8 @@ message ClearUserConversationMsgResp {
 message UpdateConversationsByUserReq {
   string userID = 1;
   openim.protobuf.StringValue ex = 2;
+  openim.protobuf.BoolValue isBot = 3;
+  openim.protobuf.BoolValue allowSendMessage = 4;
 }
 
 message UpdateConversationsByUserResp {}
