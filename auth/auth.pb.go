@@ -665,7 +665,7 @@ func (x *GetExistingTokenReq) GetPlatformID() int32 {
 
 type GetExistingTokenResp struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	TokenStates   map[string]int32       `protobuf:"bytes,1,rep,name=tokenStates,proto3" json:"tokenStates" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
+	TokenStates   map[string]int32       `protobuf:"bytes,1,rep,name=tokenStates,proto3" json:"tokenStates,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }

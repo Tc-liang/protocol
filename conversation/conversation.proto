@@ -233,6 +233,8 @@ message UpdateConversationReq {
   openim.protobuf.Int64Value msgDestructTime = 12;
   openim.protobuf.BoolValue isMsgDestruct = 13;
   openim.protobuf.Int64Value latestMsgDestructTime = 14;
+  openim.protobuf.BoolValue isBot = 15;
+  openim.protobuf.BoolValue allowSendMessage = 16;
 }
 
 message UpdateConversationResp {}
