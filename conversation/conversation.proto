@@ -38,6 +38,8 @@ message Conversation {
   int64 msgDestructTime = 15;
   int64 latestMsgDestructTime = 16;
   bool isMsgDestruct = 17;
+  bool isBot = 18;
+  bool allowSendMessage = 19;
 }
 
 message ConversationReq {

@@ -56,6 +56,8 @@ type Conversation struct {
 	MsgDestructTime       int64                  `protobuf:"varint,15,opt,name=msgDestructTime,proto3" json:"msgDestructTime"`
 	LatestMsgDestructTime int64                  `protobuf:"varint,16,opt,name=latestMsgDestructTime,proto3" json:"latestMsgDestructTime"`
 	IsMsgDestruct         bool                   `protobuf:"varint,17,opt,name=isMsgDestruct,proto3" json:"isMsgDestruct"`
+	IsBot                 bool                   `protobuf:"varint,18,opt,name=isBot,proto3" json:"isBot"`
+	AllowSendMessage      bool                   `protobuf:"varint,19,opt,name=allowSendMessage,proto3" json:"allowSendMessage"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -205,6 +207,20 @@ func (x *Conversation) GetLatestMsgDestructTime() int64 {
 func (x *Conversation) GetIsMsgDestruct() bool {
 	if x != nil {
 		return x.IsMsgDestruct
+	}
+	return false
+}
+
+func (x *Conversation) GetIsBot() bool {
+	if x != nil {
+		return x.IsBot
+	}
+	return false
+}
+
+func (x *Conversation) GetAllowSendMessage() bool {
+	if x != nil {
+		return x.AllowSendMessage
 	}
 	return false
 }
@@ -3209,7 +3225,7 @@ var File_conversation_conversation_proto protoreflect.FileDescriptor
 
 const file_conversation_conversation_proto_rawDesc = "" +
 	"\n" +
-	"\x1fconversation/conversation.proto\x12\x13openim.conversation\x1a\x11sdkws/sdkws.proto\x1a\x1bwrapperspb/wrapperspb.proto\"\xc8\x04\n" +
+	"\x1fconversation/conversation.proto\x12\x13openim.conversation\x1a\x11sdkws/sdkws.proto\x1a\x1bwrapperspb/wrapperspb.proto\"\x8a\x05\n" +
 	"\fConversation\x12 \n" +
 	"\vownerUserID\x18\x01 \x01(\tR\vownerUserID\x12&\n" +
 	"\x0econversationID\x18\x02 \x01(\tR\x0econversationID\x12\x1e\n" +
@@ -3230,7 +3246,9 @@ const file_conversation_conversation_proto_rawDesc = "" +
 	"\x06maxSeq\x18\x0e \x01(\x03R\x06maxSeq\x12(\n" +
 	"\x0fmsgDestructTime\x18\x0f \x01(\x03R\x0fmsgDestructTime\x124\n" +
 	"\x15latestMsgDestructTime\x18\x10 \x01(\x03R\x15latestMsgDestructTime\x12$\n" +
-	"\risMsgDestruct\x18\x11 \x01(\bR\risMsgDestruct\"\xb1\x06\n" +
+	"\risMsgDestruct\x18\x11 \x01(\bR\risMsgDestruct\x12\x14\n" +
+	"\x05isBot\x18\x12 \x01(\bR\x05isBot\x12*\n" +
+	"\x10allowSendMessage\x18\x13 \x01(\bR\x10allowSendMessage\"\xb1\x06\n" +
 	"\x0fConversationReq\x12&\n" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12*\n" +
 	"\x10conversationType\x18\x02 \x01(\x05R\x10conversationType\x12\x16\n" +
