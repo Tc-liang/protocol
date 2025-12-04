@@ -117,6 +117,15 @@ message MarkConversationAsReadReq {
 
 message MarkConversationAsReadResp {}
 
+message RPCMarkConversationAsReadReq {
+  string conversationID = 1;
+  string userID = 2;
+  int64 hasReadSeq = 3;
+  repeated int64 seqs = 4;
+}
+
+message RPCMarkConversationAsReadResp {}
+
 message BotMarkMaxMsgAsReadReq {
   string conversationID = 1;
   string userID = 2;
@@ -491,6 +500,7 @@ service msg {
   // mark as read
   rpc MarkMsgsAsRead(MarkMsgsAsReadReq) returns (MarkMsgsAsReadResp);
   rpc MarkConversationAsRead(MarkConversationAsReadReq) returns (MarkConversationAsReadResp);
+  rpc RPCMarkConversationAsRead(RPCMarkConversationAsReadReq) returns (RPCMarkConversationAsReadResp);
   rpc BotMarkMaxMsgAsRead(BotMarkMaxMsgAsReadReq) returns (BotMarkMaxMsgAsReadResp);
   rpc SetConversationHasReadSeq(SetConversationHasReadSeqReq) returns (SetConversationHasReadSeqResp);
 
