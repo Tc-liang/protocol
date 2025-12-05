@@ -1,94 +1,87 @@
-// Copyright © 2023 OpenIM. All rights reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 syntax = "proto3";
 package openim.auth;
 
 option go_package = "github.com/openimsdk/protocol/auth";
 
-message getAdminTokenReq {
+// ======== Requests & Responses ========
+
+message GetAdminTokenReq {
   string secret = 1;
   string userID = 3;
 }
-message getAdminTokenResp {
+message GetAdminTokenResp {
   string token = 2;
   int64 expireTimeSeconds = 3;
 }
 
-message forceLogoutReq {
+message ForceLogoutReq {
   int32 platformID = 1;
   string userID = 2;
 }
-message forceLogoutResp {}
+message ForceLogoutResp {}
 
-message parseTokenReq {
+message ParseTokenReq {
   string token = 1;
 }
-message parseTokenResp {
+message ParseTokenResp {
   string userID = 1;
   int32 platformID = 2;
   int64 expireTimeSeconds = 4;
 }
 
-message getUserTokenReq {
+message GetUserTokenReq {
   int32 platformID = 1;
   string userID = 2;
 }
 
-message getUserTokenResp {
+message GetUserTokenResp {
   string token = 1;
   int64 expireTimeSeconds = 2;
 }
 
-
-
-
-message invalidateTokenReq {
+message InvalidateTokenReq {
   string preservedToken = 1;
   string userID = 2;
   int32 platformID = 3;
 }
-message invalidateTokenResp {}
+message InvalidateTokenResp {}
 
-message kickTokensReq {
+message KickTokensReq {
   repeated string tokens = 1;
 }
-message kickTokensResp {}
+message KickTokensResp {}
 
 message GetExistingTokenReq {
   string userID = 1;
   int32 platformID = 2;
 }
 
-message getExistingTokenResp {
+message GetExistingTokenResp {
   map<string, int32> tokenStates = 1;
 }
 
-service Auth {
+
+// ======== Service ========
+
+service AuthService {
   // Generate token
-  rpc getAdminToken(getAdminTokenReq) returns (getAdminTokenResp);
+  rpc getAdminToken(GetAdminTokenReq) returns (GetAdminTokenResp);
+
   // Admin retrieves user token
-  rpc getUserToken(getUserTokenReq) returns (getUserTokenResp);
+  rpc getUserToken(GetUserTokenReq) returns (GetUserTokenResp);
 
   // Force logout
-  rpc forceLogout(forceLogoutReq) returns (forceLogoutResp);
+  rpc forceLogout(ForceLogoutReq) returns (ForceLogoutResp);
+
   // Parse token
-  rpc parseToken(parseTokenReq) returns (parseTokenResp);
+  rpc parseToken(ParseTokenReq) returns (ParseTokenResp);
+
   // Invalidate or mark the token as kicked out
-  rpc invalidateToken(invalidateTokenReq) returns (invalidateTokenResp);
-  // kick tokens
-  rpc kickTokens(kickTokensReq) returns (kickTokensResp);
+  rpc invalidateToken(InvalidateTokenReq) returns (InvalidateTokenResp);
+
+  // Kick tokens
+  rpc kickTokens(KickTokensReq) returns (KickTokensResp);
+
   // Get existing token
-  rpc getExistingToken(GetExistingTokenReq) returns (getExistingTokenResp);
+  rpc getExistingToken(GetExistingTokenReq) returns (GetExistingTokenResp);
 }
