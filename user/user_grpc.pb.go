@@ -19,43 +19,43 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	User_GetDesignateUsers_FullMethodName             = "/openim.user.User/GetDesignateUsers"
-	User_UpdateUserInfo_FullMethodName                = "/openim.user.User/UpdateUserInfo"
-	User_UpdateUserInfoEx_FullMethodName              = "/openim.user.User/UpdateUserInfoEx"
-	User_SetGlobalRecvMessageOpt_FullMethodName       = "/openim.user.User/SetGlobalRecvMessageOpt"
-	User_GetGlobalRecvMessageOpt_FullMethodName       = "/openim.user.User/GetGlobalRecvMessageOpt"
-	User_AccountCheck_FullMethodName                  = "/openim.user.User/AccountCheck"
-	User_GetPaginationUsers_FullMethodName            = "/openim.user.User/GetPaginationUsers"
-	User_UserRegister_FullMethodName                  = "/openim.user.User/UserRegister"
-	User_GetAllUserID_FullMethodName                  = "/openim.user.User/GetAllUserID"
-	User_UserRegisterCount_FullMethodName             = "/openim.user.User/UserRegisterCount"
-	User_SubscribeOrCancelUsersStatus_FullMethodName  = "/openim.user.User/SubscribeOrCancelUsersStatus"
-	User_GetSubscribeUsersStatus_FullMethodName       = "/openim.user.User/GetSubscribeUsersStatus"
-	User_GetUserStatus_FullMethodName                 = "/openim.user.User/GetUserStatus"
-	User_SetUserStatus_FullMethodName                 = "/openim.user.User/SetUserStatus"
-	User_ProcessUserCommandAdd_FullMethodName         = "/openim.user.User/ProcessUserCommandAdd"
-	User_ProcessUserCommandUpdate_FullMethodName      = "/openim.user.User/ProcessUserCommandUpdate"
-	User_ProcessUserCommandDelete_FullMethodName      = "/openim.user.User/ProcessUserCommandDelete"
-	User_ProcessUserCommandGet_FullMethodName         = "/openim.user.User/ProcessUserCommandGet"
-	User_ProcessUserCommandGetAll_FullMethodName      = "/openim.user.User/ProcessUserCommandGetAll"
-	User_AddNotificationAccount_FullMethodName        = "/openim.user.User/AddNotificationAccount"
-	User_UpdateNotificationAccountInfo_FullMethodName = "/openim.user.User/UpdateNotificationAccountInfo"
-	User_SearchNotificationAccount_FullMethodName     = "/openim.user.User/SearchNotificationAccount"
-	User_GetNotificationAccount_FullMethodName        = "/openim.user.User/GetNotificationAccount"
-	User_SortQuery_FullMethodName                     = "/openim.user.User/SortQuery"
-	User_SetUserOnlineStatus_FullMethodName           = "/openim.user.User/SetUserOnlineStatus"
-	User_GetAllOnlineUsers_FullMethodName             = "/openim.user.User/GetAllOnlineUsers"
-	User_GetUserClientConfig_FullMethodName           = "/openim.user.User/GetUserClientConfig"
-	User_SetUserClientConfig_FullMethodName           = "/openim.user.User/SetUserClientConfig"
-	User_DelUserClientConfig_FullMethodName           = "/openim.user.User/DelUserClientConfig"
-	User_PageUserClientConfig_FullMethodName          = "/openim.user.User/PageUserClientConfig"
-	User_GetBotUser_FullMethodName                    = "/openim.user.User/GetBotUser"
+	IMUserService_GetDesignateUsers_FullMethodName             = "/openim.user.IMUserService/GetDesignateUsers"
+	IMUserService_UpdateUserInfo_FullMethodName                = "/openim.user.IMUserService/UpdateUserInfo"
+	IMUserService_UpdateUserInfoEx_FullMethodName              = "/openim.user.IMUserService/UpdateUserInfoEx"
+	IMUserService_SetGlobalRecvMessageOpt_FullMethodName       = "/openim.user.IMUserService/SetGlobalRecvMessageOpt"
+	IMUserService_GetGlobalRecvMessageOpt_FullMethodName       = "/openim.user.IMUserService/GetGlobalRecvMessageOpt"
+	IMUserService_AccountCheck_FullMethodName                  = "/openim.user.IMUserService/AccountCheck"
+	IMUserService_GetPaginationUsers_FullMethodName            = "/openim.user.IMUserService/GetPaginationUsers"
+	IMUserService_UserRegister_FullMethodName                  = "/openim.user.IMUserService/UserRegister"
+	IMUserService_GetAllUserID_FullMethodName                  = "/openim.user.IMUserService/GetAllUserID"
+	IMUserService_UserRegisterCount_FullMethodName             = "/openim.user.IMUserService/UserRegisterCount"
+	IMUserService_SubscribeOrCancelUsersStatus_FullMethodName  = "/openim.user.IMUserService/SubscribeOrCancelUsersStatus"
+	IMUserService_GetSubscribeUsersStatus_FullMethodName       = "/openim.user.IMUserService/GetSubscribeUsersStatus"
+	IMUserService_GetUserStatus_FullMethodName                 = "/openim.user.IMUserService/GetUserStatus"
+	IMUserService_SetUserStatus_FullMethodName                 = "/openim.user.IMUserService/SetUserStatus"
+	IMUserService_ProcessUserCommandAdd_FullMethodName         = "/openim.user.IMUserService/ProcessUserCommandAdd"
+	IMUserService_ProcessUserCommandUpdate_FullMethodName      = "/openim.user.IMUserService/ProcessUserCommandUpdate"
+	IMUserService_ProcessUserCommandDelete_FullMethodName      = "/openim.user.IMUserService/ProcessUserCommandDelete"
+	IMUserService_ProcessUserCommandGet_FullMethodName         = "/openim.user.IMUserService/ProcessUserCommandGet"
+	IMUserService_ProcessUserCommandGetAll_FullMethodName      = "/openim.user.IMUserService/ProcessUserCommandGetAll"
+	IMUserService_AddNotificationAccount_FullMethodName        = "/openim.user.IMUserService/AddNotificationAccount"
+	IMUserService_UpdateNotificationAccountInfo_FullMethodName = "/openim.user.IMUserService/UpdateNotificationAccountInfo"
+	IMUserService_SearchNotificationAccount_FullMethodName     = "/openim.user.IMUserService/SearchNotificationAccount"
+	IMUserService_GetNotificationAccount_FullMethodName        = "/openim.user.IMUserService/GetNotificationAccount"
+	IMUserService_SortQuery_FullMethodName                     = "/openim.user.IMUserService/SortQuery"
+	IMUserService_SetUserOnlineStatus_FullMethodName           = "/openim.user.IMUserService/SetUserOnlineStatus"
+	IMUserService_GetAllOnlineUsers_FullMethodName             = "/openim.user.IMUserService/GetAllOnlineUsers"
+	IMUserService_GetUserClientConfig_FullMethodName           = "/openim.user.IMUserService/GetUserClientConfig"
+	IMUserService_SetUserClientConfig_FullMethodName           = "/openim.user.IMUserService/SetUserClientConfig"
+	IMUserService_DelUserClientConfig_FullMethodName           = "/openim.user.IMUserService/DelUserClientConfig"
+	IMUserService_PageUserClientConfig_FullMethodName          = "/openim.user.IMUserService/PageUserClientConfig"
+	IMUserService_GetBotUser_FullMethodName                    = "/openim.user.IMUserService/GetBotUser"
 )
 
-// UserClient is the client API for User service.
+// IMUserServiceClient is the client API for IMUserService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type UserClient interface {
+type IMUserServiceClient interface {
 	GetDesignateUsers(ctx context.Context, in *GetDesignateUsersReq, opts ...grpc.CallOption) (*GetDesignateUsersResp, error)
 	UpdateUserInfo(ctx context.Context, in *UpdateUserInfoReq, opts ...grpc.CallOption) (*UpdateUserInfoResp, error)
 	UpdateUserInfoEx(ctx context.Context, in *UpdateUserInfoExReq, opts ...grpc.CallOption) (*UpdateUserInfoExResp, error)
@@ -89,328 +89,328 @@ type UserClient interface {
 	GetBotUser(ctx context.Context, in *GetBotUserReq, opts ...grpc.CallOption) (*GetBotUserResp, error)
 }
 
-type userClient struct {
+type iMUserServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewUserClient(cc grpc.ClientConnInterface) UserClient {
-	return &userClient{cc}
+func NewIMUserServiceClient(cc grpc.ClientConnInterface) IMUserServiceClient {
+	return &iMUserServiceClient{cc}
 }
 
-func (c *userClient) GetDesignateUsers(ctx context.Context, in *GetDesignateUsersReq, opts ...grpc.CallOption) (*GetDesignateUsersResp, error) {
+func (c *iMUserServiceClient) GetDesignateUsers(ctx context.Context, in *GetDesignateUsersReq, opts ...grpc.CallOption) (*GetDesignateUsersResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetDesignateUsersResp)
-	err := c.cc.Invoke(ctx, User_GetDesignateUsers_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetDesignateUsers_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) UpdateUserInfo(ctx context.Context, in *UpdateUserInfoReq, opts ...grpc.CallOption) (*UpdateUserInfoResp, error) {
+func (c *iMUserServiceClient) UpdateUserInfo(ctx context.Context, in *UpdateUserInfoReq, opts ...grpc.CallOption) (*UpdateUserInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateUserInfoResp)
-	err := c.cc.Invoke(ctx, User_UpdateUserInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_UpdateUserInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) UpdateUserInfoEx(ctx context.Context, in *UpdateUserInfoExReq, opts ...grpc.CallOption) (*UpdateUserInfoExResp, error) {
+func (c *iMUserServiceClient) UpdateUserInfoEx(ctx context.Context, in *UpdateUserInfoExReq, opts ...grpc.CallOption) (*UpdateUserInfoExResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateUserInfoExResp)
-	err := c.cc.Invoke(ctx, User_UpdateUserInfoEx_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_UpdateUserInfoEx_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SetGlobalRecvMessageOpt(ctx context.Context, in *SetGlobalRecvMessageOptReq, opts ...grpc.CallOption) (*SetGlobalRecvMessageOptResp, error) {
+func (c *iMUserServiceClient) SetGlobalRecvMessageOpt(ctx context.Context, in *SetGlobalRecvMessageOptReq, opts ...grpc.CallOption) (*SetGlobalRecvMessageOptResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetGlobalRecvMessageOptResp)
-	err := c.cc.Invoke(ctx, User_SetGlobalRecvMessageOpt_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SetGlobalRecvMessageOpt_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetGlobalRecvMessageOpt(ctx context.Context, in *GetGlobalRecvMessageOptReq, opts ...grpc.CallOption) (*GetGlobalRecvMessageOptResp, error) {
+func (c *iMUserServiceClient) GetGlobalRecvMessageOpt(ctx context.Context, in *GetGlobalRecvMessageOptReq, opts ...grpc.CallOption) (*GetGlobalRecvMessageOptResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGlobalRecvMessageOptResp)
-	err := c.cc.Invoke(ctx, User_GetGlobalRecvMessageOpt_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetGlobalRecvMessageOpt_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) AccountCheck(ctx context.Context, in *AccountCheckReq, opts ...grpc.CallOption) (*AccountCheckResp, error) {
+func (c *iMUserServiceClient) AccountCheck(ctx context.Context, in *AccountCheckReq, opts ...grpc.CallOption) (*AccountCheckResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(AccountCheckResp)
-	err := c.cc.Invoke(ctx, User_AccountCheck_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_AccountCheck_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetPaginationUsers(ctx context.Context, in *GetPaginationUsersReq, opts ...grpc.CallOption) (*GetPaginationUsersResp, error) {
+func (c *iMUserServiceClient) GetPaginationUsers(ctx context.Context, in *GetPaginationUsersReq, opts ...grpc.CallOption) (*GetPaginationUsersResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPaginationUsersResp)
-	err := c.cc.Invoke(ctx, User_GetPaginationUsers_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetPaginationUsers_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) UserRegister(ctx context.Context, in *UserRegisterReq, opts ...grpc.CallOption) (*UserRegisterResp, error) {
+func (c *iMUserServiceClient) UserRegister(ctx context.Context, in *UserRegisterReq, opts ...grpc.CallOption) (*UserRegisterResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UserRegisterResp)
-	err := c.cc.Invoke(ctx, User_UserRegister_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_UserRegister_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetAllUserID(ctx context.Context, in *GetAllUserIDReq, opts ...grpc.CallOption) (*GetAllUserIDResp, error) {
+func (c *iMUserServiceClient) GetAllUserID(ctx context.Context, in *GetAllUserIDReq, opts ...grpc.CallOption) (*GetAllUserIDResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetAllUserIDResp)
-	err := c.cc.Invoke(ctx, User_GetAllUserID_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetAllUserID_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) UserRegisterCount(ctx context.Context, in *UserRegisterCountReq, opts ...grpc.CallOption) (*UserRegisterCountResp, error) {
+func (c *iMUserServiceClient) UserRegisterCount(ctx context.Context, in *UserRegisterCountReq, opts ...grpc.CallOption) (*UserRegisterCountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UserRegisterCountResp)
-	err := c.cc.Invoke(ctx, User_UserRegisterCount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_UserRegisterCount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SubscribeOrCancelUsersStatus(ctx context.Context, in *SubscribeOrCancelUsersStatusReq, opts ...grpc.CallOption) (*SubscribeOrCancelUsersStatusResp, error) {
+func (c *iMUserServiceClient) SubscribeOrCancelUsersStatus(ctx context.Context, in *SubscribeOrCancelUsersStatusReq, opts ...grpc.CallOption) (*SubscribeOrCancelUsersStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SubscribeOrCancelUsersStatusResp)
-	err := c.cc.Invoke(ctx, User_SubscribeOrCancelUsersStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SubscribeOrCancelUsersStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetSubscribeUsersStatus(ctx context.Context, in *GetSubscribeUsersStatusReq, opts ...grpc.CallOption) (*GetSubscribeUsersStatusResp, error) {
+func (c *iMUserServiceClient) GetSubscribeUsersStatus(ctx context.Context, in *GetSubscribeUsersStatusReq, opts ...grpc.CallOption) (*GetSubscribeUsersStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSubscribeUsersStatusResp)
-	err := c.cc.Invoke(ctx, User_GetSubscribeUsersStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetSubscribeUsersStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetUserStatus(ctx context.Context, in *GetUserStatusReq, opts ...grpc.CallOption) (*GetUserStatusResp, error) {
+func (c *iMUserServiceClient) GetUserStatus(ctx context.Context, in *GetUserStatusReq, opts ...grpc.CallOption) (*GetUserStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserStatusResp)
-	err := c.cc.Invoke(ctx, User_GetUserStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetUserStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SetUserStatus(ctx context.Context, in *SetUserStatusReq, opts ...grpc.CallOption) (*SetUserStatusResp, error) {
+func (c *iMUserServiceClient) SetUserStatus(ctx context.Context, in *SetUserStatusReq, opts ...grpc.CallOption) (*SetUserStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserStatusResp)
-	err := c.cc.Invoke(ctx, User_SetUserStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SetUserStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) ProcessUserCommandAdd(ctx context.Context, in *ProcessUserCommandAddReq, opts ...grpc.CallOption) (*ProcessUserCommandAddResp, error) {
+func (c *iMUserServiceClient) ProcessUserCommandAdd(ctx context.Context, in *ProcessUserCommandAddReq, opts ...grpc.CallOption) (*ProcessUserCommandAddResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProcessUserCommandAddResp)
-	err := c.cc.Invoke(ctx, User_ProcessUserCommandAdd_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_ProcessUserCommandAdd_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) ProcessUserCommandUpdate(ctx context.Context, in *ProcessUserCommandUpdateReq, opts ...grpc.CallOption) (*ProcessUserCommandUpdateResp, error) {
+func (c *iMUserServiceClient) ProcessUserCommandUpdate(ctx context.Context, in *ProcessUserCommandUpdateReq, opts ...grpc.CallOption) (*ProcessUserCommandUpdateResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProcessUserCommandUpdateResp)
-	err := c.cc.Invoke(ctx, User_ProcessUserCommandUpdate_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_ProcessUserCommandUpdate_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) ProcessUserCommandDelete(ctx context.Context, in *ProcessUserCommandDeleteReq, opts ...grpc.CallOption) (*ProcessUserCommandDeleteResp, error) {
+func (c *iMUserServiceClient) ProcessUserCommandDelete(ctx context.Context, in *ProcessUserCommandDeleteReq, opts ...grpc.CallOption) (*ProcessUserCommandDeleteResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProcessUserCommandDeleteResp)
-	err := c.cc.Invoke(ctx, User_ProcessUserCommandDelete_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_ProcessUserCommandDelete_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) ProcessUserCommandGet(ctx context.Context, in *ProcessUserCommandGetReq, opts ...grpc.CallOption) (*ProcessUserCommandGetResp, error) {
+func (c *iMUserServiceClient) ProcessUserCommandGet(ctx context.Context, in *ProcessUserCommandGetReq, opts ...grpc.CallOption) (*ProcessUserCommandGetResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProcessUserCommandGetResp)
-	err := c.cc.Invoke(ctx, User_ProcessUserCommandGet_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_ProcessUserCommandGet_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) ProcessUserCommandGetAll(ctx context.Context, in *ProcessUserCommandGetAllReq, opts ...grpc.CallOption) (*ProcessUserCommandGetAllResp, error) {
+func (c *iMUserServiceClient) ProcessUserCommandGetAll(ctx context.Context, in *ProcessUserCommandGetAllReq, opts ...grpc.CallOption) (*ProcessUserCommandGetAllResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ProcessUserCommandGetAllResp)
-	err := c.cc.Invoke(ctx, User_ProcessUserCommandGetAll_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_ProcessUserCommandGetAll_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) AddNotificationAccount(ctx context.Context, in *AddNotificationAccountReq, opts ...grpc.CallOption) (*AddNotificationAccountResp, error) {
+func (c *iMUserServiceClient) AddNotificationAccount(ctx context.Context, in *AddNotificationAccountReq, opts ...grpc.CallOption) (*AddNotificationAccountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(AddNotificationAccountResp)
-	err := c.cc.Invoke(ctx, User_AddNotificationAccount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_AddNotificationAccount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) UpdateNotificationAccountInfo(ctx context.Context, in *UpdateNotificationAccountInfoReq, opts ...grpc.CallOption) (*UpdateNotificationAccountInfoResp, error) {
+func (c *iMUserServiceClient) UpdateNotificationAccountInfo(ctx context.Context, in *UpdateNotificationAccountInfoReq, opts ...grpc.CallOption) (*UpdateNotificationAccountInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateNotificationAccountInfoResp)
-	err := c.cc.Invoke(ctx, User_UpdateNotificationAccountInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_UpdateNotificationAccountInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SearchNotificationAccount(ctx context.Context, in *SearchNotificationAccountReq, opts ...grpc.CallOption) (*SearchNotificationAccountResp, error) {
+func (c *iMUserServiceClient) SearchNotificationAccount(ctx context.Context, in *SearchNotificationAccountReq, opts ...grpc.CallOption) (*SearchNotificationAccountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SearchNotificationAccountResp)
-	err := c.cc.Invoke(ctx, User_SearchNotificationAccount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SearchNotificationAccount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetNotificationAccount(ctx context.Context, in *GetNotificationAccountReq, opts ...grpc.CallOption) (*GetNotificationAccountResp, error) {
+func (c *iMUserServiceClient) GetNotificationAccount(ctx context.Context, in *GetNotificationAccountReq, opts ...grpc.CallOption) (*GetNotificationAccountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetNotificationAccountResp)
-	err := c.cc.Invoke(ctx, User_GetNotificationAccount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetNotificationAccount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SortQuery(ctx context.Context, in *SortQueryReq, opts ...grpc.CallOption) (*SortQueryResp, error) {
+func (c *iMUserServiceClient) SortQuery(ctx context.Context, in *SortQueryReq, opts ...grpc.CallOption) (*SortQueryResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SortQueryResp)
-	err := c.cc.Invoke(ctx, User_SortQuery_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SortQuery_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SetUserOnlineStatus(ctx context.Context, in *SetUserOnlineStatusReq, opts ...grpc.CallOption) (*SetUserOnlineStatusResp, error) {
+func (c *iMUserServiceClient) SetUserOnlineStatus(ctx context.Context, in *SetUserOnlineStatusReq, opts ...grpc.CallOption) (*SetUserOnlineStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserOnlineStatusResp)
-	err := c.cc.Invoke(ctx, User_SetUserOnlineStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SetUserOnlineStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetAllOnlineUsers(ctx context.Context, in *GetAllOnlineUsersReq, opts ...grpc.CallOption) (*GetAllOnlineUsersResp, error) {
+func (c *iMUserServiceClient) GetAllOnlineUsers(ctx context.Context, in *GetAllOnlineUsersReq, opts ...grpc.CallOption) (*GetAllOnlineUsersResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetAllOnlineUsersResp)
-	err := c.cc.Invoke(ctx, User_GetAllOnlineUsers_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetAllOnlineUsers_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetUserClientConfig(ctx context.Context, in *GetUserClientConfigReq, opts ...grpc.CallOption) (*GetUserClientConfigResp, error) {
+func (c *iMUserServiceClient) GetUserClientConfig(ctx context.Context, in *GetUserClientConfigReq, opts ...grpc.CallOption) (*GetUserClientConfigResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserClientConfigResp)
-	err := c.cc.Invoke(ctx, User_GetUserClientConfig_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetUserClientConfig_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) SetUserClientConfig(ctx context.Context, in *SetUserClientConfigReq, opts ...grpc.CallOption) (*SetUserClientConfigResp, error) {
+func (c *iMUserServiceClient) SetUserClientConfig(ctx context.Context, in *SetUserClientConfigReq, opts ...grpc.CallOption) (*SetUserClientConfigResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserClientConfigResp)
-	err := c.cc.Invoke(ctx, User_SetUserClientConfig_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_SetUserClientConfig_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) DelUserClientConfig(ctx context.Context, in *DelUserClientConfigReq, opts ...grpc.CallOption) (*DelUserClientConfigResp, error) {
+func (c *iMUserServiceClient) DelUserClientConfig(ctx context.Context, in *DelUserClientConfigReq, opts ...grpc.CallOption) (*DelUserClientConfigResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DelUserClientConfigResp)
-	err := c.cc.Invoke(ctx, User_DelUserClientConfig_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_DelUserClientConfig_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) PageUserClientConfig(ctx context.Context, in *PageUserClientConfigReq, opts ...grpc.CallOption) (*PageUserClientConfigResp, error) {
+func (c *iMUserServiceClient) PageUserClientConfig(ctx context.Context, in *PageUserClientConfigReq, opts ...grpc.CallOption) (*PageUserClientConfigResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(PageUserClientConfigResp)
-	err := c.cc.Invoke(ctx, User_PageUserClientConfig_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_PageUserClientConfig_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) GetBotUser(ctx context.Context, in *GetBotUserReq, opts ...grpc.CallOption) (*GetBotUserResp, error) {
+func (c *iMUserServiceClient) GetBotUser(ctx context.Context, in *GetBotUserReq, opts ...grpc.CallOption) (*GetBotUserResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetBotUserResp)
-	err := c.cc.Invoke(ctx, User_GetBotUser_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMUserService_GetBotUser_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// UserServer is the server API for User service.
-// All implementations must embed UnimplementedUserServer
+// IMUserServiceServer is the server API for IMUserService service.
+// All implementations must embed UnimplementedIMUserServiceServer
 // for forward compatibility.
-type UserServer interface {
+type IMUserServiceServer interface {
 	GetDesignateUsers(context.Context, *GetDesignateUsersReq) (*GetDesignateUsersResp, error)
 	UpdateUserInfo(context.Context, *UpdateUserInfoReq) (*UpdateUserInfoResp, error)
 	UpdateUserInfoEx(context.Context, *UpdateUserInfoExReq) (*UpdateUserInfoExResp, error)
@@ -442,818 +442,818 @@ type UserServer interface {
 	DelUserClientConfig(context.Context, *DelUserClientConfigReq) (*DelUserClientConfigResp, error)
 	PageUserClientConfig(context.Context, *PageUserClientConfigReq) (*PageUserClientConfigResp, error)
 	GetBotUser(context.Context, *GetBotUserReq) (*GetBotUserResp, error)
-	mustEmbedUnimplementedUserServer()
+	mustEmbedUnimplementedIMUserServiceServer()
 }
 
-// UnimplementedUserServer must be embedded to have
+// UnimplementedIMUserServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedUserServer struct{}
+type UnimplementedIMUserServiceServer struct{}
 
-func (UnimplementedUserServer) GetDesignateUsers(context.Context, *GetDesignateUsersReq) (*GetDesignateUsersResp, error) {
+func (UnimplementedIMUserServiceServer) GetDesignateUsers(context.Context, *GetDesignateUsersReq) (*GetDesignateUsersResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDesignateUsers not implemented")
 }
-func (UnimplementedUserServer) UpdateUserInfo(context.Context, *UpdateUserInfoReq) (*UpdateUserInfoResp, error) {
+func (UnimplementedIMUserServiceServer) UpdateUserInfo(context.Context, *UpdateUserInfoReq) (*UpdateUserInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateUserInfo not implemented")
 }
-func (UnimplementedUserServer) UpdateUserInfoEx(context.Context, *UpdateUserInfoExReq) (*UpdateUserInfoExResp, error) {
+func (UnimplementedIMUserServiceServer) UpdateUserInfoEx(context.Context, *UpdateUserInfoExReq) (*UpdateUserInfoExResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateUserInfoEx not implemented")
 }
-func (UnimplementedUserServer) SetGlobalRecvMessageOpt(context.Context, *SetGlobalRecvMessageOptReq) (*SetGlobalRecvMessageOptResp, error) {
+func (UnimplementedIMUserServiceServer) SetGlobalRecvMessageOpt(context.Context, *SetGlobalRecvMessageOptReq) (*SetGlobalRecvMessageOptResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetGlobalRecvMessageOpt not implemented")
 }
-func (UnimplementedUserServer) GetGlobalRecvMessageOpt(context.Context, *GetGlobalRecvMessageOptReq) (*GetGlobalRecvMessageOptResp, error) {
+func (UnimplementedIMUserServiceServer) GetGlobalRecvMessageOpt(context.Context, *GetGlobalRecvMessageOptReq) (*GetGlobalRecvMessageOptResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGlobalRecvMessageOpt not implemented")
 }
-func (UnimplementedUserServer) AccountCheck(context.Context, *AccountCheckReq) (*AccountCheckResp, error) {
+func (UnimplementedIMUserServiceServer) AccountCheck(context.Context, *AccountCheckReq) (*AccountCheckResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AccountCheck not implemented")
 }
-func (UnimplementedUserServer) GetPaginationUsers(context.Context, *GetPaginationUsersReq) (*GetPaginationUsersResp, error) {
+func (UnimplementedIMUserServiceServer) GetPaginationUsers(context.Context, *GetPaginationUsersReq) (*GetPaginationUsersResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPaginationUsers not implemented")
 }
-func (UnimplementedUserServer) UserRegister(context.Context, *UserRegisterReq) (*UserRegisterResp, error) {
+func (UnimplementedIMUserServiceServer) UserRegister(context.Context, *UserRegisterReq) (*UserRegisterResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserRegister not implemented")
 }
-func (UnimplementedUserServer) GetAllUserID(context.Context, *GetAllUserIDReq) (*GetAllUserIDResp, error) {
+func (UnimplementedIMUserServiceServer) GetAllUserID(context.Context, *GetAllUserIDReq) (*GetAllUserIDResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllUserID not implemented")
 }
-func (UnimplementedUserServer) UserRegisterCount(context.Context, *UserRegisterCountReq) (*UserRegisterCountResp, error) {
+func (UnimplementedIMUserServiceServer) UserRegisterCount(context.Context, *UserRegisterCountReq) (*UserRegisterCountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserRegisterCount not implemented")
 }
-func (UnimplementedUserServer) SubscribeOrCancelUsersStatus(context.Context, *SubscribeOrCancelUsersStatusReq) (*SubscribeOrCancelUsersStatusResp, error) {
+func (UnimplementedIMUserServiceServer) SubscribeOrCancelUsersStatus(context.Context, *SubscribeOrCancelUsersStatusReq) (*SubscribeOrCancelUsersStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SubscribeOrCancelUsersStatus not implemented")
 }
-func (UnimplementedUserServer) GetSubscribeUsersStatus(context.Context, *GetSubscribeUsersStatusReq) (*GetSubscribeUsersStatusResp, error) {
+func (UnimplementedIMUserServiceServer) GetSubscribeUsersStatus(context.Context, *GetSubscribeUsersStatusReq) (*GetSubscribeUsersStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSubscribeUsersStatus not implemented")
 }
-func (UnimplementedUserServer) GetUserStatus(context.Context, *GetUserStatusReq) (*GetUserStatusResp, error) {
+func (UnimplementedIMUserServiceServer) GetUserStatus(context.Context, *GetUserStatusReq) (*GetUserStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserStatus not implemented")
 }
-func (UnimplementedUserServer) SetUserStatus(context.Context, *SetUserStatusReq) (*SetUserStatusResp, error) {
+func (UnimplementedIMUserServiceServer) SetUserStatus(context.Context, *SetUserStatusReq) (*SetUserStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserStatus not implemented")
 }
-func (UnimplementedUserServer) ProcessUserCommandAdd(context.Context, *ProcessUserCommandAddReq) (*ProcessUserCommandAddResp, error) {
+func (UnimplementedIMUserServiceServer) ProcessUserCommandAdd(context.Context, *ProcessUserCommandAddReq) (*ProcessUserCommandAddResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessUserCommandAdd not implemented")
 }
-func (UnimplementedUserServer) ProcessUserCommandUpdate(context.Context, *ProcessUserCommandUpdateReq) (*ProcessUserCommandUpdateResp, error) {
+func (UnimplementedIMUserServiceServer) ProcessUserCommandUpdate(context.Context, *ProcessUserCommandUpdateReq) (*ProcessUserCommandUpdateResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessUserCommandUpdate not implemented")
 }
-func (UnimplementedUserServer) ProcessUserCommandDelete(context.Context, *ProcessUserCommandDeleteReq) (*ProcessUserCommandDeleteResp, error) {
+func (UnimplementedIMUserServiceServer) ProcessUserCommandDelete(context.Context, *ProcessUserCommandDeleteReq) (*ProcessUserCommandDeleteResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessUserCommandDelete not implemented")
 }
-func (UnimplementedUserServer) ProcessUserCommandGet(context.Context, *ProcessUserCommandGetReq) (*ProcessUserCommandGetResp, error) {
+func (UnimplementedIMUserServiceServer) ProcessUserCommandGet(context.Context, *ProcessUserCommandGetReq) (*ProcessUserCommandGetResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessUserCommandGet not implemented")
 }
-func (UnimplementedUserServer) ProcessUserCommandGetAll(context.Context, *ProcessUserCommandGetAllReq) (*ProcessUserCommandGetAllResp, error) {
+func (UnimplementedIMUserServiceServer) ProcessUserCommandGetAll(context.Context, *ProcessUserCommandGetAllReq) (*ProcessUserCommandGetAllResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessUserCommandGetAll not implemented")
 }
-func (UnimplementedUserServer) AddNotificationAccount(context.Context, *AddNotificationAccountReq) (*AddNotificationAccountResp, error) {
+func (UnimplementedIMUserServiceServer) AddNotificationAccount(context.Context, *AddNotificationAccountReq) (*AddNotificationAccountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddNotificationAccount not implemented")
 }
-func (UnimplementedUserServer) UpdateNotificationAccountInfo(context.Context, *UpdateNotificationAccountInfoReq) (*UpdateNotificationAccountInfoResp, error) {
+func (UnimplementedIMUserServiceServer) UpdateNotificationAccountInfo(context.Context, *UpdateNotificationAccountInfoReq) (*UpdateNotificationAccountInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateNotificationAccountInfo not implemented")
 }
-func (UnimplementedUserServer) SearchNotificationAccount(context.Context, *SearchNotificationAccountReq) (*SearchNotificationAccountResp, error) {
+func (UnimplementedIMUserServiceServer) SearchNotificationAccount(context.Context, *SearchNotificationAccountReq) (*SearchNotificationAccountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchNotificationAccount not implemented")
 }
-func (UnimplementedUserServer) GetNotificationAccount(context.Context, *GetNotificationAccountReq) (*GetNotificationAccountResp, error) {
+func (UnimplementedIMUserServiceServer) GetNotificationAccount(context.Context, *GetNotificationAccountReq) (*GetNotificationAccountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetNotificationAccount not implemented")
 }
-func (UnimplementedUserServer) SortQuery(context.Context, *SortQueryReq) (*SortQueryResp, error) {
+func (UnimplementedIMUserServiceServer) SortQuery(context.Context, *SortQueryReq) (*SortQueryResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SortQuery not implemented")
 }
-func (UnimplementedUserServer) SetUserOnlineStatus(context.Context, *SetUserOnlineStatusReq) (*SetUserOnlineStatusResp, error) {
+func (UnimplementedIMUserServiceServer) SetUserOnlineStatus(context.Context, *SetUserOnlineStatusReq) (*SetUserOnlineStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserOnlineStatus not implemented")
 }
-func (UnimplementedUserServer) GetAllOnlineUsers(context.Context, *GetAllOnlineUsersReq) (*GetAllOnlineUsersResp, error) {
+func (UnimplementedIMUserServiceServer) GetAllOnlineUsers(context.Context, *GetAllOnlineUsersReq) (*GetAllOnlineUsersResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllOnlineUsers not implemented")
 }
-func (UnimplementedUserServer) GetUserClientConfig(context.Context, *GetUserClientConfigReq) (*GetUserClientConfigResp, error) {
+func (UnimplementedIMUserServiceServer) GetUserClientConfig(context.Context, *GetUserClientConfigReq) (*GetUserClientConfigResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserClientConfig not implemented")
 }
-func (UnimplementedUserServer) SetUserClientConfig(context.Context, *SetUserClientConfigReq) (*SetUserClientConfigResp, error) {
+func (UnimplementedIMUserServiceServer) SetUserClientConfig(context.Context, *SetUserClientConfigReq) (*SetUserClientConfigResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserClientConfig not implemented")
 }
-func (UnimplementedUserServer) DelUserClientConfig(context.Context, *DelUserClientConfigReq) (*DelUserClientConfigResp, error) {
+func (UnimplementedIMUserServiceServer) DelUserClientConfig(context.Context, *DelUserClientConfigReq) (*DelUserClientConfigResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DelUserClientConfig not implemented")
 }
-func (UnimplementedUserServer) PageUserClientConfig(context.Context, *PageUserClientConfigReq) (*PageUserClientConfigResp, error) {
+func (UnimplementedIMUserServiceServer) PageUserClientConfig(context.Context, *PageUserClientConfigReq) (*PageUserClientConfigResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PageUserClientConfig not implemented")
 }
-func (UnimplementedUserServer) GetBotUser(context.Context, *GetBotUserReq) (*GetBotUserResp, error) {
+func (UnimplementedIMUserServiceServer) GetBotUser(context.Context, *GetBotUserReq) (*GetBotUserResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBotUser not implemented")
 }
-func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
-func (UnimplementedUserServer) testEmbeddedByValue()              {}
+func (UnimplementedIMUserServiceServer) mustEmbedUnimplementedIMUserServiceServer() {}
+func (UnimplementedIMUserServiceServer) testEmbeddedByValue()                       {}
 
-// UnsafeUserServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to UserServer will
+// UnsafeIMUserServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMUserServiceServer will
 // result in compilation errors.
-type UnsafeUserServer interface {
-	mustEmbedUnimplementedUserServer()
+type UnsafeIMUserServiceServer interface {
+	mustEmbedUnimplementedIMUserServiceServer()
 }
 
-func RegisterUserServer(s grpc.ServiceRegistrar, srv UserServer) {
-	// If the following call pancis, it indicates UnimplementedUserServer was
+func RegisterIMUserServiceServer(s grpc.ServiceRegistrar, srv IMUserServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMUserServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&User_ServiceDesc, srv)
+	s.RegisterService(&IMUserService_ServiceDesc, srv)
 }
 
-func _User_GetDesignateUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetDesignateUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetDesignateUsersReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetDesignateUsers(ctx, in)
+		return srv.(IMUserServiceServer).GetDesignateUsers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetDesignateUsers_FullMethodName,
+		FullMethod: IMUserService_GetDesignateUsers_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetDesignateUsers(ctx, req.(*GetDesignateUsersReq))
+		return srv.(IMUserServiceServer).GetDesignateUsers(ctx, req.(*GetDesignateUsersReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_UpdateUserInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_UpdateUserInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateUserInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).UpdateUserInfo(ctx, in)
+		return srv.(IMUserServiceServer).UpdateUserInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_UpdateUserInfo_FullMethodName,
+		FullMethod: IMUserService_UpdateUserInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).UpdateUserInfo(ctx, req.(*UpdateUserInfoReq))
+		return srv.(IMUserServiceServer).UpdateUserInfo(ctx, req.(*UpdateUserInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_UpdateUserInfoEx_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_UpdateUserInfoEx_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateUserInfoExReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).UpdateUserInfoEx(ctx, in)
+		return srv.(IMUserServiceServer).UpdateUserInfoEx(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_UpdateUserInfoEx_FullMethodName,
+		FullMethod: IMUserService_UpdateUserInfoEx_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).UpdateUserInfoEx(ctx, req.(*UpdateUserInfoExReq))
+		return srv.(IMUserServiceServer).UpdateUserInfoEx(ctx, req.(*UpdateUserInfoExReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SetGlobalRecvMessageOpt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SetGlobalRecvMessageOpt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetGlobalRecvMessageOptReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SetGlobalRecvMessageOpt(ctx, in)
+		return srv.(IMUserServiceServer).SetGlobalRecvMessageOpt(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SetGlobalRecvMessageOpt_FullMethodName,
+		FullMethod: IMUserService_SetGlobalRecvMessageOpt_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SetGlobalRecvMessageOpt(ctx, req.(*SetGlobalRecvMessageOptReq))
+		return srv.(IMUserServiceServer).SetGlobalRecvMessageOpt(ctx, req.(*SetGlobalRecvMessageOptReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetGlobalRecvMessageOpt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetGlobalRecvMessageOpt_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGlobalRecvMessageOptReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetGlobalRecvMessageOpt(ctx, in)
+		return srv.(IMUserServiceServer).GetGlobalRecvMessageOpt(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetGlobalRecvMessageOpt_FullMethodName,
+		FullMethod: IMUserService_GetGlobalRecvMessageOpt_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetGlobalRecvMessageOpt(ctx, req.(*GetGlobalRecvMessageOptReq))
+		return srv.(IMUserServiceServer).GetGlobalRecvMessageOpt(ctx, req.(*GetGlobalRecvMessageOptReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_AccountCheck_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_AccountCheck_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AccountCheckReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).AccountCheck(ctx, in)
+		return srv.(IMUserServiceServer).AccountCheck(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_AccountCheck_FullMethodName,
+		FullMethod: IMUserService_AccountCheck_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).AccountCheck(ctx, req.(*AccountCheckReq))
+		return srv.(IMUserServiceServer).AccountCheck(ctx, req.(*AccountCheckReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetPaginationUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetPaginationUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPaginationUsersReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetPaginationUsers(ctx, in)
+		return srv.(IMUserServiceServer).GetPaginationUsers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetPaginationUsers_FullMethodName,
+		FullMethod: IMUserService_GetPaginationUsers_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetPaginationUsers(ctx, req.(*GetPaginationUsersReq))
+		return srv.(IMUserServiceServer).GetPaginationUsers(ctx, req.(*GetPaginationUsersReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_UserRegister_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_UserRegister_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserRegisterReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).UserRegister(ctx, in)
+		return srv.(IMUserServiceServer).UserRegister(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_UserRegister_FullMethodName,
+		FullMethod: IMUserService_UserRegister_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).UserRegister(ctx, req.(*UserRegisterReq))
+		return srv.(IMUserServiceServer).UserRegister(ctx, req.(*UserRegisterReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetAllUserID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetAllUserID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetAllUserIDReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetAllUserID(ctx, in)
+		return srv.(IMUserServiceServer).GetAllUserID(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetAllUserID_FullMethodName,
+		FullMethod: IMUserService_GetAllUserID_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetAllUserID(ctx, req.(*GetAllUserIDReq))
+		return srv.(IMUserServiceServer).GetAllUserID(ctx, req.(*GetAllUserIDReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_UserRegisterCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_UserRegisterCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserRegisterCountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).UserRegisterCount(ctx, in)
+		return srv.(IMUserServiceServer).UserRegisterCount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_UserRegisterCount_FullMethodName,
+		FullMethod: IMUserService_UserRegisterCount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).UserRegisterCount(ctx, req.(*UserRegisterCountReq))
+		return srv.(IMUserServiceServer).UserRegisterCount(ctx, req.(*UserRegisterCountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SubscribeOrCancelUsersStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SubscribeOrCancelUsersStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SubscribeOrCancelUsersStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SubscribeOrCancelUsersStatus(ctx, in)
+		return srv.(IMUserServiceServer).SubscribeOrCancelUsersStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SubscribeOrCancelUsersStatus_FullMethodName,
+		FullMethod: IMUserService_SubscribeOrCancelUsersStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SubscribeOrCancelUsersStatus(ctx, req.(*SubscribeOrCancelUsersStatusReq))
+		return srv.(IMUserServiceServer).SubscribeOrCancelUsersStatus(ctx, req.(*SubscribeOrCancelUsersStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetSubscribeUsersStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetSubscribeUsersStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSubscribeUsersStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetSubscribeUsersStatus(ctx, in)
+		return srv.(IMUserServiceServer).GetSubscribeUsersStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetSubscribeUsersStatus_FullMethodName,
+		FullMethod: IMUserService_GetSubscribeUsersStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetSubscribeUsersStatus(ctx, req.(*GetSubscribeUsersStatusReq))
+		return srv.(IMUserServiceServer).GetSubscribeUsersStatus(ctx, req.(*GetSubscribeUsersStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetUserStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetUserStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetUserStatus(ctx, in)
+		return srv.(IMUserServiceServer).GetUserStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetUserStatus_FullMethodName,
+		FullMethod: IMUserService_GetUserStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetUserStatus(ctx, req.(*GetUserStatusReq))
+		return srv.(IMUserServiceServer).GetUserStatus(ctx, req.(*GetUserStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SetUserStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SetUserStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SetUserStatus(ctx, in)
+		return srv.(IMUserServiceServer).SetUserStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SetUserStatus_FullMethodName,
+		FullMethod: IMUserService_SetUserStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SetUserStatus(ctx, req.(*SetUserStatusReq))
+		return srv.(IMUserServiceServer).SetUserStatus(ctx, req.(*SetUserStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ProcessUserCommandAdd_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_ProcessUserCommandAdd_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessUserCommandAddReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ProcessUserCommandAdd(ctx, in)
+		return srv.(IMUserServiceServer).ProcessUserCommandAdd(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_ProcessUserCommandAdd_FullMethodName,
+		FullMethod: IMUserService_ProcessUserCommandAdd_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ProcessUserCommandAdd(ctx, req.(*ProcessUserCommandAddReq))
+		return srv.(IMUserServiceServer).ProcessUserCommandAdd(ctx, req.(*ProcessUserCommandAddReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ProcessUserCommandUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_ProcessUserCommandUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessUserCommandUpdateReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ProcessUserCommandUpdate(ctx, in)
+		return srv.(IMUserServiceServer).ProcessUserCommandUpdate(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_ProcessUserCommandUpdate_FullMethodName,
+		FullMethod: IMUserService_ProcessUserCommandUpdate_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ProcessUserCommandUpdate(ctx, req.(*ProcessUserCommandUpdateReq))
+		return srv.(IMUserServiceServer).ProcessUserCommandUpdate(ctx, req.(*ProcessUserCommandUpdateReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ProcessUserCommandDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_ProcessUserCommandDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessUserCommandDeleteReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ProcessUserCommandDelete(ctx, in)
+		return srv.(IMUserServiceServer).ProcessUserCommandDelete(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_ProcessUserCommandDelete_FullMethodName,
+		FullMethod: IMUserService_ProcessUserCommandDelete_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ProcessUserCommandDelete(ctx, req.(*ProcessUserCommandDeleteReq))
+		return srv.(IMUserServiceServer).ProcessUserCommandDelete(ctx, req.(*ProcessUserCommandDeleteReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ProcessUserCommandGet_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_ProcessUserCommandGet_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessUserCommandGetReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ProcessUserCommandGet(ctx, in)
+		return srv.(IMUserServiceServer).ProcessUserCommandGet(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_ProcessUserCommandGet_FullMethodName,
+		FullMethod: IMUserService_ProcessUserCommandGet_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ProcessUserCommandGet(ctx, req.(*ProcessUserCommandGetReq))
+		return srv.(IMUserServiceServer).ProcessUserCommandGet(ctx, req.(*ProcessUserCommandGetReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ProcessUserCommandGetAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_ProcessUserCommandGetAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessUserCommandGetAllReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ProcessUserCommandGetAll(ctx, in)
+		return srv.(IMUserServiceServer).ProcessUserCommandGetAll(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_ProcessUserCommandGetAll_FullMethodName,
+		FullMethod: IMUserService_ProcessUserCommandGetAll_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ProcessUserCommandGetAll(ctx, req.(*ProcessUserCommandGetAllReq))
+		return srv.(IMUserServiceServer).ProcessUserCommandGetAll(ctx, req.(*ProcessUserCommandGetAllReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_AddNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_AddNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AddNotificationAccountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).AddNotificationAccount(ctx, in)
+		return srv.(IMUserServiceServer).AddNotificationAccount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_AddNotificationAccount_FullMethodName,
+		FullMethod: IMUserService_AddNotificationAccount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).AddNotificationAccount(ctx, req.(*AddNotificationAccountReq))
+		return srv.(IMUserServiceServer).AddNotificationAccount(ctx, req.(*AddNotificationAccountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_UpdateNotificationAccountInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_UpdateNotificationAccountInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateNotificationAccountInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).UpdateNotificationAccountInfo(ctx, in)
+		return srv.(IMUserServiceServer).UpdateNotificationAccountInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_UpdateNotificationAccountInfo_FullMethodName,
+		FullMethod: IMUserService_UpdateNotificationAccountInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).UpdateNotificationAccountInfo(ctx, req.(*UpdateNotificationAccountInfoReq))
+		return srv.(IMUserServiceServer).UpdateNotificationAccountInfo(ctx, req.(*UpdateNotificationAccountInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SearchNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SearchNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SearchNotificationAccountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SearchNotificationAccount(ctx, in)
+		return srv.(IMUserServiceServer).SearchNotificationAccount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SearchNotificationAccount_FullMethodName,
+		FullMethod: IMUserService_SearchNotificationAccount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SearchNotificationAccount(ctx, req.(*SearchNotificationAccountReq))
+		return srv.(IMUserServiceServer).SearchNotificationAccount(ctx, req.(*SearchNotificationAccountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetNotificationAccount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetNotificationAccountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetNotificationAccount(ctx, in)
+		return srv.(IMUserServiceServer).GetNotificationAccount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetNotificationAccount_FullMethodName,
+		FullMethod: IMUserService_GetNotificationAccount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetNotificationAccount(ctx, req.(*GetNotificationAccountReq))
+		return srv.(IMUserServiceServer).GetNotificationAccount(ctx, req.(*GetNotificationAccountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SortQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SortQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SortQueryReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SortQuery(ctx, in)
+		return srv.(IMUserServiceServer).SortQuery(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SortQuery_FullMethodName,
+		FullMethod: IMUserService_SortQuery_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SortQuery(ctx, req.(*SortQueryReq))
+		return srv.(IMUserServiceServer).SortQuery(ctx, req.(*SortQueryReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SetUserOnlineStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SetUserOnlineStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserOnlineStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SetUserOnlineStatus(ctx, in)
+		return srv.(IMUserServiceServer).SetUserOnlineStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SetUserOnlineStatus_FullMethodName,
+		FullMethod: IMUserService_SetUserOnlineStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SetUserOnlineStatus(ctx, req.(*SetUserOnlineStatusReq))
+		return srv.(IMUserServiceServer).SetUserOnlineStatus(ctx, req.(*SetUserOnlineStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetAllOnlineUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetAllOnlineUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetAllOnlineUsersReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetAllOnlineUsers(ctx, in)
+		return srv.(IMUserServiceServer).GetAllOnlineUsers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetAllOnlineUsers_FullMethodName,
+		FullMethod: IMUserService_GetAllOnlineUsers_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetAllOnlineUsers(ctx, req.(*GetAllOnlineUsersReq))
+		return srv.(IMUserServiceServer).GetAllOnlineUsers(ctx, req.(*GetAllOnlineUsersReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserClientConfigReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetUserClientConfig(ctx, in)
+		return srv.(IMUserServiceServer).GetUserClientConfig(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetUserClientConfig_FullMethodName,
+		FullMethod: IMUserService_GetUserClientConfig_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetUserClientConfig(ctx, req.(*GetUserClientConfigReq))
+		return srv.(IMUserServiceServer).GetUserClientConfig(ctx, req.(*GetUserClientConfigReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_SetUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_SetUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserClientConfigReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SetUserClientConfig(ctx, in)
+		return srv.(IMUserServiceServer).SetUserClientConfig(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_SetUserClientConfig_FullMethodName,
+		FullMethod: IMUserService_SetUserClientConfig_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SetUserClientConfig(ctx, req.(*SetUserClientConfigReq))
+		return srv.(IMUserServiceServer).SetUserClientConfig(ctx, req.(*SetUserClientConfigReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_DelUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_DelUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DelUserClientConfigReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).DelUserClientConfig(ctx, in)
+		return srv.(IMUserServiceServer).DelUserClientConfig(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_DelUserClientConfig_FullMethodName,
+		FullMethod: IMUserService_DelUserClientConfig_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).DelUserClientConfig(ctx, req.(*DelUserClientConfigReq))
+		return srv.(IMUserServiceServer).DelUserClientConfig(ctx, req.(*DelUserClientConfigReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_PageUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_PageUserClientConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PageUserClientConfigReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).PageUserClientConfig(ctx, in)
+		return srv.(IMUserServiceServer).PageUserClientConfig(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_PageUserClientConfig_FullMethodName,
+		FullMethod: IMUserService_PageUserClientConfig_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).PageUserClientConfig(ctx, req.(*PageUserClientConfigReq))
+		return srv.(IMUserServiceServer).PageUserClientConfig(ctx, req.(*PageUserClientConfigReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_GetBotUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMUserService_GetBotUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetBotUserReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).GetBotUser(ctx, in)
+		return srv.(IMUserServiceServer).GetBotUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: User_GetBotUser_FullMethodName,
+		FullMethod: IMUserService_GetBotUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).GetBotUser(ctx, req.(*GetBotUserReq))
+		return srv.(IMUserServiceServer).GetBotUser(ctx, req.(*GetBotUserReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// User_ServiceDesc is the grpc.ServiceDesc for User service.
+// IMUserService_ServiceDesc is the grpc.ServiceDesc for IMUserService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var User_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.user.User",
-	HandlerType: (*UserServer)(nil),
+var IMUserService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.user.IMUserService",
+	HandlerType: (*IMUserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetDesignateUsers",
-			Handler:    _User_GetDesignateUsers_Handler,
+			Handler:    _IMUserService_GetDesignateUsers_Handler,
 		},
 		{
 			MethodName: "UpdateUserInfo",
-			Handler:    _User_UpdateUserInfo_Handler,
+			Handler:    _IMUserService_UpdateUserInfo_Handler,
 		},
 		{
 			MethodName: "UpdateUserInfoEx",
-			Handler:    _User_UpdateUserInfoEx_Handler,
+			Handler:    _IMUserService_UpdateUserInfoEx_Handler,
 		},
 		{
 			MethodName: "SetGlobalRecvMessageOpt",
-			Handler:    _User_SetGlobalRecvMessageOpt_Handler,
+			Handler:    _IMUserService_SetGlobalRecvMessageOpt_Handler,
 		},
 		{
 			MethodName: "GetGlobalRecvMessageOpt",
-			Handler:    _User_GetGlobalRecvMessageOpt_Handler,
+			Handler:    _IMUserService_GetGlobalRecvMessageOpt_Handler,
 		},
 		{
 			MethodName: "AccountCheck",
-			Handler:    _User_AccountCheck_Handler,
+			Handler:    _IMUserService_AccountCheck_Handler,
 		},
 		{
 			MethodName: "GetPaginationUsers",
-			Handler:    _User_GetPaginationUsers_Handler,
+			Handler:    _IMUserService_GetPaginationUsers_Handler,
 		},
 		{
 			MethodName: "UserRegister",
-			Handler:    _User_UserRegister_Handler,
+			Handler:    _IMUserService_UserRegister_Handler,
 		},
 		{
 			MethodName: "GetAllUserID",
-			Handler:    _User_GetAllUserID_Handler,
+			Handler:    _IMUserService_GetAllUserID_Handler,
 		},
 		{
 			MethodName: "UserRegisterCount",
-			Handler:    _User_UserRegisterCount_Handler,
+			Handler:    _IMUserService_UserRegisterCount_Handler,
 		},
 		{
 			MethodName: "SubscribeOrCancelUsersStatus",
-			Handler:    _User_SubscribeOrCancelUsersStatus_Handler,
+			Handler:    _IMUserService_SubscribeOrCancelUsersStatus_Handler,
 		},
 		{
 			MethodName: "GetSubscribeUsersStatus",
-			Handler:    _User_GetSubscribeUsersStatus_Handler,
+			Handler:    _IMUserService_GetSubscribeUsersStatus_Handler,
 		},
 		{
 			MethodName: "GetUserStatus",
-			Handler:    _User_GetUserStatus_Handler,
+			Handler:    _IMUserService_GetUserStatus_Handler,
 		},
 		{
 			MethodName: "SetUserStatus",
-			Handler:    _User_SetUserStatus_Handler,
+			Handler:    _IMUserService_SetUserStatus_Handler,
 		},
 		{
 			MethodName: "ProcessUserCommandAdd",
-			Handler:    _User_ProcessUserCommandAdd_Handler,
+			Handler:    _IMUserService_ProcessUserCommandAdd_Handler,
 		},
 		{
 			MethodName: "ProcessUserCommandUpdate",
-			Handler:    _User_ProcessUserCommandUpdate_Handler,
+			Handler:    _IMUserService_ProcessUserCommandUpdate_Handler,
 		},
 		{
 			MethodName: "ProcessUserCommandDelete",
-			Handler:    _User_ProcessUserCommandDelete_Handler,
+			Handler:    _IMUserService_ProcessUserCommandDelete_Handler,
 		},
 		{
 			MethodName: "ProcessUserCommandGet",
-			Handler:    _User_ProcessUserCommandGet_Handler,
+			Handler:    _IMUserService_ProcessUserCommandGet_Handler,
 		},
 		{
 			MethodName: "ProcessUserCommandGetAll",
-			Handler:    _User_ProcessUserCommandGetAll_Handler,
+			Handler:    _IMUserService_ProcessUserCommandGetAll_Handler,
 		},
 		{
 			MethodName: "AddNotificationAccount",
-			Handler:    _User_AddNotificationAccount_Handler,
+			Handler:    _IMUserService_AddNotificationAccount_Handler,
 		},
 		{
 			MethodName: "UpdateNotificationAccountInfo",
-			Handler:    _User_UpdateNotificationAccountInfo_Handler,
+			Handler:    _IMUserService_UpdateNotificationAccountInfo_Handler,
 		},
 		{
 			MethodName: "SearchNotificationAccount",
-			Handler:    _User_SearchNotificationAccount_Handler,
+			Handler:    _IMUserService_SearchNotificationAccount_Handler,
 		},
 		{
 			MethodName: "GetNotificationAccount",
-			Handler:    _User_GetNotificationAccount_Handler,
+			Handler:    _IMUserService_GetNotificationAccount_Handler,
 		},
 		{
 			MethodName: "SortQuery",
-			Handler:    _User_SortQuery_Handler,
+			Handler:    _IMUserService_SortQuery_Handler,
 		},
 		{
 			MethodName: "SetUserOnlineStatus",
-			Handler:    _User_SetUserOnlineStatus_Handler,
+			Handler:    _IMUserService_SetUserOnlineStatus_Handler,
 		},
 		{
 			MethodName: "GetAllOnlineUsers",
-			Handler:    _User_GetAllOnlineUsers_Handler,
+			Handler:    _IMUserService_GetAllOnlineUsers_Handler,
 		},
 		{
 			MethodName: "GetUserClientConfig",
-			Handler:    _User_GetUserClientConfig_Handler,
+			Handler:    _IMUserService_GetUserClientConfig_Handler,
 		},
 		{
 			MethodName: "SetUserClientConfig",
-			Handler:    _User_SetUserClientConfig_Handler,
+			Handler:    _IMUserService_SetUserClientConfig_Handler,
 		},
 		{
 			MethodName: "DelUserClientConfig",
-			Handler:    _User_DelUserClientConfig_Handler,
+			Handler:    _IMUserService_DelUserClientConfig_Handler,
 		},
 		{
 			MethodName: "PageUserClientConfig",
-			Handler:    _User_PageUserClientConfig_Handler,
+			Handler:    _IMUserService_PageUserClientConfig_Handler,
 		},
 		{
 			MethodName: "GetBotUser",
-			Handler:    _User_GetBotUser_Handler,
+			Handler:    _IMUserService_GetBotUser_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

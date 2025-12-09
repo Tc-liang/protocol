@@ -349,7 +349,7 @@ message GetBotUserResp {
   repeated string userIDs = 1;
 }
 
-service User {
+service IMUserService {
   rpc GetDesignateUsers(GetDesignateUsersReq) returns (GetDesignateUsersResp);
   rpc UpdateUserInfo(UpdateUserInfoReq) returns (UpdateUserInfoResp);
   rpc UpdateUserInfoEx(UpdateUserInfoExReq) returns (UpdateUserInfoExResp);

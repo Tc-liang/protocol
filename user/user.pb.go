@@ -4372,8 +4372,8 @@ const file_user_user_proto_rawDesc = "" +
 	"\rGetBotUserReq\x12\x18\n" +
 	"\auserIDs\x18\x01 \x03(\tR\auserIDs\"*\n" +
 	"\x0eGetBotUserResp\x12\x18\n" +
-	"\auserIDs\x18\x01 \x03(\tR\auserIDs2\xd8\x17\n" +
-	"\x04User\x12Z\n" +
+	"\auserIDs\x18\x01 \x03(\tR\auserIDs2\xe1\x17\n" +
+	"\rIMUserService\x12Z\n" +
 	"\x11GetDesignateUsers\x12!.openim.user.GetDesignateUsersReq\x1a\".openim.user.GetDesignateUsersResp\x12Q\n" +
 	"\x0eUpdateUserInfo\x12\x1e.openim.user.UpdateUserInfoReq\x1a\x1f.openim.user.UpdateUserInfoResp\x12W\n" +
 	"\x10UpdateUserInfoEx\x12 .openim.user.UpdateUserInfoExReq\x1a!.openim.user.UpdateUserInfoExResp\x12l\n" +
@@ -4548,68 +4548,68 @@ var file_user_user_proto_depIdxs = []int32{
 	84, // 31: openim.user.SetUserClientConfigReq.configs:type_name -> openim.user.SetUserClientConfigReq.ConfigsEntry
 	85, // 32: openim.user.PageUserClientConfigReq.pagination:type_name -> openim.sdkws.RequestPagination
 	77, // 33: openim.user.PageUserClientConfigResp.configs:type_name -> openim.user.ClientConfig
-	4,  // 34: openim.user.User.GetDesignateUsers:input_type -> openim.user.GetDesignateUsersReq
-	6,  // 35: openim.user.User.UpdateUserInfo:input_type -> openim.user.UpdateUserInfoReq
-	8,  // 36: openim.user.User.UpdateUserInfoEx:input_type -> openim.user.UpdateUserInfoExReq
-	10, // 37: openim.user.User.SetGlobalRecvMessageOpt:input_type -> openim.user.SetGlobalRecvMessageOptReq
-	28, // 38: openim.user.User.GetGlobalRecvMessageOpt:input_type -> openim.user.GetGlobalRecvMessageOptReq
-	2,  // 39: openim.user.User.AccountCheck:input_type -> openim.user.AccountCheckReq
-	24, // 40: openim.user.User.GetPaginationUsers:input_type -> openim.user.GetPaginationUsersReq
-	26, // 41: openim.user.User.UserRegister:input_type -> openim.user.UserRegisterReq
-	0,  // 42: openim.user.User.GetAllUserID:input_type -> openim.user.GetAllUserIDReq
-	30, // 43: openim.user.User.UserRegisterCount:input_type -> openim.user.UserRegisterCountReq
-	32, // 44: openim.user.User.SubscribeOrCancelUsersStatus:input_type -> openim.user.SubscribeOrCancelUsersStatusReq
-	34, // 45: openim.user.User.GetSubscribeUsersStatus:input_type -> openim.user.GetSubscribeUsersStatusReq
-	37, // 46: openim.user.User.GetUserStatus:input_type -> openim.user.GetUserStatusReq
-	39, // 47: openim.user.User.SetUserStatus:input_type -> openim.user.SetUserStatusReq
-	44, // 48: openim.user.User.ProcessUserCommandAdd:input_type -> openim.user.ProcessUserCommandAddReq
-	48, // 49: openim.user.User.ProcessUserCommandUpdate:input_type -> openim.user.ProcessUserCommandUpdateReq
-	46, // 50: openim.user.User.ProcessUserCommandDelete:input_type -> openim.user.ProcessUserCommandDeleteReq
-	50, // 51: openim.user.User.ProcessUserCommandGet:input_type -> openim.user.ProcessUserCommandGetReq
-	53, // 52: openim.user.User.ProcessUserCommandGetAll:input_type -> openim.user.ProcessUserCommandGetAllReq
-	56, // 53: openim.user.User.AddNotificationAccount:input_type -> openim.user.AddNotificationAccountReq
-	58, // 54: openim.user.User.UpdateNotificationAccountInfo:input_type -> openim.user.UpdateNotificationAccountInfoReq
-	60, // 55: openim.user.User.SearchNotificationAccount:input_type -> openim.user.SearchNotificationAccountReq
-	63, // 56: openim.user.User.GetNotificationAccount:input_type -> openim.user.GetNotificationAccountReq
-	65, // 57: openim.user.User.SortQuery:input_type -> openim.user.SortQueryReq
-	42, // 58: openim.user.User.SetUserOnlineStatus:input_type -> openim.user.SetUserOnlineStatusReq
-	67, // 59: openim.user.User.GetAllOnlineUsers:input_type -> openim.user.GetAllOnlineUsersReq
-	69, // 60: openim.user.User.GetUserClientConfig:input_type -> openim.user.GetUserClientConfigReq
-	71, // 61: openim.user.User.SetUserClientConfig:input_type -> openim.user.SetUserClientConfigReq
-	73, // 62: openim.user.User.DelUserClientConfig:input_type -> openim.user.DelUserClientConfigReq
-	75, // 63: openim.user.User.PageUserClientConfig:input_type -> openim.user.PageUserClientConfigReq
-	78, // 64: openim.user.User.GetBotUser:input_type -> openim.user.GetBotUserReq
-	5,  // 65: openim.user.User.GetDesignateUsers:output_type -> openim.user.GetDesignateUsersResp
-	7,  // 66: openim.user.User.UpdateUserInfo:output_type -> openim.user.UpdateUserInfoResp
-	9,  // 67: openim.user.User.UpdateUserInfoEx:output_type -> openim.user.UpdateUserInfoExResp
-	11, // 68: openim.user.User.SetGlobalRecvMessageOpt:output_type -> openim.user.SetGlobalRecvMessageOptResp
-	29, // 69: openim.user.User.GetGlobalRecvMessageOpt:output_type -> openim.user.GetGlobalRecvMessageOptResp
-	3,  // 70: openim.user.User.AccountCheck:output_type -> openim.user.AccountCheckResp
-	25, // 71: openim.user.User.GetPaginationUsers:output_type -> openim.user.GetPaginationUsersResp
-	27, // 72: openim.user.User.UserRegister:output_type -> openim.user.UserRegisterResp
-	1,  // 73: openim.user.User.GetAllUserID:output_type -> openim.user.GetAllUserIDResp
-	31, // 74: openim.user.User.UserRegisterCount:output_type -> openim.user.UserRegisterCountResp
-	33, // 75: openim.user.User.SubscribeOrCancelUsersStatus:output_type -> openim.user.SubscribeOrCancelUsersStatusResp
-	35, // 76: openim.user.User.GetSubscribeUsersStatus:output_type -> openim.user.GetSubscribeUsersStatusResp
-	38, // 77: openim.user.User.GetUserStatus:output_type -> openim.user.GetUserStatusResp
-	40, // 78: openim.user.User.SetUserStatus:output_type -> openim.user.SetUserStatusResp
-	45, // 79: openim.user.User.ProcessUserCommandAdd:output_type -> openim.user.ProcessUserCommandAddResp
-	49, // 80: openim.user.User.ProcessUserCommandUpdate:output_type -> openim.user.ProcessUserCommandUpdateResp
-	47, // 81: openim.user.User.ProcessUserCommandDelete:output_type -> openim.user.ProcessUserCommandDeleteResp
-	52, // 82: openim.user.User.ProcessUserCommandGet:output_type -> openim.user.ProcessUserCommandGetResp
-	55, // 83: openim.user.User.ProcessUserCommandGetAll:output_type -> openim.user.ProcessUserCommandGetAllResp
-	57, // 84: openim.user.User.AddNotificationAccount:output_type -> openim.user.AddNotificationAccountResp
-	59, // 85: openim.user.User.UpdateNotificationAccountInfo:output_type -> openim.user.UpdateNotificationAccountInfoResp
-	62, // 86: openim.user.User.SearchNotificationAccount:output_type -> openim.user.SearchNotificationAccountResp
-	64, // 87: openim.user.User.GetNotificationAccount:output_type -> openim.user.GetNotificationAccountResp
-	66, // 88: openim.user.User.SortQuery:output_type -> openim.user.SortQueryResp
-	43, // 89: openim.user.User.SetUserOnlineStatus:output_type -> openim.user.SetUserOnlineStatusResp
-	68, // 90: openim.user.User.GetAllOnlineUsers:output_type -> openim.user.GetAllOnlineUsersResp
-	70, // 91: openim.user.User.GetUserClientConfig:output_type -> openim.user.GetUserClientConfigResp
-	72, // 92: openim.user.User.SetUserClientConfig:output_type -> openim.user.SetUserClientConfigResp
-	74, // 93: openim.user.User.DelUserClientConfig:output_type -> openim.user.DelUserClientConfigResp
-	76, // 94: openim.user.User.PageUserClientConfig:output_type -> openim.user.PageUserClientConfigResp
-	79, // 95: openim.user.User.GetBotUser:output_type -> openim.user.GetBotUserResp
+	4,  // 34: openim.user.IMUserService.GetDesignateUsers:input_type -> openim.user.GetDesignateUsersReq
+	6,  // 35: openim.user.IMUserService.UpdateUserInfo:input_type -> openim.user.UpdateUserInfoReq
+	8,  // 36: openim.user.IMUserService.UpdateUserInfoEx:input_type -> openim.user.UpdateUserInfoExReq
+	10, // 37: openim.user.IMUserService.SetGlobalRecvMessageOpt:input_type -> openim.user.SetGlobalRecvMessageOptReq
+	28, // 38: openim.user.IMUserService.GetGlobalRecvMessageOpt:input_type -> openim.user.GetGlobalRecvMessageOptReq
+	2,  // 39: openim.user.IMUserService.AccountCheck:input_type -> openim.user.AccountCheckReq
+	24, // 40: openim.user.IMUserService.GetPaginationUsers:input_type -> openim.user.GetPaginationUsersReq
+	26, // 41: openim.user.IMUserService.UserRegister:input_type -> openim.user.UserRegisterReq
+	0,  // 42: openim.user.IMUserService.GetAllUserID:input_type -> openim.user.GetAllUserIDReq
+	30, // 43: openim.user.IMUserService.UserRegisterCount:input_type -> openim.user.UserRegisterCountReq
+	32, // 44: openim.user.IMUserService.SubscribeOrCancelUsersStatus:input_type -> openim.user.SubscribeOrCancelUsersStatusReq
+	34, // 45: openim.user.IMUserService.GetSubscribeUsersStatus:input_type -> openim.user.GetSubscribeUsersStatusReq
+	37, // 46: openim.user.IMUserService.GetUserStatus:input_type -> openim.user.GetUserStatusReq
+	39, // 47: openim.user.IMUserService.SetUserStatus:input_type -> openim.user.SetUserStatusReq
+	44, // 48: openim.user.IMUserService.ProcessUserCommandAdd:input_type -> openim.user.ProcessUserCommandAddReq
+	48, // 49: openim.user.IMUserService.ProcessUserCommandUpdate:input_type -> openim.user.ProcessUserCommandUpdateReq
+	46, // 50: openim.user.IMUserService.ProcessUserCommandDelete:input_type -> openim.user.ProcessUserCommandDeleteReq
+	50, // 51: openim.user.IMUserService.ProcessUserCommandGet:input_type -> openim.user.ProcessUserCommandGetReq
+	53, // 52: openim.user.IMUserService.ProcessUserCommandGetAll:input_type -> openim.user.ProcessUserCommandGetAllReq
+	56, // 53: openim.user.IMUserService.AddNotificationAccount:input_type -> openim.user.AddNotificationAccountReq
+	58, // 54: openim.user.IMUserService.UpdateNotificationAccountInfo:input_type -> openim.user.UpdateNotificationAccountInfoReq
+	60, // 55: openim.user.IMUserService.SearchNotificationAccount:input_type -> openim.user.SearchNotificationAccountReq
+	63, // 56: openim.user.IMUserService.GetNotificationAccount:input_type -> openim.user.GetNotificationAccountReq
+	65, // 57: openim.user.IMUserService.SortQuery:input_type -> openim.user.SortQueryReq
+	42, // 58: openim.user.IMUserService.SetUserOnlineStatus:input_type -> openim.user.SetUserOnlineStatusReq
+	67, // 59: openim.user.IMUserService.GetAllOnlineUsers:input_type -> openim.user.GetAllOnlineUsersReq
+	69, // 60: openim.user.IMUserService.GetUserClientConfig:input_type -> openim.user.GetUserClientConfigReq
+	71, // 61: openim.user.IMUserService.SetUserClientConfig:input_type -> openim.user.SetUserClientConfigReq
+	73, // 62: openim.user.IMUserService.DelUserClientConfig:input_type -> openim.user.DelUserClientConfigReq
+	75, // 63: openim.user.IMUserService.PageUserClientConfig:input_type -> openim.user.PageUserClientConfigReq
+	78, // 64: openim.user.IMUserService.GetBotUser:input_type -> openim.user.GetBotUserReq
+	5,  // 65: openim.user.IMUserService.GetDesignateUsers:output_type -> openim.user.GetDesignateUsersResp
+	7,  // 66: openim.user.IMUserService.UpdateUserInfo:output_type -> openim.user.UpdateUserInfoResp
+	9,  // 67: openim.user.IMUserService.UpdateUserInfoEx:output_type -> openim.user.UpdateUserInfoExResp
+	11, // 68: openim.user.IMUserService.SetGlobalRecvMessageOpt:output_type -> openim.user.SetGlobalRecvMessageOptResp
+	29, // 69: openim.user.IMUserService.GetGlobalRecvMessageOpt:output_type -> openim.user.GetGlobalRecvMessageOptResp
+	3,  // 70: openim.user.IMUserService.AccountCheck:output_type -> openim.user.AccountCheckResp
+	25, // 71: openim.user.IMUserService.GetPaginationUsers:output_type -> openim.user.GetPaginationUsersResp
+	27, // 72: openim.user.IMUserService.UserRegister:output_type -> openim.user.UserRegisterResp
+	1,  // 73: openim.user.IMUserService.GetAllUserID:output_type -> openim.user.GetAllUserIDResp
+	31, // 74: openim.user.IMUserService.UserRegisterCount:output_type -> openim.user.UserRegisterCountResp
+	33, // 75: openim.user.IMUserService.SubscribeOrCancelUsersStatus:output_type -> openim.user.SubscribeOrCancelUsersStatusResp
+	35, // 76: openim.user.IMUserService.GetSubscribeUsersStatus:output_type -> openim.user.GetSubscribeUsersStatusResp
+	38, // 77: openim.user.IMUserService.GetUserStatus:output_type -> openim.user.GetUserStatusResp
+	40, // 78: openim.user.IMUserService.SetUserStatus:output_type -> openim.user.SetUserStatusResp
+	45, // 79: openim.user.IMUserService.ProcessUserCommandAdd:output_type -> openim.user.ProcessUserCommandAddResp
+	49, // 80: openim.user.IMUserService.ProcessUserCommandUpdate:output_type -> openim.user.ProcessUserCommandUpdateResp
+	47, // 81: openim.user.IMUserService.ProcessUserCommandDelete:output_type -> openim.user.ProcessUserCommandDeleteResp
+	52, // 82: openim.user.IMUserService.ProcessUserCommandGet:output_type -> openim.user.ProcessUserCommandGetResp
+	55, // 83: openim.user.IMUserService.ProcessUserCommandGetAll:output_type -> openim.user.ProcessUserCommandGetAllResp
+	57, // 84: openim.user.IMUserService.AddNotificationAccount:output_type -> openim.user.AddNotificationAccountResp
+	59, // 85: openim.user.IMUserService.UpdateNotificationAccountInfo:output_type -> openim.user.UpdateNotificationAccountInfoResp
+	62, // 86: openim.user.IMUserService.SearchNotificationAccount:output_type -> openim.user.SearchNotificationAccountResp
+	64, // 87: openim.user.IMUserService.GetNotificationAccount:output_type -> openim.user.GetNotificationAccountResp
+	66, // 88: openim.user.IMUserService.SortQuery:output_type -> openim.user.SortQueryResp
+	43, // 89: openim.user.IMUserService.SetUserOnlineStatus:output_type -> openim.user.SetUserOnlineStatusResp
+	68, // 90: openim.user.IMUserService.GetAllOnlineUsers:output_type -> openim.user.GetAllOnlineUsersResp
+	70, // 91: openim.user.IMUserService.GetUserClientConfig:output_type -> openim.user.GetUserClientConfigResp
+	72, // 92: openim.user.IMUserService.SetUserClientConfig:output_type -> openim.user.SetUserClientConfigResp
+	74, // 93: openim.user.IMUserService.DelUserClientConfig:output_type -> openim.user.DelUserClientConfigResp
+	76, // 94: openim.user.IMUserService.PageUserClientConfig:output_type -> openim.user.PageUserClientConfigResp
+	79, // 95: openim.user.IMUserService.GetBotUser:output_type -> openim.user.GetBotUserResp
 	65, // [65:96] is the sub-list for method output_type
 	34, // [34:65] is the sub-list for method input_type
 	34, // [34:34] is the sub-list for extension type_name
