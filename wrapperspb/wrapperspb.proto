@@ -18,6 +18,8 @@ package openim.protobuf;
 
 option go_package = "github.com/openimsdk/protocol/wrapperspb";
 
+option java_multiple_files = true;
+option java_package = "city.cn.im.proto.wrapper";
 // Wrapper message for `double`.
 //
 // The JSON representation for `DoubleValue` is JSON number.

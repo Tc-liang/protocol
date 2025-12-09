@@ -994,7 +994,8 @@ const file_msggateway_msggateway_proto_rawDesc = "" +
 	"\x15OnlineBatchPushOneMsg\x12+.openim.msggateway.OnlineBatchPushOneMsgReq\x1a,.openim.msggateway.OnlineBatchPushOneMsgResp\x12|\n" +
 	"\x1fSuperGroupOnlineBatchPushOneMsg\x12+.openim.msggateway.OnlineBatchPushOneMsgReq\x1a,.openim.msggateway.OnlineBatchPushOneMsgResp\x12`\n" +
 	"\x0fKickUserOffline\x12%.openim.msggateway.KickUserOfflineReq\x1a&.openim.msggateway.KickUserOfflineResp\x12x\n" +
-	"\x17MultiTerminalLoginCheck\x12-.openim.msggateway.MultiTerminalLoginCheckReq\x1a..openim.msggateway.MultiTerminalLoginCheckRespB*Z(github.com/openimsdk/protocol/msggatewayb\x06proto3"
+	"\x17MultiTerminalLoginCheck\x12-.openim.msggateway.MultiTerminalLoginCheckReq\x1a..openim.msggateway.MultiTerminalLoginCheckRespBh\n" +
+	"\x1bcity.cn.im.proto.msggatewayB\x1dIMMsgGatewayServiceOuterClassP\x01Z(github.com/openimsdk/protocol/msggatewayb\x06proto3"
 
 var (
 	file_msggateway_msggateway_proto_rawDescOnce sync.Once

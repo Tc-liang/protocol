@@ -19,6 +19,8 @@ import "wrapperspb/wrapperspb.proto";
 
 option go_package = "github.com/openimsdk/protocol/sdkws";
 
+option java_multiple_files = true;
+option java_package = "city.cn.im.proto.sdk";
 ////////////////////////////////base///////////////////////////////
 
 message GroupInfo {

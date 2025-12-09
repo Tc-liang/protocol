@@ -19,6 +19,11 @@ import "sdkws/sdkws.proto";
 
 option go_package = "github.com/openimsdk/protocol/push";
 
+option java_multiple_files = true;
+option java_package = "city.cn.im.proto.push";
+option java_outer_classname = "IMPushMsgServiceOuterClass";
+
+
 message PushMsgReq {
   sdkws.MsgData msgData = 1;
   string conversationID = 2;

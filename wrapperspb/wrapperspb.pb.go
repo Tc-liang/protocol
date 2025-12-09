@@ -493,7 +493,8 @@ const file_wrapperspb_wrapperspb_proto_rawDesc = "" +
 	"\x05value\x18\x01 \x01(\tR\x05value\"\"\n" +
 	"\n" +
 	"BytesValue\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\fR\x05valueB*Z(github.com/openimsdk/protocol/wrapperspbb\x06proto3"
+	"\x05value\x18\x01 \x01(\fR\x05valueBF\n" +
+	"\x18city.cn.im.proto.wrapperP\x01Z(github.com/openimsdk/protocol/wrapperspbb\x06proto3"
 
 var (
 	file_wrapperspb_wrapperspb_proto_rawDescOnce sync.Once

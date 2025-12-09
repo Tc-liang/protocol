@@ -5240,7 +5240,8 @@ const file_msg_msg_proto_rawDesc = "" +
 	"\bAddEmoji\x12\x17.openim.msg.AddEmojiReq\x1a\x18.openim.msg.AddEmojiResp\x12F\n" +
 	"\vRevokeEmoji\x12\x1a.openim.msg.RevokeEmojiReq\x1a\x1b.openim.msg.RevokeEmojiResp\x12j\n" +
 	"\x17BotReadMsgsNotification\x12&.openim.msg.BotReadMsgsNotificationReq\x1a'.openim.msg.BotReadMsgsNotificationResp\x12d\n" +
-	"\x17AIStreamMsgNotification\x12#.openim.msg.AIStreamNotificationReq\x1a$.openim.msg.AIStreamNotificationRespB#Z!github.com/openimsdk/protocol/msgb\x06proto3"
+	"\x17AIStreamMsgNotification\x12#.openim.msg.AIStreamNotificationReq\x1a$.openim.msg.AIStreamNotificationRespBS\n" +
+	"\x14city.cn.im.proto.msgB\x16IMMsgServiceOuterClassP\x01Z!github.com/openimsdk/protocol/msgb\x06proto3"
 
 var (
 	file_msg_msg_proto_rawDescOnce sync.Once

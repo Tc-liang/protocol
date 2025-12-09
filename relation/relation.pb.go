@@ -3410,8 +3410,8 @@ const file_relation_relation_proto_rawDesc = "" +
 	"\vownerUserID\x18\x01 \x01(\tR\vownerUserID\x12$\n" +
 	"\rfriendUserIDs\x18\x02 \x03(\tR\rfriendUserIDs\"V\n" +
 	"\x11GetFriendInfoResp\x12A\n" +
-	"\vfriendInfos\x18\x01 \x03(\v2\x1f.openim.relation.FriendInfoOnlyR\vfriendInfos2\x92\x16\n" +
-	"\rFriendService\x12_\n" +
+	"\vfriendInfos\x18\x01 \x03(\v2\x1f.openim.relation.FriendInfoOnlyR\vfriendInfos2\x94\x16\n" +
+	"\x0fIMFriendService\x12_\n" +
 	"\x10ApplyToAddFriend\x12$.openim.relation.ApplyToAddFriendReq\x1a%.openim.relation.ApplyToAddFriendResp\x12\x80\x01\n" +
 	"\x1bGetPaginationFriendsApplyTo\x12/.openim.relation.GetPaginationFriendsApplyToReq\x1a0.openim.relation.GetPaginationFriendsApplyToResp\x12\x86\x01\n" +
 	"\x1dGetPaginationFriendsApplyFrom\x121.openim.relation.GetPaginationFriendsApplyFromReq\x1a2.openim.relation.GetPaginationFriendsApplyFromResp\x12}\n" +
@@ -3438,7 +3438,8 @@ const file_relation_relation_proto_rawDesc = "" +
 	"\x14GetIncrementalBlacks\x12(.openim.relation.GetIncrementalBlacksReq\x1a).openim.relation.GetIncrementalBlacksResp\x12k\n" +
 	"\x14GetFullFriendUserIDs\x12(.openim.relation.GetFullFriendUserIDsReq\x1a).openim.relation.GetFullFriendUserIDsResp\x12}\n" +
 	"\x1aNotificationUserInfoUpdate\x12..openim.relation.NotificationUserInfoUpdateReq\x1a/.openim.relation.NotificationUserInfoUpdateResp\x12V\n" +
-	"\rGetFriendInfo\x12!.openim.relation.GetFriendInfoReq\x1a\".openim.relation.GetFriendInfoRespB(Z&github.com/openimsdk/protocol/relationb\x06proto3"
+	"\rGetFriendInfo\x12!.openim.relation.GetFriendInfoReq\x1a\".openim.relation.GetFriendInfoRespB^\n" +
+	"\x17city.cn.im.proto.friendB\x19IMFriendServiceOuterClassP\x01Z&github.com/openimsdk/protocol/relationb\x06proto3"
 
 var (
 	file_relation_relation_proto_rawDescOnce sync.Once
@@ -3547,60 +3548,60 @@ var file_relation_relation_proto_depIdxs = []int32{
 	63, // 24: openim.relation.NotificationUserInfoUpdateReq.oldUserInfo:type_name -> openim.sdkws.UserInfo
 	63, // 25: openim.relation.NotificationUserInfoUpdateReq.newUserInfo:type_name -> openim.sdkws.UserInfo
 	54, // 26: openim.relation.GetFriendInfoResp.friendInfos:type_name -> openim.relation.FriendInfoOnly
-	2,  // 27: openim.relation.FriendService.ApplyToAddFriend:input_type -> openim.relation.ApplyToAddFriendReq
-	7,  // 28: openim.relation.FriendService.GetPaginationFriendsApplyTo:input_type -> openim.relation.GetPaginationFriendsApplyToReq
-	37, // 29: openim.relation.FriendService.GetPaginationFriendsApplyFrom:input_type -> openim.relation.GetPaginationFriendsApplyFromReq
-	11, // 30: openim.relation.FriendService.GetSelfUnhandledApplyCount:input_type -> openim.relation.GetSelfUnhandledApplyCountReq
-	9,  // 31: openim.relation.FriendService.GetDesignatedFriendsApply:input_type -> openim.relation.GetDesignatedFriendsApplyReq
-	13, // 32: openim.relation.FriendService.GetIncrementalFriendsApplyTo:input_type -> openim.relation.GetIncrementalFriendsApplyToReq
-	15, // 33: openim.relation.FriendService.GetIncrementalFriendsApplyFrom:input_type -> openim.relation.GetIncrementalFriendsApplyFromReq
-	19, // 34: openim.relation.FriendService.AddBlack:input_type -> openim.relation.AddBlackReq
-	21, // 35: openim.relation.FriendService.RemoveBlack:input_type -> openim.relation.RemoveBlackReq
-	25, // 36: openim.relation.FriendService.IsFriend:input_type -> openim.relation.IsFriendReq
-	27, // 37: openim.relation.FriendService.IsBlack:input_type -> openim.relation.IsBlackReq
-	23, // 38: openim.relation.FriendService.GetPaginationBlacks:input_type -> openim.relation.GetPaginationBlacksReq
-	48, // 39: openim.relation.FriendService.GetSpecifiedBlacks:input_type -> openim.relation.GetSpecifiedBlacksReq
-	29, // 40: openim.relation.FriendService.DeleteFriend:input_type -> openim.relation.DeleteFriendReq
-	31, // 41: openim.relation.FriendService.RespondFriendApply:input_type -> openim.relation.RespondFriendApplyReq
-	33, // 42: openim.relation.FriendService.UpdateFriends:input_type -> openim.relation.UpdateFriendsReq
-	35, // 43: openim.relation.FriendService.SetFriendRemark:input_type -> openim.relation.SetFriendRemarkReq
-	5,  // 44: openim.relation.FriendService.ImportFriends:input_type -> openim.relation.ImportFriendReq
-	17, // 45: openim.relation.FriendService.GetDesignatedFriends:input_type -> openim.relation.GetDesignatedFriendsReq
-	0,  // 46: openim.relation.FriendService.GetPaginationFriends:input_type -> openim.relation.GetPaginationFriendsReq
-	39, // 47: openim.relation.FriendService.GetFriendIDs:input_type -> openim.relation.GetFriendIDsReq
-	41, // 48: openim.relation.FriendService.GetSpecifiedFriendsInfo:input_type -> openim.relation.GetSpecifiedFriendsInfoReq
-	44, // 49: openim.relation.FriendService.GetIncrementalFriends:input_type -> openim.relation.GetIncrementalFriendsReq
-	46, // 50: openim.relation.FriendService.GetIncrementalBlacks:input_type -> openim.relation.GetIncrementalBlacksReq
-	50, // 51: openim.relation.FriendService.GetFullFriendUserIDs:input_type -> openim.relation.GetFullFriendUserIDsReq
-	52, // 52: openim.relation.FriendService.NotificationUserInfoUpdate:input_type -> openim.relation.NotificationUserInfoUpdateReq
-	55, // 53: openim.relation.FriendService.GetFriendInfo:input_type -> openim.relation.GetFriendInfoReq
-	3,  // 54: openim.relation.FriendService.ApplyToAddFriend:output_type -> openim.relation.ApplyToAddFriendResp
-	8,  // 55: openim.relation.FriendService.GetPaginationFriendsApplyTo:output_type -> openim.relation.GetPaginationFriendsApplyToResp
-	38, // 56: openim.relation.FriendService.GetPaginationFriendsApplyFrom:output_type -> openim.relation.GetPaginationFriendsApplyFromResp
-	12, // 57: openim.relation.FriendService.GetSelfUnhandledApplyCount:output_type -> openim.relation.GetSelfUnhandledApplyCountResp
-	10, // 58: openim.relation.FriendService.GetDesignatedFriendsApply:output_type -> openim.relation.GetDesignatedFriendsApplyResp
-	14, // 59: openim.relation.FriendService.GetIncrementalFriendsApplyTo:output_type -> openim.relation.GetIncrementalFriendsApplyToResp
-	16, // 60: openim.relation.FriendService.GetIncrementalFriendsApplyFrom:output_type -> openim.relation.GetIncrementalFriendsApplyFromResp
-	20, // 61: openim.relation.FriendService.AddBlack:output_type -> openim.relation.AddBlackResp
-	22, // 62: openim.relation.FriendService.RemoveBlack:output_type -> openim.relation.RemoveBlackResp
-	26, // 63: openim.relation.FriendService.IsFriend:output_type -> openim.relation.IsFriendResp
-	28, // 64: openim.relation.FriendService.IsBlack:output_type -> openim.relation.IsBlackResp
-	24, // 65: openim.relation.FriendService.GetPaginationBlacks:output_type -> openim.relation.GetPaginationBlacksResp
-	49, // 66: openim.relation.FriendService.GetSpecifiedBlacks:output_type -> openim.relation.GetSpecifiedBlacksResp
-	30, // 67: openim.relation.FriendService.DeleteFriend:output_type -> openim.relation.DeleteFriendResp
-	32, // 68: openim.relation.FriendService.RespondFriendApply:output_type -> openim.relation.RespondFriendApplyResp
-	34, // 69: openim.relation.FriendService.UpdateFriends:output_type -> openim.relation.UpdateFriendsResp
-	36, // 70: openim.relation.FriendService.SetFriendRemark:output_type -> openim.relation.SetFriendRemarkResp
-	6,  // 71: openim.relation.FriendService.ImportFriends:output_type -> openim.relation.ImportFriendResp
-	18, // 72: openim.relation.FriendService.GetDesignatedFriends:output_type -> openim.relation.GetDesignatedFriendsResp
-	1,  // 73: openim.relation.FriendService.GetPaginationFriends:output_type -> openim.relation.GetPaginationFriendsResp
-	40, // 74: openim.relation.FriendService.GetFriendIDs:output_type -> openim.relation.GetFriendIDsResp
-	43, // 75: openim.relation.FriendService.GetSpecifiedFriendsInfo:output_type -> openim.relation.GetSpecifiedFriendsInfoResp
-	45, // 76: openim.relation.FriendService.GetIncrementalFriends:output_type -> openim.relation.GetIncrementalFriendsResp
-	47, // 77: openim.relation.FriendService.GetIncrementalBlacks:output_type -> openim.relation.GetIncrementalBlacksResp
-	51, // 78: openim.relation.FriendService.GetFullFriendUserIDs:output_type -> openim.relation.GetFullFriendUserIDsResp
-	53, // 79: openim.relation.FriendService.NotificationUserInfoUpdate:output_type -> openim.relation.NotificationUserInfoUpdateResp
-	56, // 80: openim.relation.FriendService.GetFriendInfo:output_type -> openim.relation.GetFriendInfoResp
+	2,  // 27: openim.relation.IMFriendService.ApplyToAddFriend:input_type -> openim.relation.ApplyToAddFriendReq
+	7,  // 28: openim.relation.IMFriendService.GetPaginationFriendsApplyTo:input_type -> openim.relation.GetPaginationFriendsApplyToReq
+	37, // 29: openim.relation.IMFriendService.GetPaginationFriendsApplyFrom:input_type -> openim.relation.GetPaginationFriendsApplyFromReq
+	11, // 30: openim.relation.IMFriendService.GetSelfUnhandledApplyCount:input_type -> openim.relation.GetSelfUnhandledApplyCountReq
+	9,  // 31: openim.relation.IMFriendService.GetDesignatedFriendsApply:input_type -> openim.relation.GetDesignatedFriendsApplyReq
+	13, // 32: openim.relation.IMFriendService.GetIncrementalFriendsApplyTo:input_type -> openim.relation.GetIncrementalFriendsApplyToReq
+	15, // 33: openim.relation.IMFriendService.GetIncrementalFriendsApplyFrom:input_type -> openim.relation.GetIncrementalFriendsApplyFromReq
+	19, // 34: openim.relation.IMFriendService.AddBlack:input_type -> openim.relation.AddBlackReq
+	21, // 35: openim.relation.IMFriendService.RemoveBlack:input_type -> openim.relation.RemoveBlackReq
+	25, // 36: openim.relation.IMFriendService.IsFriend:input_type -> openim.relation.IsFriendReq
+	27, // 37: openim.relation.IMFriendService.IsBlack:input_type -> openim.relation.IsBlackReq
+	23, // 38: openim.relation.IMFriendService.GetPaginationBlacks:input_type -> openim.relation.GetPaginationBlacksReq
+	48, // 39: openim.relation.IMFriendService.GetSpecifiedBlacks:input_type -> openim.relation.GetSpecifiedBlacksReq
+	29, // 40: openim.relation.IMFriendService.DeleteFriend:input_type -> openim.relation.DeleteFriendReq
+	31, // 41: openim.relation.IMFriendService.RespondFriendApply:input_type -> openim.relation.RespondFriendApplyReq
+	33, // 42: openim.relation.IMFriendService.UpdateFriends:input_type -> openim.relation.UpdateFriendsReq
+	35, // 43: openim.relation.IMFriendService.SetFriendRemark:input_type -> openim.relation.SetFriendRemarkReq
+	5,  // 44: openim.relation.IMFriendService.ImportFriends:input_type -> openim.relation.ImportFriendReq
+	17, // 45: openim.relation.IMFriendService.GetDesignatedFriends:input_type -> openim.relation.GetDesignatedFriendsReq
+	0,  // 46: openim.relation.IMFriendService.GetPaginationFriends:input_type -> openim.relation.GetPaginationFriendsReq
+	39, // 47: openim.relation.IMFriendService.GetFriendIDs:input_type -> openim.relation.GetFriendIDsReq
+	41, // 48: openim.relation.IMFriendService.GetSpecifiedFriendsInfo:input_type -> openim.relation.GetSpecifiedFriendsInfoReq
+	44, // 49: openim.relation.IMFriendService.GetIncrementalFriends:input_type -> openim.relation.GetIncrementalFriendsReq
+	46, // 50: openim.relation.IMFriendService.GetIncrementalBlacks:input_type -> openim.relation.GetIncrementalBlacksReq
+	50, // 51: openim.relation.IMFriendService.GetFullFriendUserIDs:input_type -> openim.relation.GetFullFriendUserIDsReq
+	52, // 52: openim.relation.IMFriendService.NotificationUserInfoUpdate:input_type -> openim.relation.NotificationUserInfoUpdateReq
+	55, // 53: openim.relation.IMFriendService.GetFriendInfo:input_type -> openim.relation.GetFriendInfoReq
+	3,  // 54: openim.relation.IMFriendService.ApplyToAddFriend:output_type -> openim.relation.ApplyToAddFriendResp
+	8,  // 55: openim.relation.IMFriendService.GetPaginationFriendsApplyTo:output_type -> openim.relation.GetPaginationFriendsApplyToResp
+	38, // 56: openim.relation.IMFriendService.GetPaginationFriendsApplyFrom:output_type -> openim.relation.GetPaginationFriendsApplyFromResp
+	12, // 57: openim.relation.IMFriendService.GetSelfUnhandledApplyCount:output_type -> openim.relation.GetSelfUnhandledApplyCountResp
+	10, // 58: openim.relation.IMFriendService.GetDesignatedFriendsApply:output_type -> openim.relation.GetDesignatedFriendsApplyResp
+	14, // 59: openim.relation.IMFriendService.GetIncrementalFriendsApplyTo:output_type -> openim.relation.GetIncrementalFriendsApplyToResp
+	16, // 60: openim.relation.IMFriendService.GetIncrementalFriendsApplyFrom:output_type -> openim.relation.GetIncrementalFriendsApplyFromResp
+	20, // 61: openim.relation.IMFriendService.AddBlack:output_type -> openim.relation.AddBlackResp
+	22, // 62: openim.relation.IMFriendService.RemoveBlack:output_type -> openim.relation.RemoveBlackResp
+	26, // 63: openim.relation.IMFriendService.IsFriend:output_type -> openim.relation.IsFriendResp
+	28, // 64: openim.relation.IMFriendService.IsBlack:output_type -> openim.relation.IsBlackResp
+	24, // 65: openim.relation.IMFriendService.GetPaginationBlacks:output_type -> openim.relation.GetPaginationBlacksResp
+	49, // 66: openim.relation.IMFriendService.GetSpecifiedBlacks:output_type -> openim.relation.GetSpecifiedBlacksResp
+	30, // 67: openim.relation.IMFriendService.DeleteFriend:output_type -> openim.relation.DeleteFriendResp
+	32, // 68: openim.relation.IMFriendService.RespondFriendApply:output_type -> openim.relation.RespondFriendApplyResp
+	34, // 69: openim.relation.IMFriendService.UpdateFriends:output_type -> openim.relation.UpdateFriendsResp
+	36, // 70: openim.relation.IMFriendService.SetFriendRemark:output_type -> openim.relation.SetFriendRemarkResp
+	6,  // 71: openim.relation.IMFriendService.ImportFriends:output_type -> openim.relation.ImportFriendResp
+	18, // 72: openim.relation.IMFriendService.GetDesignatedFriends:output_type -> openim.relation.GetDesignatedFriendsResp
+	1,  // 73: openim.relation.IMFriendService.GetPaginationFriends:output_type -> openim.relation.GetPaginationFriendsResp
+	40, // 74: openim.relation.IMFriendService.GetFriendIDs:output_type -> openim.relation.GetFriendIDsResp
+	43, // 75: openim.relation.IMFriendService.GetSpecifiedFriendsInfo:output_type -> openim.relation.GetSpecifiedFriendsInfoResp
+	45, // 76: openim.relation.IMFriendService.GetIncrementalFriends:output_type -> openim.relation.GetIncrementalFriendsResp
+	47, // 77: openim.relation.IMFriendService.GetIncrementalBlacks:output_type -> openim.relation.GetIncrementalBlacksResp
+	51, // 78: openim.relation.IMFriendService.GetFullFriendUserIDs:output_type -> openim.relation.GetFullFriendUserIDsResp
+	53, // 79: openim.relation.IMFriendService.NotificationUserInfoUpdate:output_type -> openim.relation.NotificationUserInfoUpdateResp
+	56, // 80: openim.relation.IMFriendService.GetFriendInfo:output_type -> openim.relation.GetFriendInfoResp
 	54, // [54:81] is the sub-list for method output_type
 	27, // [27:54] is the sub-list for method input_type
 	27, // [27:27] is the sub-list for extension type_name
