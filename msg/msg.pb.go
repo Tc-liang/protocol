@@ -3466,8 +3466,8 @@ func (x *GetServerTimeResp) GetServerTime() int64 {
 }
 
 type ClearMsgReq struct {
-	state         protoimpl.MessageState            `protogen:"open.v1"`
-	Conversations []*conversation.ConversationModel `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
+	state         protoimpl.MessageState       `protogen:"open.v1"`
+	Conversations []*conversation.Conversation `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -3502,7 +3502,7 @@ func (*ClearMsgReq) Descriptor() ([]byte, []int) {
 	return file_msg_msg_proto_rawDescGZIP(), []int{65}
 }
 
-func (x *ClearMsgReq) GetConversations() []*conversation.ConversationModel {
+func (x *ClearMsgReq) GetConversations() []*conversation.Conversation {
 	if x != nil {
 		return x.Conversations
 	}
@@ -5103,19 +5103,19 @@ const file_msg_msg_proto_rawDesc = "" +
 	"groupOwner\x18\x16 \x01(\tR\n" +
 	"groupOwner\x12\x1c\n" +
 	"\tgroupType\x18\x17 \x01(\x05R\tgroupType\"f\n" +
-	"\x13batchSendMessageReq\x12\x1e\n" +
+	"\x13BatchSendMessageReq\x12\x1e\n" +
 	"\n" +
 	"recvIDList\x18\x01 \x03(\tR\n" +
 	"recvIDList\x12/\n" +
 	"\amsgData\x18\x02 \x01(\v2\x15.openim.sdkws.MsgDataR\amsgData\"\x16\n" +
-	"\x14batchSendMessageResp\"\x12\n" +
+	"\x14BatchSendMessageResp\"\x12\n" +
 	"\x10GetServerTimeReq\"3\n" +
 	"\x11GetServerTimeResp\x12\x1e\n" +
 	"\n" +
 	"serverTime\x18\x01 \x01(\x03R\n" +
-	"serverTime\"[\n" +
-	"\vClearMsgReq\x12L\n" +
-	"\rconversations\x18\x01 \x03(\v2&.openim.conversation.ConversationModelR\rconversations\"\x0e\n" +
+	"serverTime\"V\n" +
+	"\vClearMsgReq\x12G\n" +
+	"\rconversations\x18\x01 \x03(\v2!.openim.conversation.ConversationR\rconversations\"\x0e\n" +
 	"\fClearMsgResp\"E\n" +
 	"\x0fDestructMsgsReq\x12\x1c\n" +
 	"\ttimestamp\x18\x01 \x01(\x03R\ttimestamp\x12\x14\n" +
@@ -5198,8 +5198,8 @@ const file_msg_msg_proto_rawDesc = "" +
 	"\amsgData\x18\x01 \x01(\v2\x15.openim.sdkws.MsgDataR\amsgData\x12\x1c\n" +
 	"\tpartIndex\x18\x02 \x01(\x03R\tpartIndex\x12\x18\n" +
 	"\aisFinal\x18\x03 \x01(\bR\aisFinal\"\x1a\n" +
-	"\x18AIStreamNotificationResp2\xb3\x1b\n" +
-	"\x03msg\x12D\n" +
+	"\x18AIStreamNotificationResp2\xbc\x1b\n" +
+	"\fIMMsgService\x12D\n" +
 	"\tGetMaxSeq\x12\x1a.openim.sdkws.GetMaxSeqReq\x1a\x1b.openim.sdkws.GetMaxSeqResp\x12A\n" +
 	"\n" +
 	"GetMaxSeqs\x12\x19.openim.msg.GetMaxSeqsReq\x1a\x18.openim.msg.SeqsInfoResp\x12I\n" +
@@ -5317,8 +5317,8 @@ var file_msg_msg_proto_goTypes = []any{
 	(*SearchedMsgData)(nil),                      // 58: openim.msg.SearchedMsgData
 	(*SearchMessageResp)(nil),                    // 59: openim.msg.SearchMessageResp
 	(*ChatLog)(nil),                              // 60: openim.msg.ChatLog
-	(*BatchSendMessageReq)(nil),                  // 61: openim.msg.batchSendMessageReq
-	(*BatchSendMessageResp)(nil),                 // 62: openim.msg.batchSendMessageResp
+	(*BatchSendMessageReq)(nil),                  // 61: openim.msg.BatchSendMessageReq
+	(*BatchSendMessageResp)(nil),                 // 62: openim.msg.BatchSendMessageResp
 	(*GetServerTimeReq)(nil),                     // 63: openim.msg.GetServerTimeReq
 	(*GetServerTimeResp)(nil),                    // 64: openim.msg.GetServerTimeResp
 	(*ClearMsgReq)(nil),                          // 65: openim.msg.ClearMsgReq
@@ -5362,7 +5362,7 @@ var file_msg_msg_proto_goTypes = []any{
 	(*sdkws.RequestPagination)(nil),              // 103: openim.sdkws.RequestPagination
 	(*sdkws.UserInfo)(nil),                       // 104: openim.sdkws.UserInfo
 	(*sdkws.GroupInfo)(nil),                      // 105: openim.sdkws.GroupInfo
-	(*conversation.ConversationModel)(nil),       // 106: openim.conversation.ConversationModel
+	(*conversation.Conversation)(nil),            // 106: openim.conversation.Conversation
 	(sdkws.PullOrder)(0),                         // 107: openim.sdkws.PullOrder
 	(*sdkws.PullMsgs)(nil),                       // 108: openim.sdkws.PullMsgs
 	(*sdkws.GetMaxSeqReq)(nil),                   // 109: openim.sdkws.GetMaxSeqReq
@@ -5399,8 +5399,8 @@ var file_msg_msg_proto_depIdxs = []int32{
 	60,  // 25: openim.msg.SearchChatLog.chatLog:type_name -> openim.msg.ChatLog
 	102, // 26: openim.msg.SearchedMsgData.msgData:type_name -> openim.sdkws.MsgData
 	57,  // 27: openim.msg.SearchMessageResp.chatLogs:type_name -> openim.msg.SearchChatLog
-	102, // 28: openim.msg.batchSendMessageReq.msgData:type_name -> openim.sdkws.MsgData
-	106, // 29: openim.msg.ClearMsgReq.conversations:type_name -> openim.conversation.ConversationModel
+	102, // 28: openim.msg.BatchSendMessageReq.msgData:type_name -> openim.sdkws.MsgData
+	106, // 29: openim.msg.ClearMsgReq.conversations:type_name -> openim.conversation.Conversation
 	71,  // 30: openim.msg.GetSeqMessageReq.conversations:type_name -> openim.msg.ConversationSeqs
 	107, // 31: openim.msg.GetSeqMessageReq.order:type_name -> openim.sdkws.PullOrder
 	99,  // 32: openim.msg.GetSeqMessageResp.msgs:type_name -> openim.msg.GetSeqMessageResp.MsgsEntry
@@ -5413,84 +5413,84 @@ var file_msg_msg_proto_depIdxs = []int32{
 	108, // 39: openim.msg.GetSeqMessageResp.MsgsEntry.value:type_name -> openim.sdkws.PullMsgs
 	108, // 40: openim.msg.GetSeqMessageResp.NotificationMsgsEntry.value:type_name -> openim.sdkws.PullMsgs
 	102, // 41: openim.msg.GetLastMessageResp.MsgsEntry.value:type_name -> openim.sdkws.MsgData
-	109, // 42: openim.msg.msg.GetMaxSeq:input_type -> openim.sdkws.GetMaxSeqReq
-	40,  // 43: openim.msg.msg.GetMaxSeqs:input_type -> openim.msg.GetMaxSeqsReq
-	41,  // 44: openim.msg.msg.GetHasReadSeqs:input_type -> openim.msg.GetHasReadSeqsReq
-	43,  // 45: openim.msg.msg.GetMsgByConversationIDs:input_type -> openim.msg.GetMsgByConversationIDsReq
-	45,  // 46: openim.msg.msg.GetConversationMaxSeq:input_type -> openim.msg.GetConversationMaxSeqReq
-	110, // 47: openim.msg.msg.PullMessageBySeqs:input_type -> openim.sdkws.PullMessageBySeqsReq
-	72,  // 48: openim.msg.msg.GetSeqMessage:input_type -> openim.msg.GetSeqMessageReq
-	56,  // 49: openim.msg.msg.SearchMessage:input_type -> openim.msg.SearchMessageReq
-	6,   // 50: openim.msg.msg.SendMsg:input_type -> openim.msg.SendMsgReq
-	8,   // 51: openim.msg.msg.SendSimpleMsg:input_type -> openim.msg.SendSimpleMsgReq
-	69,  // 52: openim.msg.msg.SetUserConversationsMinSeq:input_type -> openim.msg.SetUserConversationsMinSeqReq
-	30,  // 53: openim.msg.msg.ClearConversationsMsg:input_type -> openim.msg.ClearConversationsMsgReq
-	32,  // 54: openim.msg.msg.UserClearAllMsg:input_type -> openim.msg.UserClearAllMsgReq
-	34,  // 55: openim.msg.msg.DeleteMsgs:input_type -> openim.msg.DeleteMsgsReq
-	38,  // 56: openim.msg.msg.DeleteMsgPhysicalBySeq:input_type -> openim.msg.DeleteMsgPhysicalBySeqReq
-	36,  // 57: openim.msg.msg.DeleteMsgPhysical:input_type -> openim.msg.DeleteMsgPhysicalReq
-	10,  // 58: openim.msg.msg.SetSendMsgStatus:input_type -> openim.msg.SetSendMsgStatusReq
-	12,  // 59: openim.msg.msg.GetSendMsgStatus:input_type -> openim.msg.GetSendMsgStatusReq
-	17,  // 60: openim.msg.msg.RevokeMsg:input_type -> openim.msg.RevokeMsgReq
-	19,  // 61: openim.msg.msg.MarkMsgsAsRead:input_type -> openim.msg.MarkMsgsAsReadReq
-	21,  // 62: openim.msg.msg.MarkConversationAsRead:input_type -> openim.msg.MarkConversationAsReadReq
-	23,  // 63: openim.msg.msg.RPCMarkConversationAsRead:input_type -> openim.msg.RPCMarkConversationAsReadReq
-	25,  // 64: openim.msg.msg.BotMarkMaxMsgAsRead:input_type -> openim.msg.BotMarkMaxMsgAsReadReq
-	27,  // 65: openim.msg.msg.SetConversationHasReadSeq:input_type -> openim.msg.SetConversationHasReadSeqReq
-	47,  // 66: openim.msg.msg.GetConversationsHasReadAndMaxSeq:input_type -> openim.msg.GetConversationsHasReadAndMaxSeqReq
-	50,  // 67: openim.msg.msg.GetActiveUser:input_type -> openim.msg.GetActiveUserReq
-	53,  // 68: openim.msg.msg.GetActiveGroup:input_type -> openim.msg.GetActiveGroupReq
-	63,  // 69: openim.msg.msg.GetServerTime:input_type -> openim.msg.GetServerTimeReq
-	65,  // 70: openim.msg.msg.ClearMsg:input_type -> openim.msg.ClearMsgReq
-	67,  // 71: openim.msg.msg.DestructMsgs:input_type -> openim.msg.DestructMsgsReq
-	74,  // 72: openim.msg.msg.GetActiveConversation:input_type -> openim.msg.GetActiveConversationReq
-	77,  // 73: openim.msg.msg.SetUserConversationMaxSeq:input_type -> openim.msg.SetUserConversationMaxSeqReq
-	79,  // 74: openim.msg.msg.SetUserConversationMinSeq:input_type -> openim.msg.SetUserConversationMinSeqReq
-	81,  // 75: openim.msg.msg.GetLastMessageSeqByTime:input_type -> openim.msg.GetLastMessageSeqByTimeReq
-	83,  // 76: openim.msg.msg.GetLastMessage:input_type -> openim.msg.GetLastMessageReq
-	85,  // 77: openim.msg.msg.AddEmoji:input_type -> openim.msg.AddEmojiReq
-	87,  // 78: openim.msg.msg.RevokeEmoji:input_type -> openim.msg.RevokeEmojiReq
-	89,  // 79: openim.msg.msg.BotReadMsgsNotification:input_type -> openim.msg.BotReadMsgsNotificationReq
-	91,  // 80: openim.msg.msg.AIStreamMsgNotification:input_type -> openim.msg.AIStreamNotificationReq
-	111, // 81: openim.msg.msg.GetMaxSeq:output_type -> openim.sdkws.GetMaxSeqResp
-	42,  // 82: openim.msg.msg.GetMaxSeqs:output_type -> openim.msg.SeqsInfoResp
-	42,  // 83: openim.msg.msg.GetHasReadSeqs:output_type -> openim.msg.SeqsInfoResp
-	44,  // 84: openim.msg.msg.GetMsgByConversationIDs:output_type -> openim.msg.GetMsgByConversationIDsResp
-	46,  // 85: openim.msg.msg.GetConversationMaxSeq:output_type -> openim.msg.GetConversationMaxSeqResp
-	112, // 86: openim.msg.msg.PullMessageBySeqs:output_type -> openim.sdkws.PullMessageBySeqsResp
-	73,  // 87: openim.msg.msg.GetSeqMessage:output_type -> openim.msg.GetSeqMessageResp
-	59,  // 88: openim.msg.msg.SearchMessage:output_type -> openim.msg.SearchMessageResp
-	7,   // 89: openim.msg.msg.SendMsg:output_type -> openim.msg.SendMsgResp
-	9,   // 90: openim.msg.msg.SendSimpleMsg:output_type -> openim.msg.SendSimpleMsgResp
-	70,  // 91: openim.msg.msg.SetUserConversationsMinSeq:output_type -> openim.msg.SetUserConversationsMinSeqResp
-	31,  // 92: openim.msg.msg.ClearConversationsMsg:output_type -> openim.msg.ClearConversationsMsgResp
-	33,  // 93: openim.msg.msg.UserClearAllMsg:output_type -> openim.msg.UserClearAllMsgResp
-	35,  // 94: openim.msg.msg.DeleteMsgs:output_type -> openim.msg.DeleteMsgsResp
-	39,  // 95: openim.msg.msg.DeleteMsgPhysicalBySeq:output_type -> openim.msg.DeleteMsgPhysicalBySeqResp
-	37,  // 96: openim.msg.msg.DeleteMsgPhysical:output_type -> openim.msg.DeleteMsgPhysicalResp
-	11,  // 97: openim.msg.msg.SetSendMsgStatus:output_type -> openim.msg.SetSendMsgStatusResp
-	13,  // 98: openim.msg.msg.GetSendMsgStatus:output_type -> openim.msg.GetSendMsgStatusResp
-	18,  // 99: openim.msg.msg.RevokeMsg:output_type -> openim.msg.RevokeMsgResp
-	20,  // 100: openim.msg.msg.MarkMsgsAsRead:output_type -> openim.msg.MarkMsgsAsReadResp
-	22,  // 101: openim.msg.msg.MarkConversationAsRead:output_type -> openim.msg.MarkConversationAsReadResp
-	24,  // 102: openim.msg.msg.RPCMarkConversationAsRead:output_type -> openim.msg.RPCMarkConversationAsReadResp
-	26,  // 103: openim.msg.msg.BotMarkMaxMsgAsRead:output_type -> openim.msg.BotMarkMaxMsgAsReadResp
-	28,  // 104: openim.msg.msg.SetConversationHasReadSeq:output_type -> openim.msg.SetConversationHasReadSeqResp
-	49,  // 105: openim.msg.msg.GetConversationsHasReadAndMaxSeq:output_type -> openim.msg.GetConversationsHasReadAndMaxSeqResp
-	52,  // 106: openim.msg.msg.GetActiveUser:output_type -> openim.msg.GetActiveUserResp
-	55,  // 107: openim.msg.msg.GetActiveGroup:output_type -> openim.msg.GetActiveGroupResp
-	64,  // 108: openim.msg.msg.GetServerTime:output_type -> openim.msg.GetServerTimeResp
-	66,  // 109: openim.msg.msg.ClearMsg:output_type -> openim.msg.ClearMsgResp
-	68,  // 110: openim.msg.msg.DestructMsgs:output_type -> openim.msg.DestructMsgsResp
-	76,  // 111: openim.msg.msg.GetActiveConversation:output_type -> openim.msg.GetActiveConversationResp
-	78,  // 112: openim.msg.msg.SetUserConversationMaxSeq:output_type -> openim.msg.SetUserConversationMaxSeqResp
-	80,  // 113: openim.msg.msg.SetUserConversationMinSeq:output_type -> openim.msg.SetUserConversationMinSeqResp
-	82,  // 114: openim.msg.msg.GetLastMessageSeqByTime:output_type -> openim.msg.GetLastMessageSeqByTimeResp
-	84,  // 115: openim.msg.msg.GetLastMessage:output_type -> openim.msg.GetLastMessageResp
-	86,  // 116: openim.msg.msg.AddEmoji:output_type -> openim.msg.AddEmojiResp
-	88,  // 117: openim.msg.msg.RevokeEmoji:output_type -> openim.msg.RevokeEmojiResp
-	90,  // 118: openim.msg.msg.BotReadMsgsNotification:output_type -> openim.msg.BotReadMsgsNotificationResp
-	92,  // 119: openim.msg.msg.AIStreamMsgNotification:output_type -> openim.msg.AIStreamNotificationResp
+	109, // 42: openim.msg.IMMsgService.GetMaxSeq:input_type -> openim.sdkws.GetMaxSeqReq
+	40,  // 43: openim.msg.IMMsgService.GetMaxSeqs:input_type -> openim.msg.GetMaxSeqsReq
+	41,  // 44: openim.msg.IMMsgService.GetHasReadSeqs:input_type -> openim.msg.GetHasReadSeqsReq
+	43,  // 45: openim.msg.IMMsgService.GetMsgByConversationIDs:input_type -> openim.msg.GetMsgByConversationIDsReq
+	45,  // 46: openim.msg.IMMsgService.GetConversationMaxSeq:input_type -> openim.msg.GetConversationMaxSeqReq
+	110, // 47: openim.msg.IMMsgService.PullMessageBySeqs:input_type -> openim.sdkws.PullMessageBySeqsReq
+	72,  // 48: openim.msg.IMMsgService.GetSeqMessage:input_type -> openim.msg.GetSeqMessageReq
+	56,  // 49: openim.msg.IMMsgService.SearchMessage:input_type -> openim.msg.SearchMessageReq
+	6,   // 50: openim.msg.IMMsgService.SendMsg:input_type -> openim.msg.SendMsgReq
+	8,   // 51: openim.msg.IMMsgService.SendSimpleMsg:input_type -> openim.msg.SendSimpleMsgReq
+	69,  // 52: openim.msg.IMMsgService.SetUserConversationsMinSeq:input_type -> openim.msg.SetUserConversationsMinSeqReq
+	30,  // 53: openim.msg.IMMsgService.ClearConversationsMsg:input_type -> openim.msg.ClearConversationsMsgReq
+	32,  // 54: openim.msg.IMMsgService.UserClearAllMsg:input_type -> openim.msg.UserClearAllMsgReq
+	34,  // 55: openim.msg.IMMsgService.DeleteMsgs:input_type -> openim.msg.DeleteMsgsReq
+	38,  // 56: openim.msg.IMMsgService.DeleteMsgPhysicalBySeq:input_type -> openim.msg.DeleteMsgPhysicalBySeqReq
+	36,  // 57: openim.msg.IMMsgService.DeleteMsgPhysical:input_type -> openim.msg.DeleteMsgPhysicalReq
+	10,  // 58: openim.msg.IMMsgService.SetSendMsgStatus:input_type -> openim.msg.SetSendMsgStatusReq
+	12,  // 59: openim.msg.IMMsgService.GetSendMsgStatus:input_type -> openim.msg.GetSendMsgStatusReq
+	17,  // 60: openim.msg.IMMsgService.RevokeMsg:input_type -> openim.msg.RevokeMsgReq
+	19,  // 61: openim.msg.IMMsgService.MarkMsgsAsRead:input_type -> openim.msg.MarkMsgsAsReadReq
+	21,  // 62: openim.msg.IMMsgService.MarkConversationAsRead:input_type -> openim.msg.MarkConversationAsReadReq
+	23,  // 63: openim.msg.IMMsgService.RPCMarkConversationAsRead:input_type -> openim.msg.RPCMarkConversationAsReadReq
+	25,  // 64: openim.msg.IMMsgService.BotMarkMaxMsgAsRead:input_type -> openim.msg.BotMarkMaxMsgAsReadReq
+	27,  // 65: openim.msg.IMMsgService.SetConversationHasReadSeq:input_type -> openim.msg.SetConversationHasReadSeqReq
+	47,  // 66: openim.msg.IMMsgService.GetConversationsHasReadAndMaxSeq:input_type -> openim.msg.GetConversationsHasReadAndMaxSeqReq
+	50,  // 67: openim.msg.IMMsgService.GetActiveUser:input_type -> openim.msg.GetActiveUserReq
+	53,  // 68: openim.msg.IMMsgService.GetActiveGroup:input_type -> openim.msg.GetActiveGroupReq
+	63,  // 69: openim.msg.IMMsgService.GetServerTime:input_type -> openim.msg.GetServerTimeReq
+	65,  // 70: openim.msg.IMMsgService.ClearMsg:input_type -> openim.msg.ClearMsgReq
+	67,  // 71: openim.msg.IMMsgService.DestructMsgs:input_type -> openim.msg.DestructMsgsReq
+	74,  // 72: openim.msg.IMMsgService.GetActiveConversation:input_type -> openim.msg.GetActiveConversationReq
+	77,  // 73: openim.msg.IMMsgService.SetUserConversationMaxSeq:input_type -> openim.msg.SetUserConversationMaxSeqReq
+	79,  // 74: openim.msg.IMMsgService.SetUserConversationMinSeq:input_type -> openim.msg.SetUserConversationMinSeqReq
+	81,  // 75: openim.msg.IMMsgService.GetLastMessageSeqByTime:input_type -> openim.msg.GetLastMessageSeqByTimeReq
+	83,  // 76: openim.msg.IMMsgService.GetLastMessage:input_type -> openim.msg.GetLastMessageReq
+	85,  // 77: openim.msg.IMMsgService.AddEmoji:input_type -> openim.msg.AddEmojiReq
+	87,  // 78: openim.msg.IMMsgService.RevokeEmoji:input_type -> openim.msg.RevokeEmojiReq
+	89,  // 79: openim.msg.IMMsgService.BotReadMsgsNotification:input_type -> openim.msg.BotReadMsgsNotificationReq
+	91,  // 80: openim.msg.IMMsgService.AIStreamMsgNotification:input_type -> openim.msg.AIStreamNotificationReq
+	111, // 81: openim.msg.IMMsgService.GetMaxSeq:output_type -> openim.sdkws.GetMaxSeqResp
+	42,  // 82: openim.msg.IMMsgService.GetMaxSeqs:output_type -> openim.msg.SeqsInfoResp
+	42,  // 83: openim.msg.IMMsgService.GetHasReadSeqs:output_type -> openim.msg.SeqsInfoResp
+	44,  // 84: openim.msg.IMMsgService.GetMsgByConversationIDs:output_type -> openim.msg.GetMsgByConversationIDsResp
+	46,  // 85: openim.msg.IMMsgService.GetConversationMaxSeq:output_type -> openim.msg.GetConversationMaxSeqResp
+	112, // 86: openim.msg.IMMsgService.PullMessageBySeqs:output_type -> openim.sdkws.PullMessageBySeqsResp
+	73,  // 87: openim.msg.IMMsgService.GetSeqMessage:output_type -> openim.msg.GetSeqMessageResp
+	59,  // 88: openim.msg.IMMsgService.SearchMessage:output_type -> openim.msg.SearchMessageResp
+	7,   // 89: openim.msg.IMMsgService.SendMsg:output_type -> openim.msg.SendMsgResp
+	9,   // 90: openim.msg.IMMsgService.SendSimpleMsg:output_type -> openim.msg.SendSimpleMsgResp
+	70,  // 91: openim.msg.IMMsgService.SetUserConversationsMinSeq:output_type -> openim.msg.SetUserConversationsMinSeqResp
+	31,  // 92: openim.msg.IMMsgService.ClearConversationsMsg:output_type -> openim.msg.ClearConversationsMsgResp
+	33,  // 93: openim.msg.IMMsgService.UserClearAllMsg:output_type -> openim.msg.UserClearAllMsgResp
+	35,  // 94: openim.msg.IMMsgService.DeleteMsgs:output_type -> openim.msg.DeleteMsgsResp
+	39,  // 95: openim.msg.IMMsgService.DeleteMsgPhysicalBySeq:output_type -> openim.msg.DeleteMsgPhysicalBySeqResp
+	37,  // 96: openim.msg.IMMsgService.DeleteMsgPhysical:output_type -> openim.msg.DeleteMsgPhysicalResp
+	11,  // 97: openim.msg.IMMsgService.SetSendMsgStatus:output_type -> openim.msg.SetSendMsgStatusResp
+	13,  // 98: openim.msg.IMMsgService.GetSendMsgStatus:output_type -> openim.msg.GetSendMsgStatusResp
+	18,  // 99: openim.msg.IMMsgService.RevokeMsg:output_type -> openim.msg.RevokeMsgResp
+	20,  // 100: openim.msg.IMMsgService.MarkMsgsAsRead:output_type -> openim.msg.MarkMsgsAsReadResp
+	22,  // 101: openim.msg.IMMsgService.MarkConversationAsRead:output_type -> openim.msg.MarkConversationAsReadResp
+	24,  // 102: openim.msg.IMMsgService.RPCMarkConversationAsRead:output_type -> openim.msg.RPCMarkConversationAsReadResp
+	26,  // 103: openim.msg.IMMsgService.BotMarkMaxMsgAsRead:output_type -> openim.msg.BotMarkMaxMsgAsReadResp
+	28,  // 104: openim.msg.IMMsgService.SetConversationHasReadSeq:output_type -> openim.msg.SetConversationHasReadSeqResp
+	49,  // 105: openim.msg.IMMsgService.GetConversationsHasReadAndMaxSeq:output_type -> openim.msg.GetConversationsHasReadAndMaxSeqResp
+	52,  // 106: openim.msg.IMMsgService.GetActiveUser:output_type -> openim.msg.GetActiveUserResp
+	55,  // 107: openim.msg.IMMsgService.GetActiveGroup:output_type -> openim.msg.GetActiveGroupResp
+	64,  // 108: openim.msg.IMMsgService.GetServerTime:output_type -> openim.msg.GetServerTimeResp
+	66,  // 109: openim.msg.IMMsgService.ClearMsg:output_type -> openim.msg.ClearMsgResp
+	68,  // 110: openim.msg.IMMsgService.DestructMsgs:output_type -> openim.msg.DestructMsgsResp
+	76,  // 111: openim.msg.IMMsgService.GetActiveConversation:output_type -> openim.msg.GetActiveConversationResp
+	78,  // 112: openim.msg.IMMsgService.SetUserConversationMaxSeq:output_type -> openim.msg.SetUserConversationMaxSeqResp
+	80,  // 113: openim.msg.IMMsgService.SetUserConversationMinSeq:output_type -> openim.msg.SetUserConversationMinSeqResp
+	82,  // 114: openim.msg.IMMsgService.GetLastMessageSeqByTime:output_type -> openim.msg.GetLastMessageSeqByTimeResp
+	84,  // 115: openim.msg.IMMsgService.GetLastMessage:output_type -> openim.msg.GetLastMessageResp
+	86,  // 116: openim.msg.IMMsgService.AddEmoji:output_type -> openim.msg.AddEmojiResp
+	88,  // 117: openim.msg.IMMsgService.RevokeEmoji:output_type -> openim.msg.RevokeEmojiResp
+	90,  // 118: openim.msg.IMMsgService.BotReadMsgsNotification:output_type -> openim.msg.BotReadMsgsNotificationResp
+	92,  // 119: openim.msg.IMMsgService.AIStreamMsgNotification:output_type -> openim.msg.AIStreamNotificationResp
 	81,  // [81:120] is the sub-list for method output_type
 	42,  // [42:81] is the sub-list for method input_type
 	42,  // [42:42] is the sub-list for extension type_name

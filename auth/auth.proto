@@ -63,25 +63,25 @@ message GetExistingTokenResp {
 
 // ======== Service ========
 
-service Auth {
+service IMAuthService {
   // Generate token
-  rpc getAdminToken(GetAdminTokenReq) returns (GetAdminTokenResp);
+  rpc GetAdminToken(GetAdminTokenReq) returns (GetAdminTokenResp);
 
   // Admin retrieves user token
-  rpc getUserToken(GetUserTokenReq) returns (GetUserTokenResp);
+  rpc GetUserToken(GetUserTokenReq) returns (GetUserTokenResp);
 
   // Force logout
-  rpc forceLogout(ForceLogoutReq) returns (ForceLogoutResp);
+  rpc ForceLogout(ForceLogoutReq) returns (ForceLogoutResp);
 
   // Parse token
-  rpc parseToken(ParseTokenReq) returns (ParseTokenResp);
+  rpc ParseToken(ParseTokenReq) returns (ParseTokenResp);
 
   // Invalidate or mark the token as kicked out
-  rpc invalidateToken(InvalidateTokenReq) returns (InvalidateTokenResp);
+  rpc InvalidateToken(InvalidateTokenReq) returns (InvalidateTokenResp);
 
   // Kick tokens
-  rpc kickTokens(KickTokensReq) returns (KickTokensResp);
+  rpc KickTokens(KickTokensReq) returns (KickTokensResp);
 
   // Get existing token
-  rpc getExistingToken(GetExistingTokenReq) returns (GetExistingTokenResp);
+  rpc GetExistingToken(GetExistingTokenReq) returns (GetExistingTokenResp);
 }

@@ -33,38 +33,38 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Conversation_GetConversation_FullMethodName                         = "/openim.conversation.Conversation/GetConversation"
-	Conversation_GetSortedConversationList_FullMethodName               = "/openim.conversation.Conversation/GetSortedConversationList"
-	Conversation_GetAllConversations_FullMethodName                     = "/openim.conversation.Conversation/GetAllConversations"
-	Conversation_GetConversations_FullMethodName                        = "/openim.conversation.Conversation/GetConversations"
-	Conversation_SetConversation_FullMethodName                         = "/openim.conversation.Conversation/SetConversation"
-	Conversation_GetRecvMsgNotNotifyUserIDs_FullMethodName              = "/openim.conversation.Conversation/GetRecvMsgNotNotifyUserIDs"
-	Conversation_CreateSingleChatConversations_FullMethodName           = "/openim.conversation.Conversation/CreateSingleChatConversations"
-	Conversation_CreateGroupChatConversations_FullMethodName            = "/openim.conversation.Conversation/CreateGroupChatConversations"
-	Conversation_SetConversationMaxSeq_FullMethodName                   = "/openim.conversation.Conversation/SetConversationMaxSeq"
-	Conversation_SetConversationMinSeq_FullMethodName                   = "/openim.conversation.Conversation/SetConversationMinSeq"
-	Conversation_GetConversationIDs_FullMethodName                      = "/openim.conversation.Conversation/GetConversationIDs"
-	Conversation_SetConversations_FullMethodName                        = "/openim.conversation.Conversation/SetConversations"
-	Conversation_GetUserConversationIDsHash_FullMethodName              = "/openim.conversation.Conversation/GetUserConversationIDsHash"
-	Conversation_GetConversationsByConversationID_FullMethodName        = "/openim.conversation.Conversation/GetConversationsByConversationID"
-	Conversation_GetConversationOfflinePushUserIDs_FullMethodName       = "/openim.conversation.Conversation/GetConversationOfflinePushUserIDs"
-	Conversation_GetConversationNotReceiveMessageUserIDs_FullMethodName = "/openim.conversation.Conversation/GetConversationNotReceiveMessageUserIDs"
-	Conversation_UpdateConversation_FullMethodName                      = "/openim.conversation.Conversation/UpdateConversation"
-	Conversation_GetFullOwnerConversationIDs_FullMethodName             = "/openim.conversation.Conversation/GetFullOwnerConversationIDs"
-	Conversation_GetIncrementalConversation_FullMethodName              = "/openim.conversation.Conversation/GetIncrementalConversation"
-	Conversation_GetOwnerConversation_FullMethodName                    = "/openim.conversation.Conversation/GetOwnerConversation"
-	Conversation_GetConversationsNeedClearMsg_FullMethodName            = "/openim.conversation.Conversation/GetConversationsNeedClearMsg"
-	Conversation_GetNotNotifyConversationIDs_FullMethodName             = "/openim.conversation.Conversation/GetNotNotifyConversationIDs"
-	Conversation_GetPinnedConversationIDs_FullMethodName                = "/openim.conversation.Conversation/GetPinnedConversationIDs"
-	Conversation_ClearUserConversationMsg_FullMethodName                = "/openim.conversation.Conversation/ClearUserConversationMsg"
-	Conversation_UpdateConversationsByUser_FullMethodName               = "/openim.conversation.Conversation/UpdateConversationsByUser"
-	Conversation_DeleteConversations_FullMethodName                     = "/openim.conversation.Conversation/DeleteConversations"
+	IMConversationService_GetConversation_FullMethodName                         = "/openim.conversation.IMConversationService/GetConversation"
+	IMConversationService_GetSortedConversationList_FullMethodName               = "/openim.conversation.IMConversationService/GetSortedConversationList"
+	IMConversationService_GetAllConversations_FullMethodName                     = "/openim.conversation.IMConversationService/GetAllConversations"
+	IMConversationService_GetConversations_FullMethodName                        = "/openim.conversation.IMConversationService/GetConversations"
+	IMConversationService_SetConversation_FullMethodName                         = "/openim.conversation.IMConversationService/SetConversation"
+	IMConversationService_GetRecvMsgNotNotifyUserIDs_FullMethodName              = "/openim.conversation.IMConversationService/GetRecvMsgNotNotifyUserIDs"
+	IMConversationService_CreateSingleChatConversations_FullMethodName           = "/openim.conversation.IMConversationService/CreateSingleChatConversations"
+	IMConversationService_CreateGroupChatConversations_FullMethodName            = "/openim.conversation.IMConversationService/CreateGroupChatConversations"
+	IMConversationService_SetConversationMaxSeq_FullMethodName                   = "/openim.conversation.IMConversationService/SetConversationMaxSeq"
+	IMConversationService_SetConversationMinSeq_FullMethodName                   = "/openim.conversation.IMConversationService/SetConversationMinSeq"
+	IMConversationService_GetConversationIDs_FullMethodName                      = "/openim.conversation.IMConversationService/GetConversationIDs"
+	IMConversationService_SetConversations_FullMethodName                        = "/openim.conversation.IMConversationService/SetConversations"
+	IMConversationService_GetUserConversationIDsHash_FullMethodName              = "/openim.conversation.IMConversationService/GetUserConversationIDsHash"
+	IMConversationService_GetConversationsByConversationID_FullMethodName        = "/openim.conversation.IMConversationService/GetConversationsByConversationID"
+	IMConversationService_GetConversationOfflinePushUserIDs_FullMethodName       = "/openim.conversation.IMConversationService/GetConversationOfflinePushUserIDs"
+	IMConversationService_GetConversationNotReceiveMessageUserIDs_FullMethodName = "/openim.conversation.IMConversationService/GetConversationNotReceiveMessageUserIDs"
+	IMConversationService_UpdateConversation_FullMethodName                      = "/openim.conversation.IMConversationService/UpdateConversation"
+	IMConversationService_GetFullOwnerConversationIDs_FullMethodName             = "/openim.conversation.IMConversationService/GetFullOwnerConversationIDs"
+	IMConversationService_GetIncrementalConversation_FullMethodName              = "/openim.conversation.IMConversationService/GetIncrementalConversation"
+	IMConversationService_GetOwnerConversation_FullMethodName                    = "/openim.conversation.IMConversationService/GetOwnerConversation"
+	IMConversationService_GetConversationsNeedClearMsg_FullMethodName            = "/openim.conversation.IMConversationService/GetConversationsNeedClearMsg"
+	IMConversationService_GetNotNotifyConversationIDs_FullMethodName             = "/openim.conversation.IMConversationService/GetNotNotifyConversationIDs"
+	IMConversationService_GetPinnedConversationIDs_FullMethodName                = "/openim.conversation.IMConversationService/GetPinnedConversationIDs"
+	IMConversationService_ClearUserConversationMsg_FullMethodName                = "/openim.conversation.IMConversationService/ClearUserConversationMsg"
+	IMConversationService_UpdateConversationsByUser_FullMethodName               = "/openim.conversation.IMConversationService/UpdateConversationsByUser"
+	IMConversationService_DeleteConversations_FullMethodName                     = "/openim.conversation.IMConversationService/DeleteConversations"
 )
 
-// ConversationClient is the client API for Conversation service.
+// IMConversationServiceClient is the client API for IMConversationService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type ConversationClient interface {
+type IMConversationServiceClient interface {
 	GetConversation(ctx context.Context, in *GetConversationReq, opts ...grpc.CallOption) (*GetConversationResp, error)
 	GetSortedConversationList(ctx context.Context, in *GetSortedConversationListReq, opts ...grpc.CallOption) (*GetSortedConversationListResp, error)
 	GetAllConversations(ctx context.Context, in *GetAllConversationsReq, opts ...grpc.CallOption) (*GetAllConversationsResp, error)
@@ -93,278 +93,278 @@ type ConversationClient interface {
 	DeleteConversations(ctx context.Context, in *DeleteConversationsReq, opts ...grpc.CallOption) (*DeleteConversationsResp, error)
 }
 
-type conversationClient struct {
+type iMConversationServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewConversationClient(cc grpc.ClientConnInterface) ConversationClient {
-	return &conversationClient{cc}
+func NewIMConversationServiceClient(cc grpc.ClientConnInterface) IMConversationServiceClient {
+	return &iMConversationServiceClient{cc}
 }
 
-func (c *conversationClient) GetConversation(ctx context.Context, in *GetConversationReq, opts ...grpc.CallOption) (*GetConversationResp, error) {
+func (c *iMConversationServiceClient) GetConversation(ctx context.Context, in *GetConversationReq, opts ...grpc.CallOption) (*GetConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetSortedConversationList(ctx context.Context, in *GetSortedConversationListReq, opts ...grpc.CallOption) (*GetSortedConversationListResp, error) {
+func (c *iMConversationServiceClient) GetSortedConversationList(ctx context.Context, in *GetSortedConversationListReq, opts ...grpc.CallOption) (*GetSortedConversationListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSortedConversationListResp)
-	err := c.cc.Invoke(ctx, Conversation_GetSortedConversationList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetSortedConversationList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetAllConversations(ctx context.Context, in *GetAllConversationsReq, opts ...grpc.CallOption) (*GetAllConversationsResp, error) {
+func (c *iMConversationServiceClient) GetAllConversations(ctx context.Context, in *GetAllConversationsReq, opts ...grpc.CallOption) (*GetAllConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetAllConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetAllConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetAllConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversations(ctx context.Context, in *GetConversationsReq, opts ...grpc.CallOption) (*GetConversationsResp, error) {
+func (c *iMConversationServiceClient) GetConversations(ctx context.Context, in *GetConversationsReq, opts ...grpc.CallOption) (*GetConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) SetConversation(ctx context.Context, in *SetConversationReq, opts ...grpc.CallOption) (*SetConversationResp, error) {
+func (c *iMConversationServiceClient) SetConversation(ctx context.Context, in *SetConversationReq, opts ...grpc.CallOption) (*SetConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetConversationResp)
-	err := c.cc.Invoke(ctx, Conversation_SetConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_SetConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetRecvMsgNotNotifyUserIDs(ctx context.Context, in *GetRecvMsgNotNotifyUserIDsReq, opts ...grpc.CallOption) (*GetRecvMsgNotNotifyUserIDsResp, error) {
+func (c *iMConversationServiceClient) GetRecvMsgNotNotifyUserIDs(ctx context.Context, in *GetRecvMsgNotNotifyUserIDsReq, opts ...grpc.CallOption) (*GetRecvMsgNotNotifyUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetRecvMsgNotNotifyUserIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetRecvMsgNotNotifyUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetRecvMsgNotNotifyUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) CreateSingleChatConversations(ctx context.Context, in *CreateSingleChatConversationsReq, opts ...grpc.CallOption) (*CreateSingleChatConversationsResp, error) {
+func (c *iMConversationServiceClient) CreateSingleChatConversations(ctx context.Context, in *CreateSingleChatConversationsReq, opts ...grpc.CallOption) (*CreateSingleChatConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CreateSingleChatConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_CreateSingleChatConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_CreateSingleChatConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) CreateGroupChatConversations(ctx context.Context, in *CreateGroupChatConversationsReq, opts ...grpc.CallOption) (*CreateGroupChatConversationsResp, error) {
+func (c *iMConversationServiceClient) CreateGroupChatConversations(ctx context.Context, in *CreateGroupChatConversationsReq, opts ...grpc.CallOption) (*CreateGroupChatConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CreateGroupChatConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_CreateGroupChatConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_CreateGroupChatConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) SetConversationMaxSeq(ctx context.Context, in *SetConversationMaxSeqReq, opts ...grpc.CallOption) (*SetConversationMaxSeqResp, error) {
+func (c *iMConversationServiceClient) SetConversationMaxSeq(ctx context.Context, in *SetConversationMaxSeqReq, opts ...grpc.CallOption) (*SetConversationMaxSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetConversationMaxSeqResp)
-	err := c.cc.Invoke(ctx, Conversation_SetConversationMaxSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_SetConversationMaxSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) SetConversationMinSeq(ctx context.Context, in *SetConversationMinSeqReq, opts ...grpc.CallOption) (*SetConversationMinSeqResp, error) {
+func (c *iMConversationServiceClient) SetConversationMinSeq(ctx context.Context, in *SetConversationMinSeqReq, opts ...grpc.CallOption) (*SetConversationMinSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetConversationMinSeqResp)
-	err := c.cc.Invoke(ctx, Conversation_SetConversationMinSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_SetConversationMinSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversationIDs(ctx context.Context, in *GetConversationIDsReq, opts ...grpc.CallOption) (*GetConversationIDsResp, error) {
+func (c *iMConversationServiceClient) GetConversationIDs(ctx context.Context, in *GetConversationIDsReq, opts ...grpc.CallOption) (*GetConversationIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversationIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversationIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) SetConversations(ctx context.Context, in *SetConversationsReq, opts ...grpc.CallOption) (*SetConversationsResp, error) {
+func (c *iMConversationServiceClient) SetConversations(ctx context.Context, in *SetConversationsReq, opts ...grpc.CallOption) (*SetConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_SetConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_SetConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetUserConversationIDsHash(ctx context.Context, in *GetUserConversationIDsHashReq, opts ...grpc.CallOption) (*GetUserConversationIDsHashResp, error) {
+func (c *iMConversationServiceClient) GetUserConversationIDsHash(ctx context.Context, in *GetUserConversationIDsHashReq, opts ...grpc.CallOption) (*GetUserConversationIDsHashResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserConversationIDsHashResp)
-	err := c.cc.Invoke(ctx, Conversation_GetUserConversationIDsHash_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetUserConversationIDsHash_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversationsByConversationID(ctx context.Context, in *GetConversationsByConversationIDReq, opts ...grpc.CallOption) (*GetConversationsByConversationIDResp, error) {
+func (c *iMConversationServiceClient) GetConversationsByConversationID(ctx context.Context, in *GetConversationsByConversationIDReq, opts ...grpc.CallOption) (*GetConversationsByConversationIDResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationsByConversationIDResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversationsByConversationID_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversationsByConversationID_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversationOfflinePushUserIDs(ctx context.Context, in *GetConversationOfflinePushUserIDsReq, opts ...grpc.CallOption) (*GetConversationOfflinePushUserIDsResp, error) {
+func (c *iMConversationServiceClient) GetConversationOfflinePushUserIDs(ctx context.Context, in *GetConversationOfflinePushUserIDsReq, opts ...grpc.CallOption) (*GetConversationOfflinePushUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationOfflinePushUserIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversationOfflinePushUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversationOfflinePushUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversationNotReceiveMessageUserIDs(ctx context.Context, in *GetConversationNotReceiveMessageUserIDsReq, opts ...grpc.CallOption) (*GetConversationNotReceiveMessageUserIDsResp, error) {
+func (c *iMConversationServiceClient) GetConversationNotReceiveMessageUserIDs(ctx context.Context, in *GetConversationNotReceiveMessageUserIDsReq, opts ...grpc.CallOption) (*GetConversationNotReceiveMessageUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationNotReceiveMessageUserIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversationNotReceiveMessageUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversationNotReceiveMessageUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) UpdateConversation(ctx context.Context, in *UpdateConversationReq, opts ...grpc.CallOption) (*UpdateConversationResp, error) {
+func (c *iMConversationServiceClient) UpdateConversation(ctx context.Context, in *UpdateConversationReq, opts ...grpc.CallOption) (*UpdateConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateConversationResp)
-	err := c.cc.Invoke(ctx, Conversation_UpdateConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_UpdateConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetFullOwnerConversationIDs(ctx context.Context, in *GetFullOwnerConversationIDsReq, opts ...grpc.CallOption) (*GetFullOwnerConversationIDsResp, error) {
+func (c *iMConversationServiceClient) GetFullOwnerConversationIDs(ctx context.Context, in *GetFullOwnerConversationIDsReq, opts ...grpc.CallOption) (*GetFullOwnerConversationIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFullOwnerConversationIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetFullOwnerConversationIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetFullOwnerConversationIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetIncrementalConversation(ctx context.Context, in *GetIncrementalConversationReq, opts ...grpc.CallOption) (*GetIncrementalConversationResp, error) {
+func (c *iMConversationServiceClient) GetIncrementalConversation(ctx context.Context, in *GetIncrementalConversationReq, opts ...grpc.CallOption) (*GetIncrementalConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalConversationResp)
-	err := c.cc.Invoke(ctx, Conversation_GetIncrementalConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetIncrementalConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetOwnerConversation(ctx context.Context, in *GetOwnerConversationReq, opts ...grpc.CallOption) (*GetOwnerConversationResp, error) {
+func (c *iMConversationServiceClient) GetOwnerConversation(ctx context.Context, in *GetOwnerConversationReq, opts ...grpc.CallOption) (*GetOwnerConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetOwnerConversationResp)
-	err := c.cc.Invoke(ctx, Conversation_GetOwnerConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetOwnerConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetConversationsNeedClearMsg(ctx context.Context, in *GetConversationsNeedClearMsgReq, opts ...grpc.CallOption) (*GetConversationsNeedClearMsgResp, error) {
+func (c *iMConversationServiceClient) GetConversationsNeedClearMsg(ctx context.Context, in *GetConversationsNeedClearMsgReq, opts ...grpc.CallOption) (*GetConversationsNeedClearMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationsNeedClearMsgResp)
-	err := c.cc.Invoke(ctx, Conversation_GetConversationsNeedClearMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetConversationsNeedClearMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetNotNotifyConversationIDs(ctx context.Context, in *GetNotNotifyConversationIDsReq, opts ...grpc.CallOption) (*GetNotNotifyConversationIDsResp, error) {
+func (c *iMConversationServiceClient) GetNotNotifyConversationIDs(ctx context.Context, in *GetNotNotifyConversationIDsReq, opts ...grpc.CallOption) (*GetNotNotifyConversationIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetNotNotifyConversationIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetNotNotifyConversationIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetNotNotifyConversationIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) GetPinnedConversationIDs(ctx context.Context, in *GetPinnedConversationIDsReq, opts ...grpc.CallOption) (*GetPinnedConversationIDsResp, error) {
+func (c *iMConversationServiceClient) GetPinnedConversationIDs(ctx context.Context, in *GetPinnedConversationIDsReq, opts ...grpc.CallOption) (*GetPinnedConversationIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPinnedConversationIDsResp)
-	err := c.cc.Invoke(ctx, Conversation_GetPinnedConversationIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_GetPinnedConversationIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) ClearUserConversationMsg(ctx context.Context, in *ClearUserConversationMsgReq, opts ...grpc.CallOption) (*ClearUserConversationMsgResp, error) {
+func (c *iMConversationServiceClient) ClearUserConversationMsg(ctx context.Context, in *ClearUserConversationMsgReq, opts ...grpc.CallOption) (*ClearUserConversationMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ClearUserConversationMsgResp)
-	err := c.cc.Invoke(ctx, Conversation_ClearUserConversationMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_ClearUserConversationMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) UpdateConversationsByUser(ctx context.Context, in *UpdateConversationsByUserReq, opts ...grpc.CallOption) (*UpdateConversationsByUserResp, error) {
+func (c *iMConversationServiceClient) UpdateConversationsByUser(ctx context.Context, in *UpdateConversationsByUserReq, opts ...grpc.CallOption) (*UpdateConversationsByUserResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateConversationsByUserResp)
-	err := c.cc.Invoke(ctx, Conversation_UpdateConversationsByUser_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_UpdateConversationsByUser_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *conversationClient) DeleteConversations(ctx context.Context, in *DeleteConversationsReq, opts ...grpc.CallOption) (*DeleteConversationsResp, error) {
+func (c *iMConversationServiceClient) DeleteConversations(ctx context.Context, in *DeleteConversationsReq, opts ...grpc.CallOption) (*DeleteConversationsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteConversationsResp)
-	err := c.cc.Invoke(ctx, Conversation_DeleteConversations_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMConversationService_DeleteConversations_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ConversationServer is the server API for Conversation service.
-// All implementations must embed UnimplementedConversationServer
+// IMConversationServiceServer is the server API for IMConversationService service.
+// All implementations must embed UnimplementedIMConversationServiceServer
 // for forward compatibility.
-type ConversationServer interface {
+type IMConversationServiceServer interface {
 	GetConversation(context.Context, *GetConversationReq) (*GetConversationResp, error)
 	GetSortedConversationList(context.Context, *GetSortedConversationListReq) (*GetSortedConversationListResp, error)
 	GetAllConversations(context.Context, *GetAllConversationsReq) (*GetAllConversationsResp, error)
@@ -391,693 +391,693 @@ type ConversationServer interface {
 	ClearUserConversationMsg(context.Context, *ClearUserConversationMsgReq) (*ClearUserConversationMsgResp, error)
 	UpdateConversationsByUser(context.Context, *UpdateConversationsByUserReq) (*UpdateConversationsByUserResp, error)
 	DeleteConversations(context.Context, *DeleteConversationsReq) (*DeleteConversationsResp, error)
-	mustEmbedUnimplementedConversationServer()
+	mustEmbedUnimplementedIMConversationServiceServer()
 }
 
-// UnimplementedConversationServer must be embedded to have
+// UnimplementedIMConversationServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedConversationServer struct{}
+type UnimplementedIMConversationServiceServer struct{}
 
-func (UnimplementedConversationServer) GetConversation(context.Context, *GetConversationReq) (*GetConversationResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversation(context.Context, *GetConversationReq) (*GetConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversation not implemented")
 }
-func (UnimplementedConversationServer) GetSortedConversationList(context.Context, *GetSortedConversationListReq) (*GetSortedConversationListResp, error) {
+func (UnimplementedIMConversationServiceServer) GetSortedConversationList(context.Context, *GetSortedConversationListReq) (*GetSortedConversationListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSortedConversationList not implemented")
 }
-func (UnimplementedConversationServer) GetAllConversations(context.Context, *GetAllConversationsReq) (*GetAllConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetAllConversations(context.Context, *GetAllConversationsReq) (*GetAllConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllConversations not implemented")
 }
-func (UnimplementedConversationServer) GetConversations(context.Context, *GetConversationsReq) (*GetConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversations(context.Context, *GetConversationsReq) (*GetConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversations not implemented")
 }
-func (UnimplementedConversationServer) SetConversation(context.Context, *SetConversationReq) (*SetConversationResp, error) {
+func (UnimplementedIMConversationServiceServer) SetConversation(context.Context, *SetConversationReq) (*SetConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetConversation not implemented")
 }
-func (UnimplementedConversationServer) GetRecvMsgNotNotifyUserIDs(context.Context, *GetRecvMsgNotNotifyUserIDsReq) (*GetRecvMsgNotNotifyUserIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetRecvMsgNotNotifyUserIDs(context.Context, *GetRecvMsgNotNotifyUserIDsReq) (*GetRecvMsgNotNotifyUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRecvMsgNotNotifyUserIDs not implemented")
 }
-func (UnimplementedConversationServer) CreateSingleChatConversations(context.Context, *CreateSingleChatConversationsReq) (*CreateSingleChatConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) CreateSingleChatConversations(context.Context, *CreateSingleChatConversationsReq) (*CreateSingleChatConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateSingleChatConversations not implemented")
 }
-func (UnimplementedConversationServer) CreateGroupChatConversations(context.Context, *CreateGroupChatConversationsReq) (*CreateGroupChatConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) CreateGroupChatConversations(context.Context, *CreateGroupChatConversationsReq) (*CreateGroupChatConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateGroupChatConversations not implemented")
 }
-func (UnimplementedConversationServer) SetConversationMaxSeq(context.Context, *SetConversationMaxSeqReq) (*SetConversationMaxSeqResp, error) {
+func (UnimplementedIMConversationServiceServer) SetConversationMaxSeq(context.Context, *SetConversationMaxSeqReq) (*SetConversationMaxSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetConversationMaxSeq not implemented")
 }
-func (UnimplementedConversationServer) SetConversationMinSeq(context.Context, *SetConversationMinSeqReq) (*SetConversationMinSeqResp, error) {
+func (UnimplementedIMConversationServiceServer) SetConversationMinSeq(context.Context, *SetConversationMinSeqReq) (*SetConversationMinSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetConversationMinSeq not implemented")
 }
-func (UnimplementedConversationServer) GetConversationIDs(context.Context, *GetConversationIDsReq) (*GetConversationIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversationIDs(context.Context, *GetConversationIDsReq) (*GetConversationIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationIDs not implemented")
 }
-func (UnimplementedConversationServer) SetConversations(context.Context, *SetConversationsReq) (*SetConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) SetConversations(context.Context, *SetConversationsReq) (*SetConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetConversations not implemented")
 }
-func (UnimplementedConversationServer) GetUserConversationIDsHash(context.Context, *GetUserConversationIDsHashReq) (*GetUserConversationIDsHashResp, error) {
+func (UnimplementedIMConversationServiceServer) GetUserConversationIDsHash(context.Context, *GetUserConversationIDsHashReq) (*GetUserConversationIDsHashResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserConversationIDsHash not implemented")
 }
-func (UnimplementedConversationServer) GetConversationsByConversationID(context.Context, *GetConversationsByConversationIDReq) (*GetConversationsByConversationIDResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversationsByConversationID(context.Context, *GetConversationsByConversationIDReq) (*GetConversationsByConversationIDResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationsByConversationID not implemented")
 }
-func (UnimplementedConversationServer) GetConversationOfflinePushUserIDs(context.Context, *GetConversationOfflinePushUserIDsReq) (*GetConversationOfflinePushUserIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversationOfflinePushUserIDs(context.Context, *GetConversationOfflinePushUserIDsReq) (*GetConversationOfflinePushUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationOfflinePushUserIDs not implemented")
 }
-func (UnimplementedConversationServer) GetConversationNotReceiveMessageUserIDs(context.Context, *GetConversationNotReceiveMessageUserIDsReq) (*GetConversationNotReceiveMessageUserIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversationNotReceiveMessageUserIDs(context.Context, *GetConversationNotReceiveMessageUserIDsReq) (*GetConversationNotReceiveMessageUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationNotReceiveMessageUserIDs not implemented")
 }
-func (UnimplementedConversationServer) UpdateConversation(context.Context, *UpdateConversationReq) (*UpdateConversationResp, error) {
+func (UnimplementedIMConversationServiceServer) UpdateConversation(context.Context, *UpdateConversationReq) (*UpdateConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateConversation not implemented")
 }
-func (UnimplementedConversationServer) GetFullOwnerConversationIDs(context.Context, *GetFullOwnerConversationIDsReq) (*GetFullOwnerConversationIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetFullOwnerConversationIDs(context.Context, *GetFullOwnerConversationIDsReq) (*GetFullOwnerConversationIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFullOwnerConversationIDs not implemented")
 }
-func (UnimplementedConversationServer) GetIncrementalConversation(context.Context, *GetIncrementalConversationReq) (*GetIncrementalConversationResp, error) {
+func (UnimplementedIMConversationServiceServer) GetIncrementalConversation(context.Context, *GetIncrementalConversationReq) (*GetIncrementalConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalConversation not implemented")
 }
-func (UnimplementedConversationServer) GetOwnerConversation(context.Context, *GetOwnerConversationReq) (*GetOwnerConversationResp, error) {
+func (UnimplementedIMConversationServiceServer) GetOwnerConversation(context.Context, *GetOwnerConversationReq) (*GetOwnerConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetOwnerConversation not implemented")
 }
-func (UnimplementedConversationServer) GetConversationsNeedClearMsg(context.Context, *GetConversationsNeedClearMsgReq) (*GetConversationsNeedClearMsgResp, error) {
+func (UnimplementedIMConversationServiceServer) GetConversationsNeedClearMsg(context.Context, *GetConversationsNeedClearMsgReq) (*GetConversationsNeedClearMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationsNeedClearMsg not implemented")
 }
-func (UnimplementedConversationServer) GetNotNotifyConversationIDs(context.Context, *GetNotNotifyConversationIDsReq) (*GetNotNotifyConversationIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetNotNotifyConversationIDs(context.Context, *GetNotNotifyConversationIDsReq) (*GetNotNotifyConversationIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetNotNotifyConversationIDs not implemented")
 }
-func (UnimplementedConversationServer) GetPinnedConversationIDs(context.Context, *GetPinnedConversationIDsReq) (*GetPinnedConversationIDsResp, error) {
+func (UnimplementedIMConversationServiceServer) GetPinnedConversationIDs(context.Context, *GetPinnedConversationIDsReq) (*GetPinnedConversationIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPinnedConversationIDs not implemented")
 }
-func (UnimplementedConversationServer) ClearUserConversationMsg(context.Context, *ClearUserConversationMsgReq) (*ClearUserConversationMsgResp, error) {
+func (UnimplementedIMConversationServiceServer) ClearUserConversationMsg(context.Context, *ClearUserConversationMsgReq) (*ClearUserConversationMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClearUserConversationMsg not implemented")
 }
-func (UnimplementedConversationServer) UpdateConversationsByUser(context.Context, *UpdateConversationsByUserReq) (*UpdateConversationsByUserResp, error) {
+func (UnimplementedIMConversationServiceServer) UpdateConversationsByUser(context.Context, *UpdateConversationsByUserReq) (*UpdateConversationsByUserResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateConversationsByUser not implemented")
 }
-func (UnimplementedConversationServer) DeleteConversations(context.Context, *DeleteConversationsReq) (*DeleteConversationsResp, error) {
+func (UnimplementedIMConversationServiceServer) DeleteConversations(context.Context, *DeleteConversationsReq) (*DeleteConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteConversations not implemented")
 }
-func (UnimplementedConversationServer) mustEmbedUnimplementedConversationServer() {}
-func (UnimplementedConversationServer) testEmbeddedByValue()                      {}
+func (UnimplementedIMConversationServiceServer) mustEmbedUnimplementedIMConversationServiceServer() {}
+func (UnimplementedIMConversationServiceServer) testEmbeddedByValue()                               {}
 
-// UnsafeConversationServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ConversationServer will
+// UnsafeIMConversationServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMConversationServiceServer will
 // result in compilation errors.
-type UnsafeConversationServer interface {
-	mustEmbedUnimplementedConversationServer()
+type UnsafeIMConversationServiceServer interface {
+	mustEmbedUnimplementedIMConversationServiceServer()
 }
 
-func RegisterConversationServer(s grpc.ServiceRegistrar, srv ConversationServer) {
-	// If the following call pancis, it indicates UnimplementedConversationServer was
+func RegisterIMConversationServiceServer(s grpc.ServiceRegistrar, srv IMConversationServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMConversationServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&Conversation_ServiceDesc, srv)
+	s.RegisterService(&IMConversationService_ServiceDesc, srv)
 }
 
-func _Conversation_GetConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversation(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversation_FullMethodName,
+		FullMethod: IMConversationService_GetConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversation(ctx, req.(*GetConversationReq))
+		return srv.(IMConversationServiceServer).GetConversation(ctx, req.(*GetConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetSortedConversationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetSortedConversationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSortedConversationListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetSortedConversationList(ctx, in)
+		return srv.(IMConversationServiceServer).GetSortedConversationList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetSortedConversationList_FullMethodName,
+		FullMethod: IMConversationService_GetSortedConversationList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetSortedConversationList(ctx, req.(*GetSortedConversationListReq))
+		return srv.(IMConversationServiceServer).GetSortedConversationList(ctx, req.(*GetSortedConversationListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetAllConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetAllConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetAllConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetAllConversations(ctx, in)
+		return srv.(IMConversationServiceServer).GetAllConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetAllConversations_FullMethodName,
+		FullMethod: IMConversationService_GetAllConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetAllConversations(ctx, req.(*GetAllConversationsReq))
+		return srv.(IMConversationServiceServer).GetAllConversations(ctx, req.(*GetAllConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversations(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversations_FullMethodName,
+		FullMethod: IMConversationService_GetConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversations(ctx, req.(*GetConversationsReq))
+		return srv.(IMConversationServiceServer).GetConversations(ctx, req.(*GetConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_SetConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_SetConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).SetConversation(ctx, in)
+		return srv.(IMConversationServiceServer).SetConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_SetConversation_FullMethodName,
+		FullMethod: IMConversationService_SetConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).SetConversation(ctx, req.(*SetConversationReq))
+		return srv.(IMConversationServiceServer).SetConversation(ctx, req.(*SetConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetRecvMsgNotNotifyUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetRecvMsgNotNotifyUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetRecvMsgNotNotifyUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetRecvMsgNotNotifyUserIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetRecvMsgNotNotifyUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetRecvMsgNotNotifyUserIDs_FullMethodName,
+		FullMethod: IMConversationService_GetRecvMsgNotNotifyUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetRecvMsgNotNotifyUserIDs(ctx, req.(*GetRecvMsgNotNotifyUserIDsReq))
+		return srv.(IMConversationServiceServer).GetRecvMsgNotNotifyUserIDs(ctx, req.(*GetRecvMsgNotNotifyUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_CreateSingleChatConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_CreateSingleChatConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateSingleChatConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).CreateSingleChatConversations(ctx, in)
+		return srv.(IMConversationServiceServer).CreateSingleChatConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_CreateSingleChatConversations_FullMethodName,
+		FullMethod: IMConversationService_CreateSingleChatConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).CreateSingleChatConversations(ctx, req.(*CreateSingleChatConversationsReq))
+		return srv.(IMConversationServiceServer).CreateSingleChatConversations(ctx, req.(*CreateSingleChatConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_CreateGroupChatConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_CreateGroupChatConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateGroupChatConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).CreateGroupChatConversations(ctx, in)
+		return srv.(IMConversationServiceServer).CreateGroupChatConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_CreateGroupChatConversations_FullMethodName,
+		FullMethod: IMConversationService_CreateGroupChatConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).CreateGroupChatConversations(ctx, req.(*CreateGroupChatConversationsReq))
+		return srv.(IMConversationServiceServer).CreateGroupChatConversations(ctx, req.(*CreateGroupChatConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_SetConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_SetConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetConversationMaxSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).SetConversationMaxSeq(ctx, in)
+		return srv.(IMConversationServiceServer).SetConversationMaxSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_SetConversationMaxSeq_FullMethodName,
+		FullMethod: IMConversationService_SetConversationMaxSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).SetConversationMaxSeq(ctx, req.(*SetConversationMaxSeqReq))
+		return srv.(IMConversationServiceServer).SetConversationMaxSeq(ctx, req.(*SetConversationMaxSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_SetConversationMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_SetConversationMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetConversationMinSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).SetConversationMinSeq(ctx, in)
+		return srv.(IMConversationServiceServer).SetConversationMinSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_SetConversationMinSeq_FullMethodName,
+		FullMethod: IMConversationService_SetConversationMinSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).SetConversationMinSeq(ctx, req.(*SetConversationMinSeqReq))
+		return srv.(IMConversationServiceServer).SetConversationMinSeq(ctx, req.(*SetConversationMinSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversationIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversationIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversationIDs_FullMethodName,
+		FullMethod: IMConversationService_GetConversationIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversationIDs(ctx, req.(*GetConversationIDsReq))
+		return srv.(IMConversationServiceServer).GetConversationIDs(ctx, req.(*GetConversationIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_SetConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_SetConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).SetConversations(ctx, in)
+		return srv.(IMConversationServiceServer).SetConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_SetConversations_FullMethodName,
+		FullMethod: IMConversationService_SetConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).SetConversations(ctx, req.(*SetConversationsReq))
+		return srv.(IMConversationServiceServer).SetConversations(ctx, req.(*SetConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetUserConversationIDsHash_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetUserConversationIDsHash_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserConversationIDsHashReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetUserConversationIDsHash(ctx, in)
+		return srv.(IMConversationServiceServer).GetUserConversationIDsHash(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetUserConversationIDsHash_FullMethodName,
+		FullMethod: IMConversationService_GetUserConversationIDsHash_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetUserConversationIDsHash(ctx, req.(*GetUserConversationIDsHashReq))
+		return srv.(IMConversationServiceServer).GetUserConversationIDsHash(ctx, req.(*GetUserConversationIDsHashReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversationsByConversationID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversationsByConversationID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationsByConversationIDReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversationsByConversationID(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversationsByConversationID(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversationsByConversationID_FullMethodName,
+		FullMethod: IMConversationService_GetConversationsByConversationID_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversationsByConversationID(ctx, req.(*GetConversationsByConversationIDReq))
+		return srv.(IMConversationServiceServer).GetConversationsByConversationID(ctx, req.(*GetConversationsByConversationIDReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversationOfflinePushUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversationOfflinePushUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationOfflinePushUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversationOfflinePushUserIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversationOfflinePushUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversationOfflinePushUserIDs_FullMethodName,
+		FullMethod: IMConversationService_GetConversationOfflinePushUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversationOfflinePushUserIDs(ctx, req.(*GetConversationOfflinePushUserIDsReq))
+		return srv.(IMConversationServiceServer).GetConversationOfflinePushUserIDs(ctx, req.(*GetConversationOfflinePushUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversationNotReceiveMessageUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversationNotReceiveMessageUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationNotReceiveMessageUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversationNotReceiveMessageUserIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversationNotReceiveMessageUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversationNotReceiveMessageUserIDs_FullMethodName,
+		FullMethod: IMConversationService_GetConversationNotReceiveMessageUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversationNotReceiveMessageUserIDs(ctx, req.(*GetConversationNotReceiveMessageUserIDsReq))
+		return srv.(IMConversationServiceServer).GetConversationNotReceiveMessageUserIDs(ctx, req.(*GetConversationNotReceiveMessageUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_UpdateConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_UpdateConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).UpdateConversation(ctx, in)
+		return srv.(IMConversationServiceServer).UpdateConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_UpdateConversation_FullMethodName,
+		FullMethod: IMConversationService_UpdateConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).UpdateConversation(ctx, req.(*UpdateConversationReq))
+		return srv.(IMConversationServiceServer).UpdateConversation(ctx, req.(*UpdateConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetFullOwnerConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetFullOwnerConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFullOwnerConversationIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetFullOwnerConversationIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetFullOwnerConversationIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetFullOwnerConversationIDs_FullMethodName,
+		FullMethod: IMConversationService_GetFullOwnerConversationIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetFullOwnerConversationIDs(ctx, req.(*GetFullOwnerConversationIDsReq))
+		return srv.(IMConversationServiceServer).GetFullOwnerConversationIDs(ctx, req.(*GetFullOwnerConversationIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetIncrementalConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetIncrementalConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetIncrementalConversation(ctx, in)
+		return srv.(IMConversationServiceServer).GetIncrementalConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetIncrementalConversation_FullMethodName,
+		FullMethod: IMConversationService_GetIncrementalConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetIncrementalConversation(ctx, req.(*GetIncrementalConversationReq))
+		return srv.(IMConversationServiceServer).GetIncrementalConversation(ctx, req.(*GetIncrementalConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetOwnerConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetOwnerConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetOwnerConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetOwnerConversation(ctx, in)
+		return srv.(IMConversationServiceServer).GetOwnerConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetOwnerConversation_FullMethodName,
+		FullMethod: IMConversationService_GetOwnerConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetOwnerConversation(ctx, req.(*GetOwnerConversationReq))
+		return srv.(IMConversationServiceServer).GetOwnerConversation(ctx, req.(*GetOwnerConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetConversationsNeedClearMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetConversationsNeedClearMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationsNeedClearMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetConversationsNeedClearMsg(ctx, in)
+		return srv.(IMConversationServiceServer).GetConversationsNeedClearMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetConversationsNeedClearMsg_FullMethodName,
+		FullMethod: IMConversationService_GetConversationsNeedClearMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetConversationsNeedClearMsg(ctx, req.(*GetConversationsNeedClearMsgReq))
+		return srv.(IMConversationServiceServer).GetConversationsNeedClearMsg(ctx, req.(*GetConversationsNeedClearMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetNotNotifyConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetNotNotifyConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetNotNotifyConversationIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetNotNotifyConversationIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetNotNotifyConversationIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetNotNotifyConversationIDs_FullMethodName,
+		FullMethod: IMConversationService_GetNotNotifyConversationIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetNotNotifyConversationIDs(ctx, req.(*GetNotNotifyConversationIDsReq))
+		return srv.(IMConversationServiceServer).GetNotNotifyConversationIDs(ctx, req.(*GetNotNotifyConversationIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_GetPinnedConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_GetPinnedConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPinnedConversationIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).GetPinnedConversationIDs(ctx, in)
+		return srv.(IMConversationServiceServer).GetPinnedConversationIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_GetPinnedConversationIDs_FullMethodName,
+		FullMethod: IMConversationService_GetPinnedConversationIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).GetPinnedConversationIDs(ctx, req.(*GetPinnedConversationIDsReq))
+		return srv.(IMConversationServiceServer).GetPinnedConversationIDs(ctx, req.(*GetPinnedConversationIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_ClearUserConversationMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_ClearUserConversationMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ClearUserConversationMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).ClearUserConversationMsg(ctx, in)
+		return srv.(IMConversationServiceServer).ClearUserConversationMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_ClearUserConversationMsg_FullMethodName,
+		FullMethod: IMConversationService_ClearUserConversationMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).ClearUserConversationMsg(ctx, req.(*ClearUserConversationMsgReq))
+		return srv.(IMConversationServiceServer).ClearUserConversationMsg(ctx, req.(*ClearUserConversationMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_UpdateConversationsByUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_UpdateConversationsByUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateConversationsByUserReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).UpdateConversationsByUser(ctx, in)
+		return srv.(IMConversationServiceServer).UpdateConversationsByUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_UpdateConversationsByUser_FullMethodName,
+		FullMethod: IMConversationService_UpdateConversationsByUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).UpdateConversationsByUser(ctx, req.(*UpdateConversationsByUserReq))
+		return srv.(IMConversationServiceServer).UpdateConversationsByUser(ctx, req.(*UpdateConversationsByUserReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Conversation_DeleteConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMConversationService_DeleteConversations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteConversationsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ConversationServer).DeleteConversations(ctx, in)
+		return srv.(IMConversationServiceServer).DeleteConversations(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Conversation_DeleteConversations_FullMethodName,
+		FullMethod: IMConversationService_DeleteConversations_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ConversationServer).DeleteConversations(ctx, req.(*DeleteConversationsReq))
+		return srv.(IMConversationServiceServer).DeleteConversations(ctx, req.(*DeleteConversationsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Conversation_ServiceDesc is the grpc.ServiceDesc for Conversation service.
+// IMConversationService_ServiceDesc is the grpc.ServiceDesc for IMConversationService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Conversation_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.conversation.Conversation",
-	HandlerType: (*ConversationServer)(nil),
+var IMConversationService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.conversation.IMConversationService",
+	HandlerType: (*IMConversationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetConversation",
-			Handler:    _Conversation_GetConversation_Handler,
+			Handler:    _IMConversationService_GetConversation_Handler,
 		},
 		{
 			MethodName: "GetSortedConversationList",
-			Handler:    _Conversation_GetSortedConversationList_Handler,
+			Handler:    _IMConversationService_GetSortedConversationList_Handler,
 		},
 		{
 			MethodName: "GetAllConversations",
-			Handler:    _Conversation_GetAllConversations_Handler,
+			Handler:    _IMConversationService_GetAllConversations_Handler,
 		},
 		{
 			MethodName: "GetConversations",
-			Handler:    _Conversation_GetConversations_Handler,
+			Handler:    _IMConversationService_GetConversations_Handler,
 		},
 		{
 			MethodName: "SetConversation",
-			Handler:    _Conversation_SetConversation_Handler,
+			Handler:    _IMConversationService_SetConversation_Handler,
 		},
 		{
 			MethodName: "GetRecvMsgNotNotifyUserIDs",
-			Handler:    _Conversation_GetRecvMsgNotNotifyUserIDs_Handler,
+			Handler:    _IMConversationService_GetRecvMsgNotNotifyUserIDs_Handler,
 		},
 		{
 			MethodName: "CreateSingleChatConversations",
-			Handler:    _Conversation_CreateSingleChatConversations_Handler,
+			Handler:    _IMConversationService_CreateSingleChatConversations_Handler,
 		},
 		{
 			MethodName: "CreateGroupChatConversations",
-			Handler:    _Conversation_CreateGroupChatConversations_Handler,
+			Handler:    _IMConversationService_CreateGroupChatConversations_Handler,
 		},
 		{
 			MethodName: "SetConversationMaxSeq",
-			Handler:    _Conversation_SetConversationMaxSeq_Handler,
+			Handler:    _IMConversationService_SetConversationMaxSeq_Handler,
 		},
 		{
 			MethodName: "SetConversationMinSeq",
-			Handler:    _Conversation_SetConversationMinSeq_Handler,
+			Handler:    _IMConversationService_SetConversationMinSeq_Handler,
 		},
 		{
 			MethodName: "GetConversationIDs",
-			Handler:    _Conversation_GetConversationIDs_Handler,
+			Handler:    _IMConversationService_GetConversationIDs_Handler,
 		},
 		{
 			MethodName: "SetConversations",
-			Handler:    _Conversation_SetConversations_Handler,
+			Handler:    _IMConversationService_SetConversations_Handler,
 		},
 		{
 			MethodName: "GetUserConversationIDsHash",
-			Handler:    _Conversation_GetUserConversationIDsHash_Handler,
+			Handler:    _IMConversationService_GetUserConversationIDsHash_Handler,
 		},
 		{
 			MethodName: "GetConversationsByConversationID",
-			Handler:    _Conversation_GetConversationsByConversationID_Handler,
+			Handler:    _IMConversationService_GetConversationsByConversationID_Handler,
 		},
 		{
 			MethodName: "GetConversationOfflinePushUserIDs",
-			Handler:    _Conversation_GetConversationOfflinePushUserIDs_Handler,
+			Handler:    _IMConversationService_GetConversationOfflinePushUserIDs_Handler,
 		},
 		{
 			MethodName: "GetConversationNotReceiveMessageUserIDs",
-			Handler:    _Conversation_GetConversationNotReceiveMessageUserIDs_Handler,
+			Handler:    _IMConversationService_GetConversationNotReceiveMessageUserIDs_Handler,
 		},
 		{
 			MethodName: "UpdateConversation",
-			Handler:    _Conversation_UpdateConversation_Handler,
+			Handler:    _IMConversationService_UpdateConversation_Handler,
 		},
 		{
 			MethodName: "GetFullOwnerConversationIDs",
-			Handler:    _Conversation_GetFullOwnerConversationIDs_Handler,
+			Handler:    _IMConversationService_GetFullOwnerConversationIDs_Handler,
 		},
 		{
 			MethodName: "GetIncrementalConversation",
-			Handler:    _Conversation_GetIncrementalConversation_Handler,
+			Handler:    _IMConversationService_GetIncrementalConversation_Handler,
 		},
 		{
 			MethodName: "GetOwnerConversation",
-			Handler:    _Conversation_GetOwnerConversation_Handler,
+			Handler:    _IMConversationService_GetOwnerConversation_Handler,
 		},
 		{
 			MethodName: "GetConversationsNeedClearMsg",
-			Handler:    _Conversation_GetConversationsNeedClearMsg_Handler,
+			Handler:    _IMConversationService_GetConversationsNeedClearMsg_Handler,
 		},
 		{
 			MethodName: "GetNotNotifyConversationIDs",
-			Handler:    _Conversation_GetNotNotifyConversationIDs_Handler,
+			Handler:    _IMConversationService_GetNotNotifyConversationIDs_Handler,
 		},
 		{
 			MethodName: "GetPinnedConversationIDs",
-			Handler:    _Conversation_GetPinnedConversationIDs_Handler,
+			Handler:    _IMConversationService_GetPinnedConversationIDs_Handler,
 		},
 		{
 			MethodName: "ClearUserConversationMsg",
-			Handler:    _Conversation_ClearUserConversationMsg_Handler,
+			Handler:    _IMConversationService_ClearUserConversationMsg_Handler,
 		},
 		{
 			MethodName: "UpdateConversationsByUser",
-			Handler:    _Conversation_UpdateConversationsByUser_Handler,
+			Handler:    _IMConversationService_UpdateConversationsByUser_Handler,
 		},
 		{
 			MethodName: "DeleteConversations",
-			Handler:    _Conversation_DeleteConversations_Handler,
+			Handler:    _IMConversationService_DeleteConversations_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

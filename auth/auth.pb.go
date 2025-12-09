@@ -745,17 +745,17 @@ const file_auth_auth_proto_rawDesc = "" +
 	"\vtokenStates\x18\x01 \x03(\v22.openim.auth.GetExistingTokenResp.TokenStatesEntryR\vtokenStates\x1a>\n" +
 	"\x10TokenStatesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x012\xaa\x04\n" +
-	"\x04Auth\x12N\n" +
-	"\rgetAdminToken\x12\x1d.openim.auth.GetAdminTokenReq\x1a\x1e.openim.auth.GetAdminTokenResp\x12K\n" +
-	"\fgetUserToken\x12\x1c.openim.auth.GetUserTokenReq\x1a\x1d.openim.auth.GetUserTokenResp\x12H\n" +
-	"\vforceLogout\x12\x1b.openim.auth.ForceLogoutReq\x1a\x1c.openim.auth.ForceLogoutResp\x12E\n" +
+	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x012\xb3\x04\n" +
+	"\rIMAuthService\x12N\n" +
+	"\rGetAdminToken\x12\x1d.openim.auth.GetAdminTokenReq\x1a\x1e.openim.auth.GetAdminTokenResp\x12K\n" +
+	"\fGetUserToken\x12\x1c.openim.auth.GetUserTokenReq\x1a\x1d.openim.auth.GetUserTokenResp\x12H\n" +
+	"\vForceLogout\x12\x1b.openim.auth.ForceLogoutReq\x1a\x1c.openim.auth.ForceLogoutResp\x12E\n" +
 	"\n" +
-	"parseToken\x12\x1a.openim.auth.ParseTokenReq\x1a\x1b.openim.auth.ParseTokenResp\x12T\n" +
-	"\x0finvalidateToken\x12\x1f.openim.auth.InvalidateTokenReq\x1a .openim.auth.InvalidateTokenResp\x12E\n" +
+	"ParseToken\x12\x1a.openim.auth.ParseTokenReq\x1a\x1b.openim.auth.ParseTokenResp\x12T\n" +
+	"\x0fInvalidateToken\x12\x1f.openim.auth.InvalidateTokenReq\x1a .openim.auth.InvalidateTokenResp\x12E\n" +
 	"\n" +
-	"kickTokens\x12\x1a.openim.auth.KickTokensReq\x1a\x1b.openim.auth.KickTokensResp\x12W\n" +
-	"\x10getExistingToken\x12 .openim.auth.GetExistingTokenReq\x1a!.openim.auth.GetExistingTokenRespB$Z\"github.com/openimsdk/protocol/authb\x06proto3"
+	"KickTokens\x12\x1a.openim.auth.KickTokensReq\x1a\x1b.openim.auth.KickTokensResp\x12W\n" +
+	"\x10GetExistingToken\x12 .openim.auth.GetExistingTokenReq\x1a!.openim.auth.GetExistingTokenRespB$Z\"github.com/openimsdk/protocol/authb\x06proto3"
 
 var (
 	file_auth_auth_proto_rawDescOnce sync.Once
@@ -789,20 +789,20 @@ var file_auth_auth_proto_goTypes = []any{
 }
 var file_auth_auth_proto_depIdxs = []int32{
 	14, // 0: openim.auth.GetExistingTokenResp.tokenStates:type_name -> openim.auth.GetExistingTokenResp.TokenStatesEntry
-	0,  // 1: openim.auth.Auth.getAdminToken:input_type -> openim.auth.GetAdminTokenReq
-	6,  // 2: openim.auth.Auth.getUserToken:input_type -> openim.auth.GetUserTokenReq
-	2,  // 3: openim.auth.Auth.forceLogout:input_type -> openim.auth.ForceLogoutReq
-	4,  // 4: openim.auth.Auth.parseToken:input_type -> openim.auth.ParseTokenReq
-	8,  // 5: openim.auth.Auth.invalidateToken:input_type -> openim.auth.InvalidateTokenReq
-	10, // 6: openim.auth.Auth.kickTokens:input_type -> openim.auth.KickTokensReq
-	12, // 7: openim.auth.Auth.getExistingToken:input_type -> openim.auth.GetExistingTokenReq
-	1,  // 8: openim.auth.Auth.getAdminToken:output_type -> openim.auth.GetAdminTokenResp
-	7,  // 9: openim.auth.Auth.getUserToken:output_type -> openim.auth.GetUserTokenResp
-	3,  // 10: openim.auth.Auth.forceLogout:output_type -> openim.auth.ForceLogoutResp
-	5,  // 11: openim.auth.Auth.parseToken:output_type -> openim.auth.ParseTokenResp
-	9,  // 12: openim.auth.Auth.invalidateToken:output_type -> openim.auth.InvalidateTokenResp
-	11, // 13: openim.auth.Auth.kickTokens:output_type -> openim.auth.KickTokensResp
-	13, // 14: openim.auth.Auth.getExistingToken:output_type -> openim.auth.GetExistingTokenResp
+	0,  // 1: openim.auth.IMAuthService.GetAdminToken:input_type -> openim.auth.GetAdminTokenReq
+	6,  // 2: openim.auth.IMAuthService.GetUserToken:input_type -> openim.auth.GetUserTokenReq
+	2,  // 3: openim.auth.IMAuthService.ForceLogout:input_type -> openim.auth.ForceLogoutReq
+	4,  // 4: openim.auth.IMAuthService.ParseToken:input_type -> openim.auth.ParseTokenReq
+	8,  // 5: openim.auth.IMAuthService.InvalidateToken:input_type -> openim.auth.InvalidateTokenReq
+	10, // 6: openim.auth.IMAuthService.KickTokens:input_type -> openim.auth.KickTokensReq
+	12, // 7: openim.auth.IMAuthService.GetExistingToken:input_type -> openim.auth.GetExistingTokenReq
+	1,  // 8: openim.auth.IMAuthService.GetAdminToken:output_type -> openim.auth.GetAdminTokenResp
+	7,  // 9: openim.auth.IMAuthService.GetUserToken:output_type -> openim.auth.GetUserTokenResp
+	3,  // 10: openim.auth.IMAuthService.ForceLogout:output_type -> openim.auth.ForceLogoutResp
+	5,  // 11: openim.auth.IMAuthService.ParseToken:output_type -> openim.auth.ParseTokenResp
+	9,  // 12: openim.auth.IMAuthService.InvalidateToken:output_type -> openim.auth.InvalidateTokenResp
+	11, // 13: openim.auth.IMAuthService.KickTokens:output_type -> openim.auth.KickTokensResp
+	13, // 14: openim.auth.IMAuthService.GetExistingToken:output_type -> openim.auth.GetExistingTokenResp
 	8,  // [8:15] is the sub-list for method output_type
 	1,  // [1:8] is the sub-list for method input_type
 	1,  // [1:1] is the sub-list for extension type_name

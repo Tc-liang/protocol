@@ -33,51 +33,51 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Group_CreateGroup_FullMethodName                       = "/openim.group.Group/createGroup"
-	Group_JoinGroup_FullMethodName                         = "/openim.group.Group/joinGroup"
-	Group_QuitGroup_FullMethodName                         = "/openim.group.Group/quitGroup"
-	Group_GetGroupsInfo_FullMethodName                     = "/openim.group.Group/getGroupsInfo"
-	Group_SetGroupInfo_FullMethodName                      = "/openim.group.Group/setGroupInfo"
-	Group_SetGroupInfoEx_FullMethodName                    = "/openim.group.Group/setGroupInfoEx"
-	Group_GetGroupApplicationList_FullMethodName           = "/openim.group.Group/getGroupApplicationList"
-	Group_GetGroupApplicationUnhandledCount_FullMethodName = "/openim.group.Group/getGroupApplicationUnhandledCount"
-	Group_GetUserReqApplicationList_FullMethodName         = "/openim.group.Group/getUserReqApplicationList"
-	Group_GetGroupUsersReqApplicationList_FullMethodName   = "/openim.group.Group/getGroupUsersReqApplicationList"
-	Group_GetSpecifiedUserGroupRequestInfo_FullMethodName  = "/openim.group.Group/getSpecifiedUserGroupRequestInfo"
-	Group_TransferGroupOwner_FullMethodName                = "/openim.group.Group/transferGroupOwner"
-	Group_GroupApplicationResponse_FullMethodName          = "/openim.group.Group/groupApplicationResponse"
-	Group_GetGroupMemberList_FullMethodName                = "/openim.group.Group/getGroupMemberList"
-	Group_GetGroupMembersInfo_FullMethodName               = "/openim.group.Group/getGroupMembersInfo"
-	Group_KickGroupMember_FullMethodName                   = "/openim.group.Group/kickGroupMember"
-	Group_GetJoinedGroupList_FullMethodName                = "/openim.group.Group/getJoinedGroupList"
-	Group_InviteUserToGroup_FullMethodName                 = "/openim.group.Group/inviteUserToGroup"
-	Group_GetGroups_FullMethodName                         = "/openim.group.Group/getGroups"
-	Group_GetGroupMembersCMS_FullMethodName                = "/openim.group.Group/getGroupMembersCMS"
-	Group_DismissGroup_FullMethodName                      = "/openim.group.Group/dismissGroup"
-	Group_MuteGroupMember_FullMethodName                   = "/openim.group.Group/muteGroupMember"
-	Group_CancelMuteGroupMember_FullMethodName             = "/openim.group.Group/cancelMuteGroupMember"
-	Group_MuteGroup_FullMethodName                         = "/openim.group.Group/muteGroup"
-	Group_CancelMuteGroup_FullMethodName                   = "/openim.group.Group/cancelMuteGroup"
-	Group_SetGroupMemberInfo_FullMethodName                = "/openim.group.Group/setGroupMemberInfo"
-	Group_GetGroupAbstractInfo_FullMethodName              = "/openim.group.Group/getGroupAbstractInfo"
-	Group_GetUserInGroupMembers_FullMethodName             = "/openim.group.Group/getUserInGroupMembers"
-	Group_GetGroupMemberUserIDs_FullMethodName             = "/openim.group.Group/getGroupMemberUserIDs"
-	Group_GetGroupMemberRoleLevel_FullMethodName           = "/openim.group.Group/GetGroupMemberRoleLevel"
-	Group_GetGroupInfoCache_FullMethodName                 = "/openim.group.Group/GetGroupInfoCache"
-	Group_GetGroupMemberCache_FullMethodName               = "/openim.group.Group/GetGroupMemberCache"
-	Group_GroupCreateCount_FullMethodName                  = "/openim.group.Group/GroupCreateCount"
-	Group_NotificationUserInfoUpdate_FullMethodName        = "/openim.group.Group/NotificationUserInfoUpdate"
-	Group_GetIncrementalGroupMember_FullMethodName         = "/openim.group.Group/getIncrementalGroupMember"
-	Group_BatchGetIncrementalGroupMember_FullMethodName    = "/openim.group.Group/BatchGetIncrementalGroupMember"
-	Group_GetIncrementalJoinGroup_FullMethodName           = "/openim.group.Group/getIncrementalJoinGroup"
-	Group_GetFullGroupMemberUserIDs_FullMethodName         = "/openim.group.Group/GetFullGroupMemberUserIDs"
-	Group_GetFullJoinGroupIDs_FullMethodName               = "/openim.group.Group/GetFullJoinGroupIDs"
+	IMGroupService_CreateGroup_FullMethodName                       = "/openim.group.IMGroupService/CreateGroup"
+	IMGroupService_JoinGroup_FullMethodName                         = "/openim.group.IMGroupService/JoinGroup"
+	IMGroupService_QuitGroup_FullMethodName                         = "/openim.group.IMGroupService/QuitGroup"
+	IMGroupService_GetGroupsInfo_FullMethodName                     = "/openim.group.IMGroupService/GetGroupsInfo"
+	IMGroupService_SetGroupInfo_FullMethodName                      = "/openim.group.IMGroupService/SetGroupInfo"
+	IMGroupService_SetGroupInfoEx_FullMethodName                    = "/openim.group.IMGroupService/SetGroupInfoEx"
+	IMGroupService_GetGroupApplicationList_FullMethodName           = "/openim.group.IMGroupService/GetGroupApplicationList"
+	IMGroupService_GetGroupApplicationUnhandledCount_FullMethodName = "/openim.group.IMGroupService/GetGroupApplicationUnhandledCount"
+	IMGroupService_GetUserReqApplicationList_FullMethodName         = "/openim.group.IMGroupService/GetUserReqApplicationList"
+	IMGroupService_GetGroupUsersReqApplicationList_FullMethodName   = "/openim.group.IMGroupService/GetGroupUsersReqApplicationList"
+	IMGroupService_GetSpecifiedUserGroupRequestInfo_FullMethodName  = "/openim.group.IMGroupService/GetSpecifiedUserGroupRequestInfo"
+	IMGroupService_TransferGroupOwner_FullMethodName                = "/openim.group.IMGroupService/TransferGroupOwner"
+	IMGroupService_GroupApplicationResponse_FullMethodName          = "/openim.group.IMGroupService/GroupApplicationResponse"
+	IMGroupService_GetGroupMemberList_FullMethodName                = "/openim.group.IMGroupService/GetGroupMemberList"
+	IMGroupService_GetGroupMembersInfo_FullMethodName               = "/openim.group.IMGroupService/GetGroupMembersInfo"
+	IMGroupService_KickGroupMember_FullMethodName                   = "/openim.group.IMGroupService/KickGroupMember"
+	IMGroupService_GetJoinedGroupList_FullMethodName                = "/openim.group.IMGroupService/GetJoinedGroupList"
+	IMGroupService_InviteUserToGroup_FullMethodName                 = "/openim.group.IMGroupService/InviteUserToGroup"
+	IMGroupService_GetGroups_FullMethodName                         = "/openim.group.IMGroupService/GetGroups"
+	IMGroupService_GetGroupMembersCMS_FullMethodName                = "/openim.group.IMGroupService/GetGroupMembersCMS"
+	IMGroupService_DismissGroup_FullMethodName                      = "/openim.group.IMGroupService/DismissGroup"
+	IMGroupService_MuteGroupMember_FullMethodName                   = "/openim.group.IMGroupService/MuteGroupMember"
+	IMGroupService_CancelMuteGroupMember_FullMethodName             = "/openim.group.IMGroupService/CancelMuteGroupMember"
+	IMGroupService_MuteGroup_FullMethodName                         = "/openim.group.IMGroupService/MuteGroup"
+	IMGroupService_CancelMuteGroup_FullMethodName                   = "/openim.group.IMGroupService/CancelMuteGroup"
+	IMGroupService_SetGroupMemberInfo_FullMethodName                = "/openim.group.IMGroupService/SetGroupMemberInfo"
+	IMGroupService_GetGroupAbstractInfo_FullMethodName              = "/openim.group.IMGroupService/GetGroupAbstractInfo"
+	IMGroupService_GetUserInGroupMembers_FullMethodName             = "/openim.group.IMGroupService/GetUserInGroupMembers"
+	IMGroupService_GetGroupMemberUserIDs_FullMethodName             = "/openim.group.IMGroupService/GetGroupMemberUserIDs"
+	IMGroupService_GetGroupMemberRoleLevel_FullMethodName           = "/openim.group.IMGroupService/GetGroupMemberRoleLevel"
+	IMGroupService_GetGroupInfoCache_FullMethodName                 = "/openim.group.IMGroupService/GetGroupInfoCache"
+	IMGroupService_GetGroupMemberCache_FullMethodName               = "/openim.group.IMGroupService/GetGroupMemberCache"
+	IMGroupService_GroupCreateCount_FullMethodName                  = "/openim.group.IMGroupService/GroupCreateCount"
+	IMGroupService_NotificationUserInfoUpdate_FullMethodName        = "/openim.group.IMGroupService/NotificationUserInfoUpdate"
+	IMGroupService_GetIncrementalGroupMember_FullMethodName         = "/openim.group.IMGroupService/GetIncrementalGroupMember"
+	IMGroupService_BatchGetIncrementalGroupMember_FullMethodName    = "/openim.group.IMGroupService/BatchGetIncrementalGroupMember"
+	IMGroupService_GetIncrementalJoinGroup_FullMethodName           = "/openim.group.IMGroupService/GetIncrementalJoinGroup"
+	IMGroupService_GetFullGroupMemberUserIDs_FullMethodName         = "/openim.group.IMGroupService/GetFullGroupMemberUserIDs"
+	IMGroupService_GetFullJoinGroupIDs_FullMethodName               = "/openim.group.IMGroupService/GetFullJoinGroupIDs"
 )
 
-// GroupClient is the client API for Group service.
+// IMGroupServiceClient is the client API for IMGroupService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type GroupClient interface {
+type IMGroupServiceClient interface {
 	// Create group
 	CreateGroup(ctx context.Context, in *CreateGroupReq, opts ...grpc.CallOption) (*CreateGroupResp, error)
 	// Apply to join group
@@ -144,408 +144,408 @@ type GroupClient interface {
 	GetFullJoinGroupIDs(ctx context.Context, in *GetFullJoinGroupIDsReq, opts ...grpc.CallOption) (*GetFullJoinGroupIDsResp, error)
 }
 
-type groupClient struct {
+type iMGroupServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewGroupClient(cc grpc.ClientConnInterface) GroupClient {
-	return &groupClient{cc}
+func NewIMGroupServiceClient(cc grpc.ClientConnInterface) IMGroupServiceClient {
+	return &iMGroupServiceClient{cc}
 }
 
-func (c *groupClient) CreateGroup(ctx context.Context, in *CreateGroupReq, opts ...grpc.CallOption) (*CreateGroupResp, error) {
+func (c *iMGroupServiceClient) CreateGroup(ctx context.Context, in *CreateGroupReq, opts ...grpc.CallOption) (*CreateGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CreateGroupResp)
-	err := c.cc.Invoke(ctx, Group_CreateGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_CreateGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) JoinGroup(ctx context.Context, in *JoinGroupReq, opts ...grpc.CallOption) (*JoinGroupResp, error) {
+func (c *iMGroupServiceClient) JoinGroup(ctx context.Context, in *JoinGroupReq, opts ...grpc.CallOption) (*JoinGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(JoinGroupResp)
-	err := c.cc.Invoke(ctx, Group_JoinGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_JoinGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) QuitGroup(ctx context.Context, in *QuitGroupReq, opts ...grpc.CallOption) (*QuitGroupResp, error) {
+func (c *iMGroupServiceClient) QuitGroup(ctx context.Context, in *QuitGroupReq, opts ...grpc.CallOption) (*QuitGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(QuitGroupResp)
-	err := c.cc.Invoke(ctx, Group_QuitGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_QuitGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupsInfo(ctx context.Context, in *GetGroupsInfoReq, opts ...grpc.CallOption) (*GetGroupsInfoResp, error) {
+func (c *iMGroupServiceClient) GetGroupsInfo(ctx context.Context, in *GetGroupsInfoReq, opts ...grpc.CallOption) (*GetGroupsInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupsInfoResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupsInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupsInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) SetGroupInfo(ctx context.Context, in *SetGroupInfoReq, opts ...grpc.CallOption) (*SetGroupInfoResp, error) {
+func (c *iMGroupServiceClient) SetGroupInfo(ctx context.Context, in *SetGroupInfoReq, opts ...grpc.CallOption) (*SetGroupInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetGroupInfoResp)
-	err := c.cc.Invoke(ctx, Group_SetGroupInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_SetGroupInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) SetGroupInfoEx(ctx context.Context, in *SetGroupInfoExReq, opts ...grpc.CallOption) (*SetGroupInfoExResp, error) {
+func (c *iMGroupServiceClient) SetGroupInfoEx(ctx context.Context, in *SetGroupInfoExReq, opts ...grpc.CallOption) (*SetGroupInfoExResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetGroupInfoExResp)
-	err := c.cc.Invoke(ctx, Group_SetGroupInfoEx_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_SetGroupInfoEx_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupApplicationList(ctx context.Context, in *GetGroupApplicationListReq, opts ...grpc.CallOption) (*GetGroupApplicationListResp, error) {
+func (c *iMGroupServiceClient) GetGroupApplicationList(ctx context.Context, in *GetGroupApplicationListReq, opts ...grpc.CallOption) (*GetGroupApplicationListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupApplicationListResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupApplicationList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupApplicationList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupApplicationUnhandledCount(ctx context.Context, in *GetGroupApplicationUnhandledCountReq, opts ...grpc.CallOption) (*GetGroupApplicationUnhandledCountResp, error) {
+func (c *iMGroupServiceClient) GetGroupApplicationUnhandledCount(ctx context.Context, in *GetGroupApplicationUnhandledCountReq, opts ...grpc.CallOption) (*GetGroupApplicationUnhandledCountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupApplicationUnhandledCountResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupApplicationUnhandledCount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupApplicationUnhandledCount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetUserReqApplicationList(ctx context.Context, in *GetUserReqApplicationListReq, opts ...grpc.CallOption) (*GetUserReqApplicationListResp, error) {
+func (c *iMGroupServiceClient) GetUserReqApplicationList(ctx context.Context, in *GetUserReqApplicationListReq, opts ...grpc.CallOption) (*GetUserReqApplicationListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserReqApplicationListResp)
-	err := c.cc.Invoke(ctx, Group_GetUserReqApplicationList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetUserReqApplicationList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupUsersReqApplicationList(ctx context.Context, in *GetGroupUsersReqApplicationListReq, opts ...grpc.CallOption) (*GetGroupUsersReqApplicationListResp, error) {
+func (c *iMGroupServiceClient) GetGroupUsersReqApplicationList(ctx context.Context, in *GetGroupUsersReqApplicationListReq, opts ...grpc.CallOption) (*GetGroupUsersReqApplicationListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupUsersReqApplicationListResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupUsersReqApplicationList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupUsersReqApplicationList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetSpecifiedUserGroupRequestInfo(ctx context.Context, in *GetSpecifiedUserGroupRequestInfoReq, opts ...grpc.CallOption) (*GetSpecifiedUserGroupRequestInfoResp, error) {
+func (c *iMGroupServiceClient) GetSpecifiedUserGroupRequestInfo(ctx context.Context, in *GetSpecifiedUserGroupRequestInfoReq, opts ...grpc.CallOption) (*GetSpecifiedUserGroupRequestInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSpecifiedUserGroupRequestInfoResp)
-	err := c.cc.Invoke(ctx, Group_GetSpecifiedUserGroupRequestInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetSpecifiedUserGroupRequestInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) TransferGroupOwner(ctx context.Context, in *TransferGroupOwnerReq, opts ...grpc.CallOption) (*TransferGroupOwnerResp, error) {
+func (c *iMGroupServiceClient) TransferGroupOwner(ctx context.Context, in *TransferGroupOwnerReq, opts ...grpc.CallOption) (*TransferGroupOwnerResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(TransferGroupOwnerResp)
-	err := c.cc.Invoke(ctx, Group_TransferGroupOwner_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_TransferGroupOwner_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GroupApplicationResponse(ctx context.Context, in *GroupApplicationResponseReq, opts ...grpc.CallOption) (*GroupApplicationResponseResp, error) {
+func (c *iMGroupServiceClient) GroupApplicationResponse(ctx context.Context, in *GroupApplicationResponseReq, opts ...grpc.CallOption) (*GroupApplicationResponseResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GroupApplicationResponseResp)
-	err := c.cc.Invoke(ctx, Group_GroupApplicationResponse_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GroupApplicationResponse_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMemberList(ctx context.Context, in *GetGroupMemberListReq, opts ...grpc.CallOption) (*GetGroupMemberListResp, error) {
+func (c *iMGroupServiceClient) GetGroupMemberList(ctx context.Context, in *GetGroupMemberListReq, opts ...grpc.CallOption) (*GetGroupMemberListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMemberListResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMemberList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMemberList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMembersInfo(ctx context.Context, in *GetGroupMembersInfoReq, opts ...grpc.CallOption) (*GetGroupMembersInfoResp, error) {
+func (c *iMGroupServiceClient) GetGroupMembersInfo(ctx context.Context, in *GetGroupMembersInfoReq, opts ...grpc.CallOption) (*GetGroupMembersInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMembersInfoResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMembersInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMembersInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) KickGroupMember(ctx context.Context, in *KickGroupMemberReq, opts ...grpc.CallOption) (*KickGroupMemberResp, error) {
+func (c *iMGroupServiceClient) KickGroupMember(ctx context.Context, in *KickGroupMemberReq, opts ...grpc.CallOption) (*KickGroupMemberResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(KickGroupMemberResp)
-	err := c.cc.Invoke(ctx, Group_KickGroupMember_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_KickGroupMember_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetJoinedGroupList(ctx context.Context, in *GetJoinedGroupListReq, opts ...grpc.CallOption) (*GetJoinedGroupListResp, error) {
+func (c *iMGroupServiceClient) GetJoinedGroupList(ctx context.Context, in *GetJoinedGroupListReq, opts ...grpc.CallOption) (*GetJoinedGroupListResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetJoinedGroupListResp)
-	err := c.cc.Invoke(ctx, Group_GetJoinedGroupList_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetJoinedGroupList_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) InviteUserToGroup(ctx context.Context, in *InviteUserToGroupReq, opts ...grpc.CallOption) (*InviteUserToGroupResp, error) {
+func (c *iMGroupServiceClient) InviteUserToGroup(ctx context.Context, in *InviteUserToGroupReq, opts ...grpc.CallOption) (*InviteUserToGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(InviteUserToGroupResp)
-	err := c.cc.Invoke(ctx, Group_InviteUserToGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_InviteUserToGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroups(ctx context.Context, in *GetGroupsReq, opts ...grpc.CallOption) (*GetGroupsResp, error) {
+func (c *iMGroupServiceClient) GetGroups(ctx context.Context, in *GetGroupsReq, opts ...grpc.CallOption) (*GetGroupsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupsResp)
-	err := c.cc.Invoke(ctx, Group_GetGroups_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroups_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMembersCMS(ctx context.Context, in *GetGroupMembersCMSReq, opts ...grpc.CallOption) (*GetGroupMembersCMSResp, error) {
+func (c *iMGroupServiceClient) GetGroupMembersCMS(ctx context.Context, in *GetGroupMembersCMSReq, opts ...grpc.CallOption) (*GetGroupMembersCMSResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMembersCMSResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMembersCMS_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMembersCMS_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) DismissGroup(ctx context.Context, in *DismissGroupReq, opts ...grpc.CallOption) (*DismissGroupResp, error) {
+func (c *iMGroupServiceClient) DismissGroup(ctx context.Context, in *DismissGroupReq, opts ...grpc.CallOption) (*DismissGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DismissGroupResp)
-	err := c.cc.Invoke(ctx, Group_DismissGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_DismissGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) MuteGroupMember(ctx context.Context, in *MuteGroupMemberReq, opts ...grpc.CallOption) (*MuteGroupMemberResp, error) {
+func (c *iMGroupServiceClient) MuteGroupMember(ctx context.Context, in *MuteGroupMemberReq, opts ...grpc.CallOption) (*MuteGroupMemberResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MuteGroupMemberResp)
-	err := c.cc.Invoke(ctx, Group_MuteGroupMember_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_MuteGroupMember_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) CancelMuteGroupMember(ctx context.Context, in *CancelMuteGroupMemberReq, opts ...grpc.CallOption) (*CancelMuteGroupMemberResp, error) {
+func (c *iMGroupServiceClient) CancelMuteGroupMember(ctx context.Context, in *CancelMuteGroupMemberReq, opts ...grpc.CallOption) (*CancelMuteGroupMemberResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CancelMuteGroupMemberResp)
-	err := c.cc.Invoke(ctx, Group_CancelMuteGroupMember_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_CancelMuteGroupMember_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) MuteGroup(ctx context.Context, in *MuteGroupReq, opts ...grpc.CallOption) (*MuteGroupResp, error) {
+func (c *iMGroupServiceClient) MuteGroup(ctx context.Context, in *MuteGroupReq, opts ...grpc.CallOption) (*MuteGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MuteGroupResp)
-	err := c.cc.Invoke(ctx, Group_MuteGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_MuteGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) CancelMuteGroup(ctx context.Context, in *CancelMuteGroupReq, opts ...grpc.CallOption) (*CancelMuteGroupResp, error) {
+func (c *iMGroupServiceClient) CancelMuteGroup(ctx context.Context, in *CancelMuteGroupReq, opts ...grpc.CallOption) (*CancelMuteGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CancelMuteGroupResp)
-	err := c.cc.Invoke(ctx, Group_CancelMuteGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_CancelMuteGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) SetGroupMemberInfo(ctx context.Context, in *SetGroupMemberInfoReq, opts ...grpc.CallOption) (*SetGroupMemberInfoResp, error) {
+func (c *iMGroupServiceClient) SetGroupMemberInfo(ctx context.Context, in *SetGroupMemberInfoReq, opts ...grpc.CallOption) (*SetGroupMemberInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetGroupMemberInfoResp)
-	err := c.cc.Invoke(ctx, Group_SetGroupMemberInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_SetGroupMemberInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupAbstractInfo(ctx context.Context, in *GetGroupAbstractInfoReq, opts ...grpc.CallOption) (*GetGroupAbstractInfoResp, error) {
+func (c *iMGroupServiceClient) GetGroupAbstractInfo(ctx context.Context, in *GetGroupAbstractInfoReq, opts ...grpc.CallOption) (*GetGroupAbstractInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupAbstractInfoResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupAbstractInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupAbstractInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetUserInGroupMembers(ctx context.Context, in *GetUserInGroupMembersReq, opts ...grpc.CallOption) (*GetUserInGroupMembersResp, error) {
+func (c *iMGroupServiceClient) GetUserInGroupMembers(ctx context.Context, in *GetUserInGroupMembersReq, opts ...grpc.CallOption) (*GetUserInGroupMembersResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserInGroupMembersResp)
-	err := c.cc.Invoke(ctx, Group_GetUserInGroupMembers_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetUserInGroupMembers_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMemberUserIDs(ctx context.Context, in *GetGroupMemberUserIDsReq, opts ...grpc.CallOption) (*GetGroupMemberUserIDsResp, error) {
+func (c *iMGroupServiceClient) GetGroupMemberUserIDs(ctx context.Context, in *GetGroupMemberUserIDsReq, opts ...grpc.CallOption) (*GetGroupMemberUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMemberUserIDsResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMemberUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMemberUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMemberRoleLevel(ctx context.Context, in *GetGroupMemberRoleLevelReq, opts ...grpc.CallOption) (*GetGroupMemberRoleLevelResp, error) {
+func (c *iMGroupServiceClient) GetGroupMemberRoleLevel(ctx context.Context, in *GetGroupMemberRoleLevelReq, opts ...grpc.CallOption) (*GetGroupMemberRoleLevelResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMemberRoleLevelResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMemberRoleLevel_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMemberRoleLevel_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupInfoCache(ctx context.Context, in *GetGroupInfoCacheReq, opts ...grpc.CallOption) (*GetGroupInfoCacheResp, error) {
+func (c *iMGroupServiceClient) GetGroupInfoCache(ctx context.Context, in *GetGroupInfoCacheReq, opts ...grpc.CallOption) (*GetGroupInfoCacheResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupInfoCacheResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupInfoCache_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupInfoCache_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetGroupMemberCache(ctx context.Context, in *GetGroupMemberCacheReq, opts ...grpc.CallOption) (*GetGroupMemberCacheResp, error) {
+func (c *iMGroupServiceClient) GetGroupMemberCache(ctx context.Context, in *GetGroupMemberCacheReq, opts ...grpc.CallOption) (*GetGroupMemberCacheResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetGroupMemberCacheResp)
-	err := c.cc.Invoke(ctx, Group_GetGroupMemberCache_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetGroupMemberCache_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GroupCreateCount(ctx context.Context, in *GroupCreateCountReq, opts ...grpc.CallOption) (*GroupCreateCountResp, error) {
+func (c *iMGroupServiceClient) GroupCreateCount(ctx context.Context, in *GroupCreateCountReq, opts ...grpc.CallOption) (*GroupCreateCountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GroupCreateCountResp)
-	err := c.cc.Invoke(ctx, Group_GroupCreateCount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GroupCreateCount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) NotificationUserInfoUpdate(ctx context.Context, in *NotificationUserInfoUpdateReq, opts ...grpc.CallOption) (*NotificationUserInfoUpdateResp, error) {
+func (c *iMGroupServiceClient) NotificationUserInfoUpdate(ctx context.Context, in *NotificationUserInfoUpdateReq, opts ...grpc.CallOption) (*NotificationUserInfoUpdateResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(NotificationUserInfoUpdateResp)
-	err := c.cc.Invoke(ctx, Group_NotificationUserInfoUpdate_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_NotificationUserInfoUpdate_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetIncrementalGroupMember(ctx context.Context, in *GetIncrementalGroupMemberReq, opts ...grpc.CallOption) (*GetIncrementalGroupMemberResp, error) {
+func (c *iMGroupServiceClient) GetIncrementalGroupMember(ctx context.Context, in *GetIncrementalGroupMemberReq, opts ...grpc.CallOption) (*GetIncrementalGroupMemberResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalGroupMemberResp)
-	err := c.cc.Invoke(ctx, Group_GetIncrementalGroupMember_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetIncrementalGroupMember_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) BatchGetIncrementalGroupMember(ctx context.Context, in *BatchGetIncrementalGroupMemberReq, opts ...grpc.CallOption) (*BatchGetIncrementalGroupMemberResp, error) {
+func (c *iMGroupServiceClient) BatchGetIncrementalGroupMember(ctx context.Context, in *BatchGetIncrementalGroupMemberReq, opts ...grpc.CallOption) (*BatchGetIncrementalGroupMemberResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(BatchGetIncrementalGroupMemberResp)
-	err := c.cc.Invoke(ctx, Group_BatchGetIncrementalGroupMember_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_BatchGetIncrementalGroupMember_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetIncrementalJoinGroup(ctx context.Context, in *GetIncrementalJoinGroupReq, opts ...grpc.CallOption) (*GetIncrementalJoinGroupResp, error) {
+func (c *iMGroupServiceClient) GetIncrementalJoinGroup(ctx context.Context, in *GetIncrementalJoinGroupReq, opts ...grpc.CallOption) (*GetIncrementalJoinGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalJoinGroupResp)
-	err := c.cc.Invoke(ctx, Group_GetIncrementalJoinGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetIncrementalJoinGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetFullGroupMemberUserIDs(ctx context.Context, in *GetFullGroupMemberUserIDsReq, opts ...grpc.CallOption) (*GetFullGroupMemberUserIDsResp, error) {
+func (c *iMGroupServiceClient) GetFullGroupMemberUserIDs(ctx context.Context, in *GetFullGroupMemberUserIDsReq, opts ...grpc.CallOption) (*GetFullGroupMemberUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFullGroupMemberUserIDsResp)
-	err := c.cc.Invoke(ctx, Group_GetFullGroupMemberUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetFullGroupMemberUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *groupClient) GetFullJoinGroupIDs(ctx context.Context, in *GetFullJoinGroupIDsReq, opts ...grpc.CallOption) (*GetFullJoinGroupIDsResp, error) {
+func (c *iMGroupServiceClient) GetFullJoinGroupIDs(ctx context.Context, in *GetFullJoinGroupIDsReq, opts ...grpc.CallOption) (*GetFullJoinGroupIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFullJoinGroupIDsResp)
-	err := c.cc.Invoke(ctx, Group_GetFullJoinGroupIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMGroupService_GetFullJoinGroupIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// GroupServer is the server API for Group service.
-// All implementations must embed UnimplementedGroupServer
+// IMGroupServiceServer is the server API for IMGroupService service.
+// All implementations must embed UnimplementedIMGroupServiceServer
 // for forward compatibility.
-type GroupServer interface {
+type IMGroupServiceServer interface {
 	// Create group
 	CreateGroup(context.Context, *CreateGroupReq) (*CreateGroupResp, error)
 	// Apply to join group
@@ -610,1018 +610,1018 @@ type GroupServer interface {
 	GetIncrementalJoinGroup(context.Context, *GetIncrementalJoinGroupReq) (*GetIncrementalJoinGroupResp, error)
 	GetFullGroupMemberUserIDs(context.Context, *GetFullGroupMemberUserIDsReq) (*GetFullGroupMemberUserIDsResp, error)
 	GetFullJoinGroupIDs(context.Context, *GetFullJoinGroupIDsReq) (*GetFullJoinGroupIDsResp, error)
-	mustEmbedUnimplementedGroupServer()
+	mustEmbedUnimplementedIMGroupServiceServer()
 }
 
-// UnimplementedGroupServer must be embedded to have
+// UnimplementedIMGroupServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedGroupServer struct{}
+type UnimplementedIMGroupServiceServer struct{}
 
-func (UnimplementedGroupServer) CreateGroup(context.Context, *CreateGroupReq) (*CreateGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) CreateGroup(context.Context, *CreateGroupReq) (*CreateGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateGroup not implemented")
 }
-func (UnimplementedGroupServer) JoinGroup(context.Context, *JoinGroupReq) (*JoinGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) JoinGroup(context.Context, *JoinGroupReq) (*JoinGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method JoinGroup not implemented")
 }
-func (UnimplementedGroupServer) QuitGroup(context.Context, *QuitGroupReq) (*QuitGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) QuitGroup(context.Context, *QuitGroupReq) (*QuitGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QuitGroup not implemented")
 }
-func (UnimplementedGroupServer) GetGroupsInfo(context.Context, *GetGroupsInfoReq) (*GetGroupsInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupsInfo(context.Context, *GetGroupsInfoReq) (*GetGroupsInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupsInfo not implemented")
 }
-func (UnimplementedGroupServer) SetGroupInfo(context.Context, *SetGroupInfoReq) (*SetGroupInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) SetGroupInfo(context.Context, *SetGroupInfoReq) (*SetGroupInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetGroupInfo not implemented")
 }
-func (UnimplementedGroupServer) SetGroupInfoEx(context.Context, *SetGroupInfoExReq) (*SetGroupInfoExResp, error) {
+func (UnimplementedIMGroupServiceServer) SetGroupInfoEx(context.Context, *SetGroupInfoExReq) (*SetGroupInfoExResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetGroupInfoEx not implemented")
 }
-func (UnimplementedGroupServer) GetGroupApplicationList(context.Context, *GetGroupApplicationListReq) (*GetGroupApplicationListResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupApplicationList(context.Context, *GetGroupApplicationListReq) (*GetGroupApplicationListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupApplicationList not implemented")
 }
-func (UnimplementedGroupServer) GetGroupApplicationUnhandledCount(context.Context, *GetGroupApplicationUnhandledCountReq) (*GetGroupApplicationUnhandledCountResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupApplicationUnhandledCount(context.Context, *GetGroupApplicationUnhandledCountReq) (*GetGroupApplicationUnhandledCountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupApplicationUnhandledCount not implemented")
 }
-func (UnimplementedGroupServer) GetUserReqApplicationList(context.Context, *GetUserReqApplicationListReq) (*GetUserReqApplicationListResp, error) {
+func (UnimplementedIMGroupServiceServer) GetUserReqApplicationList(context.Context, *GetUserReqApplicationListReq) (*GetUserReqApplicationListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserReqApplicationList not implemented")
 }
-func (UnimplementedGroupServer) GetGroupUsersReqApplicationList(context.Context, *GetGroupUsersReqApplicationListReq) (*GetGroupUsersReqApplicationListResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupUsersReqApplicationList(context.Context, *GetGroupUsersReqApplicationListReq) (*GetGroupUsersReqApplicationListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupUsersReqApplicationList not implemented")
 }
-func (UnimplementedGroupServer) GetSpecifiedUserGroupRequestInfo(context.Context, *GetSpecifiedUserGroupRequestInfoReq) (*GetSpecifiedUserGroupRequestInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) GetSpecifiedUserGroupRequestInfo(context.Context, *GetSpecifiedUserGroupRequestInfoReq) (*GetSpecifiedUserGroupRequestInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSpecifiedUserGroupRequestInfo not implemented")
 }
-func (UnimplementedGroupServer) TransferGroupOwner(context.Context, *TransferGroupOwnerReq) (*TransferGroupOwnerResp, error) {
+func (UnimplementedIMGroupServiceServer) TransferGroupOwner(context.Context, *TransferGroupOwnerReq) (*TransferGroupOwnerResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method TransferGroupOwner not implemented")
 }
-func (UnimplementedGroupServer) GroupApplicationResponse(context.Context, *GroupApplicationResponseReq) (*GroupApplicationResponseResp, error) {
+func (UnimplementedIMGroupServiceServer) GroupApplicationResponse(context.Context, *GroupApplicationResponseReq) (*GroupApplicationResponseResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GroupApplicationResponse not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMemberList(context.Context, *GetGroupMemberListReq) (*GetGroupMemberListResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMemberList(context.Context, *GetGroupMemberListReq) (*GetGroupMemberListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMemberList not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMembersInfo(context.Context, *GetGroupMembersInfoReq) (*GetGroupMembersInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMembersInfo(context.Context, *GetGroupMembersInfoReq) (*GetGroupMembersInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMembersInfo not implemented")
 }
-func (UnimplementedGroupServer) KickGroupMember(context.Context, *KickGroupMemberReq) (*KickGroupMemberResp, error) {
+func (UnimplementedIMGroupServiceServer) KickGroupMember(context.Context, *KickGroupMemberReq) (*KickGroupMemberResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method KickGroupMember not implemented")
 }
-func (UnimplementedGroupServer) GetJoinedGroupList(context.Context, *GetJoinedGroupListReq) (*GetJoinedGroupListResp, error) {
+func (UnimplementedIMGroupServiceServer) GetJoinedGroupList(context.Context, *GetJoinedGroupListReq) (*GetJoinedGroupListResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetJoinedGroupList not implemented")
 }
-func (UnimplementedGroupServer) InviteUserToGroup(context.Context, *InviteUserToGroupReq) (*InviteUserToGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) InviteUserToGroup(context.Context, *InviteUserToGroupReq) (*InviteUserToGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InviteUserToGroup not implemented")
 }
-func (UnimplementedGroupServer) GetGroups(context.Context, *GetGroupsReq) (*GetGroupsResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroups(context.Context, *GetGroupsReq) (*GetGroupsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroups not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMembersCMS(context.Context, *GetGroupMembersCMSReq) (*GetGroupMembersCMSResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMembersCMS(context.Context, *GetGroupMembersCMSReq) (*GetGroupMembersCMSResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMembersCMS not implemented")
 }
-func (UnimplementedGroupServer) DismissGroup(context.Context, *DismissGroupReq) (*DismissGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) DismissGroup(context.Context, *DismissGroupReq) (*DismissGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DismissGroup not implemented")
 }
-func (UnimplementedGroupServer) MuteGroupMember(context.Context, *MuteGroupMemberReq) (*MuteGroupMemberResp, error) {
+func (UnimplementedIMGroupServiceServer) MuteGroupMember(context.Context, *MuteGroupMemberReq) (*MuteGroupMemberResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MuteGroupMember not implemented")
 }
-func (UnimplementedGroupServer) CancelMuteGroupMember(context.Context, *CancelMuteGroupMemberReq) (*CancelMuteGroupMemberResp, error) {
+func (UnimplementedIMGroupServiceServer) CancelMuteGroupMember(context.Context, *CancelMuteGroupMemberReq) (*CancelMuteGroupMemberResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CancelMuteGroupMember not implemented")
 }
-func (UnimplementedGroupServer) MuteGroup(context.Context, *MuteGroupReq) (*MuteGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) MuteGroup(context.Context, *MuteGroupReq) (*MuteGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MuteGroup not implemented")
 }
-func (UnimplementedGroupServer) CancelMuteGroup(context.Context, *CancelMuteGroupReq) (*CancelMuteGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) CancelMuteGroup(context.Context, *CancelMuteGroupReq) (*CancelMuteGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CancelMuteGroup not implemented")
 }
-func (UnimplementedGroupServer) SetGroupMemberInfo(context.Context, *SetGroupMemberInfoReq) (*SetGroupMemberInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) SetGroupMemberInfo(context.Context, *SetGroupMemberInfoReq) (*SetGroupMemberInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetGroupMemberInfo not implemented")
 }
-func (UnimplementedGroupServer) GetGroupAbstractInfo(context.Context, *GetGroupAbstractInfoReq) (*GetGroupAbstractInfoResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupAbstractInfo(context.Context, *GetGroupAbstractInfoReq) (*GetGroupAbstractInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupAbstractInfo not implemented")
 }
-func (UnimplementedGroupServer) GetUserInGroupMembers(context.Context, *GetUserInGroupMembersReq) (*GetUserInGroupMembersResp, error) {
+func (UnimplementedIMGroupServiceServer) GetUserInGroupMembers(context.Context, *GetUserInGroupMembersReq) (*GetUserInGroupMembersResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserInGroupMembers not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMemberUserIDs(context.Context, *GetGroupMemberUserIDsReq) (*GetGroupMemberUserIDsResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMemberUserIDs(context.Context, *GetGroupMemberUserIDsReq) (*GetGroupMemberUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMemberUserIDs not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMemberRoleLevel(context.Context, *GetGroupMemberRoleLevelReq) (*GetGroupMemberRoleLevelResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMemberRoleLevel(context.Context, *GetGroupMemberRoleLevelReq) (*GetGroupMemberRoleLevelResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMemberRoleLevel not implemented")
 }
-func (UnimplementedGroupServer) GetGroupInfoCache(context.Context, *GetGroupInfoCacheReq) (*GetGroupInfoCacheResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupInfoCache(context.Context, *GetGroupInfoCacheReq) (*GetGroupInfoCacheResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupInfoCache not implemented")
 }
-func (UnimplementedGroupServer) GetGroupMemberCache(context.Context, *GetGroupMemberCacheReq) (*GetGroupMemberCacheResp, error) {
+func (UnimplementedIMGroupServiceServer) GetGroupMemberCache(context.Context, *GetGroupMemberCacheReq) (*GetGroupMemberCacheResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetGroupMemberCache not implemented")
 }
-func (UnimplementedGroupServer) GroupCreateCount(context.Context, *GroupCreateCountReq) (*GroupCreateCountResp, error) {
+func (UnimplementedIMGroupServiceServer) GroupCreateCount(context.Context, *GroupCreateCountReq) (*GroupCreateCountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GroupCreateCount not implemented")
 }
-func (UnimplementedGroupServer) NotificationUserInfoUpdate(context.Context, *NotificationUserInfoUpdateReq) (*NotificationUserInfoUpdateResp, error) {
+func (UnimplementedIMGroupServiceServer) NotificationUserInfoUpdate(context.Context, *NotificationUserInfoUpdateReq) (*NotificationUserInfoUpdateResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NotificationUserInfoUpdate not implemented")
 }
-func (UnimplementedGroupServer) GetIncrementalGroupMember(context.Context, *GetIncrementalGroupMemberReq) (*GetIncrementalGroupMemberResp, error) {
+func (UnimplementedIMGroupServiceServer) GetIncrementalGroupMember(context.Context, *GetIncrementalGroupMemberReq) (*GetIncrementalGroupMemberResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalGroupMember not implemented")
 }
-func (UnimplementedGroupServer) BatchGetIncrementalGroupMember(context.Context, *BatchGetIncrementalGroupMemberReq) (*BatchGetIncrementalGroupMemberResp, error) {
+func (UnimplementedIMGroupServiceServer) BatchGetIncrementalGroupMember(context.Context, *BatchGetIncrementalGroupMemberReq) (*BatchGetIncrementalGroupMemberResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchGetIncrementalGroupMember not implemented")
 }
-func (UnimplementedGroupServer) GetIncrementalJoinGroup(context.Context, *GetIncrementalJoinGroupReq) (*GetIncrementalJoinGroupResp, error) {
+func (UnimplementedIMGroupServiceServer) GetIncrementalJoinGroup(context.Context, *GetIncrementalJoinGroupReq) (*GetIncrementalJoinGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalJoinGroup not implemented")
 }
-func (UnimplementedGroupServer) GetFullGroupMemberUserIDs(context.Context, *GetFullGroupMemberUserIDsReq) (*GetFullGroupMemberUserIDsResp, error) {
+func (UnimplementedIMGroupServiceServer) GetFullGroupMemberUserIDs(context.Context, *GetFullGroupMemberUserIDsReq) (*GetFullGroupMemberUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFullGroupMemberUserIDs not implemented")
 }
-func (UnimplementedGroupServer) GetFullJoinGroupIDs(context.Context, *GetFullJoinGroupIDsReq) (*GetFullJoinGroupIDsResp, error) {
+func (UnimplementedIMGroupServiceServer) GetFullJoinGroupIDs(context.Context, *GetFullJoinGroupIDsReq) (*GetFullJoinGroupIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFullJoinGroupIDs not implemented")
 }
-func (UnimplementedGroupServer) mustEmbedUnimplementedGroupServer() {}
-func (UnimplementedGroupServer) testEmbeddedByValue()               {}
+func (UnimplementedIMGroupServiceServer) mustEmbedUnimplementedIMGroupServiceServer() {}
+func (UnimplementedIMGroupServiceServer) testEmbeddedByValue()                        {}
 
-// UnsafeGroupServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to GroupServer will
+// UnsafeIMGroupServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMGroupServiceServer will
 // result in compilation errors.
-type UnsafeGroupServer interface {
-	mustEmbedUnimplementedGroupServer()
+type UnsafeIMGroupServiceServer interface {
+	mustEmbedUnimplementedIMGroupServiceServer()
 }
 
-func RegisterGroupServer(s grpc.ServiceRegistrar, srv GroupServer) {
-	// If the following call pancis, it indicates UnimplementedGroupServer was
+func RegisterIMGroupServiceServer(s grpc.ServiceRegistrar, srv IMGroupServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMGroupServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&Group_ServiceDesc, srv)
+	s.RegisterService(&IMGroupService_ServiceDesc, srv)
 }
 
-func _Group_CreateGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_CreateGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).CreateGroup(ctx, in)
+		return srv.(IMGroupServiceServer).CreateGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_CreateGroup_FullMethodName,
+		FullMethod: IMGroupService_CreateGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).CreateGroup(ctx, req.(*CreateGroupReq))
+		return srv.(IMGroupServiceServer).CreateGroup(ctx, req.(*CreateGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_JoinGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_JoinGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(JoinGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).JoinGroup(ctx, in)
+		return srv.(IMGroupServiceServer).JoinGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_JoinGroup_FullMethodName,
+		FullMethod: IMGroupService_JoinGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).JoinGroup(ctx, req.(*JoinGroupReq))
+		return srv.(IMGroupServiceServer).JoinGroup(ctx, req.(*JoinGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_QuitGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_QuitGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(QuitGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).QuitGroup(ctx, in)
+		return srv.(IMGroupServiceServer).QuitGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_QuitGroup_FullMethodName,
+		FullMethod: IMGroupService_QuitGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).QuitGroup(ctx, req.(*QuitGroupReq))
+		return srv.(IMGroupServiceServer).QuitGroup(ctx, req.(*QuitGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupsInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupsInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupsInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupsInfo(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupsInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupsInfo_FullMethodName,
+		FullMethod: IMGroupService_GetGroupsInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupsInfo(ctx, req.(*GetGroupsInfoReq))
+		return srv.(IMGroupServiceServer).GetGroupsInfo(ctx, req.(*GetGroupsInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_SetGroupInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_SetGroupInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetGroupInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).SetGroupInfo(ctx, in)
+		return srv.(IMGroupServiceServer).SetGroupInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_SetGroupInfo_FullMethodName,
+		FullMethod: IMGroupService_SetGroupInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).SetGroupInfo(ctx, req.(*SetGroupInfoReq))
+		return srv.(IMGroupServiceServer).SetGroupInfo(ctx, req.(*SetGroupInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_SetGroupInfoEx_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_SetGroupInfoEx_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetGroupInfoExReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).SetGroupInfoEx(ctx, in)
+		return srv.(IMGroupServiceServer).SetGroupInfoEx(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_SetGroupInfoEx_FullMethodName,
+		FullMethod: IMGroupService_SetGroupInfoEx_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).SetGroupInfoEx(ctx, req.(*SetGroupInfoExReq))
+		return srv.(IMGroupServiceServer).SetGroupInfoEx(ctx, req.(*SetGroupInfoExReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupApplicationListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupApplicationList(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupApplicationList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupApplicationList_FullMethodName,
+		FullMethod: IMGroupService_GetGroupApplicationList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupApplicationList(ctx, req.(*GetGroupApplicationListReq))
+		return srv.(IMGroupServiceServer).GetGroupApplicationList(ctx, req.(*GetGroupApplicationListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupApplicationUnhandledCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupApplicationUnhandledCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupApplicationUnhandledCountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupApplicationUnhandledCount(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupApplicationUnhandledCount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupApplicationUnhandledCount_FullMethodName,
+		FullMethod: IMGroupService_GetGroupApplicationUnhandledCount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupApplicationUnhandledCount(ctx, req.(*GetGroupApplicationUnhandledCountReq))
+		return srv.(IMGroupServiceServer).GetGroupApplicationUnhandledCount(ctx, req.(*GetGroupApplicationUnhandledCountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetUserReqApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetUserReqApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserReqApplicationListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetUserReqApplicationList(ctx, in)
+		return srv.(IMGroupServiceServer).GetUserReqApplicationList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetUserReqApplicationList_FullMethodName,
+		FullMethod: IMGroupService_GetUserReqApplicationList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetUserReqApplicationList(ctx, req.(*GetUserReqApplicationListReq))
+		return srv.(IMGroupServiceServer).GetUserReqApplicationList(ctx, req.(*GetUserReqApplicationListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupUsersReqApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupUsersReqApplicationList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupUsersReqApplicationListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupUsersReqApplicationList(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupUsersReqApplicationList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupUsersReqApplicationList_FullMethodName,
+		FullMethod: IMGroupService_GetGroupUsersReqApplicationList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupUsersReqApplicationList(ctx, req.(*GetGroupUsersReqApplicationListReq))
+		return srv.(IMGroupServiceServer).GetGroupUsersReqApplicationList(ctx, req.(*GetGroupUsersReqApplicationListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetSpecifiedUserGroupRequestInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetSpecifiedUserGroupRequestInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSpecifiedUserGroupRequestInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetSpecifiedUserGroupRequestInfo(ctx, in)
+		return srv.(IMGroupServiceServer).GetSpecifiedUserGroupRequestInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetSpecifiedUserGroupRequestInfo_FullMethodName,
+		FullMethod: IMGroupService_GetSpecifiedUserGroupRequestInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetSpecifiedUserGroupRequestInfo(ctx, req.(*GetSpecifiedUserGroupRequestInfoReq))
+		return srv.(IMGroupServiceServer).GetSpecifiedUserGroupRequestInfo(ctx, req.(*GetSpecifiedUserGroupRequestInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_TransferGroupOwner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_TransferGroupOwner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(TransferGroupOwnerReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).TransferGroupOwner(ctx, in)
+		return srv.(IMGroupServiceServer).TransferGroupOwner(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_TransferGroupOwner_FullMethodName,
+		FullMethod: IMGroupService_TransferGroupOwner_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).TransferGroupOwner(ctx, req.(*TransferGroupOwnerReq))
+		return srv.(IMGroupServiceServer).TransferGroupOwner(ctx, req.(*TransferGroupOwnerReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GroupApplicationResponse_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GroupApplicationResponse_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GroupApplicationResponseReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GroupApplicationResponse(ctx, in)
+		return srv.(IMGroupServiceServer).GroupApplicationResponse(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GroupApplicationResponse_FullMethodName,
+		FullMethod: IMGroupService_GroupApplicationResponse_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GroupApplicationResponse(ctx, req.(*GroupApplicationResponseReq))
+		return srv.(IMGroupServiceServer).GroupApplicationResponse(ctx, req.(*GroupApplicationResponseReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMemberList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMemberList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMemberListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMemberList(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMemberList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMemberList_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMemberList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMemberList(ctx, req.(*GetGroupMemberListReq))
+		return srv.(IMGroupServiceServer).GetGroupMemberList(ctx, req.(*GetGroupMemberListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMembersInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMembersInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMembersInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMembersInfo(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMembersInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMembersInfo_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMembersInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMembersInfo(ctx, req.(*GetGroupMembersInfoReq))
+		return srv.(IMGroupServiceServer).GetGroupMembersInfo(ctx, req.(*GetGroupMembersInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_KickGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_KickGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(KickGroupMemberReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).KickGroupMember(ctx, in)
+		return srv.(IMGroupServiceServer).KickGroupMember(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_KickGroupMember_FullMethodName,
+		FullMethod: IMGroupService_KickGroupMember_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).KickGroupMember(ctx, req.(*KickGroupMemberReq))
+		return srv.(IMGroupServiceServer).KickGroupMember(ctx, req.(*KickGroupMemberReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetJoinedGroupList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetJoinedGroupList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetJoinedGroupListReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetJoinedGroupList(ctx, in)
+		return srv.(IMGroupServiceServer).GetJoinedGroupList(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetJoinedGroupList_FullMethodName,
+		FullMethod: IMGroupService_GetJoinedGroupList_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetJoinedGroupList(ctx, req.(*GetJoinedGroupListReq))
+		return srv.(IMGroupServiceServer).GetJoinedGroupList(ctx, req.(*GetJoinedGroupListReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_InviteUserToGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_InviteUserToGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(InviteUserToGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).InviteUserToGroup(ctx, in)
+		return srv.(IMGroupServiceServer).InviteUserToGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_InviteUserToGroup_FullMethodName,
+		FullMethod: IMGroupService_InviteUserToGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).InviteUserToGroup(ctx, req.(*InviteUserToGroupReq))
+		return srv.(IMGroupServiceServer).InviteUserToGroup(ctx, req.(*InviteUserToGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroups_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroups_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroups(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroups(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroups_FullMethodName,
+		FullMethod: IMGroupService_GetGroups_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroups(ctx, req.(*GetGroupsReq))
+		return srv.(IMGroupServiceServer).GetGroups(ctx, req.(*GetGroupsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMembersCMS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMembersCMS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMembersCMSReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMembersCMS(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMembersCMS(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMembersCMS_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMembersCMS_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMembersCMS(ctx, req.(*GetGroupMembersCMSReq))
+		return srv.(IMGroupServiceServer).GetGroupMembersCMS(ctx, req.(*GetGroupMembersCMSReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_DismissGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_DismissGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DismissGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).DismissGroup(ctx, in)
+		return srv.(IMGroupServiceServer).DismissGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_DismissGroup_FullMethodName,
+		FullMethod: IMGroupService_DismissGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).DismissGroup(ctx, req.(*DismissGroupReq))
+		return srv.(IMGroupServiceServer).DismissGroup(ctx, req.(*DismissGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_MuteGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_MuteGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MuteGroupMemberReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).MuteGroupMember(ctx, in)
+		return srv.(IMGroupServiceServer).MuteGroupMember(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_MuteGroupMember_FullMethodName,
+		FullMethod: IMGroupService_MuteGroupMember_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).MuteGroupMember(ctx, req.(*MuteGroupMemberReq))
+		return srv.(IMGroupServiceServer).MuteGroupMember(ctx, req.(*MuteGroupMemberReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_CancelMuteGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_CancelMuteGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CancelMuteGroupMemberReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).CancelMuteGroupMember(ctx, in)
+		return srv.(IMGroupServiceServer).CancelMuteGroupMember(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_CancelMuteGroupMember_FullMethodName,
+		FullMethod: IMGroupService_CancelMuteGroupMember_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).CancelMuteGroupMember(ctx, req.(*CancelMuteGroupMemberReq))
+		return srv.(IMGroupServiceServer).CancelMuteGroupMember(ctx, req.(*CancelMuteGroupMemberReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_MuteGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_MuteGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MuteGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).MuteGroup(ctx, in)
+		return srv.(IMGroupServiceServer).MuteGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_MuteGroup_FullMethodName,
+		FullMethod: IMGroupService_MuteGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).MuteGroup(ctx, req.(*MuteGroupReq))
+		return srv.(IMGroupServiceServer).MuteGroup(ctx, req.(*MuteGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_CancelMuteGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_CancelMuteGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CancelMuteGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).CancelMuteGroup(ctx, in)
+		return srv.(IMGroupServiceServer).CancelMuteGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_CancelMuteGroup_FullMethodName,
+		FullMethod: IMGroupService_CancelMuteGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).CancelMuteGroup(ctx, req.(*CancelMuteGroupReq))
+		return srv.(IMGroupServiceServer).CancelMuteGroup(ctx, req.(*CancelMuteGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_SetGroupMemberInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_SetGroupMemberInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetGroupMemberInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).SetGroupMemberInfo(ctx, in)
+		return srv.(IMGroupServiceServer).SetGroupMemberInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_SetGroupMemberInfo_FullMethodName,
+		FullMethod: IMGroupService_SetGroupMemberInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).SetGroupMemberInfo(ctx, req.(*SetGroupMemberInfoReq))
+		return srv.(IMGroupServiceServer).SetGroupMemberInfo(ctx, req.(*SetGroupMemberInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupAbstractInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupAbstractInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupAbstractInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupAbstractInfo(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupAbstractInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupAbstractInfo_FullMethodName,
+		FullMethod: IMGroupService_GetGroupAbstractInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupAbstractInfo(ctx, req.(*GetGroupAbstractInfoReq))
+		return srv.(IMGroupServiceServer).GetGroupAbstractInfo(ctx, req.(*GetGroupAbstractInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetUserInGroupMembers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetUserInGroupMembers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserInGroupMembersReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetUserInGroupMembers(ctx, in)
+		return srv.(IMGroupServiceServer).GetUserInGroupMembers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetUserInGroupMembers_FullMethodName,
+		FullMethod: IMGroupService_GetUserInGroupMembers_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetUserInGroupMembers(ctx, req.(*GetUserInGroupMembersReq))
+		return srv.(IMGroupServiceServer).GetUserInGroupMembers(ctx, req.(*GetUserInGroupMembersReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMemberUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMemberUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMemberUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMemberUserIDs(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMemberUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMemberUserIDs_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMemberUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMemberUserIDs(ctx, req.(*GetGroupMemberUserIDsReq))
+		return srv.(IMGroupServiceServer).GetGroupMemberUserIDs(ctx, req.(*GetGroupMemberUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMemberRoleLevel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMemberRoleLevel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMemberRoleLevelReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMemberRoleLevel(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMemberRoleLevel(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMemberRoleLevel_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMemberRoleLevel_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMemberRoleLevel(ctx, req.(*GetGroupMemberRoleLevelReq))
+		return srv.(IMGroupServiceServer).GetGroupMemberRoleLevel(ctx, req.(*GetGroupMemberRoleLevelReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupInfoCache_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupInfoCache_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupInfoCacheReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupInfoCache(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupInfoCache(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupInfoCache_FullMethodName,
+		FullMethod: IMGroupService_GetGroupInfoCache_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupInfoCache(ctx, req.(*GetGroupInfoCacheReq))
+		return srv.(IMGroupServiceServer).GetGroupInfoCache(ctx, req.(*GetGroupInfoCacheReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetGroupMemberCache_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetGroupMemberCache_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetGroupMemberCacheReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetGroupMemberCache(ctx, in)
+		return srv.(IMGroupServiceServer).GetGroupMemberCache(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetGroupMemberCache_FullMethodName,
+		FullMethod: IMGroupService_GetGroupMemberCache_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetGroupMemberCache(ctx, req.(*GetGroupMemberCacheReq))
+		return srv.(IMGroupServiceServer).GetGroupMemberCache(ctx, req.(*GetGroupMemberCacheReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GroupCreateCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GroupCreateCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GroupCreateCountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GroupCreateCount(ctx, in)
+		return srv.(IMGroupServiceServer).GroupCreateCount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GroupCreateCount_FullMethodName,
+		FullMethod: IMGroupService_GroupCreateCount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GroupCreateCount(ctx, req.(*GroupCreateCountReq))
+		return srv.(IMGroupServiceServer).GroupCreateCount(ctx, req.(*GroupCreateCountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_NotificationUserInfoUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_NotificationUserInfoUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(NotificationUserInfoUpdateReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).NotificationUserInfoUpdate(ctx, in)
+		return srv.(IMGroupServiceServer).NotificationUserInfoUpdate(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_NotificationUserInfoUpdate_FullMethodName,
+		FullMethod: IMGroupService_NotificationUserInfoUpdate_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).NotificationUserInfoUpdate(ctx, req.(*NotificationUserInfoUpdateReq))
+		return srv.(IMGroupServiceServer).NotificationUserInfoUpdate(ctx, req.(*NotificationUserInfoUpdateReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetIncrementalGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetIncrementalGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalGroupMemberReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetIncrementalGroupMember(ctx, in)
+		return srv.(IMGroupServiceServer).GetIncrementalGroupMember(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetIncrementalGroupMember_FullMethodName,
+		FullMethod: IMGroupService_GetIncrementalGroupMember_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetIncrementalGroupMember(ctx, req.(*GetIncrementalGroupMemberReq))
+		return srv.(IMGroupServiceServer).GetIncrementalGroupMember(ctx, req.(*GetIncrementalGroupMemberReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_BatchGetIncrementalGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_BatchGetIncrementalGroupMember_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BatchGetIncrementalGroupMemberReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).BatchGetIncrementalGroupMember(ctx, in)
+		return srv.(IMGroupServiceServer).BatchGetIncrementalGroupMember(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_BatchGetIncrementalGroupMember_FullMethodName,
+		FullMethod: IMGroupService_BatchGetIncrementalGroupMember_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).BatchGetIncrementalGroupMember(ctx, req.(*BatchGetIncrementalGroupMemberReq))
+		return srv.(IMGroupServiceServer).BatchGetIncrementalGroupMember(ctx, req.(*BatchGetIncrementalGroupMemberReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetIncrementalJoinGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetIncrementalJoinGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalJoinGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetIncrementalJoinGroup(ctx, in)
+		return srv.(IMGroupServiceServer).GetIncrementalJoinGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetIncrementalJoinGroup_FullMethodName,
+		FullMethod: IMGroupService_GetIncrementalJoinGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetIncrementalJoinGroup(ctx, req.(*GetIncrementalJoinGroupReq))
+		return srv.(IMGroupServiceServer).GetIncrementalJoinGroup(ctx, req.(*GetIncrementalJoinGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetFullGroupMemberUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetFullGroupMemberUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFullGroupMemberUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetFullGroupMemberUserIDs(ctx, in)
+		return srv.(IMGroupServiceServer).GetFullGroupMemberUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetFullGroupMemberUserIDs_FullMethodName,
+		FullMethod: IMGroupService_GetFullGroupMemberUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetFullGroupMemberUserIDs(ctx, req.(*GetFullGroupMemberUserIDsReq))
+		return srv.(IMGroupServiceServer).GetFullGroupMemberUserIDs(ctx, req.(*GetFullGroupMemberUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Group_GetFullJoinGroupIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMGroupService_GetFullJoinGroupIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFullJoinGroupIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GroupServer).GetFullJoinGroupIDs(ctx, in)
+		return srv.(IMGroupServiceServer).GetFullJoinGroupIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Group_GetFullJoinGroupIDs_FullMethodName,
+		FullMethod: IMGroupService_GetFullJoinGroupIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GroupServer).GetFullJoinGroupIDs(ctx, req.(*GetFullJoinGroupIDsReq))
+		return srv.(IMGroupServiceServer).GetFullJoinGroupIDs(ctx, req.(*GetFullJoinGroupIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Group_ServiceDesc is the grpc.ServiceDesc for Group service.
+// IMGroupService_ServiceDesc is the grpc.ServiceDesc for IMGroupService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Group_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.group.Group",
-	HandlerType: (*GroupServer)(nil),
+var IMGroupService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.group.IMGroupService",
+	HandlerType: (*IMGroupServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "createGroup",
-			Handler:    _Group_CreateGroup_Handler,
+			MethodName: "CreateGroup",
+			Handler:    _IMGroupService_CreateGroup_Handler,
 		},
 		{
-			MethodName: "joinGroup",
-			Handler:    _Group_JoinGroup_Handler,
+			MethodName: "JoinGroup",
+			Handler:    _IMGroupService_JoinGroup_Handler,
 		},
 		{
-			MethodName: "quitGroup",
-			Handler:    _Group_QuitGroup_Handler,
+			MethodName: "QuitGroup",
+			Handler:    _IMGroupService_QuitGroup_Handler,
 		},
 		{
-			MethodName: "getGroupsInfo",
-			Handler:    _Group_GetGroupsInfo_Handler,
+			MethodName: "GetGroupsInfo",
+			Handler:    _IMGroupService_GetGroupsInfo_Handler,
 		},
 		{
-			MethodName: "setGroupInfo",
-			Handler:    _Group_SetGroupInfo_Handler,
+			MethodName: "SetGroupInfo",
+			Handler:    _IMGroupService_SetGroupInfo_Handler,
 		},
 		{
-			MethodName: "setGroupInfoEx",
-			Handler:    _Group_SetGroupInfoEx_Handler,
+			MethodName: "SetGroupInfoEx",
+			Handler:    _IMGroupService_SetGroupInfoEx_Handler,
 		},
 		{
-			MethodName: "getGroupApplicationList",
-			Handler:    _Group_GetGroupApplicationList_Handler,
+			MethodName: "GetGroupApplicationList",
+			Handler:    _IMGroupService_GetGroupApplicationList_Handler,
 		},
 		{
-			MethodName: "getGroupApplicationUnhandledCount",
-			Handler:    _Group_GetGroupApplicationUnhandledCount_Handler,
+			MethodName: "GetGroupApplicationUnhandledCount",
+			Handler:    _IMGroupService_GetGroupApplicationUnhandledCount_Handler,
 		},
 		{
-			MethodName: "getUserReqApplicationList",
-			Handler:    _Group_GetUserReqApplicationList_Handler,
+			MethodName: "GetUserReqApplicationList",
+			Handler:    _IMGroupService_GetUserReqApplicationList_Handler,
 		},
 		{
-			MethodName: "getGroupUsersReqApplicationList",
-			Handler:    _Group_GetGroupUsersReqApplicationList_Handler,
+			MethodName: "GetGroupUsersReqApplicationList",
+			Handler:    _IMGroupService_GetGroupUsersReqApplicationList_Handler,
 		},
 		{
-			MethodName: "getSpecifiedUserGroupRequestInfo",
-			Handler:    _Group_GetSpecifiedUserGroupRequestInfo_Handler,
+			MethodName: "GetSpecifiedUserGroupRequestInfo",
+			Handler:    _IMGroupService_GetSpecifiedUserGroupRequestInfo_Handler,
 		},
 		{
-			MethodName: "transferGroupOwner",
-			Handler:    _Group_TransferGroupOwner_Handler,
+			MethodName: "TransferGroupOwner",
+			Handler:    _IMGroupService_TransferGroupOwner_Handler,
 		},
 		{
-			MethodName: "groupApplicationResponse",
-			Handler:    _Group_GroupApplicationResponse_Handler,
+			MethodName: "GroupApplicationResponse",
+			Handler:    _IMGroupService_GroupApplicationResponse_Handler,
 		},
 		{
-			MethodName: "getGroupMemberList",
-			Handler:    _Group_GetGroupMemberList_Handler,
+			MethodName: "GetGroupMemberList",
+			Handler:    _IMGroupService_GetGroupMemberList_Handler,
 		},
 		{
-			MethodName: "getGroupMembersInfo",
-			Handler:    _Group_GetGroupMembersInfo_Handler,
+			MethodName: "GetGroupMembersInfo",
+			Handler:    _IMGroupService_GetGroupMembersInfo_Handler,
 		},
 		{
-			MethodName: "kickGroupMember",
-			Handler:    _Group_KickGroupMember_Handler,
+			MethodName: "KickGroupMember",
+			Handler:    _IMGroupService_KickGroupMember_Handler,
 		},
 		{
-			MethodName: "getJoinedGroupList",
-			Handler:    _Group_GetJoinedGroupList_Handler,
+			MethodName: "GetJoinedGroupList",
+			Handler:    _IMGroupService_GetJoinedGroupList_Handler,
 		},
 		{
-			MethodName: "inviteUserToGroup",
-			Handler:    _Group_InviteUserToGroup_Handler,
+			MethodName: "InviteUserToGroup",
+			Handler:    _IMGroupService_InviteUserToGroup_Handler,
 		},
 		{
-			MethodName: "getGroups",
-			Handler:    _Group_GetGroups_Handler,
+			MethodName: "GetGroups",
+			Handler:    _IMGroupService_GetGroups_Handler,
 		},
 		{
-			MethodName: "getGroupMembersCMS",
-			Handler:    _Group_GetGroupMembersCMS_Handler,
+			MethodName: "GetGroupMembersCMS",
+			Handler:    _IMGroupService_GetGroupMembersCMS_Handler,
 		},
 		{
-			MethodName: "dismissGroup",
-			Handler:    _Group_DismissGroup_Handler,
+			MethodName: "DismissGroup",
+			Handler:    _IMGroupService_DismissGroup_Handler,
 		},
 		{
-			MethodName: "muteGroupMember",
-			Handler:    _Group_MuteGroupMember_Handler,
+			MethodName: "MuteGroupMember",
+			Handler:    _IMGroupService_MuteGroupMember_Handler,
 		},
 		{
-			MethodName: "cancelMuteGroupMember",
-			Handler:    _Group_CancelMuteGroupMember_Handler,
+			MethodName: "CancelMuteGroupMember",
+			Handler:    _IMGroupService_CancelMuteGroupMember_Handler,
 		},
 		{
-			MethodName: "muteGroup",
-			Handler:    _Group_MuteGroup_Handler,
+			MethodName: "MuteGroup",
+			Handler:    _IMGroupService_MuteGroup_Handler,
 		},
 		{
-			MethodName: "cancelMuteGroup",
-			Handler:    _Group_CancelMuteGroup_Handler,
+			MethodName: "CancelMuteGroup",
+			Handler:    _IMGroupService_CancelMuteGroup_Handler,
 		},
 		{
-			MethodName: "setGroupMemberInfo",
-			Handler:    _Group_SetGroupMemberInfo_Handler,
+			MethodName: "SetGroupMemberInfo",
+			Handler:    _IMGroupService_SetGroupMemberInfo_Handler,
 		},
 		{
-			MethodName: "getGroupAbstractInfo",
-			Handler:    _Group_GetGroupAbstractInfo_Handler,
+			MethodName: "GetGroupAbstractInfo",
+			Handler:    _IMGroupService_GetGroupAbstractInfo_Handler,
 		},
 		{
-			MethodName: "getUserInGroupMembers",
-			Handler:    _Group_GetUserInGroupMembers_Handler,
+			MethodName: "GetUserInGroupMembers",
+			Handler:    _IMGroupService_GetUserInGroupMembers_Handler,
 		},
 		{
-			MethodName: "getGroupMemberUserIDs",
-			Handler:    _Group_GetGroupMemberUserIDs_Handler,
+			MethodName: "GetGroupMemberUserIDs",
+			Handler:    _IMGroupService_GetGroupMemberUserIDs_Handler,
 		},
 		{
 			MethodName: "GetGroupMemberRoleLevel",
-			Handler:    _Group_GetGroupMemberRoleLevel_Handler,
+			Handler:    _IMGroupService_GetGroupMemberRoleLevel_Handler,
 		},
 		{
 			MethodName: "GetGroupInfoCache",
-			Handler:    _Group_GetGroupInfoCache_Handler,
+			Handler:    _IMGroupService_GetGroupInfoCache_Handler,
 		},
 		{
 			MethodName: "GetGroupMemberCache",
-			Handler:    _Group_GetGroupMemberCache_Handler,
+			Handler:    _IMGroupService_GetGroupMemberCache_Handler,
 		},
 		{
 			MethodName: "GroupCreateCount",
-			Handler:    _Group_GroupCreateCount_Handler,
+			Handler:    _IMGroupService_GroupCreateCount_Handler,
 		},
 		{
 			MethodName: "NotificationUserInfoUpdate",
-			Handler:    _Group_NotificationUserInfoUpdate_Handler,
+			Handler:    _IMGroupService_NotificationUserInfoUpdate_Handler,
 		},
 		{
-			MethodName: "getIncrementalGroupMember",
-			Handler:    _Group_GetIncrementalGroupMember_Handler,
+			MethodName: "GetIncrementalGroupMember",
+			Handler:    _IMGroupService_GetIncrementalGroupMember_Handler,
 		},
 		{
 			MethodName: "BatchGetIncrementalGroupMember",
-			Handler:    _Group_BatchGetIncrementalGroupMember_Handler,
+			Handler:    _IMGroupService_BatchGetIncrementalGroupMember_Handler,
 		},
 		{
-			MethodName: "getIncrementalJoinGroup",
-			Handler:    _Group_GetIncrementalJoinGroup_Handler,
+			MethodName: "GetIncrementalJoinGroup",
+			Handler:    _IMGroupService_GetIncrementalJoinGroup_Handler,
 		},
 		{
 			MethodName: "GetFullGroupMemberUserIDs",
-			Handler:    _Group_GetFullGroupMemberUserIDs_Handler,
+			Handler:    _IMGroupService_GetFullGroupMemberUserIDs_Handler,
 		},
 		{
 			MethodName: "GetFullJoinGroupIDs",
-			Handler:    _Group_GetFullJoinGroupIDs_Handler,
+			Handler:    _IMGroupService_GetFullJoinGroupIDs_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

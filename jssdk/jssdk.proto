@@ -23,7 +23,7 @@ import "conversation/conversation.proto";
 option go_package = "github.com/openimsdk/protocol/jssdk";
 
 message ConversationMsg {
-  conversation.ConversationModel conversation = 1;
+  conversation.Conversation conversation = 1;
   sdkws.MsgData lastMsg = 2;
   sdkws.UserInfo user = 3;
   relation.FriendInfoOnly friend = 4;

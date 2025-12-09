@@ -107,7 +107,7 @@ message MultiTerminalLoginCheckReq {
 }
 message MultiTerminalLoginCheckResp {}
 
-service msgGateway {
+service IMMsgGatewayService {
   rpc OnlinePushMsg(OnlinePushMsgReq) returns (OnlinePushMsgResp);
   rpc GetUsersOnlineStatus(GetUsersOnlineStatusReq) returns (GetUsersOnlineStatusResp);
   rpc OnlineBatchPushOneMsg(OnlineBatchPushOneMsgReq) returns (OnlineBatchPushOneMsgResp);

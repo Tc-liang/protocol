@@ -321,19 +321,19 @@ message ChatLog {
   int32 groupType = 23;
 }
 
-message batchSendMessageReq {
+message BatchSendMessageReq {
   repeated string recvIDList = 1;
   sdkws.MsgData msgData = 2;
 }
 
-message batchSendMessageResp {}
+message BatchSendMessageResp {}
 message GetServerTimeReq {}
 message GetServerTimeResp {
   int64 serverTime = 1;
 }
 
 message ClearMsgReq {
-  repeated conversation.ConversationModel conversations = 1;
+  repeated conversation.Conversation conversations = 1;
 }
 
 message ClearMsgResp {}
@@ -460,7 +460,7 @@ message AIStreamNotificationReq{
 message AIStreamNotificationResp {
 }
 
-service msg {
+service IMMsgService {
   //获取最小最大seq（包括用户的，以及指定群组的）
   rpc GetMaxSeq(sdkws.GetMaxSeqReq) returns (sdkws.GetMaxSeqResp);
   //获取会话列表的最大seq

@@ -33,1137 +33,1089 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Friend_ApplyToAddFriend_FullMethodName               = "/openim.relation.friend/applyToAddFriend"
-	Friend_GetPaginationFriendsApplyTo_FullMethodName    = "/openim.relation.friend/getPaginationFriendsApplyTo"
-	Friend_GetPaginationFriendsApplyFrom_FullMethodName  = "/openim.relation.friend/getPaginationFriendsApplyFrom"
-	Friend_GetSelfUnhandledApplyCount_FullMethodName     = "/openim.relation.friend/getSelfUnhandledApplyCount"
-	Friend_GetDesignatedFriendsApply_FullMethodName      = "/openim.relation.friend/getDesignatedFriendsApply"
-	Friend_GetIncrementalFriendsApplyTo_FullMethodName   = "/openim.relation.friend/getIncrementalFriendsApplyTo"
-	Friend_GetIncrementalFriendsApplyFrom_FullMethodName = "/openim.relation.friend/getIncrementalFriendsApplyFrom"
-	Friend_AddBlack_FullMethodName                       = "/openim.relation.friend/addBlack"
-	Friend_RemoveBlack_FullMethodName                    = "/openim.relation.friend/removeBlack"
-	Friend_IsFriend_FullMethodName                       = "/openim.relation.friend/isFriend"
-	Friend_IsBlack_FullMethodName                        = "/openim.relation.friend/isBlack"
-	Friend_GetPaginationBlacks_FullMethodName            = "/openim.relation.friend/getPaginationBlacks"
-	Friend_GetSpecifiedBlacks_FullMethodName             = "/openim.relation.friend/GetSpecifiedBlacks"
-	Friend_DeleteFriend_FullMethodName                   = "/openim.relation.friend/deleteFriend"
-	Friend_RespondFriendApply_FullMethodName             = "/openim.relation.friend/respondFriendApply"
-	Friend_UpdateFriends_FullMethodName                  = "/openim.relation.friend/updateFriends"
-	Friend_SetFriendRemark_FullMethodName                = "/openim.relation.friend/setFriendRemark"
-	Friend_ImportFriends_FullMethodName                  = "/openim.relation.friend/importFriends"
-	Friend_GetDesignatedFriends_FullMethodName           = "/openim.relation.friend/getDesignatedFriends"
-	Friend_GetPaginationFriends_FullMethodName           = "/openim.relation.friend/getPaginationFriends"
-	Friend_GetFriendIDs_FullMethodName                   = "/openim.relation.friend/getFriendIDs"
-	Friend_GetSpecifiedFriendsInfo_FullMethodName        = "/openim.relation.friend/GetSpecifiedFriendsInfo"
-	Friend_GetIncrementalFriends_FullMethodName          = "/openim.relation.friend/getIncrementalFriends"
-	Friend_GetIncrementalBlacks_FullMethodName           = "/openim.relation.friend/getIncrementalBlacks"
-	Friend_GetFullFriendUserIDs_FullMethodName           = "/openim.relation.friend/getFullFriendUserIDs"
-	Friend_NotificationUserInfoUpdate_FullMethodName     = "/openim.relation.friend/NotificationUserInfoUpdate"
-	Friend_GetFriendInfo_FullMethodName                  = "/openim.relation.friend/getFriendInfo"
+	FriendService_ApplyToAddFriend_FullMethodName               = "/openim.relation.FriendService/ApplyToAddFriend"
+	FriendService_GetPaginationFriendsApplyTo_FullMethodName    = "/openim.relation.FriendService/GetPaginationFriendsApplyTo"
+	FriendService_GetPaginationFriendsApplyFrom_FullMethodName  = "/openim.relation.FriendService/GetPaginationFriendsApplyFrom"
+	FriendService_GetSelfUnhandledApplyCount_FullMethodName     = "/openim.relation.FriendService/GetSelfUnhandledApplyCount"
+	FriendService_GetDesignatedFriendsApply_FullMethodName      = "/openim.relation.FriendService/GetDesignatedFriendsApply"
+	FriendService_GetIncrementalFriendsApplyTo_FullMethodName   = "/openim.relation.FriendService/GetIncrementalFriendsApplyTo"
+	FriendService_GetIncrementalFriendsApplyFrom_FullMethodName = "/openim.relation.FriendService/GetIncrementalFriendsApplyFrom"
+	FriendService_AddBlack_FullMethodName                       = "/openim.relation.FriendService/AddBlack"
+	FriendService_RemoveBlack_FullMethodName                    = "/openim.relation.FriendService/RemoveBlack"
+	FriendService_IsFriend_FullMethodName                       = "/openim.relation.FriendService/IsFriend"
+	FriendService_IsBlack_FullMethodName                        = "/openim.relation.FriendService/IsBlack"
+	FriendService_GetPaginationBlacks_FullMethodName            = "/openim.relation.FriendService/GetPaginationBlacks"
+	FriendService_GetSpecifiedBlacks_FullMethodName             = "/openim.relation.FriendService/GetSpecifiedBlacks"
+	FriendService_DeleteFriend_FullMethodName                   = "/openim.relation.FriendService/DeleteFriend"
+	FriendService_RespondFriendApply_FullMethodName             = "/openim.relation.FriendService/RespondFriendApply"
+	FriendService_UpdateFriends_FullMethodName                  = "/openim.relation.FriendService/UpdateFriends"
+	FriendService_SetFriendRemark_FullMethodName                = "/openim.relation.FriendService/SetFriendRemark"
+	FriendService_ImportFriends_FullMethodName                  = "/openim.relation.FriendService/ImportFriends"
+	FriendService_GetDesignatedFriends_FullMethodName           = "/openim.relation.FriendService/GetDesignatedFriends"
+	FriendService_GetPaginationFriends_FullMethodName           = "/openim.relation.FriendService/GetPaginationFriends"
+	FriendService_GetFriendIDs_FullMethodName                   = "/openim.relation.FriendService/GetFriendIDs"
+	FriendService_GetSpecifiedFriendsInfo_FullMethodName        = "/openim.relation.FriendService/GetSpecifiedFriendsInfo"
+	FriendService_GetIncrementalFriends_FullMethodName          = "/openim.relation.FriendService/GetIncrementalFriends"
+	FriendService_GetIncrementalBlacks_FullMethodName           = "/openim.relation.FriendService/GetIncrementalBlacks"
+	FriendService_GetFullFriendUserIDs_FullMethodName           = "/openim.relation.FriendService/GetFullFriendUserIDs"
+	FriendService_NotificationUserInfoUpdate_FullMethodName     = "/openim.relation.FriendService/NotificationUserInfoUpdate"
+	FriendService_GetFriendInfo_FullMethodName                  = "/openim.relation.FriendService/GetFriendInfo"
 )
 
-// FriendClient is the client API for Friend service.
+// FriendServiceClient is the client API for FriendService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type FriendClient interface {
-	// Friend request
+type FriendServiceClient interface {
 	ApplyToAddFriend(ctx context.Context, in *ApplyToAddFriendReq, opts ...grpc.CallOption) (*ApplyToAddFriendResp, error)
-	// Get friend request list
 	GetPaginationFriendsApplyTo(ctx context.Context, in *GetPaginationFriendsApplyToReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyToResp, error)
-	// Get sent friend request list
 	GetPaginationFriendsApplyFrom(ctx context.Context, in *GetPaginationFriendsApplyFromReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyFromResp, error)
-	// Get unhandled friend request count
 	GetSelfUnhandledApplyCount(ctx context.Context, in *GetSelfUnhandledApplyCountReq, opts ...grpc.CallOption) (*GetSelfUnhandledApplyCountResp, error)
-	// Get specified friend request
 	GetDesignatedFriendsApply(ctx context.Context, in *GetDesignatedFriendsApplyReq, opts ...grpc.CallOption) (*GetDesignatedFriendsApplyResp, error)
-	// Get Incremental friends apply to list
 	GetIncrementalFriendsApplyTo(ctx context.Context, in *GetIncrementalFriendsApplyToReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyToResp, error)
-	// Get Incremental friends apply from list
 	GetIncrementalFriendsApplyFrom(ctx context.Context, in *GetIncrementalFriendsApplyFromReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyFromResp, error)
-	// Add black user
 	AddBlack(ctx context.Context, in *AddBlackReq, opts ...grpc.CallOption) (*AddBlackResp, error)
-	// Remove black user
 	RemoveBlack(ctx context.Context, in *RemoveBlackReq, opts ...grpc.CallOption) (*RemoveBlackResp, error)
-	// Check user is in friends list
 	IsFriend(ctx context.Context, in *IsFriendReq, opts ...grpc.CallOption) (*IsFriendResp, error)
-	// Check user is blacklist
 	IsBlack(ctx context.Context, in *IsBlackReq, opts ...grpc.CallOption) (*IsBlackResp, error)
-	// Get blacklist
 	GetPaginationBlacks(ctx context.Context, in *GetPaginationBlacksReq, opts ...grpc.CallOption) (*GetPaginationBlacksResp, error)
-	// Get specified blacklist
 	GetSpecifiedBlacks(ctx context.Context, in *GetSpecifiedBlacksReq, opts ...grpc.CallOption) (*GetSpecifiedBlacksResp, error)
-	// Delete friend
 	DeleteFriend(ctx context.Context, in *DeleteFriendReq, opts ...grpc.CallOption) (*DeleteFriendResp, error)
-	// Respond to friend request (Accept or Decline)
 	RespondFriendApply(ctx context.Context, in *RespondFriendApplyReq, opts ...grpc.CallOption) (*RespondFriendApplyResp, error)
-	// Favorited friend
 	UpdateFriends(ctx context.Context, in *UpdateFriendsReq, opts ...grpc.CallOption) (*UpdateFriendsResp, error)
-	// Set friend nickname
 	SetFriendRemark(ctx context.Context, in *SetFriendRemarkReq, opts ...grpc.CallOption) (*SetFriendRemarkResp, error)
-	// Import friends relationship
 	ImportFriends(ctx context.Context, in *ImportFriendReq, opts ...grpc.CallOption) (*ImportFriendResp, error)
-	// Paginate and retrieve friend list; do not return error if no results.
 	GetDesignatedFriends(ctx context.Context, in *GetDesignatedFriendsReq, opts ...grpc.CallOption) (*GetDesignatedFriendsResp, error)
-	// Get specified friend's information; return error if ID does not exist.
 	GetPaginationFriends(ctx context.Context, in *GetPaginationFriendsReq, opts ...grpc.CallOption) (*GetPaginationFriendsResp, error)
-	// Get friend IDs list
 	GetFriendIDs(ctx context.Context, in *GetFriendIDsReq, opts ...grpc.CallOption) (*GetFriendIDsResp, error)
-	// Get specified friends info
 	GetSpecifiedFriendsInfo(ctx context.Context, in *GetSpecifiedFriendsInfoReq, opts ...grpc.CallOption) (*GetSpecifiedFriendsInfoResp, error)
 	GetIncrementalFriends(ctx context.Context, in *GetIncrementalFriendsReq, opts ...grpc.CallOption) (*GetIncrementalFriendsResp, error)
-	// Get Incremental blackslist
 	GetIncrementalBlacks(ctx context.Context, in *GetIncrementalBlacksReq, opts ...grpc.CallOption) (*GetIncrementalBlacksResp, error)
-	// Get full friend userIDs
 	GetFullFriendUserIDs(ctx context.Context, in *GetFullFriendUserIDsReq, opts ...grpc.CallOption) (*GetFullFriendUserIDsResp, error)
 	NotificationUserInfoUpdate(ctx context.Context, in *NotificationUserInfoUpdateReq, opts ...grpc.CallOption) (*NotificationUserInfoUpdateResp, error)
 	GetFriendInfo(ctx context.Context, in *GetFriendInfoReq, opts ...grpc.CallOption) (*GetFriendInfoResp, error)
 }
 
-type friendClient struct {
+type friendServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewFriendClient(cc grpc.ClientConnInterface) FriendClient {
-	return &friendClient{cc}
+func NewFriendServiceClient(cc grpc.ClientConnInterface) FriendServiceClient {
+	return &friendServiceClient{cc}
 }
 
-func (c *friendClient) ApplyToAddFriend(ctx context.Context, in *ApplyToAddFriendReq, opts ...grpc.CallOption) (*ApplyToAddFriendResp, error) {
+func (c *friendServiceClient) ApplyToAddFriend(ctx context.Context, in *ApplyToAddFriendReq, opts ...grpc.CallOption) (*ApplyToAddFriendResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ApplyToAddFriendResp)
-	err := c.cc.Invoke(ctx, Friend_ApplyToAddFriend_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_ApplyToAddFriend_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetPaginationFriendsApplyTo(ctx context.Context, in *GetPaginationFriendsApplyToReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyToResp, error) {
+func (c *friendServiceClient) GetPaginationFriendsApplyTo(ctx context.Context, in *GetPaginationFriendsApplyToReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyToResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPaginationFriendsApplyToResp)
-	err := c.cc.Invoke(ctx, Friend_GetPaginationFriendsApplyTo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetPaginationFriendsApplyTo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetPaginationFriendsApplyFrom(ctx context.Context, in *GetPaginationFriendsApplyFromReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyFromResp, error) {
+func (c *friendServiceClient) GetPaginationFriendsApplyFrom(ctx context.Context, in *GetPaginationFriendsApplyFromReq, opts ...grpc.CallOption) (*GetPaginationFriendsApplyFromResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPaginationFriendsApplyFromResp)
-	err := c.cc.Invoke(ctx, Friend_GetPaginationFriendsApplyFrom_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetPaginationFriendsApplyFrom_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetSelfUnhandledApplyCount(ctx context.Context, in *GetSelfUnhandledApplyCountReq, opts ...grpc.CallOption) (*GetSelfUnhandledApplyCountResp, error) {
+func (c *friendServiceClient) GetSelfUnhandledApplyCount(ctx context.Context, in *GetSelfUnhandledApplyCountReq, opts ...grpc.CallOption) (*GetSelfUnhandledApplyCountResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSelfUnhandledApplyCountResp)
-	err := c.cc.Invoke(ctx, Friend_GetSelfUnhandledApplyCount_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetSelfUnhandledApplyCount_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetDesignatedFriendsApply(ctx context.Context, in *GetDesignatedFriendsApplyReq, opts ...grpc.CallOption) (*GetDesignatedFriendsApplyResp, error) {
+func (c *friendServiceClient) GetDesignatedFriendsApply(ctx context.Context, in *GetDesignatedFriendsApplyReq, opts ...grpc.CallOption) (*GetDesignatedFriendsApplyResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetDesignatedFriendsApplyResp)
-	err := c.cc.Invoke(ctx, Friend_GetDesignatedFriendsApply_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetDesignatedFriendsApply_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetIncrementalFriendsApplyTo(ctx context.Context, in *GetIncrementalFriendsApplyToReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyToResp, error) {
+func (c *friendServiceClient) GetIncrementalFriendsApplyTo(ctx context.Context, in *GetIncrementalFriendsApplyToReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyToResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalFriendsApplyToResp)
-	err := c.cc.Invoke(ctx, Friend_GetIncrementalFriendsApplyTo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetIncrementalFriendsApplyTo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetIncrementalFriendsApplyFrom(ctx context.Context, in *GetIncrementalFriendsApplyFromReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyFromResp, error) {
+func (c *friendServiceClient) GetIncrementalFriendsApplyFrom(ctx context.Context, in *GetIncrementalFriendsApplyFromReq, opts ...grpc.CallOption) (*GetIncrementalFriendsApplyFromResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalFriendsApplyFromResp)
-	err := c.cc.Invoke(ctx, Friend_GetIncrementalFriendsApplyFrom_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetIncrementalFriendsApplyFrom_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) AddBlack(ctx context.Context, in *AddBlackReq, opts ...grpc.CallOption) (*AddBlackResp, error) {
+func (c *friendServiceClient) AddBlack(ctx context.Context, in *AddBlackReq, opts ...grpc.CallOption) (*AddBlackResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(AddBlackResp)
-	err := c.cc.Invoke(ctx, Friend_AddBlack_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_AddBlack_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) RemoveBlack(ctx context.Context, in *RemoveBlackReq, opts ...grpc.CallOption) (*RemoveBlackResp, error) {
+func (c *friendServiceClient) RemoveBlack(ctx context.Context, in *RemoveBlackReq, opts ...grpc.CallOption) (*RemoveBlackResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(RemoveBlackResp)
-	err := c.cc.Invoke(ctx, Friend_RemoveBlack_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_RemoveBlack_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) IsFriend(ctx context.Context, in *IsFriendReq, opts ...grpc.CallOption) (*IsFriendResp, error) {
+func (c *friendServiceClient) IsFriend(ctx context.Context, in *IsFriendReq, opts ...grpc.CallOption) (*IsFriendResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(IsFriendResp)
-	err := c.cc.Invoke(ctx, Friend_IsFriend_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_IsFriend_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) IsBlack(ctx context.Context, in *IsBlackReq, opts ...grpc.CallOption) (*IsBlackResp, error) {
+func (c *friendServiceClient) IsBlack(ctx context.Context, in *IsBlackReq, opts ...grpc.CallOption) (*IsBlackResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(IsBlackResp)
-	err := c.cc.Invoke(ctx, Friend_IsBlack_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_IsBlack_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetPaginationBlacks(ctx context.Context, in *GetPaginationBlacksReq, opts ...grpc.CallOption) (*GetPaginationBlacksResp, error) {
+func (c *friendServiceClient) GetPaginationBlacks(ctx context.Context, in *GetPaginationBlacksReq, opts ...grpc.CallOption) (*GetPaginationBlacksResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPaginationBlacksResp)
-	err := c.cc.Invoke(ctx, Friend_GetPaginationBlacks_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetPaginationBlacks_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetSpecifiedBlacks(ctx context.Context, in *GetSpecifiedBlacksReq, opts ...grpc.CallOption) (*GetSpecifiedBlacksResp, error) {
+func (c *friendServiceClient) GetSpecifiedBlacks(ctx context.Context, in *GetSpecifiedBlacksReq, opts ...grpc.CallOption) (*GetSpecifiedBlacksResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSpecifiedBlacksResp)
-	err := c.cc.Invoke(ctx, Friend_GetSpecifiedBlacks_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetSpecifiedBlacks_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) DeleteFriend(ctx context.Context, in *DeleteFriendReq, opts ...grpc.CallOption) (*DeleteFriendResp, error) {
+func (c *friendServiceClient) DeleteFriend(ctx context.Context, in *DeleteFriendReq, opts ...grpc.CallOption) (*DeleteFriendResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteFriendResp)
-	err := c.cc.Invoke(ctx, Friend_DeleteFriend_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_DeleteFriend_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) RespondFriendApply(ctx context.Context, in *RespondFriendApplyReq, opts ...grpc.CallOption) (*RespondFriendApplyResp, error) {
+func (c *friendServiceClient) RespondFriendApply(ctx context.Context, in *RespondFriendApplyReq, opts ...grpc.CallOption) (*RespondFriendApplyResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(RespondFriendApplyResp)
-	err := c.cc.Invoke(ctx, Friend_RespondFriendApply_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_RespondFriendApply_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) UpdateFriends(ctx context.Context, in *UpdateFriendsReq, opts ...grpc.CallOption) (*UpdateFriendsResp, error) {
+func (c *friendServiceClient) UpdateFriends(ctx context.Context, in *UpdateFriendsReq, opts ...grpc.CallOption) (*UpdateFriendsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UpdateFriendsResp)
-	err := c.cc.Invoke(ctx, Friend_UpdateFriends_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_UpdateFriends_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) SetFriendRemark(ctx context.Context, in *SetFriendRemarkReq, opts ...grpc.CallOption) (*SetFriendRemarkResp, error) {
+func (c *friendServiceClient) SetFriendRemark(ctx context.Context, in *SetFriendRemarkReq, opts ...grpc.CallOption) (*SetFriendRemarkResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetFriendRemarkResp)
-	err := c.cc.Invoke(ctx, Friend_SetFriendRemark_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_SetFriendRemark_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) ImportFriends(ctx context.Context, in *ImportFriendReq, opts ...grpc.CallOption) (*ImportFriendResp, error) {
+func (c *friendServiceClient) ImportFriends(ctx context.Context, in *ImportFriendReq, opts ...grpc.CallOption) (*ImportFriendResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ImportFriendResp)
-	err := c.cc.Invoke(ctx, Friend_ImportFriends_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_ImportFriends_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetDesignatedFriends(ctx context.Context, in *GetDesignatedFriendsReq, opts ...grpc.CallOption) (*GetDesignatedFriendsResp, error) {
+func (c *friendServiceClient) GetDesignatedFriends(ctx context.Context, in *GetDesignatedFriendsReq, opts ...grpc.CallOption) (*GetDesignatedFriendsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetDesignatedFriendsResp)
-	err := c.cc.Invoke(ctx, Friend_GetDesignatedFriends_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetDesignatedFriends_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetPaginationFriends(ctx context.Context, in *GetPaginationFriendsReq, opts ...grpc.CallOption) (*GetPaginationFriendsResp, error) {
+func (c *friendServiceClient) GetPaginationFriends(ctx context.Context, in *GetPaginationFriendsReq, opts ...grpc.CallOption) (*GetPaginationFriendsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetPaginationFriendsResp)
-	err := c.cc.Invoke(ctx, Friend_GetPaginationFriends_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetPaginationFriends_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetFriendIDs(ctx context.Context, in *GetFriendIDsReq, opts ...grpc.CallOption) (*GetFriendIDsResp, error) {
+func (c *friendServiceClient) GetFriendIDs(ctx context.Context, in *GetFriendIDsReq, opts ...grpc.CallOption) (*GetFriendIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFriendIDsResp)
-	err := c.cc.Invoke(ctx, Friend_GetFriendIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetFriendIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetSpecifiedFriendsInfo(ctx context.Context, in *GetSpecifiedFriendsInfoReq, opts ...grpc.CallOption) (*GetSpecifiedFriendsInfoResp, error) {
+func (c *friendServiceClient) GetSpecifiedFriendsInfo(ctx context.Context, in *GetSpecifiedFriendsInfoReq, opts ...grpc.CallOption) (*GetSpecifiedFriendsInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSpecifiedFriendsInfoResp)
-	err := c.cc.Invoke(ctx, Friend_GetSpecifiedFriendsInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetSpecifiedFriendsInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetIncrementalFriends(ctx context.Context, in *GetIncrementalFriendsReq, opts ...grpc.CallOption) (*GetIncrementalFriendsResp, error) {
+func (c *friendServiceClient) GetIncrementalFriends(ctx context.Context, in *GetIncrementalFriendsReq, opts ...grpc.CallOption) (*GetIncrementalFriendsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalFriendsResp)
-	err := c.cc.Invoke(ctx, Friend_GetIncrementalFriends_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetIncrementalFriends_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetIncrementalBlacks(ctx context.Context, in *GetIncrementalBlacksReq, opts ...grpc.CallOption) (*GetIncrementalBlacksResp, error) {
+func (c *friendServiceClient) GetIncrementalBlacks(ctx context.Context, in *GetIncrementalBlacksReq, opts ...grpc.CallOption) (*GetIncrementalBlacksResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetIncrementalBlacksResp)
-	err := c.cc.Invoke(ctx, Friend_GetIncrementalBlacks_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetIncrementalBlacks_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetFullFriendUserIDs(ctx context.Context, in *GetFullFriendUserIDsReq, opts ...grpc.CallOption) (*GetFullFriendUserIDsResp, error) {
+func (c *friendServiceClient) GetFullFriendUserIDs(ctx context.Context, in *GetFullFriendUserIDsReq, opts ...grpc.CallOption) (*GetFullFriendUserIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFullFriendUserIDsResp)
-	err := c.cc.Invoke(ctx, Friend_GetFullFriendUserIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetFullFriendUserIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) NotificationUserInfoUpdate(ctx context.Context, in *NotificationUserInfoUpdateReq, opts ...grpc.CallOption) (*NotificationUserInfoUpdateResp, error) {
+func (c *friendServiceClient) NotificationUserInfoUpdate(ctx context.Context, in *NotificationUserInfoUpdateReq, opts ...grpc.CallOption) (*NotificationUserInfoUpdateResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(NotificationUserInfoUpdateResp)
-	err := c.cc.Invoke(ctx, Friend_NotificationUserInfoUpdate_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_NotificationUserInfoUpdate_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *friendClient) GetFriendInfo(ctx context.Context, in *GetFriendInfoReq, opts ...grpc.CallOption) (*GetFriendInfoResp, error) {
+func (c *friendServiceClient) GetFriendInfo(ctx context.Context, in *GetFriendInfoReq, opts ...grpc.CallOption) (*GetFriendInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFriendInfoResp)
-	err := c.cc.Invoke(ctx, Friend_GetFriendInfo_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FriendService_GetFriendInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// FriendServer is the server API for Friend service.
-// All implementations must embed UnimplementedFriendServer
+// FriendServiceServer is the server API for FriendService service.
+// All implementations must embed UnimplementedFriendServiceServer
 // for forward compatibility.
-type FriendServer interface {
-	// Friend request
+type FriendServiceServer interface {
 	ApplyToAddFriend(context.Context, *ApplyToAddFriendReq) (*ApplyToAddFriendResp, error)
-	// Get friend request list
 	GetPaginationFriendsApplyTo(context.Context, *GetPaginationFriendsApplyToReq) (*GetPaginationFriendsApplyToResp, error)
-	// Get sent friend request list
 	GetPaginationFriendsApplyFrom(context.Context, *GetPaginationFriendsApplyFromReq) (*GetPaginationFriendsApplyFromResp, error)
-	// Get unhandled friend request count
 	GetSelfUnhandledApplyCount(context.Context, *GetSelfUnhandledApplyCountReq) (*GetSelfUnhandledApplyCountResp, error)
-	// Get specified friend request
 	GetDesignatedFriendsApply(context.Context, *GetDesignatedFriendsApplyReq) (*GetDesignatedFriendsApplyResp, error)
-	// Get Incremental friends apply to list
 	GetIncrementalFriendsApplyTo(context.Context, *GetIncrementalFriendsApplyToReq) (*GetIncrementalFriendsApplyToResp, error)
-	// Get Incremental friends apply from list
 	GetIncrementalFriendsApplyFrom(context.Context, *GetIncrementalFriendsApplyFromReq) (*GetIncrementalFriendsApplyFromResp, error)
-	// Add black user
 	AddBlack(context.Context, *AddBlackReq) (*AddBlackResp, error)
-	// Remove black user
 	RemoveBlack(context.Context, *RemoveBlackReq) (*RemoveBlackResp, error)
-	// Check user is in friends list
 	IsFriend(context.Context, *IsFriendReq) (*IsFriendResp, error)
-	// Check user is blacklist
 	IsBlack(context.Context, *IsBlackReq) (*IsBlackResp, error)
-	// Get blacklist
 	GetPaginationBlacks(context.Context, *GetPaginationBlacksReq) (*GetPaginationBlacksResp, error)
-	// Get specified blacklist
 	GetSpecifiedBlacks(context.Context, *GetSpecifiedBlacksReq) (*GetSpecifiedBlacksResp, error)
-	// Delete friend
 	DeleteFriend(context.Context, *DeleteFriendReq) (*DeleteFriendResp, error)
-	// Respond to friend request (Accept or Decline)
 	RespondFriendApply(context.Context, *RespondFriendApplyReq) (*RespondFriendApplyResp, error)
-	// Favorited friend
 	UpdateFriends(context.Context, *UpdateFriendsReq) (*UpdateFriendsResp, error)
-	// Set friend nickname
 	SetFriendRemark(context.Context, *SetFriendRemarkReq) (*SetFriendRemarkResp, error)
-	// Import friends relationship
 	ImportFriends(context.Context, *ImportFriendReq) (*ImportFriendResp, error)
-	// Paginate and retrieve friend list; do not return error if no results.
 	GetDesignatedFriends(context.Context, *GetDesignatedFriendsReq) (*GetDesignatedFriendsResp, error)
-	// Get specified friend's information; return error if ID does not exist.
 	GetPaginationFriends(context.Context, *GetPaginationFriendsReq) (*GetPaginationFriendsResp, error)
-	// Get friend IDs list
 	GetFriendIDs(context.Context, *GetFriendIDsReq) (*GetFriendIDsResp, error)
-	// Get specified friends info
 	GetSpecifiedFriendsInfo(context.Context, *GetSpecifiedFriendsInfoReq) (*GetSpecifiedFriendsInfoResp, error)
 	GetIncrementalFriends(context.Context, *GetIncrementalFriendsReq) (*GetIncrementalFriendsResp, error)
-	// Get Incremental blackslist
 	GetIncrementalBlacks(context.Context, *GetIncrementalBlacksReq) (*GetIncrementalBlacksResp, error)
-	// Get full friend userIDs
 	GetFullFriendUserIDs(context.Context, *GetFullFriendUserIDsReq) (*GetFullFriendUserIDsResp, error)
 	NotificationUserInfoUpdate(context.Context, *NotificationUserInfoUpdateReq) (*NotificationUserInfoUpdateResp, error)
 	GetFriendInfo(context.Context, *GetFriendInfoReq) (*GetFriendInfoResp, error)
-	mustEmbedUnimplementedFriendServer()
+	mustEmbedUnimplementedFriendServiceServer()
 }
 
-// UnimplementedFriendServer must be embedded to have
+// UnimplementedFriendServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedFriendServer struct{}
+type UnimplementedFriendServiceServer struct{}
 
-func (UnimplementedFriendServer) ApplyToAddFriend(context.Context, *ApplyToAddFriendReq) (*ApplyToAddFriendResp, error) {
+func (UnimplementedFriendServiceServer) ApplyToAddFriend(context.Context, *ApplyToAddFriendReq) (*ApplyToAddFriendResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ApplyToAddFriend not implemented")
 }
-func (UnimplementedFriendServer) GetPaginationFriendsApplyTo(context.Context, *GetPaginationFriendsApplyToReq) (*GetPaginationFriendsApplyToResp, error) {
+func (UnimplementedFriendServiceServer) GetPaginationFriendsApplyTo(context.Context, *GetPaginationFriendsApplyToReq) (*GetPaginationFriendsApplyToResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPaginationFriendsApplyTo not implemented")
 }
-func (UnimplementedFriendServer) GetPaginationFriendsApplyFrom(context.Context, *GetPaginationFriendsApplyFromReq) (*GetPaginationFriendsApplyFromResp, error) {
+func (UnimplementedFriendServiceServer) GetPaginationFriendsApplyFrom(context.Context, *GetPaginationFriendsApplyFromReq) (*GetPaginationFriendsApplyFromResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPaginationFriendsApplyFrom not implemented")
 }
-func (UnimplementedFriendServer) GetSelfUnhandledApplyCount(context.Context, *GetSelfUnhandledApplyCountReq) (*GetSelfUnhandledApplyCountResp, error) {
+func (UnimplementedFriendServiceServer) GetSelfUnhandledApplyCount(context.Context, *GetSelfUnhandledApplyCountReq) (*GetSelfUnhandledApplyCountResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSelfUnhandledApplyCount not implemented")
 }
-func (UnimplementedFriendServer) GetDesignatedFriendsApply(context.Context, *GetDesignatedFriendsApplyReq) (*GetDesignatedFriendsApplyResp, error) {
+func (UnimplementedFriendServiceServer) GetDesignatedFriendsApply(context.Context, *GetDesignatedFriendsApplyReq) (*GetDesignatedFriendsApplyResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDesignatedFriendsApply not implemented")
 }
-func (UnimplementedFriendServer) GetIncrementalFriendsApplyTo(context.Context, *GetIncrementalFriendsApplyToReq) (*GetIncrementalFriendsApplyToResp, error) {
+func (UnimplementedFriendServiceServer) GetIncrementalFriendsApplyTo(context.Context, *GetIncrementalFriendsApplyToReq) (*GetIncrementalFriendsApplyToResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalFriendsApplyTo not implemented")
 }
-func (UnimplementedFriendServer) GetIncrementalFriendsApplyFrom(context.Context, *GetIncrementalFriendsApplyFromReq) (*GetIncrementalFriendsApplyFromResp, error) {
+func (UnimplementedFriendServiceServer) GetIncrementalFriendsApplyFrom(context.Context, *GetIncrementalFriendsApplyFromReq) (*GetIncrementalFriendsApplyFromResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalFriendsApplyFrom not implemented")
 }
-func (UnimplementedFriendServer) AddBlack(context.Context, *AddBlackReq) (*AddBlackResp, error) {
+func (UnimplementedFriendServiceServer) AddBlack(context.Context, *AddBlackReq) (*AddBlackResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddBlack not implemented")
 }
-func (UnimplementedFriendServer) RemoveBlack(context.Context, *RemoveBlackReq) (*RemoveBlackResp, error) {
+func (UnimplementedFriendServiceServer) RemoveBlack(context.Context, *RemoveBlackReq) (*RemoveBlackResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RemoveBlack not implemented")
 }
-func (UnimplementedFriendServer) IsFriend(context.Context, *IsFriendReq) (*IsFriendResp, error) {
+func (UnimplementedFriendServiceServer) IsFriend(context.Context, *IsFriendReq) (*IsFriendResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method IsFriend not implemented")
 }
-func (UnimplementedFriendServer) IsBlack(context.Context, *IsBlackReq) (*IsBlackResp, error) {
+func (UnimplementedFriendServiceServer) IsBlack(context.Context, *IsBlackReq) (*IsBlackResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method IsBlack not implemented")
 }
-func (UnimplementedFriendServer) GetPaginationBlacks(context.Context, *GetPaginationBlacksReq) (*GetPaginationBlacksResp, error) {
+func (UnimplementedFriendServiceServer) GetPaginationBlacks(context.Context, *GetPaginationBlacksReq) (*GetPaginationBlacksResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPaginationBlacks not implemented")
 }
-func (UnimplementedFriendServer) GetSpecifiedBlacks(context.Context, *GetSpecifiedBlacksReq) (*GetSpecifiedBlacksResp, error) {
+func (UnimplementedFriendServiceServer) GetSpecifiedBlacks(context.Context, *GetSpecifiedBlacksReq) (*GetSpecifiedBlacksResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSpecifiedBlacks not implemented")
 }
-func (UnimplementedFriendServer) DeleteFriend(context.Context, *DeleteFriendReq) (*DeleteFriendResp, error) {
+func (UnimplementedFriendServiceServer) DeleteFriend(context.Context, *DeleteFriendReq) (*DeleteFriendResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteFriend not implemented")
 }
-func (UnimplementedFriendServer) RespondFriendApply(context.Context, *RespondFriendApplyReq) (*RespondFriendApplyResp, error) {
+func (UnimplementedFriendServiceServer) RespondFriendApply(context.Context, *RespondFriendApplyReq) (*RespondFriendApplyResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RespondFriendApply not implemented")
 }
-func (UnimplementedFriendServer) UpdateFriends(context.Context, *UpdateFriendsReq) (*UpdateFriendsResp, error) {
+func (UnimplementedFriendServiceServer) UpdateFriends(context.Context, *UpdateFriendsReq) (*UpdateFriendsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateFriends not implemented")
 }
-func (UnimplementedFriendServer) SetFriendRemark(context.Context, *SetFriendRemarkReq) (*SetFriendRemarkResp, error) {
+func (UnimplementedFriendServiceServer) SetFriendRemark(context.Context, *SetFriendRemarkReq) (*SetFriendRemarkResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetFriendRemark not implemented")
 }
-func (UnimplementedFriendServer) ImportFriends(context.Context, *ImportFriendReq) (*ImportFriendResp, error) {
+func (UnimplementedFriendServiceServer) ImportFriends(context.Context, *ImportFriendReq) (*ImportFriendResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ImportFriends not implemented")
 }
-func (UnimplementedFriendServer) GetDesignatedFriends(context.Context, *GetDesignatedFriendsReq) (*GetDesignatedFriendsResp, error) {
+func (UnimplementedFriendServiceServer) GetDesignatedFriends(context.Context, *GetDesignatedFriendsReq) (*GetDesignatedFriendsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDesignatedFriends not implemented")
 }
-func (UnimplementedFriendServer) GetPaginationFriends(context.Context, *GetPaginationFriendsReq) (*GetPaginationFriendsResp, error) {
+func (UnimplementedFriendServiceServer) GetPaginationFriends(context.Context, *GetPaginationFriendsReq) (*GetPaginationFriendsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPaginationFriends not implemented")
 }
-func (UnimplementedFriendServer) GetFriendIDs(context.Context, *GetFriendIDsReq) (*GetFriendIDsResp, error) {
+func (UnimplementedFriendServiceServer) GetFriendIDs(context.Context, *GetFriendIDsReq) (*GetFriendIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFriendIDs not implemented")
 }
-func (UnimplementedFriendServer) GetSpecifiedFriendsInfo(context.Context, *GetSpecifiedFriendsInfoReq) (*GetSpecifiedFriendsInfoResp, error) {
+func (UnimplementedFriendServiceServer) GetSpecifiedFriendsInfo(context.Context, *GetSpecifiedFriendsInfoReq) (*GetSpecifiedFriendsInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSpecifiedFriendsInfo not implemented")
 }
-func (UnimplementedFriendServer) GetIncrementalFriends(context.Context, *GetIncrementalFriendsReq) (*GetIncrementalFriendsResp, error) {
+func (UnimplementedFriendServiceServer) GetIncrementalFriends(context.Context, *GetIncrementalFriendsReq) (*GetIncrementalFriendsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalFriends not implemented")
 }
-func (UnimplementedFriendServer) GetIncrementalBlacks(context.Context, *GetIncrementalBlacksReq) (*GetIncrementalBlacksResp, error) {
+func (UnimplementedFriendServiceServer) GetIncrementalBlacks(context.Context, *GetIncrementalBlacksReq) (*GetIncrementalBlacksResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetIncrementalBlacks not implemented")
 }
-func (UnimplementedFriendServer) GetFullFriendUserIDs(context.Context, *GetFullFriendUserIDsReq) (*GetFullFriendUserIDsResp, error) {
+func (UnimplementedFriendServiceServer) GetFullFriendUserIDs(context.Context, *GetFullFriendUserIDsReq) (*GetFullFriendUserIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFullFriendUserIDs not implemented")
 }
-func (UnimplementedFriendServer) NotificationUserInfoUpdate(context.Context, *NotificationUserInfoUpdateReq) (*NotificationUserInfoUpdateResp, error) {
+func (UnimplementedFriendServiceServer) NotificationUserInfoUpdate(context.Context, *NotificationUserInfoUpdateReq) (*NotificationUserInfoUpdateResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NotificationUserInfoUpdate not implemented")
 }
-func (UnimplementedFriendServer) GetFriendInfo(context.Context, *GetFriendInfoReq) (*GetFriendInfoResp, error) {
+func (UnimplementedFriendServiceServer) GetFriendInfo(context.Context, *GetFriendInfoReq) (*GetFriendInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFriendInfo not implemented")
 }
-func (UnimplementedFriendServer) mustEmbedUnimplementedFriendServer() {}
-func (UnimplementedFriendServer) testEmbeddedByValue()                {}
+func (UnimplementedFriendServiceServer) mustEmbedUnimplementedFriendServiceServer() {}
+func (UnimplementedFriendServiceServer) testEmbeddedByValue()                       {}
 
-// UnsafeFriendServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to FriendServer will
+// UnsafeFriendServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to FriendServiceServer will
 // result in compilation errors.
-type UnsafeFriendServer interface {
-	mustEmbedUnimplementedFriendServer()
+type UnsafeFriendServiceServer interface {
+	mustEmbedUnimplementedFriendServiceServer()
 }
 
-func RegisterFriendServer(s grpc.ServiceRegistrar, srv FriendServer) {
-	// If the following call pancis, it indicates UnimplementedFriendServer was
+func RegisterFriendServiceServer(s grpc.ServiceRegistrar, srv FriendServiceServer) {
+	// If the following call pancis, it indicates UnimplementedFriendServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&Friend_ServiceDesc, srv)
+	s.RegisterService(&FriendService_ServiceDesc, srv)
 }
 
-func _Friend_ApplyToAddFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_ApplyToAddFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ApplyToAddFriendReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).ApplyToAddFriend(ctx, in)
+		return srv.(FriendServiceServer).ApplyToAddFriend(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_ApplyToAddFriend_FullMethodName,
+		FullMethod: FriendService_ApplyToAddFriend_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).ApplyToAddFriend(ctx, req.(*ApplyToAddFriendReq))
+		return srv.(FriendServiceServer).ApplyToAddFriend(ctx, req.(*ApplyToAddFriendReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetPaginationFriendsApplyTo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetPaginationFriendsApplyTo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPaginationFriendsApplyToReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetPaginationFriendsApplyTo(ctx, in)
+		return srv.(FriendServiceServer).GetPaginationFriendsApplyTo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetPaginationFriendsApplyTo_FullMethodName,
+		FullMethod: FriendService_GetPaginationFriendsApplyTo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetPaginationFriendsApplyTo(ctx, req.(*GetPaginationFriendsApplyToReq))
+		return srv.(FriendServiceServer).GetPaginationFriendsApplyTo(ctx, req.(*GetPaginationFriendsApplyToReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetPaginationFriendsApplyFrom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetPaginationFriendsApplyFrom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPaginationFriendsApplyFromReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetPaginationFriendsApplyFrom(ctx, in)
+		return srv.(FriendServiceServer).GetPaginationFriendsApplyFrom(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetPaginationFriendsApplyFrom_FullMethodName,
+		FullMethod: FriendService_GetPaginationFriendsApplyFrom_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetPaginationFriendsApplyFrom(ctx, req.(*GetPaginationFriendsApplyFromReq))
+		return srv.(FriendServiceServer).GetPaginationFriendsApplyFrom(ctx, req.(*GetPaginationFriendsApplyFromReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetSelfUnhandledApplyCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetSelfUnhandledApplyCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSelfUnhandledApplyCountReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetSelfUnhandledApplyCount(ctx, in)
+		return srv.(FriendServiceServer).GetSelfUnhandledApplyCount(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetSelfUnhandledApplyCount_FullMethodName,
+		FullMethod: FriendService_GetSelfUnhandledApplyCount_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetSelfUnhandledApplyCount(ctx, req.(*GetSelfUnhandledApplyCountReq))
+		return srv.(FriendServiceServer).GetSelfUnhandledApplyCount(ctx, req.(*GetSelfUnhandledApplyCountReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetDesignatedFriendsApply_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetDesignatedFriendsApply_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetDesignatedFriendsApplyReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetDesignatedFriendsApply(ctx, in)
+		return srv.(FriendServiceServer).GetDesignatedFriendsApply(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetDesignatedFriendsApply_FullMethodName,
+		FullMethod: FriendService_GetDesignatedFriendsApply_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetDesignatedFriendsApply(ctx, req.(*GetDesignatedFriendsApplyReq))
+		return srv.(FriendServiceServer).GetDesignatedFriendsApply(ctx, req.(*GetDesignatedFriendsApplyReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetIncrementalFriendsApplyTo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetIncrementalFriendsApplyTo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalFriendsApplyToReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetIncrementalFriendsApplyTo(ctx, in)
+		return srv.(FriendServiceServer).GetIncrementalFriendsApplyTo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetIncrementalFriendsApplyTo_FullMethodName,
+		FullMethod: FriendService_GetIncrementalFriendsApplyTo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetIncrementalFriendsApplyTo(ctx, req.(*GetIncrementalFriendsApplyToReq))
+		return srv.(FriendServiceServer).GetIncrementalFriendsApplyTo(ctx, req.(*GetIncrementalFriendsApplyToReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetIncrementalFriendsApplyFrom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetIncrementalFriendsApplyFrom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalFriendsApplyFromReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetIncrementalFriendsApplyFrom(ctx, in)
+		return srv.(FriendServiceServer).GetIncrementalFriendsApplyFrom(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetIncrementalFriendsApplyFrom_FullMethodName,
+		FullMethod: FriendService_GetIncrementalFriendsApplyFrom_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetIncrementalFriendsApplyFrom(ctx, req.(*GetIncrementalFriendsApplyFromReq))
+		return srv.(FriendServiceServer).GetIncrementalFriendsApplyFrom(ctx, req.(*GetIncrementalFriendsApplyFromReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_AddBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_AddBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AddBlackReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).AddBlack(ctx, in)
+		return srv.(FriendServiceServer).AddBlack(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_AddBlack_FullMethodName,
+		FullMethod: FriendService_AddBlack_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).AddBlack(ctx, req.(*AddBlackReq))
+		return srv.(FriendServiceServer).AddBlack(ctx, req.(*AddBlackReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_RemoveBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_RemoveBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RemoveBlackReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).RemoveBlack(ctx, in)
+		return srv.(FriendServiceServer).RemoveBlack(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_RemoveBlack_FullMethodName,
+		FullMethod: FriendService_RemoveBlack_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).RemoveBlack(ctx, req.(*RemoveBlackReq))
+		return srv.(FriendServiceServer).RemoveBlack(ctx, req.(*RemoveBlackReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_IsFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_IsFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(IsFriendReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).IsFriend(ctx, in)
+		return srv.(FriendServiceServer).IsFriend(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_IsFriend_FullMethodName,
+		FullMethod: FriendService_IsFriend_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).IsFriend(ctx, req.(*IsFriendReq))
+		return srv.(FriendServiceServer).IsFriend(ctx, req.(*IsFriendReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_IsBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_IsBlack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(IsBlackReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).IsBlack(ctx, in)
+		return srv.(FriendServiceServer).IsBlack(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_IsBlack_FullMethodName,
+		FullMethod: FriendService_IsBlack_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).IsBlack(ctx, req.(*IsBlackReq))
+		return srv.(FriendServiceServer).IsBlack(ctx, req.(*IsBlackReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetPaginationBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetPaginationBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPaginationBlacksReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetPaginationBlacks(ctx, in)
+		return srv.(FriendServiceServer).GetPaginationBlacks(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetPaginationBlacks_FullMethodName,
+		FullMethod: FriendService_GetPaginationBlacks_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetPaginationBlacks(ctx, req.(*GetPaginationBlacksReq))
+		return srv.(FriendServiceServer).GetPaginationBlacks(ctx, req.(*GetPaginationBlacksReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetSpecifiedBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetSpecifiedBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSpecifiedBlacksReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetSpecifiedBlacks(ctx, in)
+		return srv.(FriendServiceServer).GetSpecifiedBlacks(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetSpecifiedBlacks_FullMethodName,
+		FullMethod: FriendService_GetSpecifiedBlacks_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetSpecifiedBlacks(ctx, req.(*GetSpecifiedBlacksReq))
+		return srv.(FriendServiceServer).GetSpecifiedBlacks(ctx, req.(*GetSpecifiedBlacksReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_DeleteFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_DeleteFriend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteFriendReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).DeleteFriend(ctx, in)
+		return srv.(FriendServiceServer).DeleteFriend(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_DeleteFriend_FullMethodName,
+		FullMethod: FriendService_DeleteFriend_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).DeleteFriend(ctx, req.(*DeleteFriendReq))
+		return srv.(FriendServiceServer).DeleteFriend(ctx, req.(*DeleteFriendReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_RespondFriendApply_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_RespondFriendApply_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RespondFriendApplyReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).RespondFriendApply(ctx, in)
+		return srv.(FriendServiceServer).RespondFriendApply(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_RespondFriendApply_FullMethodName,
+		FullMethod: FriendService_RespondFriendApply_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).RespondFriendApply(ctx, req.(*RespondFriendApplyReq))
+		return srv.(FriendServiceServer).RespondFriendApply(ctx, req.(*RespondFriendApplyReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_UpdateFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_UpdateFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateFriendsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).UpdateFriends(ctx, in)
+		return srv.(FriendServiceServer).UpdateFriends(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_UpdateFriends_FullMethodName,
+		FullMethod: FriendService_UpdateFriends_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).UpdateFriends(ctx, req.(*UpdateFriendsReq))
+		return srv.(FriendServiceServer).UpdateFriends(ctx, req.(*UpdateFriendsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_SetFriendRemark_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_SetFriendRemark_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetFriendRemarkReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).SetFriendRemark(ctx, in)
+		return srv.(FriendServiceServer).SetFriendRemark(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_SetFriendRemark_FullMethodName,
+		FullMethod: FriendService_SetFriendRemark_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).SetFriendRemark(ctx, req.(*SetFriendRemarkReq))
+		return srv.(FriendServiceServer).SetFriendRemark(ctx, req.(*SetFriendRemarkReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_ImportFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_ImportFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ImportFriendReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).ImportFriends(ctx, in)
+		return srv.(FriendServiceServer).ImportFriends(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_ImportFriends_FullMethodName,
+		FullMethod: FriendService_ImportFriends_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).ImportFriends(ctx, req.(*ImportFriendReq))
+		return srv.(FriendServiceServer).ImportFriends(ctx, req.(*ImportFriendReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetDesignatedFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetDesignatedFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetDesignatedFriendsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetDesignatedFriends(ctx, in)
+		return srv.(FriendServiceServer).GetDesignatedFriends(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetDesignatedFriends_FullMethodName,
+		FullMethod: FriendService_GetDesignatedFriends_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetDesignatedFriends(ctx, req.(*GetDesignatedFriendsReq))
+		return srv.(FriendServiceServer).GetDesignatedFriends(ctx, req.(*GetDesignatedFriendsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetPaginationFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetPaginationFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPaginationFriendsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetPaginationFriends(ctx, in)
+		return srv.(FriendServiceServer).GetPaginationFriends(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetPaginationFriends_FullMethodName,
+		FullMethod: FriendService_GetPaginationFriends_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetPaginationFriends(ctx, req.(*GetPaginationFriendsReq))
+		return srv.(FriendServiceServer).GetPaginationFriends(ctx, req.(*GetPaginationFriendsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetFriendIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetFriendIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFriendIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetFriendIDs(ctx, in)
+		return srv.(FriendServiceServer).GetFriendIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetFriendIDs_FullMethodName,
+		FullMethod: FriendService_GetFriendIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetFriendIDs(ctx, req.(*GetFriendIDsReq))
+		return srv.(FriendServiceServer).GetFriendIDs(ctx, req.(*GetFriendIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetSpecifiedFriendsInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetSpecifiedFriendsInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSpecifiedFriendsInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetSpecifiedFriendsInfo(ctx, in)
+		return srv.(FriendServiceServer).GetSpecifiedFriendsInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetSpecifiedFriendsInfo_FullMethodName,
+		FullMethod: FriendService_GetSpecifiedFriendsInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetSpecifiedFriendsInfo(ctx, req.(*GetSpecifiedFriendsInfoReq))
+		return srv.(FriendServiceServer).GetSpecifiedFriendsInfo(ctx, req.(*GetSpecifiedFriendsInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetIncrementalFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetIncrementalFriends_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalFriendsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetIncrementalFriends(ctx, in)
+		return srv.(FriendServiceServer).GetIncrementalFriends(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetIncrementalFriends_FullMethodName,
+		FullMethod: FriendService_GetIncrementalFriends_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetIncrementalFriends(ctx, req.(*GetIncrementalFriendsReq))
+		return srv.(FriendServiceServer).GetIncrementalFriends(ctx, req.(*GetIncrementalFriendsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetIncrementalBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetIncrementalBlacks_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetIncrementalBlacksReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetIncrementalBlacks(ctx, in)
+		return srv.(FriendServiceServer).GetIncrementalBlacks(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetIncrementalBlacks_FullMethodName,
+		FullMethod: FriendService_GetIncrementalBlacks_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetIncrementalBlacks(ctx, req.(*GetIncrementalBlacksReq))
+		return srv.(FriendServiceServer).GetIncrementalBlacks(ctx, req.(*GetIncrementalBlacksReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetFullFriendUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetFullFriendUserIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFullFriendUserIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetFullFriendUserIDs(ctx, in)
+		return srv.(FriendServiceServer).GetFullFriendUserIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetFullFriendUserIDs_FullMethodName,
+		FullMethod: FriendService_GetFullFriendUserIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetFullFriendUserIDs(ctx, req.(*GetFullFriendUserIDsReq))
+		return srv.(FriendServiceServer).GetFullFriendUserIDs(ctx, req.(*GetFullFriendUserIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_NotificationUserInfoUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_NotificationUserInfoUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(NotificationUserInfoUpdateReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).NotificationUserInfoUpdate(ctx, in)
+		return srv.(FriendServiceServer).NotificationUserInfoUpdate(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_NotificationUserInfoUpdate_FullMethodName,
+		FullMethod: FriendService_NotificationUserInfoUpdate_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).NotificationUserInfoUpdate(ctx, req.(*NotificationUserInfoUpdateReq))
+		return srv.(FriendServiceServer).NotificationUserInfoUpdate(ctx, req.(*NotificationUserInfoUpdateReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Friend_GetFriendInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FriendService_GetFriendInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetFriendInfoReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FriendServer).GetFriendInfo(ctx, in)
+		return srv.(FriendServiceServer).GetFriendInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Friend_GetFriendInfo_FullMethodName,
+		FullMethod: FriendService_GetFriendInfo_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FriendServer).GetFriendInfo(ctx, req.(*GetFriendInfoReq))
+		return srv.(FriendServiceServer).GetFriendInfo(ctx, req.(*GetFriendInfoReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Friend_ServiceDesc is the grpc.ServiceDesc for Friend service.
+// FriendService_ServiceDesc is the grpc.ServiceDesc for FriendService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Friend_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.relation.friend",
-	HandlerType: (*FriendServer)(nil),
+var FriendService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.relation.FriendService",
+	HandlerType: (*FriendServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "applyToAddFriend",
-			Handler:    _Friend_ApplyToAddFriend_Handler,
+			MethodName: "ApplyToAddFriend",
+			Handler:    _FriendService_ApplyToAddFriend_Handler,
 		},
 		{
-			MethodName: "getPaginationFriendsApplyTo",
-			Handler:    _Friend_GetPaginationFriendsApplyTo_Handler,
+			MethodName: "GetPaginationFriendsApplyTo",
+			Handler:    _FriendService_GetPaginationFriendsApplyTo_Handler,
 		},
 		{
-			MethodName: "getPaginationFriendsApplyFrom",
-			Handler:    _Friend_GetPaginationFriendsApplyFrom_Handler,
+			MethodName: "GetPaginationFriendsApplyFrom",
+			Handler:    _FriendService_GetPaginationFriendsApplyFrom_Handler,
 		},
 		{
-			MethodName: "getSelfUnhandledApplyCount",
-			Handler:    _Friend_GetSelfUnhandledApplyCount_Handler,
+			MethodName: "GetSelfUnhandledApplyCount",
+			Handler:    _FriendService_GetSelfUnhandledApplyCount_Handler,
 		},
 		{
-			MethodName: "getDesignatedFriendsApply",
-			Handler:    _Friend_GetDesignatedFriendsApply_Handler,
+			MethodName: "GetDesignatedFriendsApply",
+			Handler:    _FriendService_GetDesignatedFriendsApply_Handler,
 		},
 		{
-			MethodName: "getIncrementalFriendsApplyTo",
-			Handler:    _Friend_GetIncrementalFriendsApplyTo_Handler,
+			MethodName: "GetIncrementalFriendsApplyTo",
+			Handler:    _FriendService_GetIncrementalFriendsApplyTo_Handler,
 		},
 		{
-			MethodName: "getIncrementalFriendsApplyFrom",
-			Handler:    _Friend_GetIncrementalFriendsApplyFrom_Handler,
+			MethodName: "GetIncrementalFriendsApplyFrom",
+			Handler:    _FriendService_GetIncrementalFriendsApplyFrom_Handler,
 		},
 		{
-			MethodName: "addBlack",
-			Handler:    _Friend_AddBlack_Handler,
+			MethodName: "AddBlack",
+			Handler:    _FriendService_AddBlack_Handler,
 		},
 		{
-			MethodName: "removeBlack",
-			Handler:    _Friend_RemoveBlack_Handler,
+			MethodName: "RemoveBlack",
+			Handler:    _FriendService_RemoveBlack_Handler,
 		},
 		{
-			MethodName: "isFriend",
-			Handler:    _Friend_IsFriend_Handler,
+			MethodName: "IsFriend",
+			Handler:    _FriendService_IsFriend_Handler,
 		},
 		{
-			MethodName: "isBlack",
-			Handler:    _Friend_IsBlack_Handler,
+			MethodName: "IsBlack",
+			Handler:    _FriendService_IsBlack_Handler,
 		},
 		{
-			MethodName: "getPaginationBlacks",
-			Handler:    _Friend_GetPaginationBlacks_Handler,
+			MethodName: "GetPaginationBlacks",
+			Handler:    _FriendService_GetPaginationBlacks_Handler,
 		},
 		{
 			MethodName: "GetSpecifiedBlacks",
-			Handler:    _Friend_GetSpecifiedBlacks_Handler,
+			Handler:    _FriendService_GetSpecifiedBlacks_Handler,
 		},
 		{
-			MethodName: "deleteFriend",
-			Handler:    _Friend_DeleteFriend_Handler,
+			MethodName: "DeleteFriend",
+			Handler:    _FriendService_DeleteFriend_Handler,
 		},
 		{
-			MethodName: "respondFriendApply",
-			Handler:    _Friend_RespondFriendApply_Handler,
+			MethodName: "RespondFriendApply",
+			Handler:    _FriendService_RespondFriendApply_Handler,
 		},
 		{
-			MethodName: "updateFriends",
-			Handler:    _Friend_UpdateFriends_Handler,
+			MethodName: "UpdateFriends",
+			Handler:    _FriendService_UpdateFriends_Handler,
 		},
 		{
-			MethodName: "setFriendRemark",
-			Handler:    _Friend_SetFriendRemark_Handler,
+			MethodName: "SetFriendRemark",
+			Handler:    _FriendService_SetFriendRemark_Handler,
 		},
 		{
-			MethodName: "importFriends",
-			Handler:    _Friend_ImportFriends_Handler,
+			MethodName: "ImportFriends",
+			Handler:    _FriendService_ImportFriends_Handler,
 		},
 		{
-			MethodName: "getDesignatedFriends",
-			Handler:    _Friend_GetDesignatedFriends_Handler,
+			MethodName: "GetDesignatedFriends",
+			Handler:    _FriendService_GetDesignatedFriends_Handler,
 		},
 		{
-			MethodName: "getPaginationFriends",
-			Handler:    _Friend_GetPaginationFriends_Handler,
+			MethodName: "GetPaginationFriends",
+			Handler:    _FriendService_GetPaginationFriends_Handler,
 		},
 		{
-			MethodName: "getFriendIDs",
-			Handler:    _Friend_GetFriendIDs_Handler,
+			MethodName: "GetFriendIDs",
+			Handler:    _FriendService_GetFriendIDs_Handler,
 		},
 		{
 			MethodName: "GetSpecifiedFriendsInfo",
-			Handler:    _Friend_GetSpecifiedFriendsInfo_Handler,
+			Handler:    _FriendService_GetSpecifiedFriendsInfo_Handler,
 		},
 		{
-			MethodName: "getIncrementalFriends",
-			Handler:    _Friend_GetIncrementalFriends_Handler,
+			MethodName: "GetIncrementalFriends",
+			Handler:    _FriendService_GetIncrementalFriends_Handler,
 		},
 		{
-			MethodName: "getIncrementalBlacks",
-			Handler:    _Friend_GetIncrementalBlacks_Handler,
+			MethodName: "GetIncrementalBlacks",
+			Handler:    _FriendService_GetIncrementalBlacks_Handler,
 		},
 		{
-			MethodName: "getFullFriendUserIDs",
-			Handler:    _Friend_GetFullFriendUserIDs_Handler,
+			MethodName: "GetFullFriendUserIDs",
+			Handler:    _FriendService_GetFullFriendUserIDs_Handler,
 		},
 		{
 			MethodName: "NotificationUserInfoUpdate",
-			Handler:    _Friend_NotificationUserInfoUpdate_Handler,
+			Handler:    _FriendService_NotificationUserInfoUpdate_Handler,
 		},
 		{
-			MethodName: "getFriendInfo",
-			Handler:    _Friend_GetFriendInfo_Handler,
+			MethodName: "GetFriendInfo",
+			Handler:    _FriendService_GetFriendInfo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

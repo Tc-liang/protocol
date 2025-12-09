@@ -20,7 +20,7 @@ import "wrapperspb/wrapperspb.proto";
 
 option go_package = "github.com/openimsdk/protocol/conversation";
 
-message ConversationModel {
+message Conversation {
   string ownerUserID = 1;
   string conversationID = 2;
   int32 recvMsgOpt = 3;
@@ -61,7 +61,7 @@ message ConversationReq {
 }
 
 message SetConversationReq {
-  ConversationModel conversation = 1;
+  Conversation conversation = 1;
 }
 
 message SetConversationResp {}
@@ -72,7 +72,7 @@ message GetConversationReq {
 }
 
 message GetConversationResp {
-  ConversationModel conversation = 2;
+  Conversation conversation = 2;
 }
 
 message GetSortedConversationListReq {
@@ -121,7 +121,7 @@ message GetConversationsReq {
 }
 
 message GetConversationsResp {
-  repeated ConversationModel conversations = 2;
+  repeated Conversation conversations = 2;
 }
 
 message GetAllConversationsReq {
@@ -129,7 +129,7 @@ message GetAllConversationsReq {
 }
 
 message GetAllConversationsResp {
-  repeated ConversationModel conversations = 2;
+  repeated Conversation conversations = 2;
 }
 
 message GetRecvMsgNotNotifyUserIDsReq {
@@ -200,7 +200,7 @@ message GetConversationsByConversationIDReq {
 }
 
 message GetConversationsByConversationIDResp {
-  repeated ConversationModel conversations = 1;
+  repeated Conversation conversations = 1;
 }
 
 message GetConversationOfflinePushUserIDsReq {
@@ -264,8 +264,8 @@ message GetIncrementalConversationResp {
   string versionID = 2;
   bool full = 3;
   repeated string delete = 4;
-  repeated ConversationModel insert = 5;
-  repeated ConversationModel update = 6;
+  repeated Conversation insert = 5;
+  repeated Conversation update = 6;
 }
 
 message GetOwnerConversationReq {
@@ -275,13 +275,13 @@ message GetOwnerConversationReq {
 
 message GetOwnerConversationResp {
   int64 total = 1;
-  repeated ConversationModel conversations = 2;
+  repeated Conversation conversations = 2;
 }
 
 message GetConversationsNeedClearMsgReq {}
 
 message GetConversationsNeedClearMsgResp {
-  repeated ConversationModel conversations = 1;
+  repeated Conversation conversations = 1;
 }
 
 message GetNotNotifyConversationIDsReq {
@@ -324,7 +324,7 @@ message DeleteConversationsReq {
 }
 message DeleteConversationsResp {}
 
-service Conversation {
+service IMConversationService {
   rpc GetConversation(GetConversationReq) returns (GetConversationResp);
   rpc GetSortedConversationList(GetSortedConversationListReq) returns (GetSortedConversationListResp);
   rpc GetAllConversations(GetAllConversationsReq) returns (GetAllConversationsResp);

@@ -987,9 +987,8 @@ const file_msggateway_msggateway_proto_rawDesc = "" +
 	"platformID\x18\x02 \x01(\x05R\n" +
 	"platformID\x12\x14\n" +
 	"\x05token\x18\x03 \x01(\tR\x05token\"\x1d\n" +
-	"\x1bMultiTerminalLoginCheckResp2\xa7\x05\n" +
-	"\n" +
-	"msgGateway\x12Z\n" +
+	"\x1bMultiTerminalLoginCheckResp2\xb0\x05\n" +
+	"\x13IMMsgGatewayService\x12Z\n" +
 	"\rOnlinePushMsg\x12#.openim.msggateway.OnlinePushMsgReq\x1a$.openim.msggateway.OnlinePushMsgResp\x12o\n" +
 	"\x14GetUsersOnlineStatus\x12*.openim.msggateway.GetUsersOnlineStatusReq\x1a+.openim.msggateway.GetUsersOnlineStatusResp\x12r\n" +
 	"\x15OnlineBatchPushOneMsg\x12+.openim.msggateway.OnlineBatchPushOneMsgReq\x1a,.openim.msggateway.OnlineBatchPushOneMsgResp\x12|\n" +
@@ -1040,18 +1039,18 @@ var file_msggateway_msggateway_proto_depIdxs = []int32{
 	15, // 6: openim.msggateway.GetUsersOnlineStatusResp.failedResult:type_name -> openim.msggateway.GetUsersOnlineStatusResp.FailedDetail
 	9,  // 7: openim.msggateway.SingleDetail.singlePlatformToken:type_name -> openim.msggateway.SinglePlatformToken
 	14, // 8: openim.msggateway.GetUsersOnlineStatusResp.SuccessResult.detailPlatformStatus:type_name -> openim.msggateway.GetUsersOnlineStatusResp.SuccessDetail
-	0,  // 9: openim.msggateway.msgGateway.OnlinePushMsg:input_type -> openim.msggateway.OnlinePushMsgReq
-	6,  // 10: openim.msggateway.msgGateway.GetUsersOnlineStatus:input_type -> openim.msggateway.GetUsersOnlineStatusReq
-	3,  // 11: openim.msggateway.msgGateway.OnlineBatchPushOneMsg:input_type -> openim.msggateway.OnlineBatchPushOneMsgReq
-	3,  // 12: openim.msggateway.msgGateway.SuperGroupOnlineBatchPushOneMsg:input_type -> openim.msggateway.OnlineBatchPushOneMsgReq
-	10, // 13: openim.msggateway.msgGateway.KickUserOffline:input_type -> openim.msggateway.KickUserOfflineReq
-	12, // 14: openim.msggateway.msgGateway.MultiTerminalLoginCheck:input_type -> openim.msggateway.MultiTerminalLoginCheckReq
-	1,  // 15: openim.msggateway.msgGateway.OnlinePushMsg:output_type -> openim.msggateway.OnlinePushMsgResp
-	7,  // 16: openim.msggateway.msgGateway.GetUsersOnlineStatus:output_type -> openim.msggateway.GetUsersOnlineStatusResp
-	4,  // 17: openim.msggateway.msgGateway.OnlineBatchPushOneMsg:output_type -> openim.msggateway.OnlineBatchPushOneMsgResp
-	4,  // 18: openim.msggateway.msgGateway.SuperGroupOnlineBatchPushOneMsg:output_type -> openim.msggateway.OnlineBatchPushOneMsgResp
-	11, // 19: openim.msggateway.msgGateway.KickUserOffline:output_type -> openim.msggateway.KickUserOfflineResp
-	13, // 20: openim.msggateway.msgGateway.MultiTerminalLoginCheck:output_type -> openim.msggateway.MultiTerminalLoginCheckResp
+	0,  // 9: openim.msggateway.IMMsgGatewayService.OnlinePushMsg:input_type -> openim.msggateway.OnlinePushMsgReq
+	6,  // 10: openim.msggateway.IMMsgGatewayService.GetUsersOnlineStatus:input_type -> openim.msggateway.GetUsersOnlineStatusReq
+	3,  // 11: openim.msggateway.IMMsgGatewayService.OnlineBatchPushOneMsg:input_type -> openim.msggateway.OnlineBatchPushOneMsgReq
+	3,  // 12: openim.msggateway.IMMsgGatewayService.SuperGroupOnlineBatchPushOneMsg:input_type -> openim.msggateway.OnlineBatchPushOneMsgReq
+	10, // 13: openim.msggateway.IMMsgGatewayService.KickUserOffline:input_type -> openim.msggateway.KickUserOfflineReq
+	12, // 14: openim.msggateway.IMMsgGatewayService.MultiTerminalLoginCheck:input_type -> openim.msggateway.MultiTerminalLoginCheckReq
+	1,  // 15: openim.msggateway.IMMsgGatewayService.OnlinePushMsg:output_type -> openim.msggateway.OnlinePushMsgResp
+	7,  // 16: openim.msggateway.IMMsgGatewayService.GetUsersOnlineStatus:output_type -> openim.msggateway.GetUsersOnlineStatusResp
+	4,  // 17: openim.msggateway.IMMsgGatewayService.OnlineBatchPushOneMsg:output_type -> openim.msggateway.OnlineBatchPushOneMsgResp
+	4,  // 18: openim.msggateway.IMMsgGatewayService.SuperGroupOnlineBatchPushOneMsg:output_type -> openim.msggateway.OnlineBatchPushOneMsgResp
+	11, // 19: openim.msggateway.IMMsgGatewayService.KickUserOffline:output_type -> openim.msggateway.KickUserOfflineResp
+	13, // 20: openim.msggateway.IMMsgGatewayService.MultiTerminalLoginCheck:output_type -> openim.msggateway.MultiTerminalLoginCheckResp
 	15, // [15:21] is the sub-list for method output_type
 	9,  // [9:15] is the sub-list for method input_type
 	9,  // [9:9] is the sub-list for extension type_name

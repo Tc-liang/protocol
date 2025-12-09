@@ -33,18 +33,18 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	MsgGateway_OnlinePushMsg_FullMethodName                   = "/openim.msggateway.msgGateway/OnlinePushMsg"
-	MsgGateway_GetUsersOnlineStatus_FullMethodName            = "/openim.msggateway.msgGateway/GetUsersOnlineStatus"
-	MsgGateway_OnlineBatchPushOneMsg_FullMethodName           = "/openim.msggateway.msgGateway/OnlineBatchPushOneMsg"
-	MsgGateway_SuperGroupOnlineBatchPushOneMsg_FullMethodName = "/openim.msggateway.msgGateway/SuperGroupOnlineBatchPushOneMsg"
-	MsgGateway_KickUserOffline_FullMethodName                 = "/openim.msggateway.msgGateway/KickUserOffline"
-	MsgGateway_MultiTerminalLoginCheck_FullMethodName         = "/openim.msggateway.msgGateway/MultiTerminalLoginCheck"
+	IMMsgGatewayService_OnlinePushMsg_FullMethodName                   = "/openim.msggateway.IMMsgGatewayService/OnlinePushMsg"
+	IMMsgGatewayService_GetUsersOnlineStatus_FullMethodName            = "/openim.msggateway.IMMsgGatewayService/GetUsersOnlineStatus"
+	IMMsgGatewayService_OnlineBatchPushOneMsg_FullMethodName           = "/openim.msggateway.IMMsgGatewayService/OnlineBatchPushOneMsg"
+	IMMsgGatewayService_SuperGroupOnlineBatchPushOneMsg_FullMethodName = "/openim.msggateway.IMMsgGatewayService/SuperGroupOnlineBatchPushOneMsg"
+	IMMsgGatewayService_KickUserOffline_FullMethodName                 = "/openim.msggateway.IMMsgGatewayService/KickUserOffline"
+	IMMsgGatewayService_MultiTerminalLoginCheck_FullMethodName         = "/openim.msggateway.IMMsgGatewayService/MultiTerminalLoginCheck"
 )
 
-// MsgGatewayClient is the client API for MsgGateway service.
+// IMMsgGatewayServiceClient is the client API for IMMsgGatewayService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type MsgGatewayClient interface {
+type IMMsgGatewayServiceClient interface {
 	OnlinePushMsg(ctx context.Context, in *OnlinePushMsgReq, opts ...grpc.CallOption) (*OnlinePushMsgResp, error)
 	GetUsersOnlineStatus(ctx context.Context, in *GetUsersOnlineStatusReq, opts ...grpc.CallOption) (*GetUsersOnlineStatusResp, error)
 	OnlineBatchPushOneMsg(ctx context.Context, in *OnlineBatchPushOneMsgReq, opts ...grpc.CallOption) (*OnlineBatchPushOneMsgResp, error)
@@ -53,271 +53,271 @@ type MsgGatewayClient interface {
 	MultiTerminalLoginCheck(ctx context.Context, in *MultiTerminalLoginCheckReq, opts ...grpc.CallOption) (*MultiTerminalLoginCheckResp, error)
 }
 
-type msgGatewayClient struct {
+type iMMsgGatewayServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewMsgGatewayClient(cc grpc.ClientConnInterface) MsgGatewayClient {
-	return &msgGatewayClient{cc}
+func NewIMMsgGatewayServiceClient(cc grpc.ClientConnInterface) IMMsgGatewayServiceClient {
+	return &iMMsgGatewayServiceClient{cc}
 }
 
-func (c *msgGatewayClient) OnlinePushMsg(ctx context.Context, in *OnlinePushMsgReq, opts ...grpc.CallOption) (*OnlinePushMsgResp, error) {
+func (c *iMMsgGatewayServiceClient) OnlinePushMsg(ctx context.Context, in *OnlinePushMsgReq, opts ...grpc.CallOption) (*OnlinePushMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(OnlinePushMsgResp)
-	err := c.cc.Invoke(ctx, MsgGateway_OnlinePushMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_OnlinePushMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgGatewayClient) GetUsersOnlineStatus(ctx context.Context, in *GetUsersOnlineStatusReq, opts ...grpc.CallOption) (*GetUsersOnlineStatusResp, error) {
+func (c *iMMsgGatewayServiceClient) GetUsersOnlineStatus(ctx context.Context, in *GetUsersOnlineStatusReq, opts ...grpc.CallOption) (*GetUsersOnlineStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUsersOnlineStatusResp)
-	err := c.cc.Invoke(ctx, MsgGateway_GetUsersOnlineStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_GetUsersOnlineStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgGatewayClient) OnlineBatchPushOneMsg(ctx context.Context, in *OnlineBatchPushOneMsgReq, opts ...grpc.CallOption) (*OnlineBatchPushOneMsgResp, error) {
+func (c *iMMsgGatewayServiceClient) OnlineBatchPushOneMsg(ctx context.Context, in *OnlineBatchPushOneMsgReq, opts ...grpc.CallOption) (*OnlineBatchPushOneMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(OnlineBatchPushOneMsgResp)
-	err := c.cc.Invoke(ctx, MsgGateway_OnlineBatchPushOneMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_OnlineBatchPushOneMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgGatewayClient) SuperGroupOnlineBatchPushOneMsg(ctx context.Context, in *OnlineBatchPushOneMsgReq, opts ...grpc.CallOption) (*OnlineBatchPushOneMsgResp, error) {
+func (c *iMMsgGatewayServiceClient) SuperGroupOnlineBatchPushOneMsg(ctx context.Context, in *OnlineBatchPushOneMsgReq, opts ...grpc.CallOption) (*OnlineBatchPushOneMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(OnlineBatchPushOneMsgResp)
-	err := c.cc.Invoke(ctx, MsgGateway_SuperGroupOnlineBatchPushOneMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_SuperGroupOnlineBatchPushOneMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgGatewayClient) KickUserOffline(ctx context.Context, in *KickUserOfflineReq, opts ...grpc.CallOption) (*KickUserOfflineResp, error) {
+func (c *iMMsgGatewayServiceClient) KickUserOffline(ctx context.Context, in *KickUserOfflineReq, opts ...grpc.CallOption) (*KickUserOfflineResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(KickUserOfflineResp)
-	err := c.cc.Invoke(ctx, MsgGateway_KickUserOffline_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_KickUserOffline_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgGatewayClient) MultiTerminalLoginCheck(ctx context.Context, in *MultiTerminalLoginCheckReq, opts ...grpc.CallOption) (*MultiTerminalLoginCheckResp, error) {
+func (c *iMMsgGatewayServiceClient) MultiTerminalLoginCheck(ctx context.Context, in *MultiTerminalLoginCheckReq, opts ...grpc.CallOption) (*MultiTerminalLoginCheckResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MultiTerminalLoginCheckResp)
-	err := c.cc.Invoke(ctx, MsgGateway_MultiTerminalLoginCheck_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgGatewayService_MultiTerminalLoginCheck_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// MsgGatewayServer is the server API for MsgGateway service.
-// All implementations must embed UnimplementedMsgGatewayServer
+// IMMsgGatewayServiceServer is the server API for IMMsgGatewayService service.
+// All implementations must embed UnimplementedIMMsgGatewayServiceServer
 // for forward compatibility.
-type MsgGatewayServer interface {
+type IMMsgGatewayServiceServer interface {
 	OnlinePushMsg(context.Context, *OnlinePushMsgReq) (*OnlinePushMsgResp, error)
 	GetUsersOnlineStatus(context.Context, *GetUsersOnlineStatusReq) (*GetUsersOnlineStatusResp, error)
 	OnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error)
 	SuperGroupOnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error)
 	KickUserOffline(context.Context, *KickUserOfflineReq) (*KickUserOfflineResp, error)
 	MultiTerminalLoginCheck(context.Context, *MultiTerminalLoginCheckReq) (*MultiTerminalLoginCheckResp, error)
-	mustEmbedUnimplementedMsgGatewayServer()
+	mustEmbedUnimplementedIMMsgGatewayServiceServer()
 }
 
-// UnimplementedMsgGatewayServer must be embedded to have
+// UnimplementedIMMsgGatewayServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedMsgGatewayServer struct{}
+type UnimplementedIMMsgGatewayServiceServer struct{}
 
-func (UnimplementedMsgGatewayServer) OnlinePushMsg(context.Context, *OnlinePushMsgReq) (*OnlinePushMsgResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) OnlinePushMsg(context.Context, *OnlinePushMsgReq) (*OnlinePushMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method OnlinePushMsg not implemented")
 }
-func (UnimplementedMsgGatewayServer) GetUsersOnlineStatus(context.Context, *GetUsersOnlineStatusReq) (*GetUsersOnlineStatusResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) GetUsersOnlineStatus(context.Context, *GetUsersOnlineStatusReq) (*GetUsersOnlineStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUsersOnlineStatus not implemented")
 }
-func (UnimplementedMsgGatewayServer) OnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) OnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method OnlineBatchPushOneMsg not implemented")
 }
-func (UnimplementedMsgGatewayServer) SuperGroupOnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) SuperGroupOnlineBatchPushOneMsg(context.Context, *OnlineBatchPushOneMsgReq) (*OnlineBatchPushOneMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SuperGroupOnlineBatchPushOneMsg not implemented")
 }
-func (UnimplementedMsgGatewayServer) KickUserOffline(context.Context, *KickUserOfflineReq) (*KickUserOfflineResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) KickUserOffline(context.Context, *KickUserOfflineReq) (*KickUserOfflineResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method KickUserOffline not implemented")
 }
-func (UnimplementedMsgGatewayServer) MultiTerminalLoginCheck(context.Context, *MultiTerminalLoginCheckReq) (*MultiTerminalLoginCheckResp, error) {
+func (UnimplementedIMMsgGatewayServiceServer) MultiTerminalLoginCheck(context.Context, *MultiTerminalLoginCheckReq) (*MultiTerminalLoginCheckResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MultiTerminalLoginCheck not implemented")
 }
-func (UnimplementedMsgGatewayServer) mustEmbedUnimplementedMsgGatewayServer() {}
-func (UnimplementedMsgGatewayServer) testEmbeddedByValue()                    {}
+func (UnimplementedIMMsgGatewayServiceServer) mustEmbedUnimplementedIMMsgGatewayServiceServer() {}
+func (UnimplementedIMMsgGatewayServiceServer) testEmbeddedByValue()                             {}
 
-// UnsafeMsgGatewayServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to MsgGatewayServer will
+// UnsafeIMMsgGatewayServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMMsgGatewayServiceServer will
 // result in compilation errors.
-type UnsafeMsgGatewayServer interface {
-	mustEmbedUnimplementedMsgGatewayServer()
+type UnsafeIMMsgGatewayServiceServer interface {
+	mustEmbedUnimplementedIMMsgGatewayServiceServer()
 }
 
-func RegisterMsgGatewayServer(s grpc.ServiceRegistrar, srv MsgGatewayServer) {
-	// If the following call pancis, it indicates UnimplementedMsgGatewayServer was
+func RegisterIMMsgGatewayServiceServer(s grpc.ServiceRegistrar, srv IMMsgGatewayServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMMsgGatewayServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&MsgGateway_ServiceDesc, srv)
+	s.RegisterService(&IMMsgGatewayService_ServiceDesc, srv)
 }
 
-func _MsgGateway_OnlinePushMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_OnlinePushMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(OnlinePushMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).OnlinePushMsg(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).OnlinePushMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_OnlinePushMsg_FullMethodName,
+		FullMethod: IMMsgGatewayService_OnlinePushMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).OnlinePushMsg(ctx, req.(*OnlinePushMsgReq))
+		return srv.(IMMsgGatewayServiceServer).OnlinePushMsg(ctx, req.(*OnlinePushMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MsgGateway_GetUsersOnlineStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_GetUsersOnlineStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUsersOnlineStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).GetUsersOnlineStatus(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).GetUsersOnlineStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_GetUsersOnlineStatus_FullMethodName,
+		FullMethod: IMMsgGatewayService_GetUsersOnlineStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).GetUsersOnlineStatus(ctx, req.(*GetUsersOnlineStatusReq))
+		return srv.(IMMsgGatewayServiceServer).GetUsersOnlineStatus(ctx, req.(*GetUsersOnlineStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MsgGateway_OnlineBatchPushOneMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_OnlineBatchPushOneMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(OnlineBatchPushOneMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).OnlineBatchPushOneMsg(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).OnlineBatchPushOneMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_OnlineBatchPushOneMsg_FullMethodName,
+		FullMethod: IMMsgGatewayService_OnlineBatchPushOneMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).OnlineBatchPushOneMsg(ctx, req.(*OnlineBatchPushOneMsgReq))
+		return srv.(IMMsgGatewayServiceServer).OnlineBatchPushOneMsg(ctx, req.(*OnlineBatchPushOneMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MsgGateway_SuperGroupOnlineBatchPushOneMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_SuperGroupOnlineBatchPushOneMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(OnlineBatchPushOneMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).SuperGroupOnlineBatchPushOneMsg(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).SuperGroupOnlineBatchPushOneMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_SuperGroupOnlineBatchPushOneMsg_FullMethodName,
+		FullMethod: IMMsgGatewayService_SuperGroupOnlineBatchPushOneMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).SuperGroupOnlineBatchPushOneMsg(ctx, req.(*OnlineBatchPushOneMsgReq))
+		return srv.(IMMsgGatewayServiceServer).SuperGroupOnlineBatchPushOneMsg(ctx, req.(*OnlineBatchPushOneMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MsgGateway_KickUserOffline_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_KickUserOffline_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(KickUserOfflineReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).KickUserOffline(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).KickUserOffline(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_KickUserOffline_FullMethodName,
+		FullMethod: IMMsgGatewayService_KickUserOffline_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).KickUserOffline(ctx, req.(*KickUserOfflineReq))
+		return srv.(IMMsgGatewayServiceServer).KickUserOffline(ctx, req.(*KickUserOfflineReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MsgGateway_MultiTerminalLoginCheck_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgGatewayService_MultiTerminalLoginCheck_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MultiTerminalLoginCheckReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgGatewayServer).MultiTerminalLoginCheck(ctx, in)
+		return srv.(IMMsgGatewayServiceServer).MultiTerminalLoginCheck(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: MsgGateway_MultiTerminalLoginCheck_FullMethodName,
+		FullMethod: IMMsgGatewayService_MultiTerminalLoginCheck_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgGatewayServer).MultiTerminalLoginCheck(ctx, req.(*MultiTerminalLoginCheckReq))
+		return srv.(IMMsgGatewayServiceServer).MultiTerminalLoginCheck(ctx, req.(*MultiTerminalLoginCheckReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// MsgGateway_ServiceDesc is the grpc.ServiceDesc for MsgGateway service.
+// IMMsgGatewayService_ServiceDesc is the grpc.ServiceDesc for IMMsgGatewayService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var MsgGateway_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.msggateway.msgGateway",
-	HandlerType: (*MsgGatewayServer)(nil),
+var IMMsgGatewayService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.msggateway.IMMsgGatewayService",
+	HandlerType: (*IMMsgGatewayServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "OnlinePushMsg",
-			Handler:    _MsgGateway_OnlinePushMsg_Handler,
+			Handler:    _IMMsgGatewayService_OnlinePushMsg_Handler,
 		},
 		{
 			MethodName: "GetUsersOnlineStatus",
-			Handler:    _MsgGateway_GetUsersOnlineStatus_Handler,
+			Handler:    _IMMsgGatewayService_GetUsersOnlineStatus_Handler,
 		},
 		{
 			MethodName: "OnlineBatchPushOneMsg",
-			Handler:    _MsgGateway_OnlineBatchPushOneMsg_Handler,
+			Handler:    _IMMsgGatewayService_OnlineBatchPushOneMsg_Handler,
 		},
 		{
 			MethodName: "SuperGroupOnlineBatchPushOneMsg",
-			Handler:    _MsgGateway_SuperGroupOnlineBatchPushOneMsg_Handler,
+			Handler:    _IMMsgGatewayService_SuperGroupOnlineBatchPushOneMsg_Handler,
 		},
 		{
 			MethodName: "KickUserOffline",
-			Handler:    _MsgGateway_KickUserOffline_Handler,
+			Handler:    _IMMsgGatewayService_KickUserOffline_Handler,
 		},
 		{
 			MethodName: "MultiTerminalLoginCheck",
-			Handler:    _MsgGateway_MultiTerminalLoginCheck_Handler,
+			Handler:    _IMMsgGatewayService_MultiTerminalLoginCheck_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

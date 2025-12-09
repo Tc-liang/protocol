@@ -34,7 +34,7 @@ message DelUserPushTokenReq {
 
 message DelUserPushTokenResp {}
 
-service PushMsgService {
+service IMPushMsgService {
   rpc PushMsg(PushMsgReq) returns (PushMsgResp);
   rpc DelUserPushToken(DelUserPushTokenReq) returns (DelUserPushTokenResp);
 }

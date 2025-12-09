@@ -34,51 +34,51 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Msg_GetMaxSeq_FullMethodName                        = "/openim.msg.msg/GetMaxSeq"
-	Msg_GetMaxSeqs_FullMethodName                       = "/openim.msg.msg/GetMaxSeqs"
-	Msg_GetHasReadSeqs_FullMethodName                   = "/openim.msg.msg/GetHasReadSeqs"
-	Msg_GetMsgByConversationIDs_FullMethodName          = "/openim.msg.msg/GetMsgByConversationIDs"
-	Msg_GetConversationMaxSeq_FullMethodName            = "/openim.msg.msg/GetConversationMaxSeq"
-	Msg_PullMessageBySeqs_FullMethodName                = "/openim.msg.msg/PullMessageBySeqs"
-	Msg_GetSeqMessage_FullMethodName                    = "/openim.msg.msg/GetSeqMessage"
-	Msg_SearchMessage_FullMethodName                    = "/openim.msg.msg/SearchMessage"
-	Msg_SendMsg_FullMethodName                          = "/openim.msg.msg/SendMsg"
-	Msg_SendSimpleMsg_FullMethodName                    = "/openim.msg.msg/SendSimpleMsg"
-	Msg_SetUserConversationsMinSeq_FullMethodName       = "/openim.msg.msg/SetUserConversationsMinSeq"
-	Msg_ClearConversationsMsg_FullMethodName            = "/openim.msg.msg/ClearConversationsMsg"
-	Msg_UserClearAllMsg_FullMethodName                  = "/openim.msg.msg/UserClearAllMsg"
-	Msg_DeleteMsgs_FullMethodName                       = "/openim.msg.msg/DeleteMsgs"
-	Msg_DeleteMsgPhysicalBySeq_FullMethodName           = "/openim.msg.msg/DeleteMsgPhysicalBySeq"
-	Msg_DeleteMsgPhysical_FullMethodName                = "/openim.msg.msg/DeleteMsgPhysical"
-	Msg_SetSendMsgStatus_FullMethodName                 = "/openim.msg.msg/SetSendMsgStatus"
-	Msg_GetSendMsgStatus_FullMethodName                 = "/openim.msg.msg/GetSendMsgStatus"
-	Msg_RevokeMsg_FullMethodName                        = "/openim.msg.msg/RevokeMsg"
-	Msg_MarkMsgsAsRead_FullMethodName                   = "/openim.msg.msg/MarkMsgsAsRead"
-	Msg_MarkConversationAsRead_FullMethodName           = "/openim.msg.msg/MarkConversationAsRead"
-	Msg_RPCMarkConversationAsRead_FullMethodName        = "/openim.msg.msg/RPCMarkConversationAsRead"
-	Msg_BotMarkMaxMsgAsRead_FullMethodName              = "/openim.msg.msg/BotMarkMaxMsgAsRead"
-	Msg_SetConversationHasReadSeq_FullMethodName        = "/openim.msg.msg/SetConversationHasReadSeq"
-	Msg_GetConversationsHasReadAndMaxSeq_FullMethodName = "/openim.msg.msg/GetConversationsHasReadAndMaxSeq"
-	Msg_GetActiveUser_FullMethodName                    = "/openim.msg.msg/GetActiveUser"
-	Msg_GetActiveGroup_FullMethodName                   = "/openim.msg.msg/GetActiveGroup"
-	Msg_GetServerTime_FullMethodName                    = "/openim.msg.msg/GetServerTime"
-	Msg_ClearMsg_FullMethodName                         = "/openim.msg.msg/ClearMsg"
-	Msg_DestructMsgs_FullMethodName                     = "/openim.msg.msg/DestructMsgs"
-	Msg_GetActiveConversation_FullMethodName            = "/openim.msg.msg/GetActiveConversation"
-	Msg_SetUserConversationMaxSeq_FullMethodName        = "/openim.msg.msg/SetUserConversationMaxSeq"
-	Msg_SetUserConversationMinSeq_FullMethodName        = "/openim.msg.msg/SetUserConversationMinSeq"
-	Msg_GetLastMessageSeqByTime_FullMethodName          = "/openim.msg.msg/GetLastMessageSeqByTime"
-	Msg_GetLastMessage_FullMethodName                   = "/openim.msg.msg/GetLastMessage"
-	Msg_AddEmoji_FullMethodName                         = "/openim.msg.msg/AddEmoji"
-	Msg_RevokeEmoji_FullMethodName                      = "/openim.msg.msg/RevokeEmoji"
-	Msg_BotReadMsgsNotification_FullMethodName          = "/openim.msg.msg/BotReadMsgsNotification"
-	Msg_AIStreamMsgNotification_FullMethodName          = "/openim.msg.msg/AIStreamMsgNotification"
+	IMMsgService_GetMaxSeq_FullMethodName                        = "/openim.msg.IMMsgService/GetMaxSeq"
+	IMMsgService_GetMaxSeqs_FullMethodName                       = "/openim.msg.IMMsgService/GetMaxSeqs"
+	IMMsgService_GetHasReadSeqs_FullMethodName                   = "/openim.msg.IMMsgService/GetHasReadSeqs"
+	IMMsgService_GetMsgByConversationIDs_FullMethodName          = "/openim.msg.IMMsgService/GetMsgByConversationIDs"
+	IMMsgService_GetConversationMaxSeq_FullMethodName            = "/openim.msg.IMMsgService/GetConversationMaxSeq"
+	IMMsgService_PullMessageBySeqs_FullMethodName                = "/openim.msg.IMMsgService/PullMessageBySeqs"
+	IMMsgService_GetSeqMessage_FullMethodName                    = "/openim.msg.IMMsgService/GetSeqMessage"
+	IMMsgService_SearchMessage_FullMethodName                    = "/openim.msg.IMMsgService/SearchMessage"
+	IMMsgService_SendMsg_FullMethodName                          = "/openim.msg.IMMsgService/SendMsg"
+	IMMsgService_SendSimpleMsg_FullMethodName                    = "/openim.msg.IMMsgService/SendSimpleMsg"
+	IMMsgService_SetUserConversationsMinSeq_FullMethodName       = "/openim.msg.IMMsgService/SetUserConversationsMinSeq"
+	IMMsgService_ClearConversationsMsg_FullMethodName            = "/openim.msg.IMMsgService/ClearConversationsMsg"
+	IMMsgService_UserClearAllMsg_FullMethodName                  = "/openim.msg.IMMsgService/UserClearAllMsg"
+	IMMsgService_DeleteMsgs_FullMethodName                       = "/openim.msg.IMMsgService/DeleteMsgs"
+	IMMsgService_DeleteMsgPhysicalBySeq_FullMethodName           = "/openim.msg.IMMsgService/DeleteMsgPhysicalBySeq"
+	IMMsgService_DeleteMsgPhysical_FullMethodName                = "/openim.msg.IMMsgService/DeleteMsgPhysical"
+	IMMsgService_SetSendMsgStatus_FullMethodName                 = "/openim.msg.IMMsgService/SetSendMsgStatus"
+	IMMsgService_GetSendMsgStatus_FullMethodName                 = "/openim.msg.IMMsgService/GetSendMsgStatus"
+	IMMsgService_RevokeMsg_FullMethodName                        = "/openim.msg.IMMsgService/RevokeMsg"
+	IMMsgService_MarkMsgsAsRead_FullMethodName                   = "/openim.msg.IMMsgService/MarkMsgsAsRead"
+	IMMsgService_MarkConversationAsRead_FullMethodName           = "/openim.msg.IMMsgService/MarkConversationAsRead"
+	IMMsgService_RPCMarkConversationAsRead_FullMethodName        = "/openim.msg.IMMsgService/RPCMarkConversationAsRead"
+	IMMsgService_BotMarkMaxMsgAsRead_FullMethodName              = "/openim.msg.IMMsgService/BotMarkMaxMsgAsRead"
+	IMMsgService_SetConversationHasReadSeq_FullMethodName        = "/openim.msg.IMMsgService/SetConversationHasReadSeq"
+	IMMsgService_GetConversationsHasReadAndMaxSeq_FullMethodName = "/openim.msg.IMMsgService/GetConversationsHasReadAndMaxSeq"
+	IMMsgService_GetActiveUser_FullMethodName                    = "/openim.msg.IMMsgService/GetActiveUser"
+	IMMsgService_GetActiveGroup_FullMethodName                   = "/openim.msg.IMMsgService/GetActiveGroup"
+	IMMsgService_GetServerTime_FullMethodName                    = "/openim.msg.IMMsgService/GetServerTime"
+	IMMsgService_ClearMsg_FullMethodName                         = "/openim.msg.IMMsgService/ClearMsg"
+	IMMsgService_DestructMsgs_FullMethodName                     = "/openim.msg.IMMsgService/DestructMsgs"
+	IMMsgService_GetActiveConversation_FullMethodName            = "/openim.msg.IMMsgService/GetActiveConversation"
+	IMMsgService_SetUserConversationMaxSeq_FullMethodName        = "/openim.msg.IMMsgService/SetUserConversationMaxSeq"
+	IMMsgService_SetUserConversationMinSeq_FullMethodName        = "/openim.msg.IMMsgService/SetUserConversationMinSeq"
+	IMMsgService_GetLastMessageSeqByTime_FullMethodName          = "/openim.msg.IMMsgService/GetLastMessageSeqByTime"
+	IMMsgService_GetLastMessage_FullMethodName                   = "/openim.msg.IMMsgService/GetLastMessage"
+	IMMsgService_AddEmoji_FullMethodName                         = "/openim.msg.IMMsgService/AddEmoji"
+	IMMsgService_RevokeEmoji_FullMethodName                      = "/openim.msg.IMMsgService/RevokeEmoji"
+	IMMsgService_BotReadMsgsNotification_FullMethodName          = "/openim.msg.IMMsgService/BotReadMsgsNotification"
+	IMMsgService_AIStreamMsgNotification_FullMethodName          = "/openim.msg.IMMsgService/AIStreamMsgNotification"
 )
 
-// MsgClient is the client API for Msg service.
+// IMMsgServiceClient is the client API for IMMsgService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type MsgClient interface {
+type IMMsgServiceClient interface {
 	// 获取最小最大seq（包括用户的，以及指定群组的）
 	GetMaxSeq(ctx context.Context, in *sdkws.GetMaxSeqReq, opts ...grpc.CallOption) (*sdkws.GetMaxSeqResp, error)
 	// 获取会话列表的最大seq
@@ -135,408 +135,408 @@ type MsgClient interface {
 	AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error)
 }
 
-type msgClient struct {
+type iMMsgServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewMsgClient(cc grpc.ClientConnInterface) MsgClient {
-	return &msgClient{cc}
+func NewIMMsgServiceClient(cc grpc.ClientConnInterface) IMMsgServiceClient {
+	return &iMMsgServiceClient{cc}
 }
 
-func (c *msgClient) GetMaxSeq(ctx context.Context, in *sdkws.GetMaxSeqReq, opts ...grpc.CallOption) (*sdkws.GetMaxSeqResp, error) {
+func (c *iMMsgServiceClient) GetMaxSeq(ctx context.Context, in *sdkws.GetMaxSeqReq, opts ...grpc.CallOption) (*sdkws.GetMaxSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(sdkws.GetMaxSeqResp)
-	err := c.cc.Invoke(ctx, Msg_GetMaxSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetMaxSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetMaxSeqs(ctx context.Context, in *GetMaxSeqsReq, opts ...grpc.CallOption) (*SeqsInfoResp, error) {
+func (c *iMMsgServiceClient) GetMaxSeqs(ctx context.Context, in *GetMaxSeqsReq, opts ...grpc.CallOption) (*SeqsInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SeqsInfoResp)
-	err := c.cc.Invoke(ctx, Msg_GetMaxSeqs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetMaxSeqs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetHasReadSeqs(ctx context.Context, in *GetHasReadSeqsReq, opts ...grpc.CallOption) (*SeqsInfoResp, error) {
+func (c *iMMsgServiceClient) GetHasReadSeqs(ctx context.Context, in *GetHasReadSeqsReq, opts ...grpc.CallOption) (*SeqsInfoResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SeqsInfoResp)
-	err := c.cc.Invoke(ctx, Msg_GetHasReadSeqs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetHasReadSeqs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetMsgByConversationIDs(ctx context.Context, in *GetMsgByConversationIDsReq, opts ...grpc.CallOption) (*GetMsgByConversationIDsResp, error) {
+func (c *iMMsgServiceClient) GetMsgByConversationIDs(ctx context.Context, in *GetMsgByConversationIDsReq, opts ...grpc.CallOption) (*GetMsgByConversationIDsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetMsgByConversationIDsResp)
-	err := c.cc.Invoke(ctx, Msg_GetMsgByConversationIDs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetMsgByConversationIDs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetConversationMaxSeq(ctx context.Context, in *GetConversationMaxSeqReq, opts ...grpc.CallOption) (*GetConversationMaxSeqResp, error) {
+func (c *iMMsgServiceClient) GetConversationMaxSeq(ctx context.Context, in *GetConversationMaxSeqReq, opts ...grpc.CallOption) (*GetConversationMaxSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationMaxSeqResp)
-	err := c.cc.Invoke(ctx, Msg_GetConversationMaxSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetConversationMaxSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) PullMessageBySeqs(ctx context.Context, in *sdkws.PullMessageBySeqsReq, opts ...grpc.CallOption) (*sdkws.PullMessageBySeqsResp, error) {
+func (c *iMMsgServiceClient) PullMessageBySeqs(ctx context.Context, in *sdkws.PullMessageBySeqsReq, opts ...grpc.CallOption) (*sdkws.PullMessageBySeqsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(sdkws.PullMessageBySeqsResp)
-	err := c.cc.Invoke(ctx, Msg_PullMessageBySeqs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_PullMessageBySeqs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetSeqMessage(ctx context.Context, in *GetSeqMessageReq, opts ...grpc.CallOption) (*GetSeqMessageResp, error) {
+func (c *iMMsgServiceClient) GetSeqMessage(ctx context.Context, in *GetSeqMessageReq, opts ...grpc.CallOption) (*GetSeqMessageResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSeqMessageResp)
-	err := c.cc.Invoke(ctx, Msg_GetSeqMessage_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetSeqMessage_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SearchMessage(ctx context.Context, in *SearchMessageReq, opts ...grpc.CallOption) (*SearchMessageResp, error) {
+func (c *iMMsgServiceClient) SearchMessage(ctx context.Context, in *SearchMessageReq, opts ...grpc.CallOption) (*SearchMessageResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SearchMessageResp)
-	err := c.cc.Invoke(ctx, Msg_SearchMessage_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SearchMessage_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SendMsg(ctx context.Context, in *SendMsgReq, opts ...grpc.CallOption) (*SendMsgResp, error) {
+func (c *iMMsgServiceClient) SendMsg(ctx context.Context, in *SendMsgReq, opts ...grpc.CallOption) (*SendMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SendMsgResp)
-	err := c.cc.Invoke(ctx, Msg_SendMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SendMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SendSimpleMsg(ctx context.Context, in *SendSimpleMsgReq, opts ...grpc.CallOption) (*SendSimpleMsgResp, error) {
+func (c *iMMsgServiceClient) SendSimpleMsg(ctx context.Context, in *SendSimpleMsgReq, opts ...grpc.CallOption) (*SendSimpleMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SendSimpleMsgResp)
-	err := c.cc.Invoke(ctx, Msg_SendSimpleMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SendSimpleMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SetUserConversationsMinSeq(ctx context.Context, in *SetUserConversationsMinSeqReq, opts ...grpc.CallOption) (*SetUserConversationsMinSeqResp, error) {
+func (c *iMMsgServiceClient) SetUserConversationsMinSeq(ctx context.Context, in *SetUserConversationsMinSeqReq, opts ...grpc.CallOption) (*SetUserConversationsMinSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserConversationsMinSeqResp)
-	err := c.cc.Invoke(ctx, Msg_SetUserConversationsMinSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SetUserConversationsMinSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) ClearConversationsMsg(ctx context.Context, in *ClearConversationsMsgReq, opts ...grpc.CallOption) (*ClearConversationsMsgResp, error) {
+func (c *iMMsgServiceClient) ClearConversationsMsg(ctx context.Context, in *ClearConversationsMsgReq, opts ...grpc.CallOption) (*ClearConversationsMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ClearConversationsMsgResp)
-	err := c.cc.Invoke(ctx, Msg_ClearConversationsMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_ClearConversationsMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) UserClearAllMsg(ctx context.Context, in *UserClearAllMsgReq, opts ...grpc.CallOption) (*UserClearAllMsgResp, error) {
+func (c *iMMsgServiceClient) UserClearAllMsg(ctx context.Context, in *UserClearAllMsgReq, opts ...grpc.CallOption) (*UserClearAllMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(UserClearAllMsgResp)
-	err := c.cc.Invoke(ctx, Msg_UserClearAllMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_UserClearAllMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) DeleteMsgs(ctx context.Context, in *DeleteMsgsReq, opts ...grpc.CallOption) (*DeleteMsgsResp, error) {
+func (c *iMMsgServiceClient) DeleteMsgs(ctx context.Context, in *DeleteMsgsReq, opts ...grpc.CallOption) (*DeleteMsgsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteMsgsResp)
-	err := c.cc.Invoke(ctx, Msg_DeleteMsgs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_DeleteMsgs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) DeleteMsgPhysicalBySeq(ctx context.Context, in *DeleteMsgPhysicalBySeqReq, opts ...grpc.CallOption) (*DeleteMsgPhysicalBySeqResp, error) {
+func (c *iMMsgServiceClient) DeleteMsgPhysicalBySeq(ctx context.Context, in *DeleteMsgPhysicalBySeqReq, opts ...grpc.CallOption) (*DeleteMsgPhysicalBySeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteMsgPhysicalBySeqResp)
-	err := c.cc.Invoke(ctx, Msg_DeleteMsgPhysicalBySeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_DeleteMsgPhysicalBySeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) DeleteMsgPhysical(ctx context.Context, in *DeleteMsgPhysicalReq, opts ...grpc.CallOption) (*DeleteMsgPhysicalResp, error) {
+func (c *iMMsgServiceClient) DeleteMsgPhysical(ctx context.Context, in *DeleteMsgPhysicalReq, opts ...grpc.CallOption) (*DeleteMsgPhysicalResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteMsgPhysicalResp)
-	err := c.cc.Invoke(ctx, Msg_DeleteMsgPhysical_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_DeleteMsgPhysical_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SetSendMsgStatus(ctx context.Context, in *SetSendMsgStatusReq, opts ...grpc.CallOption) (*SetSendMsgStatusResp, error) {
+func (c *iMMsgServiceClient) SetSendMsgStatus(ctx context.Context, in *SetSendMsgStatusReq, opts ...grpc.CallOption) (*SetSendMsgStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetSendMsgStatusResp)
-	err := c.cc.Invoke(ctx, Msg_SetSendMsgStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SetSendMsgStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetSendMsgStatus(ctx context.Context, in *GetSendMsgStatusReq, opts ...grpc.CallOption) (*GetSendMsgStatusResp, error) {
+func (c *iMMsgServiceClient) GetSendMsgStatus(ctx context.Context, in *GetSendMsgStatusReq, opts ...grpc.CallOption) (*GetSendMsgStatusResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetSendMsgStatusResp)
-	err := c.cc.Invoke(ctx, Msg_GetSendMsgStatus_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetSendMsgStatus_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) RevokeMsg(ctx context.Context, in *RevokeMsgReq, opts ...grpc.CallOption) (*RevokeMsgResp, error) {
+func (c *iMMsgServiceClient) RevokeMsg(ctx context.Context, in *RevokeMsgReq, opts ...grpc.CallOption) (*RevokeMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(RevokeMsgResp)
-	err := c.cc.Invoke(ctx, Msg_RevokeMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_RevokeMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) MarkMsgsAsRead(ctx context.Context, in *MarkMsgsAsReadReq, opts ...grpc.CallOption) (*MarkMsgsAsReadResp, error) {
+func (c *iMMsgServiceClient) MarkMsgsAsRead(ctx context.Context, in *MarkMsgsAsReadReq, opts ...grpc.CallOption) (*MarkMsgsAsReadResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MarkMsgsAsReadResp)
-	err := c.cc.Invoke(ctx, Msg_MarkMsgsAsRead_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_MarkMsgsAsRead_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) MarkConversationAsRead(ctx context.Context, in *MarkConversationAsReadReq, opts ...grpc.CallOption) (*MarkConversationAsReadResp, error) {
+func (c *iMMsgServiceClient) MarkConversationAsRead(ctx context.Context, in *MarkConversationAsReadReq, opts ...grpc.CallOption) (*MarkConversationAsReadResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(MarkConversationAsReadResp)
-	err := c.cc.Invoke(ctx, Msg_MarkConversationAsRead_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_MarkConversationAsRead_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) RPCMarkConversationAsRead(ctx context.Context, in *RPCMarkConversationAsReadReq, opts ...grpc.CallOption) (*RPCMarkConversationAsReadResp, error) {
+func (c *iMMsgServiceClient) RPCMarkConversationAsRead(ctx context.Context, in *RPCMarkConversationAsReadReq, opts ...grpc.CallOption) (*RPCMarkConversationAsReadResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(RPCMarkConversationAsReadResp)
-	err := c.cc.Invoke(ctx, Msg_RPCMarkConversationAsRead_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_RPCMarkConversationAsRead_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) BotMarkMaxMsgAsRead(ctx context.Context, in *BotMarkMaxMsgAsReadReq, opts ...grpc.CallOption) (*BotMarkMaxMsgAsReadResp, error) {
+func (c *iMMsgServiceClient) BotMarkMaxMsgAsRead(ctx context.Context, in *BotMarkMaxMsgAsReadReq, opts ...grpc.CallOption) (*BotMarkMaxMsgAsReadResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(BotMarkMaxMsgAsReadResp)
-	err := c.cc.Invoke(ctx, Msg_BotMarkMaxMsgAsRead_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_BotMarkMaxMsgAsRead_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SetConversationHasReadSeq(ctx context.Context, in *SetConversationHasReadSeqReq, opts ...grpc.CallOption) (*SetConversationHasReadSeqResp, error) {
+func (c *iMMsgServiceClient) SetConversationHasReadSeq(ctx context.Context, in *SetConversationHasReadSeqReq, opts ...grpc.CallOption) (*SetConversationHasReadSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetConversationHasReadSeqResp)
-	err := c.cc.Invoke(ctx, Msg_SetConversationHasReadSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SetConversationHasReadSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetConversationsHasReadAndMaxSeq(ctx context.Context, in *GetConversationsHasReadAndMaxSeqReq, opts ...grpc.CallOption) (*GetConversationsHasReadAndMaxSeqResp, error) {
+func (c *iMMsgServiceClient) GetConversationsHasReadAndMaxSeq(ctx context.Context, in *GetConversationsHasReadAndMaxSeqReq, opts ...grpc.CallOption) (*GetConversationsHasReadAndMaxSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetConversationsHasReadAndMaxSeqResp)
-	err := c.cc.Invoke(ctx, Msg_GetConversationsHasReadAndMaxSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetConversationsHasReadAndMaxSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetActiveUser(ctx context.Context, in *GetActiveUserReq, opts ...grpc.CallOption) (*GetActiveUserResp, error) {
+func (c *iMMsgServiceClient) GetActiveUser(ctx context.Context, in *GetActiveUserReq, opts ...grpc.CallOption) (*GetActiveUserResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetActiveUserResp)
-	err := c.cc.Invoke(ctx, Msg_GetActiveUser_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetActiveUser_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetActiveGroup(ctx context.Context, in *GetActiveGroupReq, opts ...grpc.CallOption) (*GetActiveGroupResp, error) {
+func (c *iMMsgServiceClient) GetActiveGroup(ctx context.Context, in *GetActiveGroupReq, opts ...grpc.CallOption) (*GetActiveGroupResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetActiveGroupResp)
-	err := c.cc.Invoke(ctx, Msg_GetActiveGroup_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetActiveGroup_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetServerTime(ctx context.Context, in *GetServerTimeReq, opts ...grpc.CallOption) (*GetServerTimeResp, error) {
+func (c *iMMsgServiceClient) GetServerTime(ctx context.Context, in *GetServerTimeReq, opts ...grpc.CallOption) (*GetServerTimeResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetServerTimeResp)
-	err := c.cc.Invoke(ctx, Msg_GetServerTime_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetServerTime_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) ClearMsg(ctx context.Context, in *ClearMsgReq, opts ...grpc.CallOption) (*ClearMsgResp, error) {
+func (c *iMMsgServiceClient) ClearMsg(ctx context.Context, in *ClearMsgReq, opts ...grpc.CallOption) (*ClearMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ClearMsgResp)
-	err := c.cc.Invoke(ctx, Msg_ClearMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_ClearMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) DestructMsgs(ctx context.Context, in *DestructMsgsReq, opts ...grpc.CallOption) (*DestructMsgsResp, error) {
+func (c *iMMsgServiceClient) DestructMsgs(ctx context.Context, in *DestructMsgsReq, opts ...grpc.CallOption) (*DestructMsgsResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DestructMsgsResp)
-	err := c.cc.Invoke(ctx, Msg_DestructMsgs_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_DestructMsgs_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetActiveConversation(ctx context.Context, in *GetActiveConversationReq, opts ...grpc.CallOption) (*GetActiveConversationResp, error) {
+func (c *iMMsgServiceClient) GetActiveConversation(ctx context.Context, in *GetActiveConversationReq, opts ...grpc.CallOption) (*GetActiveConversationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetActiveConversationResp)
-	err := c.cc.Invoke(ctx, Msg_GetActiveConversation_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetActiveConversation_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SetUserConversationMaxSeq(ctx context.Context, in *SetUserConversationMaxSeqReq, opts ...grpc.CallOption) (*SetUserConversationMaxSeqResp, error) {
+func (c *iMMsgServiceClient) SetUserConversationMaxSeq(ctx context.Context, in *SetUserConversationMaxSeqReq, opts ...grpc.CallOption) (*SetUserConversationMaxSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserConversationMaxSeqResp)
-	err := c.cc.Invoke(ctx, Msg_SetUserConversationMaxSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SetUserConversationMaxSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) SetUserConversationMinSeq(ctx context.Context, in *SetUserConversationMinSeqReq, opts ...grpc.CallOption) (*SetUserConversationMinSeqResp, error) {
+func (c *iMMsgServiceClient) SetUserConversationMinSeq(ctx context.Context, in *SetUserConversationMinSeqReq, opts ...grpc.CallOption) (*SetUserConversationMinSeqResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(SetUserConversationMinSeqResp)
-	err := c.cc.Invoke(ctx, Msg_SetUserConversationMinSeq_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_SetUserConversationMinSeq_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetLastMessageSeqByTime(ctx context.Context, in *GetLastMessageSeqByTimeReq, opts ...grpc.CallOption) (*GetLastMessageSeqByTimeResp, error) {
+func (c *iMMsgServiceClient) GetLastMessageSeqByTime(ctx context.Context, in *GetLastMessageSeqByTimeReq, opts ...grpc.CallOption) (*GetLastMessageSeqByTimeResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetLastMessageSeqByTimeResp)
-	err := c.cc.Invoke(ctx, Msg_GetLastMessageSeqByTime_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetLastMessageSeqByTime_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) GetLastMessage(ctx context.Context, in *GetLastMessageReq, opts ...grpc.CallOption) (*GetLastMessageResp, error) {
+func (c *iMMsgServiceClient) GetLastMessage(ctx context.Context, in *GetLastMessageReq, opts ...grpc.CallOption) (*GetLastMessageResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetLastMessageResp)
-	err := c.cc.Invoke(ctx, Msg_GetLastMessage_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_GetLastMessage_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) AddEmoji(ctx context.Context, in *AddEmojiReq, opts ...grpc.CallOption) (*AddEmojiResp, error) {
+func (c *iMMsgServiceClient) AddEmoji(ctx context.Context, in *AddEmojiReq, opts ...grpc.CallOption) (*AddEmojiResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(AddEmojiResp)
-	err := c.cc.Invoke(ctx, Msg_AddEmoji_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_AddEmoji_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ...grpc.CallOption) (*RevokeEmojiResp, error) {
+func (c *iMMsgServiceClient) RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ...grpc.CallOption) (*RevokeEmojiResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(RevokeEmojiResp)
-	err := c.cc.Invoke(ctx, Msg_RevokeEmoji_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_RevokeEmoji_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error) {
+func (c *iMMsgServiceClient) BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(BotReadMsgsNotificationResp)
-	err := c.cc.Invoke(ctx, Msg_BotReadMsgsNotification_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_BotReadMsgsNotification_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *msgClient) AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error) {
+func (c *iMMsgServiceClient) AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(AIStreamNotificationResp)
-	err := c.cc.Invoke(ctx, Msg_AIStreamMsgNotification_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMMsgService_AIStreamMsgNotification_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// MsgServer is the server API for Msg service.
-// All implementations must embed UnimplementedMsgServer
+// IMMsgServiceServer is the server API for IMMsgService service.
+// All implementations must embed UnimplementedIMMsgServiceServer
 // for forward compatibility.
-type MsgServer interface {
+type IMMsgServiceServer interface {
 	// 获取最小最大seq（包括用户的，以及指定群组的）
 	GetMaxSeq(context.Context, *sdkws.GetMaxSeqReq) (*sdkws.GetMaxSeqResp, error)
 	// 获取会话列表的最大seq
@@ -591,1018 +591,1018 @@ type MsgServer interface {
 	RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error)
 	BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error)
 	AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error)
-	mustEmbedUnimplementedMsgServer()
+	mustEmbedUnimplementedIMMsgServiceServer()
 }
 
-// UnimplementedMsgServer must be embedded to have
+// UnimplementedIMMsgServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedMsgServer struct{}
+type UnimplementedIMMsgServiceServer struct{}
 
-func (UnimplementedMsgServer) GetMaxSeq(context.Context, *sdkws.GetMaxSeqReq) (*sdkws.GetMaxSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) GetMaxSeq(context.Context, *sdkws.GetMaxSeqReq) (*sdkws.GetMaxSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMaxSeq not implemented")
 }
-func (UnimplementedMsgServer) GetMaxSeqs(context.Context, *GetMaxSeqsReq) (*SeqsInfoResp, error) {
+func (UnimplementedIMMsgServiceServer) GetMaxSeqs(context.Context, *GetMaxSeqsReq) (*SeqsInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMaxSeqs not implemented")
 }
-func (UnimplementedMsgServer) GetHasReadSeqs(context.Context, *GetHasReadSeqsReq) (*SeqsInfoResp, error) {
+func (UnimplementedIMMsgServiceServer) GetHasReadSeqs(context.Context, *GetHasReadSeqsReq) (*SeqsInfoResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetHasReadSeqs not implemented")
 }
-func (UnimplementedMsgServer) GetMsgByConversationIDs(context.Context, *GetMsgByConversationIDsReq) (*GetMsgByConversationIDsResp, error) {
+func (UnimplementedIMMsgServiceServer) GetMsgByConversationIDs(context.Context, *GetMsgByConversationIDsReq) (*GetMsgByConversationIDsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMsgByConversationIDs not implemented")
 }
-func (UnimplementedMsgServer) GetConversationMaxSeq(context.Context, *GetConversationMaxSeqReq) (*GetConversationMaxSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) GetConversationMaxSeq(context.Context, *GetConversationMaxSeqReq) (*GetConversationMaxSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationMaxSeq not implemented")
 }
-func (UnimplementedMsgServer) PullMessageBySeqs(context.Context, *sdkws.PullMessageBySeqsReq) (*sdkws.PullMessageBySeqsResp, error) {
+func (UnimplementedIMMsgServiceServer) PullMessageBySeqs(context.Context, *sdkws.PullMessageBySeqsReq) (*sdkws.PullMessageBySeqsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PullMessageBySeqs not implemented")
 }
-func (UnimplementedMsgServer) GetSeqMessage(context.Context, *GetSeqMessageReq) (*GetSeqMessageResp, error) {
+func (UnimplementedIMMsgServiceServer) GetSeqMessage(context.Context, *GetSeqMessageReq) (*GetSeqMessageResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSeqMessage not implemented")
 }
-func (UnimplementedMsgServer) SearchMessage(context.Context, *SearchMessageReq) (*SearchMessageResp, error) {
+func (UnimplementedIMMsgServiceServer) SearchMessage(context.Context, *SearchMessageReq) (*SearchMessageResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchMessage not implemented")
 }
-func (UnimplementedMsgServer) SendMsg(context.Context, *SendMsgReq) (*SendMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) SendMsg(context.Context, *SendMsgReq) (*SendMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendMsg not implemented")
 }
-func (UnimplementedMsgServer) SendSimpleMsg(context.Context, *SendSimpleMsgReq) (*SendSimpleMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) SendSimpleMsg(context.Context, *SendSimpleMsgReq) (*SendSimpleMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendSimpleMsg not implemented")
 }
-func (UnimplementedMsgServer) SetUserConversationsMinSeq(context.Context, *SetUserConversationsMinSeqReq) (*SetUserConversationsMinSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) SetUserConversationsMinSeq(context.Context, *SetUserConversationsMinSeqReq) (*SetUserConversationsMinSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserConversationsMinSeq not implemented")
 }
-func (UnimplementedMsgServer) ClearConversationsMsg(context.Context, *ClearConversationsMsgReq) (*ClearConversationsMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) ClearConversationsMsg(context.Context, *ClearConversationsMsgReq) (*ClearConversationsMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClearConversationsMsg not implemented")
 }
-func (UnimplementedMsgServer) UserClearAllMsg(context.Context, *UserClearAllMsgReq) (*UserClearAllMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) UserClearAllMsg(context.Context, *UserClearAllMsgReq) (*UserClearAllMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UserClearAllMsg not implemented")
 }
-func (UnimplementedMsgServer) DeleteMsgs(context.Context, *DeleteMsgsReq) (*DeleteMsgsResp, error) {
+func (UnimplementedIMMsgServiceServer) DeleteMsgs(context.Context, *DeleteMsgsReq) (*DeleteMsgsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteMsgs not implemented")
 }
-func (UnimplementedMsgServer) DeleteMsgPhysicalBySeq(context.Context, *DeleteMsgPhysicalBySeqReq) (*DeleteMsgPhysicalBySeqResp, error) {
+func (UnimplementedIMMsgServiceServer) DeleteMsgPhysicalBySeq(context.Context, *DeleteMsgPhysicalBySeqReq) (*DeleteMsgPhysicalBySeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteMsgPhysicalBySeq not implemented")
 }
-func (UnimplementedMsgServer) DeleteMsgPhysical(context.Context, *DeleteMsgPhysicalReq) (*DeleteMsgPhysicalResp, error) {
+func (UnimplementedIMMsgServiceServer) DeleteMsgPhysical(context.Context, *DeleteMsgPhysicalReq) (*DeleteMsgPhysicalResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteMsgPhysical not implemented")
 }
-func (UnimplementedMsgServer) SetSendMsgStatus(context.Context, *SetSendMsgStatusReq) (*SetSendMsgStatusResp, error) {
+func (UnimplementedIMMsgServiceServer) SetSendMsgStatus(context.Context, *SetSendMsgStatusReq) (*SetSendMsgStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetSendMsgStatus not implemented")
 }
-func (UnimplementedMsgServer) GetSendMsgStatus(context.Context, *GetSendMsgStatusReq) (*GetSendMsgStatusResp, error) {
+func (UnimplementedIMMsgServiceServer) GetSendMsgStatus(context.Context, *GetSendMsgStatusReq) (*GetSendMsgStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSendMsgStatus not implemented")
 }
-func (UnimplementedMsgServer) RevokeMsg(context.Context, *RevokeMsgReq) (*RevokeMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) RevokeMsg(context.Context, *RevokeMsgReq) (*RevokeMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RevokeMsg not implemented")
 }
-func (UnimplementedMsgServer) MarkMsgsAsRead(context.Context, *MarkMsgsAsReadReq) (*MarkMsgsAsReadResp, error) {
+func (UnimplementedIMMsgServiceServer) MarkMsgsAsRead(context.Context, *MarkMsgsAsReadReq) (*MarkMsgsAsReadResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MarkMsgsAsRead not implemented")
 }
-func (UnimplementedMsgServer) MarkConversationAsRead(context.Context, *MarkConversationAsReadReq) (*MarkConversationAsReadResp, error) {
+func (UnimplementedIMMsgServiceServer) MarkConversationAsRead(context.Context, *MarkConversationAsReadReq) (*MarkConversationAsReadResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method MarkConversationAsRead not implemented")
 }
-func (UnimplementedMsgServer) RPCMarkConversationAsRead(context.Context, *RPCMarkConversationAsReadReq) (*RPCMarkConversationAsReadResp, error) {
+func (UnimplementedIMMsgServiceServer) RPCMarkConversationAsRead(context.Context, *RPCMarkConversationAsReadReq) (*RPCMarkConversationAsReadResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RPCMarkConversationAsRead not implemented")
 }
-func (UnimplementedMsgServer) BotMarkMaxMsgAsRead(context.Context, *BotMarkMaxMsgAsReadReq) (*BotMarkMaxMsgAsReadResp, error) {
+func (UnimplementedIMMsgServiceServer) BotMarkMaxMsgAsRead(context.Context, *BotMarkMaxMsgAsReadReq) (*BotMarkMaxMsgAsReadResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BotMarkMaxMsgAsRead not implemented")
 }
-func (UnimplementedMsgServer) SetConversationHasReadSeq(context.Context, *SetConversationHasReadSeqReq) (*SetConversationHasReadSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) SetConversationHasReadSeq(context.Context, *SetConversationHasReadSeqReq) (*SetConversationHasReadSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetConversationHasReadSeq not implemented")
 }
-func (UnimplementedMsgServer) GetConversationsHasReadAndMaxSeq(context.Context, *GetConversationsHasReadAndMaxSeqReq) (*GetConversationsHasReadAndMaxSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) GetConversationsHasReadAndMaxSeq(context.Context, *GetConversationsHasReadAndMaxSeqReq) (*GetConversationsHasReadAndMaxSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConversationsHasReadAndMaxSeq not implemented")
 }
-func (UnimplementedMsgServer) GetActiveUser(context.Context, *GetActiveUserReq) (*GetActiveUserResp, error) {
+func (UnimplementedIMMsgServiceServer) GetActiveUser(context.Context, *GetActiveUserReq) (*GetActiveUserResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetActiveUser not implemented")
 }
-func (UnimplementedMsgServer) GetActiveGroup(context.Context, *GetActiveGroupReq) (*GetActiveGroupResp, error) {
+func (UnimplementedIMMsgServiceServer) GetActiveGroup(context.Context, *GetActiveGroupReq) (*GetActiveGroupResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetActiveGroup not implemented")
 }
-func (UnimplementedMsgServer) GetServerTime(context.Context, *GetServerTimeReq) (*GetServerTimeResp, error) {
+func (UnimplementedIMMsgServiceServer) GetServerTime(context.Context, *GetServerTimeReq) (*GetServerTimeResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetServerTime not implemented")
 }
-func (UnimplementedMsgServer) ClearMsg(context.Context, *ClearMsgReq) (*ClearMsgResp, error) {
+func (UnimplementedIMMsgServiceServer) ClearMsg(context.Context, *ClearMsgReq) (*ClearMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClearMsg not implemented")
 }
-func (UnimplementedMsgServer) DestructMsgs(context.Context, *DestructMsgsReq) (*DestructMsgsResp, error) {
+func (UnimplementedIMMsgServiceServer) DestructMsgs(context.Context, *DestructMsgsReq) (*DestructMsgsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DestructMsgs not implemented")
 }
-func (UnimplementedMsgServer) GetActiveConversation(context.Context, *GetActiveConversationReq) (*GetActiveConversationResp, error) {
+func (UnimplementedIMMsgServiceServer) GetActiveConversation(context.Context, *GetActiveConversationReq) (*GetActiveConversationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetActiveConversation not implemented")
 }
-func (UnimplementedMsgServer) SetUserConversationMaxSeq(context.Context, *SetUserConversationMaxSeqReq) (*SetUserConversationMaxSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) SetUserConversationMaxSeq(context.Context, *SetUserConversationMaxSeqReq) (*SetUserConversationMaxSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserConversationMaxSeq not implemented")
 }
-func (UnimplementedMsgServer) SetUserConversationMinSeq(context.Context, *SetUserConversationMinSeqReq) (*SetUserConversationMinSeqResp, error) {
+func (UnimplementedIMMsgServiceServer) SetUserConversationMinSeq(context.Context, *SetUserConversationMinSeqReq) (*SetUserConversationMinSeqResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetUserConversationMinSeq not implemented")
 }
-func (UnimplementedMsgServer) GetLastMessageSeqByTime(context.Context, *GetLastMessageSeqByTimeReq) (*GetLastMessageSeqByTimeResp, error) {
+func (UnimplementedIMMsgServiceServer) GetLastMessageSeqByTime(context.Context, *GetLastMessageSeqByTimeReq) (*GetLastMessageSeqByTimeResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLastMessageSeqByTime not implemented")
 }
-func (UnimplementedMsgServer) GetLastMessage(context.Context, *GetLastMessageReq) (*GetLastMessageResp, error) {
+func (UnimplementedIMMsgServiceServer) GetLastMessage(context.Context, *GetLastMessageReq) (*GetLastMessageResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLastMessage not implemented")
 }
-func (UnimplementedMsgServer) AddEmoji(context.Context, *AddEmojiReq) (*AddEmojiResp, error) {
+func (UnimplementedIMMsgServiceServer) AddEmoji(context.Context, *AddEmojiReq) (*AddEmojiResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddEmoji not implemented")
 }
-func (UnimplementedMsgServer) RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error) {
+func (UnimplementedIMMsgServiceServer) RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RevokeEmoji not implemented")
 }
-func (UnimplementedMsgServer) BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error) {
+func (UnimplementedIMMsgServiceServer) BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BotReadMsgsNotification not implemented")
 }
-func (UnimplementedMsgServer) AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error) {
+func (UnimplementedIMMsgServiceServer) AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AIStreamMsgNotification not implemented")
 }
-func (UnimplementedMsgServer) mustEmbedUnimplementedMsgServer() {}
-func (UnimplementedMsgServer) testEmbeddedByValue()             {}
+func (UnimplementedIMMsgServiceServer) mustEmbedUnimplementedIMMsgServiceServer() {}
+func (UnimplementedIMMsgServiceServer) testEmbeddedByValue()                      {}
 
-// UnsafeMsgServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to MsgServer will
+// UnsafeIMMsgServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMMsgServiceServer will
 // result in compilation errors.
-type UnsafeMsgServer interface {
-	mustEmbedUnimplementedMsgServer()
+type UnsafeIMMsgServiceServer interface {
+	mustEmbedUnimplementedIMMsgServiceServer()
 }
 
-func RegisterMsgServer(s grpc.ServiceRegistrar, srv MsgServer) {
-	// If the following call pancis, it indicates UnimplementedMsgServer was
+func RegisterIMMsgServiceServer(s grpc.ServiceRegistrar, srv IMMsgServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMMsgServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&Msg_ServiceDesc, srv)
+	s.RegisterService(&IMMsgService_ServiceDesc, srv)
 }
 
-func _Msg_GetMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(sdkws.GetMaxSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetMaxSeq(ctx, in)
+		return srv.(IMMsgServiceServer).GetMaxSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetMaxSeq_FullMethodName,
+		FullMethod: IMMsgService_GetMaxSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetMaxSeq(ctx, req.(*sdkws.GetMaxSeqReq))
+		return srv.(IMMsgServiceServer).GetMaxSeq(ctx, req.(*sdkws.GetMaxSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetMaxSeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetMaxSeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetMaxSeqsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetMaxSeqs(ctx, in)
+		return srv.(IMMsgServiceServer).GetMaxSeqs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetMaxSeqs_FullMethodName,
+		FullMethod: IMMsgService_GetMaxSeqs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetMaxSeqs(ctx, req.(*GetMaxSeqsReq))
+		return srv.(IMMsgServiceServer).GetMaxSeqs(ctx, req.(*GetMaxSeqsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetHasReadSeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetHasReadSeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetHasReadSeqsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetHasReadSeqs(ctx, in)
+		return srv.(IMMsgServiceServer).GetHasReadSeqs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetHasReadSeqs_FullMethodName,
+		FullMethod: IMMsgService_GetHasReadSeqs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetHasReadSeqs(ctx, req.(*GetHasReadSeqsReq))
+		return srv.(IMMsgServiceServer).GetHasReadSeqs(ctx, req.(*GetHasReadSeqsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetMsgByConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetMsgByConversationIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetMsgByConversationIDsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetMsgByConversationIDs(ctx, in)
+		return srv.(IMMsgServiceServer).GetMsgByConversationIDs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetMsgByConversationIDs_FullMethodName,
+		FullMethod: IMMsgService_GetMsgByConversationIDs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetMsgByConversationIDs(ctx, req.(*GetMsgByConversationIDsReq))
+		return srv.(IMMsgServiceServer).GetMsgByConversationIDs(ctx, req.(*GetMsgByConversationIDsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationMaxSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetConversationMaxSeq(ctx, in)
+		return srv.(IMMsgServiceServer).GetConversationMaxSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetConversationMaxSeq_FullMethodName,
+		FullMethod: IMMsgService_GetConversationMaxSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetConversationMaxSeq(ctx, req.(*GetConversationMaxSeqReq))
+		return srv.(IMMsgServiceServer).GetConversationMaxSeq(ctx, req.(*GetConversationMaxSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_PullMessageBySeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_PullMessageBySeqs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(sdkws.PullMessageBySeqsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).PullMessageBySeqs(ctx, in)
+		return srv.(IMMsgServiceServer).PullMessageBySeqs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_PullMessageBySeqs_FullMethodName,
+		FullMethod: IMMsgService_PullMessageBySeqs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).PullMessageBySeqs(ctx, req.(*sdkws.PullMessageBySeqsReq))
+		return srv.(IMMsgServiceServer).PullMessageBySeqs(ctx, req.(*sdkws.PullMessageBySeqsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetSeqMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetSeqMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSeqMessageReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetSeqMessage(ctx, in)
+		return srv.(IMMsgServiceServer).GetSeqMessage(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetSeqMessage_FullMethodName,
+		FullMethod: IMMsgService_GetSeqMessage_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetSeqMessage(ctx, req.(*GetSeqMessageReq))
+		return srv.(IMMsgServiceServer).GetSeqMessage(ctx, req.(*GetSeqMessageReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SearchMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SearchMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SearchMessageReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SearchMessage(ctx, in)
+		return srv.(IMMsgServiceServer).SearchMessage(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SearchMessage_FullMethodName,
+		FullMethod: IMMsgService_SearchMessage_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SearchMessage(ctx, req.(*SearchMessageReq))
+		return srv.(IMMsgServiceServer).SearchMessage(ctx, req.(*SearchMessageReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SendMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SendMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SendMsg(ctx, in)
+		return srv.(IMMsgServiceServer).SendMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SendMsg_FullMethodName,
+		FullMethod: IMMsgService_SendMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SendMsg(ctx, req.(*SendMsgReq))
+		return srv.(IMMsgServiceServer).SendMsg(ctx, req.(*SendMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SendSimpleMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SendSimpleMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendSimpleMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SendSimpleMsg(ctx, in)
+		return srv.(IMMsgServiceServer).SendSimpleMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SendSimpleMsg_FullMethodName,
+		FullMethod: IMMsgService_SendSimpleMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SendSimpleMsg(ctx, req.(*SendSimpleMsgReq))
+		return srv.(IMMsgServiceServer).SendSimpleMsg(ctx, req.(*SendSimpleMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SetUserConversationsMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SetUserConversationsMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserConversationsMinSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SetUserConversationsMinSeq(ctx, in)
+		return srv.(IMMsgServiceServer).SetUserConversationsMinSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SetUserConversationsMinSeq_FullMethodName,
+		FullMethod: IMMsgService_SetUserConversationsMinSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SetUserConversationsMinSeq(ctx, req.(*SetUserConversationsMinSeqReq))
+		return srv.(IMMsgServiceServer).SetUserConversationsMinSeq(ctx, req.(*SetUserConversationsMinSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_ClearConversationsMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_ClearConversationsMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ClearConversationsMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).ClearConversationsMsg(ctx, in)
+		return srv.(IMMsgServiceServer).ClearConversationsMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_ClearConversationsMsg_FullMethodName,
+		FullMethod: IMMsgService_ClearConversationsMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).ClearConversationsMsg(ctx, req.(*ClearConversationsMsgReq))
+		return srv.(IMMsgServiceServer).ClearConversationsMsg(ctx, req.(*ClearConversationsMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_UserClearAllMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_UserClearAllMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserClearAllMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).UserClearAllMsg(ctx, in)
+		return srv.(IMMsgServiceServer).UserClearAllMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_UserClearAllMsg_FullMethodName,
+		FullMethod: IMMsgService_UserClearAllMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).UserClearAllMsg(ctx, req.(*UserClearAllMsgReq))
+		return srv.(IMMsgServiceServer).UserClearAllMsg(ctx, req.(*UserClearAllMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_DeleteMsgs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_DeleteMsgs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteMsgsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).DeleteMsgs(ctx, in)
+		return srv.(IMMsgServiceServer).DeleteMsgs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_DeleteMsgs_FullMethodName,
+		FullMethod: IMMsgService_DeleteMsgs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).DeleteMsgs(ctx, req.(*DeleteMsgsReq))
+		return srv.(IMMsgServiceServer).DeleteMsgs(ctx, req.(*DeleteMsgsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_DeleteMsgPhysicalBySeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_DeleteMsgPhysicalBySeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteMsgPhysicalBySeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).DeleteMsgPhysicalBySeq(ctx, in)
+		return srv.(IMMsgServiceServer).DeleteMsgPhysicalBySeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_DeleteMsgPhysicalBySeq_FullMethodName,
+		FullMethod: IMMsgService_DeleteMsgPhysicalBySeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).DeleteMsgPhysicalBySeq(ctx, req.(*DeleteMsgPhysicalBySeqReq))
+		return srv.(IMMsgServiceServer).DeleteMsgPhysicalBySeq(ctx, req.(*DeleteMsgPhysicalBySeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_DeleteMsgPhysical_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_DeleteMsgPhysical_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteMsgPhysicalReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).DeleteMsgPhysical(ctx, in)
+		return srv.(IMMsgServiceServer).DeleteMsgPhysical(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_DeleteMsgPhysical_FullMethodName,
+		FullMethod: IMMsgService_DeleteMsgPhysical_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).DeleteMsgPhysical(ctx, req.(*DeleteMsgPhysicalReq))
+		return srv.(IMMsgServiceServer).DeleteMsgPhysical(ctx, req.(*DeleteMsgPhysicalReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SetSendMsgStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SetSendMsgStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetSendMsgStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SetSendMsgStatus(ctx, in)
+		return srv.(IMMsgServiceServer).SetSendMsgStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SetSendMsgStatus_FullMethodName,
+		FullMethod: IMMsgService_SetSendMsgStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SetSendMsgStatus(ctx, req.(*SetSendMsgStatusReq))
+		return srv.(IMMsgServiceServer).SetSendMsgStatus(ctx, req.(*SetSendMsgStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetSendMsgStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetSendMsgStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetSendMsgStatusReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetSendMsgStatus(ctx, in)
+		return srv.(IMMsgServiceServer).GetSendMsgStatus(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetSendMsgStatus_FullMethodName,
+		FullMethod: IMMsgService_GetSendMsgStatus_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetSendMsgStatus(ctx, req.(*GetSendMsgStatusReq))
+		return srv.(IMMsgServiceServer).GetSendMsgStatus(ctx, req.(*GetSendMsgStatusReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_RevokeMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_RevokeMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RevokeMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).RevokeMsg(ctx, in)
+		return srv.(IMMsgServiceServer).RevokeMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_RevokeMsg_FullMethodName,
+		FullMethod: IMMsgService_RevokeMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).RevokeMsg(ctx, req.(*RevokeMsgReq))
+		return srv.(IMMsgServiceServer).RevokeMsg(ctx, req.(*RevokeMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_MarkMsgsAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_MarkMsgsAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MarkMsgsAsReadReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).MarkMsgsAsRead(ctx, in)
+		return srv.(IMMsgServiceServer).MarkMsgsAsRead(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_MarkMsgsAsRead_FullMethodName,
+		FullMethod: IMMsgService_MarkMsgsAsRead_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).MarkMsgsAsRead(ctx, req.(*MarkMsgsAsReadReq))
+		return srv.(IMMsgServiceServer).MarkMsgsAsRead(ctx, req.(*MarkMsgsAsReadReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_MarkConversationAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_MarkConversationAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MarkConversationAsReadReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).MarkConversationAsRead(ctx, in)
+		return srv.(IMMsgServiceServer).MarkConversationAsRead(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_MarkConversationAsRead_FullMethodName,
+		FullMethod: IMMsgService_MarkConversationAsRead_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).MarkConversationAsRead(ctx, req.(*MarkConversationAsReadReq))
+		return srv.(IMMsgServiceServer).MarkConversationAsRead(ctx, req.(*MarkConversationAsReadReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_RPCMarkConversationAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_RPCMarkConversationAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RPCMarkConversationAsReadReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).RPCMarkConversationAsRead(ctx, in)
+		return srv.(IMMsgServiceServer).RPCMarkConversationAsRead(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_RPCMarkConversationAsRead_FullMethodName,
+		FullMethod: IMMsgService_RPCMarkConversationAsRead_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).RPCMarkConversationAsRead(ctx, req.(*RPCMarkConversationAsReadReq))
+		return srv.(IMMsgServiceServer).RPCMarkConversationAsRead(ctx, req.(*RPCMarkConversationAsReadReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_BotMarkMaxMsgAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_BotMarkMaxMsgAsRead_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BotMarkMaxMsgAsReadReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).BotMarkMaxMsgAsRead(ctx, in)
+		return srv.(IMMsgServiceServer).BotMarkMaxMsgAsRead(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_BotMarkMaxMsgAsRead_FullMethodName,
+		FullMethod: IMMsgService_BotMarkMaxMsgAsRead_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).BotMarkMaxMsgAsRead(ctx, req.(*BotMarkMaxMsgAsReadReq))
+		return srv.(IMMsgServiceServer).BotMarkMaxMsgAsRead(ctx, req.(*BotMarkMaxMsgAsReadReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SetConversationHasReadSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SetConversationHasReadSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetConversationHasReadSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SetConversationHasReadSeq(ctx, in)
+		return srv.(IMMsgServiceServer).SetConversationHasReadSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SetConversationHasReadSeq_FullMethodName,
+		FullMethod: IMMsgService_SetConversationHasReadSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SetConversationHasReadSeq(ctx, req.(*SetConversationHasReadSeqReq))
+		return srv.(IMMsgServiceServer).SetConversationHasReadSeq(ctx, req.(*SetConversationHasReadSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetConversationsHasReadAndMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetConversationsHasReadAndMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetConversationsHasReadAndMaxSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetConversationsHasReadAndMaxSeq(ctx, in)
+		return srv.(IMMsgServiceServer).GetConversationsHasReadAndMaxSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetConversationsHasReadAndMaxSeq_FullMethodName,
+		FullMethod: IMMsgService_GetConversationsHasReadAndMaxSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetConversationsHasReadAndMaxSeq(ctx, req.(*GetConversationsHasReadAndMaxSeqReq))
+		return srv.(IMMsgServiceServer).GetConversationsHasReadAndMaxSeq(ctx, req.(*GetConversationsHasReadAndMaxSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetActiveUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetActiveUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetActiveUserReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetActiveUser(ctx, in)
+		return srv.(IMMsgServiceServer).GetActiveUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetActiveUser_FullMethodName,
+		FullMethod: IMMsgService_GetActiveUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetActiveUser(ctx, req.(*GetActiveUserReq))
+		return srv.(IMMsgServiceServer).GetActiveUser(ctx, req.(*GetActiveUserReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetActiveGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetActiveGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetActiveGroupReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetActiveGroup(ctx, in)
+		return srv.(IMMsgServiceServer).GetActiveGroup(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetActiveGroup_FullMethodName,
+		FullMethod: IMMsgService_GetActiveGroup_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetActiveGroup(ctx, req.(*GetActiveGroupReq))
+		return srv.(IMMsgServiceServer).GetActiveGroup(ctx, req.(*GetActiveGroupReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetServerTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetServerTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetServerTimeReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetServerTime(ctx, in)
+		return srv.(IMMsgServiceServer).GetServerTime(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetServerTime_FullMethodName,
+		FullMethod: IMMsgService_GetServerTime_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetServerTime(ctx, req.(*GetServerTimeReq))
+		return srv.(IMMsgServiceServer).GetServerTime(ctx, req.(*GetServerTimeReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_ClearMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_ClearMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ClearMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).ClearMsg(ctx, in)
+		return srv.(IMMsgServiceServer).ClearMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_ClearMsg_FullMethodName,
+		FullMethod: IMMsgService_ClearMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).ClearMsg(ctx, req.(*ClearMsgReq))
+		return srv.(IMMsgServiceServer).ClearMsg(ctx, req.(*ClearMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_DestructMsgs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_DestructMsgs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DestructMsgsReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).DestructMsgs(ctx, in)
+		return srv.(IMMsgServiceServer).DestructMsgs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_DestructMsgs_FullMethodName,
+		FullMethod: IMMsgService_DestructMsgs_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).DestructMsgs(ctx, req.(*DestructMsgsReq))
+		return srv.(IMMsgServiceServer).DestructMsgs(ctx, req.(*DestructMsgsReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetActiveConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetActiveConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetActiveConversationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetActiveConversation(ctx, in)
+		return srv.(IMMsgServiceServer).GetActiveConversation(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetActiveConversation_FullMethodName,
+		FullMethod: IMMsgService_GetActiveConversation_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetActiveConversation(ctx, req.(*GetActiveConversationReq))
+		return srv.(IMMsgServiceServer).GetActiveConversation(ctx, req.(*GetActiveConversationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SetUserConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SetUserConversationMaxSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserConversationMaxSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SetUserConversationMaxSeq(ctx, in)
+		return srv.(IMMsgServiceServer).SetUserConversationMaxSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SetUserConversationMaxSeq_FullMethodName,
+		FullMethod: IMMsgService_SetUserConversationMaxSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SetUserConversationMaxSeq(ctx, req.(*SetUserConversationMaxSeqReq))
+		return srv.(IMMsgServiceServer).SetUserConversationMaxSeq(ctx, req.(*SetUserConversationMaxSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_SetUserConversationMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_SetUserConversationMinSeq_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SetUserConversationMinSeqReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).SetUserConversationMinSeq(ctx, in)
+		return srv.(IMMsgServiceServer).SetUserConversationMinSeq(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_SetUserConversationMinSeq_FullMethodName,
+		FullMethod: IMMsgService_SetUserConversationMinSeq_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).SetUserConversationMinSeq(ctx, req.(*SetUserConversationMinSeqReq))
+		return srv.(IMMsgServiceServer).SetUserConversationMinSeq(ctx, req.(*SetUserConversationMinSeqReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetLastMessageSeqByTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetLastMessageSeqByTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetLastMessageSeqByTimeReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetLastMessageSeqByTime(ctx, in)
+		return srv.(IMMsgServiceServer).GetLastMessageSeqByTime(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetLastMessageSeqByTime_FullMethodName,
+		FullMethod: IMMsgService_GetLastMessageSeqByTime_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetLastMessageSeqByTime(ctx, req.(*GetLastMessageSeqByTimeReq))
+		return srv.(IMMsgServiceServer).GetLastMessageSeqByTime(ctx, req.(*GetLastMessageSeqByTimeReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_GetLastMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_GetLastMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetLastMessageReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).GetLastMessage(ctx, in)
+		return srv.(IMMsgServiceServer).GetLastMessage(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_GetLastMessage_FullMethodName,
+		FullMethod: IMMsgService_GetLastMessage_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).GetLastMessage(ctx, req.(*GetLastMessageReq))
+		return srv.(IMMsgServiceServer).GetLastMessage(ctx, req.(*GetLastMessageReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_AddEmoji_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_AddEmoji_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AddEmojiReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).AddEmoji(ctx, in)
+		return srv.(IMMsgServiceServer).AddEmoji(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_AddEmoji_FullMethodName,
+		FullMethod: IMMsgService_AddEmoji_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).AddEmoji(ctx, req.(*AddEmojiReq))
+		return srv.(IMMsgServiceServer).AddEmoji(ctx, req.(*AddEmojiReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_RevokeEmoji_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_RevokeEmoji_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RevokeEmojiReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).RevokeEmoji(ctx, in)
+		return srv.(IMMsgServiceServer).RevokeEmoji(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_RevokeEmoji_FullMethodName,
+		FullMethod: IMMsgService_RevokeEmoji_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).RevokeEmoji(ctx, req.(*RevokeEmojiReq))
+		return srv.(IMMsgServiceServer).RevokeEmoji(ctx, req.(*RevokeEmojiReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_BotReadMsgsNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_BotReadMsgsNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BotReadMsgsNotificationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).BotReadMsgsNotification(ctx, in)
+		return srv.(IMMsgServiceServer).BotReadMsgsNotification(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_BotReadMsgsNotification_FullMethodName,
+		FullMethod: IMMsgService_BotReadMsgsNotification_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).BotReadMsgsNotification(ctx, req.(*BotReadMsgsNotificationReq))
+		return srv.(IMMsgServiceServer).BotReadMsgsNotification(ctx, req.(*BotReadMsgsNotificationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_AIStreamMsgNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMMsgService_AIStreamMsgNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AIStreamNotificationReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).AIStreamMsgNotification(ctx, in)
+		return srv.(IMMsgServiceServer).AIStreamMsgNotification(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_AIStreamMsgNotification_FullMethodName,
+		FullMethod: IMMsgService_AIStreamMsgNotification_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).AIStreamMsgNotification(ctx, req.(*AIStreamNotificationReq))
+		return srv.(IMMsgServiceServer).AIStreamMsgNotification(ctx, req.(*AIStreamNotificationReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Msg_ServiceDesc is the grpc.ServiceDesc for Msg service.
+// IMMsgService_ServiceDesc is the grpc.ServiceDesc for IMMsgService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.msg.msg",
-	HandlerType: (*MsgServer)(nil),
+var IMMsgService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.msg.IMMsgService",
+	HandlerType: (*IMMsgServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetMaxSeq",
-			Handler:    _Msg_GetMaxSeq_Handler,
+			Handler:    _IMMsgService_GetMaxSeq_Handler,
 		},
 		{
 			MethodName: "GetMaxSeqs",
-			Handler:    _Msg_GetMaxSeqs_Handler,
+			Handler:    _IMMsgService_GetMaxSeqs_Handler,
 		},
 		{
 			MethodName: "GetHasReadSeqs",
-			Handler:    _Msg_GetHasReadSeqs_Handler,
+			Handler:    _IMMsgService_GetHasReadSeqs_Handler,
 		},
 		{
 			MethodName: "GetMsgByConversationIDs",
-			Handler:    _Msg_GetMsgByConversationIDs_Handler,
+			Handler:    _IMMsgService_GetMsgByConversationIDs_Handler,
 		},
 		{
 			MethodName: "GetConversationMaxSeq",
-			Handler:    _Msg_GetConversationMaxSeq_Handler,
+			Handler:    _IMMsgService_GetConversationMaxSeq_Handler,
 		},
 		{
 			MethodName: "PullMessageBySeqs",
-			Handler:    _Msg_PullMessageBySeqs_Handler,
+			Handler:    _IMMsgService_PullMessageBySeqs_Handler,
 		},
 		{
 			MethodName: "GetSeqMessage",
-			Handler:    _Msg_GetSeqMessage_Handler,
+			Handler:    _IMMsgService_GetSeqMessage_Handler,
 		},
 		{
 			MethodName: "SearchMessage",
-			Handler:    _Msg_SearchMessage_Handler,
+			Handler:    _IMMsgService_SearchMessage_Handler,
 		},
 		{
 			MethodName: "SendMsg",
-			Handler:    _Msg_SendMsg_Handler,
+			Handler:    _IMMsgService_SendMsg_Handler,
 		},
 		{
 			MethodName: "SendSimpleMsg",
-			Handler:    _Msg_SendSimpleMsg_Handler,
+			Handler:    _IMMsgService_SendSimpleMsg_Handler,
 		},
 		{
 			MethodName: "SetUserConversationsMinSeq",
-			Handler:    _Msg_SetUserConversationsMinSeq_Handler,
+			Handler:    _IMMsgService_SetUserConversationsMinSeq_Handler,
 		},
 		{
 			MethodName: "ClearConversationsMsg",
-			Handler:    _Msg_ClearConversationsMsg_Handler,
+			Handler:    _IMMsgService_ClearConversationsMsg_Handler,
 		},
 		{
 			MethodName: "UserClearAllMsg",
-			Handler:    _Msg_UserClearAllMsg_Handler,
+			Handler:    _IMMsgService_UserClearAllMsg_Handler,
 		},
 		{
 			MethodName: "DeleteMsgs",
-			Handler:    _Msg_DeleteMsgs_Handler,
+			Handler:    _IMMsgService_DeleteMsgs_Handler,
 		},
 		{
 			MethodName: "DeleteMsgPhysicalBySeq",
-			Handler:    _Msg_DeleteMsgPhysicalBySeq_Handler,
+			Handler:    _IMMsgService_DeleteMsgPhysicalBySeq_Handler,
 		},
 		{
 			MethodName: "DeleteMsgPhysical",
-			Handler:    _Msg_DeleteMsgPhysical_Handler,
+			Handler:    _IMMsgService_DeleteMsgPhysical_Handler,
 		},
 		{
 			MethodName: "SetSendMsgStatus",
-			Handler:    _Msg_SetSendMsgStatus_Handler,
+			Handler:    _IMMsgService_SetSendMsgStatus_Handler,
 		},
 		{
 			MethodName: "GetSendMsgStatus",
-			Handler:    _Msg_GetSendMsgStatus_Handler,
+			Handler:    _IMMsgService_GetSendMsgStatus_Handler,
 		},
 		{
 			MethodName: "RevokeMsg",
-			Handler:    _Msg_RevokeMsg_Handler,
+			Handler:    _IMMsgService_RevokeMsg_Handler,
 		},
 		{
 			MethodName: "MarkMsgsAsRead",
-			Handler:    _Msg_MarkMsgsAsRead_Handler,
+			Handler:    _IMMsgService_MarkMsgsAsRead_Handler,
 		},
 		{
 			MethodName: "MarkConversationAsRead",
-			Handler:    _Msg_MarkConversationAsRead_Handler,
+			Handler:    _IMMsgService_MarkConversationAsRead_Handler,
 		},
 		{
 			MethodName: "RPCMarkConversationAsRead",
-			Handler:    _Msg_RPCMarkConversationAsRead_Handler,
+			Handler:    _IMMsgService_RPCMarkConversationAsRead_Handler,
 		},
 		{
 			MethodName: "BotMarkMaxMsgAsRead",
-			Handler:    _Msg_BotMarkMaxMsgAsRead_Handler,
+			Handler:    _IMMsgService_BotMarkMaxMsgAsRead_Handler,
 		},
 		{
 			MethodName: "SetConversationHasReadSeq",
-			Handler:    _Msg_SetConversationHasReadSeq_Handler,
+			Handler:    _IMMsgService_SetConversationHasReadSeq_Handler,
 		},
 		{
 			MethodName: "GetConversationsHasReadAndMaxSeq",
-			Handler:    _Msg_GetConversationsHasReadAndMaxSeq_Handler,
+			Handler:    _IMMsgService_GetConversationsHasReadAndMaxSeq_Handler,
 		},
 		{
 			MethodName: "GetActiveUser",
-			Handler:    _Msg_GetActiveUser_Handler,
+			Handler:    _IMMsgService_GetActiveUser_Handler,
 		},
 		{
 			MethodName: "GetActiveGroup",
-			Handler:    _Msg_GetActiveGroup_Handler,
+			Handler:    _IMMsgService_GetActiveGroup_Handler,
 		},
 		{
 			MethodName: "GetServerTime",
-			Handler:    _Msg_GetServerTime_Handler,
+			Handler:    _IMMsgService_GetServerTime_Handler,
 		},
 		{
 			MethodName: "ClearMsg",
-			Handler:    _Msg_ClearMsg_Handler,
+			Handler:    _IMMsgService_ClearMsg_Handler,
 		},
 		{
 			MethodName: "DestructMsgs",
-			Handler:    _Msg_DestructMsgs_Handler,
+			Handler:    _IMMsgService_DestructMsgs_Handler,
 		},
 		{
 			MethodName: "GetActiveConversation",
-			Handler:    _Msg_GetActiveConversation_Handler,
+			Handler:    _IMMsgService_GetActiveConversation_Handler,
 		},
 		{
 			MethodName: "SetUserConversationMaxSeq",
-			Handler:    _Msg_SetUserConversationMaxSeq_Handler,
+			Handler:    _IMMsgService_SetUserConversationMaxSeq_Handler,
 		},
 		{
 			MethodName: "SetUserConversationMinSeq",
-			Handler:    _Msg_SetUserConversationMinSeq_Handler,
+			Handler:    _IMMsgService_SetUserConversationMinSeq_Handler,
 		},
 		{
 			MethodName: "GetLastMessageSeqByTime",
-			Handler:    _Msg_GetLastMessageSeqByTime_Handler,
+			Handler:    _IMMsgService_GetLastMessageSeqByTime_Handler,
 		},
 		{
 			MethodName: "GetLastMessage",
-			Handler:    _Msg_GetLastMessage_Handler,
+			Handler:    _IMMsgService_GetLastMessage_Handler,
 		},
 		{
 			MethodName: "AddEmoji",
-			Handler:    _Msg_AddEmoji_Handler,
+			Handler:    _IMMsgService_AddEmoji_Handler,
 		},
 		{
 			MethodName: "RevokeEmoji",
-			Handler:    _Msg_RevokeEmoji_Handler,
+			Handler:    _IMMsgService_RevokeEmoji_Handler,
 		},
 		{
 			MethodName: "BotReadMsgsNotification",
-			Handler:    _Msg_BotReadMsgsNotification_Handler,
+			Handler:    _IMMsgService_BotReadMsgsNotification_Handler,
 		},
 		{
 			MethodName: "AIStreamMsgNotification",
-			Handler:    _Msg_AIStreamMsgNotification_Handler,
+			Handler:    _IMMsgService_AIStreamMsgNotification_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

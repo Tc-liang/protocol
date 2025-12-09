@@ -1,17 +1,3 @@
-// Copyright © 2023 OpenIM. All rights reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 syntax = "proto3";
 package openim.user;
 
@@ -21,226 +7,210 @@ import "wrapperspb/wrapperspb.proto";
 
 option go_package = "github.com/openimsdk/protocol/user";
 
-message getAllUserIDReq {
+message GetAllUserIDReq {
   sdkws.RequestPagination pagination = 1;
 }
-message getAllUserIDResp {
+message GetAllUserIDResp {
   int32 total = 1;
   repeated string userIDs = 2;
 }
 
-message accountCheckReq {
+message AccountCheckReq {
   repeated string checkUserIDs = 1;
 }
-message accountCheckResp {
-  message singleUserStatus {
+message AccountCheckResp {
+  message SingleUserStatus {
     string userID = 1;
     int32 accountStatus = 2;
   }
-  repeated singleUserStatus results = 1;
+  repeated SingleUserStatus results = 1;
 }
 
-message getDesignateUsersReq {
+message GetDesignateUsersReq {
   repeated string userIDs = 1;
 }
-message getDesignateUsersResp {
+message GetDesignateUsersResp {
   repeated sdkws.UserInfo usersInfo = 1;
 }
 
-message updateUserInfoReq {
+message UpdateUserInfoReq {
   sdkws.UserInfo userInfo = 1;
 }
-message updateUserInfoResp {}
-message updateUserInfoExReq {
+message UpdateUserInfoResp {}
+
+message UpdateUserInfoExReq {
   sdkws.UserInfoWithEx userInfo = 1;
 }
-message updateUserInfoExResp {}
-message setGlobalRecvMessageOptReq {
+message UpdateUserInfoExResp {}
+
+message SetGlobalRecvMessageOptReq {
   string userID = 1;
   int32 globalRecvMsgOpt = 3;
 }
+message SetGlobalRecvMessageOptResp {}
 
-message setGlobalRecvMessageOptResp {}
-
-message setConversationReq {
-  openim.conversation.ConversationModel conversation = 1;
+message SetConversationReq {
+  openim.conversation.Conversation conversation = 1;
   int32 notificationType = 2;
   string operationID = 3;
 }
+message SetConversationResp {}
 
-message setConversationResp {}
-
-message setRecvMsgOptReq {
+message SetRecvMsgOptReq {
   string ownerUserID = 1;
   string conversationID = 2;
   int32 recvMsgOpt = 3;
   int32 notificationType = 4;
   string operationID = 5;
 }
+message SetRecvMsgOptResp {}
 
-message setRecvMsgOptResp {}
-
-message getConversationReq {
+message GetConversationReq {
   string conversationID = 1;
   string ownerUserID = 2;
   string operationID = 3;
 }
-
-message getConversationResp {
-  openim.conversation.ConversationModel conversation = 2;
+message GetConversationResp {
+  openim.conversation.Conversation conversation = 2;
 }
 
-message getConversationsReq {
+message GetConversationsReq {
   string ownerUserID = 1;
   repeated string conversationIDs = 2;
   string operationID = 3;
 }
-
-message getConversationsResp {
-  repeated openim.conversation.ConversationModel conversations = 2;
+message GetConversationsResp {
+  repeated openim.conversation.Conversation conversations = 2;
 }
 
-message getAllConversationsReq {
+message GetAllConversationsReq {
   string ownerUserID = 1;
   string operationID = 2;
 }
-
-message getAllConversationsResp {
-  repeated openim.conversation.ConversationModel conversations = 2;
+message GetAllConversationsResp {
+  repeated openim.conversation.Conversation conversations = 2;
 }
 
-message batchSetConversationsReq {
-  repeated openim.conversation.ConversationModel conversations = 1;
+message BatchSetConversationsReq {
+  repeated openim.conversation.Conversation conversations = 1;
   string OwnerUserID = 2;
   int32 notificationType = 3;
   string OperationID = 4;
 }
-
-message batchSetConversationsResp {
+message BatchSetConversationsResp {
   repeated string Success = 2;
   repeated string Failed = 3;
 }
 
-message getPaginationUsersReq {
+message GetPaginationUsersReq {
   sdkws.RequestPagination pagination = 2;
   string userID = 3;
   string nickName = 4;
 }
-
-message getPaginationUsersResp {
+message GetPaginationUsersResp {
   int32 total = 1;
   repeated sdkws.UserInfo users = 2;
 }
 
-message userRegisterReq {
+message UserRegisterReq {
   repeated sdkws.UserInfo users = 1;
 }
-message userRegisterResp {}
+message UserRegisterResp {}
 
-message getGlobalRecvMessageOptReq {
+message GetGlobalRecvMessageOptReq {
   string userID = 1;
 }
-
-message getGlobalRecvMessageOptResp {
+message GetGlobalRecvMessageOptResp {
   int32 globalRecvMsgOpt = 1;
 }
 
-message userRegisterCountReq {
+message UserRegisterCountReq {
   int64 start = 1;
   int64 end = 2;
 }
-
-message userRegisterCountResp {
+message UserRegisterCountResp {
   int64 total = 1;
   int64 before = 2;
   map<string, int64> count = 3;
 }
 
-message subscribeOrCancelUsersStatusReq {
+message SubscribeOrCancelUsersStatusReq {
   string userID = 1;
   repeated string userIDs = 2;
   int32 genre = 3;
 }
-
-message subscribeOrCancelUsersStatusResp {
-  repeated onlineStatus statusList = 1;
+message SubscribeOrCancelUsersStatusResp {
+  repeated OnlineStatus statusList = 1;
 }
 
-message getSubscribeUsersStatusReq {
+message GetSubscribeUsersStatusReq {
   string userID = 1;
 }
-
-message getSubscribeUsersStatusResp {
-  repeated onlineStatus statusList = 1;
+message GetSubscribeUsersStatusResp {
+  repeated OnlineStatus statusList = 1;
 }
 
-message onlineStatus {
+message OnlineStatus {
   string userID = 1;
   int32 status = 2;
   repeated int32 platformIDs = 3;
 }
 
-message getUserStatusReq {
+message GetUserStatusReq {
   string userID = 1;
   repeated string userIDs = 2;
 }
-
-message getUserStatusResp {
-  repeated onlineStatus statusList = 1;
+message GetUserStatusResp {
+  repeated OnlineStatus statusList = 1;
 }
 
-message setUserStatusReq {
+message SetUserStatusReq {
   string userID = 1;
   int32 status = 2;
   int32 platformID = 3;
   string connID = 4;
   bool isBackground = 5;
 }
+message SetUserStatusResp {}
 
-message setUserStatusResp {}
-
-message userOnlineStatus {
+message UserOnlineStatus {
   string userID = 1;
   string connID = 2;
   repeated int32 online = 3;
   repeated int32 offline = 4;
 }
 
-message setUserOnlineStatusReq {
-  repeated userOnlineStatus status = 1;
+message SetUserOnlineStatusReq {
+  repeated UserOnlineStatus status = 1;
 }
+message SetUserOnlineStatusResp {}
 
-message setUserOnlineStatusResp {}
-
-message processUserCommandAddReq {
+message ProcessUserCommandAddReq {
   string userID = 1;
   int32 type = 2;
   string uuid = 3;
   openim.protobuf.StringValue value = 4;
   openim.protobuf.StringValue ex = 5;
 }
+message ProcessUserCommandAddResp {}
 
-message processUserCommandAddResp {}
-
-message processUserCommandDeleteReq {
+message ProcessUserCommandDeleteReq {
   string userID = 1;
   int32 type = 2;
   string uuid = 3;
 }
+message ProcessUserCommandDeleteResp {}
 
-message processUserCommandDeleteResp {}
-
-message processUserCommandUpdateReq {
+message ProcessUserCommandUpdateReq {
   string userID = 1;
   int32 type = 2;
   string uuid = 3;
   openim.protobuf.StringValue value = 4;
   openim.protobuf.StringValue ex = 5;
 }
+message ProcessUserCommandUpdateResp {}
 
-message processUserCommandUpdateResp {}
-
-message processUserCommandGetReq {
+message ProcessUserCommandGetReq {
   string userID = 1;
   int32 type = 2;
 }
@@ -253,13 +223,13 @@ message CommandInfoResp {
   string ex = 5;
 }
 
-message processUserCommandGetResp {
+message ProcessUserCommandGetResp {
   repeated CommandInfoResp CommandResp = 1;
 }
-message processUserCommandGetAllReq {
+
+message ProcessUserCommandGetAllReq {
   string userID = 1;
 }
-
 message AllCommandInfoResp {
   int32 type = 1;
   int64 createTime = 2;
@@ -267,186 +237,143 @@ message AllCommandInfoResp {
   string value = 4;
   string ex = 5;
 }
-
-message processUserCommandGetAllResp {
+message ProcessUserCommandGetAllResp {
   repeated AllCommandInfoResp CommandResp = 1;
 }
-message addNotificationAccountReq {
+
+message AddNotificationAccountReq {
   string userID = 1;
   string nickName = 2;
   string faceURL = 3;
   int32 appMangerLevel = 4;
 }
-
-message addNotificationAccountResp {
+message AddNotificationAccountResp {
   string userID = 1;
   string faceURL = 2;
   string nickName = 3;
   int32 appMangerLevel = 4;
 }
 
-message updateNotificationAccountInfoReq {
+message UpdateNotificationAccountInfoReq {
   string userID = 1;
   string faceURL = 2;
   string nickName = 3;
 }
+message UpdateNotificationAccountInfoResp {}
 
-message updateNotificationAccountInfoResp {}
-
-message searchNotificationAccountReq {
+message SearchNotificationAccountReq {
   string keyword = 1;
   optional int32 appManagerLevel = 2;
   sdkws.RequestPagination pagination = 3;
 }
 
-message notificationAccountInfo {
+message NotificationAccountInfo {
   string userID = 1;
   string faceURL = 2;
   string nickName = 3;
   int32 appMangerLevel = 4;
 }
 
-message searchNotificationAccountResp {
+message SearchNotificationAccountResp {
   int64 total = 1;
-  repeated notificationAccountInfo notificationAccounts = 2;
+  repeated NotificationAccountInfo notificationAccounts = 2;
 }
 
-message getNotificationAccountReq {
+message GetNotificationAccountReq {
   string userID = 1;
 }
-
-message getNotificationAccountResp {
-    notificationAccountInfo account = 1;
+message GetNotificationAccountResp {
+  NotificationAccountInfo account = 1;
 }
 
-message sortQueryReq {
+message SortQueryReq {
   bool asc = 1;
   map<string, string> userIDName = 2;
 }
-
-message sortQueryResp {
+message SortQueryResp {
   repeated sdkws.UserInfo users = 2;
 }
 
-message getAllOnlineUsersReq {
+message GetAllOnlineUsersReq {
   uint64 cursor = 1;
 }
-
-message getAllOnlineUsersResp {
-  repeated onlineStatus StatusList = 1;
+message GetAllOnlineUsersResp {
+  repeated OnlineStatus StatusList = 1;
   uint64 nextCursor = 2;
 }
 
-message getUserClientConfigReq {
+message GetUserClientConfigReq {
   string userID = 1;
 }
-
-message getUserClientConfigResp {
+message GetUserClientConfigResp {
   map<string,string> configs = 2;
 }
 
-message setUserClientConfigReq {
+message SetUserClientConfigReq {
   string userID = 1;
   map<string,string> configs = 2;
 }
+message SetUserClientConfigResp {}
 
-message setUserClientConfigResp {
-}
-
-message delUserClientConfigReq {
+message DelUserClientConfigReq {
   string userID = 1;
   repeated string keys = 2;
 }
+message DelUserClientConfigResp {}
 
-message delUserClientConfigResp {
-}
-
-
-message pageUserClientConfigReq {
+message PageUserClientConfigReq {
   string userID = 1;
   string key = 2;
   sdkws.RequestPagination pagination = 3;
 }
-
-message pageUserClientConfigResp {
+message PageUserClientConfigResp {
   int64 total = 1;
-  repeated clientConfig configs = 2;
+  repeated ClientConfig configs = 2;
 }
 
-message clientConfig {
+message ClientConfig {
   string key = 1;
   string userID = 2;
   string value = 3;
 }
 
-message getBotUserReq {
+message GetBotUserReq {
   repeated string userIDs = 1;
 }
-message getBotUserResp {
+message GetBotUserResp {
   repeated string userIDs = 1;
 }
 
-service user {
-  //Get the specified user information full field
-  rpc getDesignateUsers(getDesignateUsersReq) returns (getDesignateUsersResp);
-  //update user information
-  rpc updateUserInfo(updateUserInfoReq) returns (updateUserInfoResp);
-  rpc updateUserInfoEx(updateUserInfoExReq) returns (updateUserInfoExResp);
-  //Set user message receiving options
-  rpc setGlobalRecvMessageOpt(setGlobalRecvMessageOptReq) returns (setGlobalRecvMessageOptResp);
-  //Get the user message receiving option If not found, no error will be returned
-  rpc getGlobalRecvMessageOpt(getGlobalRecvMessageOptReq) returns (getGlobalRecvMessageOptResp);
-  //Check if userID exists
-  rpc accountCheck(accountCheckReq) returns (accountCheckResp);
-  //Turn the page (or specify userID, nickname) to pull user information Full field
-  rpc getPaginationUsers(getPaginationUsersReq) returns (getPaginationUsersResp);
-  //user registration
-  rpc userRegister(userRegisterReq) returns (userRegisterResp);
-  //Get all user IDs
-  rpc getAllUserID(getAllUserIDReq) returns (getAllUserIDResp);
-  //Get the total number of users and the user increment within a specified time period
-  rpc userRegisterCount(userRegisterCountReq) returns (userRegisterCountResp);
-  //Subscribe or unsubscribe user presence
-  rpc subscribeOrCancelUsersStatus(subscribeOrCancelUsersStatusReq) returns (subscribeOrCancelUsersStatusResp);
-  //Get the online status of subscribers
-  rpc getSubscribeUsersStatus(getSubscribeUsersStatusReq) returns (getSubscribeUsersStatusResp);
-  //Get user online status
-  rpc getUserStatus(getUserStatusReq) returns (getUserStatusResp);
-  //The gateway synchronizes the online status of users in redis
-  rpc setUserStatus(setUserStatusReq) returns (setUserStatusResp);
-  //add a general function for add
-  rpc processUserCommandAdd(processUserCommandAddReq) returns (processUserCommandAddResp);
-  //add a general function for update
-  rpc processUserCommandUpdate(processUserCommandUpdateReq) returns (processUserCommandUpdateResp);
-  //add a general function for delete
-  rpc processUserCommandDelete(processUserCommandDeleteReq) returns (processUserCommandDeleteResp);
-  //add a general function for get
-  rpc processUserCommandGet(processUserCommandGetReq) returns (processUserCommandGetResp);
-  //add a general function for get all
-  rpc processUserCommandGetAll(processUserCommandGetAllReq) returns (processUserCommandGetAllResp);
-  //add a system notification account
-  rpc addNotificationAccount(addNotificationAccountReq) returns (addNotificationAccountResp);
-  //update the system notification info
-  rpc updateNotificationAccountInfo(updateNotificationAccountInfoReq) returns (updateNotificationAccountInfoResp);
-  //search the system notification account
-  rpc searchNotificationAccount(searchNotificationAccountReq) returns (searchNotificationAccountResp);
-  //getNotificationAccount by userID
-  rpc getNotificationAccount(getNotificationAccountReq) returns (getNotificationAccountResp);
-
-  rpc sortQuery(sortQueryReq) returns (sortQueryResp);
-
-  rpc setUserOnlineStatus(setUserOnlineStatusReq) returns (setUserOnlineStatusResp);
-  // get all online users
-  rpc getAllOnlineUsers(getAllOnlineUsersReq) returns (getAllOnlineUsersResp);
-
-  rpc getUserClientConfig(getUserClientConfigReq) returns (getUserClientConfigResp);
-
-  rpc setUserClientConfig(setUserClientConfigReq) returns (setUserClientConfigResp);
-
-  rpc delUserClientConfig(delUserClientConfigReq) returns (delUserClientConfigResp);
-
-  rpc pageUserClientConfig(pageUserClientConfigReq) returns (pageUserClientConfigResp);
-
-  rpc GetBotUser(getBotUserReq) returns (getBotUserResp);
-
+service User {
+  rpc GetDesignateUsers(GetDesignateUsersReq) returns (GetDesignateUsersResp);
+  rpc UpdateUserInfo(UpdateUserInfoReq) returns (UpdateUserInfoResp);
+  rpc UpdateUserInfoEx(UpdateUserInfoExReq) returns (UpdateUserInfoExResp);
+  rpc SetGlobalRecvMessageOpt(SetGlobalRecvMessageOptReq) returns (SetGlobalRecvMessageOptResp);
+  rpc GetGlobalRecvMessageOpt(GetGlobalRecvMessageOptReq) returns (GetGlobalRecvMessageOptResp);
+  rpc AccountCheck(AccountCheckReq) returns (AccountCheckResp);
+  rpc GetPaginationUsers(GetPaginationUsersReq) returns (GetPaginationUsersResp);
+  rpc UserRegister(UserRegisterReq) returns (UserRegisterResp);
+  rpc GetAllUserID(GetAllUserIDReq) returns (GetAllUserIDResp);
+  rpc UserRegisterCount(UserRegisterCountReq) returns (UserRegisterCountResp);
+  rpc SubscribeOrCancelUsersStatus(SubscribeOrCancelUsersStatusReq) returns (SubscribeOrCancelUsersStatusResp);
+  rpc GetSubscribeUsersStatus(GetSubscribeUsersStatusReq) returns (GetSubscribeUsersStatusResp);
+  rpc GetUserStatus(GetUserStatusReq) returns (GetUserStatusResp);
+  rpc SetUserStatus(SetUserStatusReq) returns (SetUserStatusResp);
+  rpc ProcessUserCommandAdd(ProcessUserCommandAddReq) returns (ProcessUserCommandAddResp);
+  rpc ProcessUserCommandUpdate(ProcessUserCommandUpdateReq) returns (ProcessUserCommandUpdateResp);
+  rpc ProcessUserCommandDelete(ProcessUserCommandDeleteReq) returns (ProcessUserCommandDeleteResp);
+  rpc ProcessUserCommandGet(ProcessUserCommandGetReq) returns (ProcessUserCommandGetResp);
+  rpc ProcessUserCommandGetAll(ProcessUserCommandGetAllReq) returns (ProcessUserCommandGetAllResp);
+  rpc AddNotificationAccount(AddNotificationAccountReq) returns (AddNotificationAccountResp);
+  rpc UpdateNotificationAccountInfo(UpdateNotificationAccountInfoReq) returns (UpdateNotificationAccountInfoResp);
+  rpc SearchNotificationAccount(SearchNotificationAccountReq) returns (SearchNotificationAccountResp);
+  rpc GetNotificationAccount(GetNotificationAccountReq) returns (GetNotificationAccountResp);
+  rpc SortQuery(SortQueryReq) returns (SortQueryResp);
+  rpc SetUserOnlineStatus(SetUserOnlineStatusReq) returns (SetUserOnlineStatusResp);
+  rpc GetAllOnlineUsers(GetAllOnlineUsersReq) returns (GetAllOnlineUsersResp);
+  rpc GetUserClientConfig(GetUserClientConfigReq) returns (GetUserClientConfigResp);
+  rpc SetUserClientConfig(SetUserClientConfigReq) returns (SetUserClientConfigResp);
+  rpc DelUserClientConfig(DelUserClientConfigReq) returns (DelUserClientConfigResp);
+  rpc PageUserClientConfig(PageUserClientConfigReq) returns (PageUserClientConfigResp);
+  rpc GetBotUser(GetBotUserReq) returns (GetBotUserResp);
 }

@@ -33,139 +33,139 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	PushMsgService_PushMsg_FullMethodName          = "/openim.push.PushMsgService/PushMsg"
-	PushMsgService_DelUserPushToken_FullMethodName = "/openim.push.PushMsgService/DelUserPushToken"
+	IMPushMsgService_PushMsg_FullMethodName          = "/openim.push.IMPushMsgService/PushMsg"
+	IMPushMsgService_DelUserPushToken_FullMethodName = "/openim.push.IMPushMsgService/DelUserPushToken"
 )
 
-// PushMsgServiceClient is the client API for PushMsgService service.
+// IMPushMsgServiceClient is the client API for IMPushMsgService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type PushMsgServiceClient interface {
+type IMPushMsgServiceClient interface {
 	PushMsg(ctx context.Context, in *PushMsgReq, opts ...grpc.CallOption) (*PushMsgResp, error)
 	DelUserPushToken(ctx context.Context, in *DelUserPushTokenReq, opts ...grpc.CallOption) (*DelUserPushTokenResp, error)
 }
 
-type pushMsgServiceClient struct {
+type iMPushMsgServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewPushMsgServiceClient(cc grpc.ClientConnInterface) PushMsgServiceClient {
-	return &pushMsgServiceClient{cc}
+func NewIMPushMsgServiceClient(cc grpc.ClientConnInterface) IMPushMsgServiceClient {
+	return &iMPushMsgServiceClient{cc}
 }
 
-func (c *pushMsgServiceClient) PushMsg(ctx context.Context, in *PushMsgReq, opts ...grpc.CallOption) (*PushMsgResp, error) {
+func (c *iMPushMsgServiceClient) PushMsg(ctx context.Context, in *PushMsgReq, opts ...grpc.CallOption) (*PushMsgResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(PushMsgResp)
-	err := c.cc.Invoke(ctx, PushMsgService_PushMsg_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMPushMsgService_PushMsg_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *pushMsgServiceClient) DelUserPushToken(ctx context.Context, in *DelUserPushTokenReq, opts ...grpc.CallOption) (*DelUserPushTokenResp, error) {
+func (c *iMPushMsgServiceClient) DelUserPushToken(ctx context.Context, in *DelUserPushTokenReq, opts ...grpc.CallOption) (*DelUserPushTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DelUserPushTokenResp)
-	err := c.cc.Invoke(ctx, PushMsgService_DelUserPushToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, IMPushMsgService_DelUserPushToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// PushMsgServiceServer is the server API for PushMsgService service.
-// All implementations must embed UnimplementedPushMsgServiceServer
+// IMPushMsgServiceServer is the server API for IMPushMsgService service.
+// All implementations must embed UnimplementedIMPushMsgServiceServer
 // for forward compatibility.
-type PushMsgServiceServer interface {
+type IMPushMsgServiceServer interface {
 	PushMsg(context.Context, *PushMsgReq) (*PushMsgResp, error)
 	DelUserPushToken(context.Context, *DelUserPushTokenReq) (*DelUserPushTokenResp, error)
-	mustEmbedUnimplementedPushMsgServiceServer()
+	mustEmbedUnimplementedIMPushMsgServiceServer()
 }
 
-// UnimplementedPushMsgServiceServer must be embedded to have
+// UnimplementedIMPushMsgServiceServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedPushMsgServiceServer struct{}
+type UnimplementedIMPushMsgServiceServer struct{}
 
-func (UnimplementedPushMsgServiceServer) PushMsg(context.Context, *PushMsgReq) (*PushMsgResp, error) {
+func (UnimplementedIMPushMsgServiceServer) PushMsg(context.Context, *PushMsgReq) (*PushMsgResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PushMsg not implemented")
 }
-func (UnimplementedPushMsgServiceServer) DelUserPushToken(context.Context, *DelUserPushTokenReq) (*DelUserPushTokenResp, error) {
+func (UnimplementedIMPushMsgServiceServer) DelUserPushToken(context.Context, *DelUserPushTokenReq) (*DelUserPushTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DelUserPushToken not implemented")
 }
-func (UnimplementedPushMsgServiceServer) mustEmbedUnimplementedPushMsgServiceServer() {}
-func (UnimplementedPushMsgServiceServer) testEmbeddedByValue()                        {}
+func (UnimplementedIMPushMsgServiceServer) mustEmbedUnimplementedIMPushMsgServiceServer() {}
+func (UnimplementedIMPushMsgServiceServer) testEmbeddedByValue()                          {}
 
-// UnsafePushMsgServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to PushMsgServiceServer will
+// UnsafeIMPushMsgServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to IMPushMsgServiceServer will
 // result in compilation errors.
-type UnsafePushMsgServiceServer interface {
-	mustEmbedUnimplementedPushMsgServiceServer()
+type UnsafeIMPushMsgServiceServer interface {
+	mustEmbedUnimplementedIMPushMsgServiceServer()
 }
 
-func RegisterPushMsgServiceServer(s grpc.ServiceRegistrar, srv PushMsgServiceServer) {
-	// If the following call pancis, it indicates UnimplementedPushMsgServiceServer was
+func RegisterIMPushMsgServiceServer(s grpc.ServiceRegistrar, srv IMPushMsgServiceServer) {
+	// If the following call pancis, it indicates UnimplementedIMPushMsgServiceServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&PushMsgService_ServiceDesc, srv)
+	s.RegisterService(&IMPushMsgService_ServiceDesc, srv)
 }
 
-func _PushMsgService_PushMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMPushMsgService_PushMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PushMsgReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PushMsgServiceServer).PushMsg(ctx, in)
+		return srv.(IMPushMsgServiceServer).PushMsg(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: PushMsgService_PushMsg_FullMethodName,
+		FullMethod: IMPushMsgService_PushMsg_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PushMsgServiceServer).PushMsg(ctx, req.(*PushMsgReq))
+		return srv.(IMPushMsgServiceServer).PushMsg(ctx, req.(*PushMsgReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PushMsgService_DelUserPushToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IMPushMsgService_DelUserPushToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DelUserPushTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PushMsgServiceServer).DelUserPushToken(ctx, in)
+		return srv.(IMPushMsgServiceServer).DelUserPushToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: PushMsgService_DelUserPushToken_FullMethodName,
+		FullMethod: IMPushMsgService_DelUserPushToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PushMsgServiceServer).DelUserPushToken(ctx, req.(*DelUserPushTokenReq))
+		return srv.(IMPushMsgServiceServer).DelUserPushToken(ctx, req.(*DelUserPushTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// PushMsgService_ServiceDesc is the grpc.ServiceDesc for PushMsgService service.
+// IMPushMsgService_ServiceDesc is the grpc.ServiceDesc for IMPushMsgService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var PushMsgService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.push.PushMsgService",
-	HandlerType: (*PushMsgServiceServer)(nil),
+var IMPushMsgService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.push.IMPushMsgService",
+	HandlerType: (*IMPushMsgServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "PushMsg",
-			Handler:    _PushMsgService_PushMsg_Handler,
+			Handler:    _IMPushMsgService_PushMsg_Handler,
 		},
 		{
 			MethodName: "DelUserPushToken",
-			Handler:    _PushMsgService_DelUserPushToken_Handler,
+			Handler:    _IMPushMsgService_DelUserPushToken_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

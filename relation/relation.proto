@@ -20,24 +20,24 @@ import "wrapperspb/wrapperspb.proto";
 
 option go_package = "github.com/openimsdk/protocol/relation";
 
-message getPaginationFriendsReq {
+message GetPaginationFriendsReq {
   openim.sdkws.RequestPagination pagination = 1;
   string userID = 2;
 }
-message getPaginationFriendsResp {
+message GetPaginationFriendsResp {
   repeated openim.sdkws.FriendInfo friendsInfo = 1;
   int32 total = 2;
 }
 
-message applyToAddFriendReq {
+message ApplyToAddFriendReq {
   string fromUserID = 1;
   string toUserID = 2;
   string reqMsg = 3;
   string ex = 4;
 }
-message applyToAddFriendResp {}
+message ApplyToAddFriendResp {}
 
-message friendInfo {
+message FriendInfo {
   string ownerUserID = 1;
   string friendUserID = 2;
   string friendNickname = 3;
@@ -50,187 +50,186 @@ message friendInfo {
   bool isPinned = 10;
 }
 
-message importFriendReq {
+message ImportFriendReq {
   string ownerUserID = 1;
   repeated string friendUserIDs = 2;
 }
 
-message importFriendResp {}
+message ImportFriendResp {}
 
-message getPaginationFriendsApplyToReq {
+message GetPaginationFriendsApplyToReq {
   string userID = 1;
   openim.sdkws.RequestPagination pagination = 2;
   repeated int32 handleResults = 3;
 }
-message getPaginationFriendsApplyToResp {
-  repeated openim.sdkws.FriendRequest FriendRequests = 1;
+message GetPaginationFriendsApplyToResp {
+  repeated openim.sdkws.FriendRequest friendRequests = 1;
   int32 total = 2;
 }
 
-message getDesignatedFriendsApplyReq {
+message GetDesignatedFriendsApplyReq {
   string fromUserID = 1;
   string toUserID = 2;
 }
 
-message getDesignatedFriendsApplyResp {
+message GetDesignatedFriendsApplyResp {
   repeated openim.sdkws.FriendRequest friendRequests = 1;
 }
 
-message getSelfUnhandledApplyCountReq {
+message GetSelfUnhandledApplyCountReq {
   string userID = 1;
   int64 time = 2;
 }
 
-message getSelfUnhandledApplyCountResp {
+message GetSelfUnhandledApplyCountResp {
   int64 count = 1;
 }
 
-message getIncrementalFriendsApplyToReq {
+message GetIncrementalFriendsApplyToReq {
   string userID = 1;
   string versionID = 2;
   uint64 version = 3;
 }
-message getIncrementalFriendsApplyToResp {
+message GetIncrementalFriendsApplyToResp {
   uint64 version = 1;
   string versionID = 2;
   bool full = 3;
-  repeated string deleteUserIds = 4;
+  repeated string delete_user_ids = 4; // 建议 snake_case，但原字段名是 deleteUserIds，可保留或改
   repeated openim.sdkws.FriendRequest changes = 5;
 }
 
-message getIncrementalFriendsApplyFromReq {
+message GetIncrementalFriendsApplyFromReq {
   string userID = 1;
   string versionID = 2;
   uint64 version = 3;
 }
-message getIncrementalFriendsApplyFromResp {
+message GetIncrementalFriendsApplyFromResp {
   uint64 version = 1;
   string versionID = 2;
   bool full = 3;
-  repeated string deleteUserIds = 4;
+  repeated string delete_user_ids = 4;
   repeated openim.sdkws.FriendRequest changes = 5;
 }
 
-message getDesignatedFriendsReq {
+message GetDesignatedFriendsReq {
   string ownerUserID = 1;
   repeated string friendUserIDs = 2;
 }
-message getDesignatedFriendsResp {
+message GetDesignatedFriendsResp {
   repeated openim.sdkws.FriendInfo friendsInfo = 1;
 }
 
-message addBlackReq {
+message AddBlackReq {
   string ownerUserID = 1;
   string blackUserID = 2;
   string ex = 3;
 }
-message addBlackResp {}
+message AddBlackResp {}
 
-message removeBlackReq {
+message RemoveBlackReq {
   string ownerUserID = 1;
   string blackUserID = 2;
 }
-message removeBlackResp {}
+message RemoveBlackResp {}
 
-message getPaginationBlacksReq {
+message GetPaginationBlacksReq {
   string userID = 1;
   openim.sdkws.RequestPagination pagination = 2;
 }
-message getPaginationBlacksResp {
+message GetPaginationBlacksResp {
   repeated openim.sdkws.BlackInfo blacks = 1;
   int32 total = 2;
 }
 
-message isFriendReq {
+message IsFriendReq {
   string userID1 = 1;
   string userID2 = 2;
 }
-message isFriendResp {
-  bool inUser1Friends = 1; // If userID2 is in userID1’s friend list, return true
-  bool inUser2Friends = 2; // If userID1 is in userID2’s friend list, return true
+message IsFriendResp {
+  bool inUser1Friends = 1;
+  bool inUser2Friends = 2;
 }
 
-message isBlackReq {
+message IsBlackReq {
   string userID1 = 1;
   string userID2 = 2;
 }
-message isBlackResp {
-  bool inUser1Blacks = 1; // If userID2 is in userID1's blacklist, true
-  bool inUser2Blacks = 2; // If userID1 is in userID2's blacklist, true
+message IsBlackResp {
+  bool inUser1Blacks = 1;
+  bool inUser2Blacks = 2;
 }
 
-message deleteFriendReq {
+message DeleteFriendReq {
   string ownerUserID = 1;
   string friendUserID = 2;
 }
-message deleteFriendResp {}
+message DeleteFriendResp {}
 
-// process
-message respondFriendApplyReq {
-  string fromUserID = 1; // ID of the user initiating the friend request
-  string toUserID = 2; // ID of the user receiving the friend request
+message RespondFriendApplyReq {
+  string fromUserID = 1;
+  string toUserID = 2;
   int32 handleResult = 3;
   string handleMsg = 4;
 }
 
-message respondFriendApplyResp {}
+message RespondFriendApplyResp {}
 
-message updateFriendsReq {
+message UpdateFriendsReq {
   string ownerUserID = 1;
   repeated string friendUserIDs = 2;
   openim.protobuf.BoolValue isPinned = 3;
   openim.protobuf.StringValue remark = 4;
   openim.protobuf.StringValue ex = 5;
 }
-message updateFriendsResp {}
+message UpdateFriendsResp {}
 
-message setFriendRemarkReq {
+message SetFriendRemarkReq {
   string ownerUserID = 1;
   string friendUserID = 2;
   string remark = 3;
 }
-message setFriendRemarkResp {}
+message SetFriendRemarkResp {}
 
-message getPaginationFriendsApplyFromReq {
+message GetPaginationFriendsApplyFromReq {
   string userID = 1;
   openim.sdkws.RequestPagination pagination = 2;
   repeated int32 handleResults = 3;
 }
-message getPaginationFriendsApplyFromResp {
+message GetPaginationFriendsApplyFromResp {
   repeated openim.sdkws.FriendRequest friendRequests = 1;
   int32 total = 2;
 }
 
-message getFriendIDsReq {
+message GetFriendIDsReq {
   string userID = 1;
 }
 
-message getFriendIDsResp {
+message GetFriendIDsResp {
   repeated string friendIDs = 1;
 }
 
-message getSpecifiedFriendsInfoReq {
+message GetSpecifiedFriendsInfoReq {
   string ownerUserID = 1;
   repeated string userIDList = 2;
 }
 
-message getSpecifiedFriendsInfoInfo {
+message GetSpecifiedFriendsInfoInfo {
   openim.sdkws.UserInfo userInfo = 1;
   openim.sdkws.FriendInfo friendInfo = 2;
   openim.sdkws.BlackInfo blackInfo = 3;
 }
 
-message getSpecifiedFriendsInfoResp {
-  repeated getSpecifiedFriendsInfoInfo infos = 1;
+message GetSpecifiedFriendsInfoResp {
+  repeated GetSpecifiedFriendsInfoInfo infos = 1;
 }
 
-message getIncrementalFriendsReq {
+message GetIncrementalFriendsReq {
   string userID = 1;
   string versionID = 2;
   uint64 version = 3;
 }
 
-message getIncrementalFriendsResp {
+message GetIncrementalFriendsResp {
   uint64 version = 1;
   string versionID = 2;
   bool full = 3;
@@ -240,12 +239,12 @@ message getIncrementalFriendsResp {
   uint64 sortVersion = 7;
 }
 
-message getIncrementalBlacksReq {
+message GetIncrementalBlacksReq {
   string userID = 1;
   string versionID = 2;
   uint64 version = 3;
 }
-message getIncrementalBlacksResp {
+message GetIncrementalBlacksResp {
   uint64 version = 1;
   string versionID = 2;
   bool full = 3;
@@ -264,25 +263,25 @@ message GetSpecifiedBlacksResp {
   int32 total = 2;
 }
 
-message getFullFriendUserIDsReq {
+message GetFullFriendUserIDsReq {
   uint64 idHash = 1;
   string userID = 2;
 }
 
-message getFullFriendUserIDsResp {
+message GetFullFriendUserIDsResp {
   uint64 version = 1;
   string versionID = 2;
   bool equal = 3;
   repeated string userIDs = 4;
 }
 
-message notificationUserInfoUpdateReq {
+message NotificationUserInfoUpdateReq {
   string userID = 1;
   openim.sdkws.UserInfo oldUserInfo = 2;
   openim.sdkws.UserInfo newUserInfo = 3;
 }
 
-message notificationUserInfoUpdateResp {}
+message NotificationUserInfoUpdateResp {}
 
 message FriendInfoOnly {
   string ownerUserID = 1;
@@ -295,68 +294,41 @@ message FriendInfoOnly {
   bool isPinned = 8;
 }
 
-message getFriendInfoReq {
+message GetFriendInfoReq {
   string ownerUserID = 1;
   repeated string friendUserIDs = 2;
 }
 
-message getFriendInfoResp {
+message GetFriendInfoResp {
   repeated FriendInfoOnly friendInfos = 1;
 }
 
-service friend {
-  // Friend request
-  rpc applyToAddFriend(applyToAddFriendReq) returns (applyToAddFriendResp);
-  // Get friend request list
-  rpc getPaginationFriendsApplyTo(getPaginationFriendsApplyToReq) returns (getPaginationFriendsApplyToResp);
-  // Get sent friend request list
-  rpc getPaginationFriendsApplyFrom(getPaginationFriendsApplyFromReq) returns (getPaginationFriendsApplyFromResp);
-  // Get unhandled friend request count
-  rpc getSelfUnhandledApplyCount(getSelfUnhandledApplyCountReq) returns (getSelfUnhandledApplyCountResp);
-  // Get specified friend request
-  rpc getDesignatedFriendsApply(getDesignatedFriendsApplyReq) returns (getDesignatedFriendsApplyResp);
-  // Get Incremental friends apply to list
-  rpc getIncrementalFriendsApplyTo(getIncrementalFriendsApplyToReq) returns (getIncrementalFriendsApplyToResp);
-  // Get Incremental friends apply from list
-  rpc getIncrementalFriendsApplyFrom(getIncrementalFriendsApplyFromReq) returns (getIncrementalFriendsApplyFromResp);
-  // Add black user
-  rpc addBlack(addBlackReq) returns (addBlackResp);
-  // Remove black user
-  rpc removeBlack(removeBlackReq) returns (removeBlackResp);
-  // Check user is in friends list
-  rpc isFriend(isFriendReq) returns (isFriendResp);
-  // Check user is blacklist
-  rpc isBlack(isBlackReq) returns (isBlackResp);
-  // Get blacklist
-  rpc getPaginationBlacks(getPaginationBlacksReq) returns (getPaginationBlacksResp);
-  // Get specified blacklist
+service FriendService {  // 建议 service 也 PascalCase + Service 后缀
+  rpc ApplyToAddFriend(ApplyToAddFriendReq) returns (ApplyToAddFriendResp);
+  rpc GetPaginationFriendsApplyTo(GetPaginationFriendsApplyToReq) returns (GetPaginationFriendsApplyToResp);
+  rpc GetPaginationFriendsApplyFrom(GetPaginationFriendsApplyFromReq) returns (GetPaginationFriendsApplyFromResp);
+  rpc GetSelfUnhandledApplyCount(GetSelfUnhandledApplyCountReq) returns (GetSelfUnhandledApplyCountResp);
+  rpc GetDesignatedFriendsApply(GetDesignatedFriendsApplyReq) returns (GetDesignatedFriendsApplyResp);
+  rpc GetIncrementalFriendsApplyTo(GetIncrementalFriendsApplyToReq) returns (GetIncrementalFriendsApplyToResp);
+  rpc GetIncrementalFriendsApplyFrom(GetIncrementalFriendsApplyFromReq) returns (GetIncrementalFriendsApplyFromResp);
+  rpc AddBlack(AddBlackReq) returns (AddBlackResp);
+  rpc RemoveBlack(RemoveBlackReq) returns (RemoveBlackResp);
+  rpc IsFriend(IsFriendReq) returns (IsFriendResp);
+  rpc IsBlack(IsBlackReq) returns (IsBlackResp);
+  rpc GetPaginationBlacks(GetPaginationBlacksReq) returns (GetPaginationBlacksResp);
   rpc GetSpecifiedBlacks(GetSpecifiedBlacksReq) returns (GetSpecifiedBlacksResp);
-  // Delete friend
-  rpc deleteFriend(deleteFriendReq) returns (deleteFriendResp);
-  // Respond to friend request (Accept or Decline)
-  rpc respondFriendApply(respondFriendApplyReq) returns (respondFriendApplyResp);
-  //Favorited friend
-  rpc updateFriends(updateFriendsReq) returns (updateFriendsResp);
-  // Set friend nickname
-  rpc setFriendRemark(setFriendRemarkReq) returns (setFriendRemarkResp);
-  // Import friends relationship
-  rpc importFriends(importFriendReq) returns (importFriendResp);
-  // Paginate and retrieve friend list; do not return error if no results.
-  rpc getDesignatedFriends(getDesignatedFriendsReq) returns (getDesignatedFriendsResp);
-  // Get specified friend's information; return error if ID does not exist.
-  rpc getPaginationFriends(getPaginationFriendsReq) returns (getPaginationFriendsResp);
-  // Get friend IDs list
-  rpc getFriendIDs(getFriendIDsReq) returns (getFriendIDsResp);
-  // Get specified friends info
-  rpc GetSpecifiedFriendsInfo(getSpecifiedFriendsInfoReq) returns (getSpecifiedFriendsInfoResp);
-
-  rpc getIncrementalFriends(getIncrementalFriendsReq) returns (getIncrementalFriendsResp);
-  // Get Incremental blackslist
-  rpc getIncrementalBlacks(getIncrementalBlacksReq) returns (getIncrementalBlacksResp);
-  // Get full friend userIDs
-  rpc getFullFriendUserIDs(getFullFriendUserIDsReq) returns (getFullFriendUserIDsResp);
-
-  rpc NotificationUserInfoUpdate(notificationUserInfoUpdateReq) returns (notificationUserInfoUpdateResp);
-
-  rpc getFriendInfo(getFriendInfoReq) returns (getFriendInfoResp);
+  rpc DeleteFriend(DeleteFriendReq) returns (DeleteFriendResp);
+  rpc RespondFriendApply(RespondFriendApplyReq) returns (RespondFriendApplyResp);
+  rpc UpdateFriends(UpdateFriendsReq) returns (UpdateFriendsResp);
+  rpc SetFriendRemark(SetFriendRemarkReq) returns (SetFriendRemarkResp);
+  rpc ImportFriends(ImportFriendReq) returns (ImportFriendResp);
+  rpc GetDesignatedFriends(GetDesignatedFriendsReq) returns (GetDesignatedFriendsResp);
+  rpc GetPaginationFriends(GetPaginationFriendsReq) returns (GetPaginationFriendsResp);
+  rpc GetFriendIDs(GetFriendIDsReq) returns (GetFriendIDsResp);
+  rpc GetSpecifiedFriendsInfo(GetSpecifiedFriendsInfoReq) returns (GetSpecifiedFriendsInfoResp);
+  rpc GetIncrementalFriends(GetIncrementalFriendsReq) returns (GetIncrementalFriendsResp);
+  rpc GetIncrementalBlacks(GetIncrementalBlacksReq) returns (GetIncrementalBlacksResp);
+  rpc GetFullFriendUserIDs(GetFullFriendUserIDsReq) returns (GetFullFriendUserIDsResp);
+  rpc NotificationUserInfoUpdate(NotificationUserInfoUpdateReq) returns (NotificationUserInfoUpdateResp);
+  rpc GetFriendInfo(GetFriendInfoReq) returns (GetFriendInfoResp);
 }

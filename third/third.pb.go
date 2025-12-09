@@ -2191,8 +2191,8 @@ const file_third_third_proto_rawDesc = "" +
 	" \x01(\tR\aversion\"[\n" +
 	"\x0eSearchLogsResp\x123\n" +
 	"\tlogsInfos\x18\x01 \x03(\v2\x15.openim.third.LogInfoR\tlogsInfos\x12\x14\n" +
-	"\x05total\x18\x02 \x01(\rR\x05total2\x8c\t\n" +
-	"\x05third\x12D\n" +
+	"\x05total\x18\x02 \x01(\rR\x05total2\x95\t\n" +
+	"\x0eIMThirdService\x12D\n" +
 	"\tPartLimit\x12\x1a.openim.third.PartLimitReq\x1a\x1b.openim.third.PartLimitResp\x12A\n" +
 	"\bPartSize\x12\x19.openim.third.PartSizeReq\x1a\x1a.openim.third.PartSizeResp\x12n\n" +
 	"\x17InitiateMultipartUpload\x12(.openim.third.InitiateMultipartUploadReq\x1a).openim.third.InitiateMultipartUploadResp\x12A\n" +
@@ -2280,34 +2280,34 @@ var file_third_third_proto_depIdxs = []int32{
 	26, // 13: openim.third.UploadLogsReq.fileURLs:type_name -> openim.third.fileURL
 	36, // 14: openim.third.SearchLogsReq.pagination:type_name -> openim.sdkws.RequestPagination
 	32, // 15: openim.third.SearchLogsResp.logsInfos:type_name -> openim.third.LogInfo
-	3,  // 16: openim.third.third.PartLimit:input_type -> openim.third.PartLimitReq
-	5,  // 17: openim.third.third.PartSize:input_type -> openim.third.PartSizeReq
-	7,  // 18: openim.third.third.InitiateMultipartUpload:input_type -> openim.third.InitiateMultipartUploadReq
-	10, // 19: openim.third.third.AuthSign:input_type -> openim.third.AuthSignReq
-	12, // 20: openim.third.third.CompleteMultipartUpload:input_type -> openim.third.CompleteMultipartUploadReq
-	14, // 21: openim.third.third.AccessURL:input_type -> openim.third.AccessURLReq
-	16, // 22: openim.third.third.InitiateFormData:input_type -> openim.third.InitiateFormDataReq
-	18, // 23: openim.third.third.CompleteFormData:input_type -> openim.third.CompleteFormDataReq
-	20, // 24: openim.third.third.DeleteOutdatedData:input_type -> openim.third.DeleteOutdatedDataReq
-	22, // 25: openim.third.third.FcmUpdateToken:input_type -> openim.third.FcmUpdateTokenReq
-	24, // 26: openim.third.third.SetAppBadge:input_type -> openim.third.SetAppBadgeReq
-	27, // 27: openim.third.third.UploadLogs:input_type -> openim.third.UploadLogsReq
-	29, // 28: openim.third.third.DeleteLogs:input_type -> openim.third.DeleteLogsReq
-	31, // 29: openim.third.third.SearchLogs:input_type -> openim.third.SearchLogsReq
-	4,  // 30: openim.third.third.PartLimit:output_type -> openim.third.PartLimitResp
-	6,  // 31: openim.third.third.PartSize:output_type -> openim.third.PartSizeResp
-	9,  // 32: openim.third.third.InitiateMultipartUpload:output_type -> openim.third.InitiateMultipartUploadResp
-	11, // 33: openim.third.third.AuthSign:output_type -> openim.third.AuthSignResp
-	13, // 34: openim.third.third.CompleteMultipartUpload:output_type -> openim.third.CompleteMultipartUploadResp
-	15, // 35: openim.third.third.AccessURL:output_type -> openim.third.AccessURLResp
-	17, // 36: openim.third.third.InitiateFormData:output_type -> openim.third.InitiateFormDataResp
-	19, // 37: openim.third.third.CompleteFormData:output_type -> openim.third.CompleteFormDataResp
-	21, // 38: openim.third.third.DeleteOutdatedData:output_type -> openim.third.DeleteOutdatedDataResp
-	23, // 39: openim.third.third.FcmUpdateToken:output_type -> openim.third.FcmUpdateTokenResp
-	25, // 40: openim.third.third.SetAppBadge:output_type -> openim.third.SetAppBadgeResp
-	28, // 41: openim.third.third.UploadLogs:output_type -> openim.third.UploadLogsResp
-	30, // 42: openim.third.third.DeleteLogs:output_type -> openim.third.DeleteLogsResp
-	33, // 43: openim.third.third.SearchLogs:output_type -> openim.third.SearchLogsResp
+	3,  // 16: openim.third.IMThirdService.PartLimit:input_type -> openim.third.PartLimitReq
+	5,  // 17: openim.third.IMThirdService.PartSize:input_type -> openim.third.PartSizeReq
+	7,  // 18: openim.third.IMThirdService.InitiateMultipartUpload:input_type -> openim.third.InitiateMultipartUploadReq
+	10, // 19: openim.third.IMThirdService.AuthSign:input_type -> openim.third.AuthSignReq
+	12, // 20: openim.third.IMThirdService.CompleteMultipartUpload:input_type -> openim.third.CompleteMultipartUploadReq
+	14, // 21: openim.third.IMThirdService.AccessURL:input_type -> openim.third.AccessURLReq
+	16, // 22: openim.third.IMThirdService.InitiateFormData:input_type -> openim.third.InitiateFormDataReq
+	18, // 23: openim.third.IMThirdService.CompleteFormData:input_type -> openim.third.CompleteFormDataReq
+	20, // 24: openim.third.IMThirdService.DeleteOutdatedData:input_type -> openim.third.DeleteOutdatedDataReq
+	22, // 25: openim.third.IMThirdService.FcmUpdateToken:input_type -> openim.third.FcmUpdateTokenReq
+	24, // 26: openim.third.IMThirdService.SetAppBadge:input_type -> openim.third.SetAppBadgeReq
+	27, // 27: openim.third.IMThirdService.UploadLogs:input_type -> openim.third.UploadLogsReq
+	29, // 28: openim.third.IMThirdService.DeleteLogs:input_type -> openim.third.DeleteLogsReq
+	31, // 29: openim.third.IMThirdService.SearchLogs:input_type -> openim.third.SearchLogsReq
+	4,  // 30: openim.third.IMThirdService.PartLimit:output_type -> openim.third.PartLimitResp
+	6,  // 31: openim.third.IMThirdService.PartSize:output_type -> openim.third.PartSizeResp
+	9,  // 32: openim.third.IMThirdService.InitiateMultipartUpload:output_type -> openim.third.InitiateMultipartUploadResp
+	11, // 33: openim.third.IMThirdService.AuthSign:output_type -> openim.third.AuthSignResp
+	13, // 34: openim.third.IMThirdService.CompleteMultipartUpload:output_type -> openim.third.CompleteMultipartUploadResp
+	15, // 35: openim.third.IMThirdService.AccessURL:output_type -> openim.third.AccessURLResp
+	17, // 36: openim.third.IMThirdService.InitiateFormData:output_type -> openim.third.InitiateFormDataResp
+	19, // 37: openim.third.IMThirdService.CompleteFormData:output_type -> openim.third.CompleteFormDataResp
+	21, // 38: openim.third.IMThirdService.DeleteOutdatedData:output_type -> openim.third.DeleteOutdatedDataResp
+	23, // 39: openim.third.IMThirdService.FcmUpdateToken:output_type -> openim.third.FcmUpdateTokenResp
+	25, // 40: openim.third.IMThirdService.SetAppBadge:output_type -> openim.third.SetAppBadgeResp
+	28, // 41: openim.third.IMThirdService.UploadLogs:output_type -> openim.third.UploadLogsResp
+	30, // 42: openim.third.IMThirdService.DeleteLogs:output_type -> openim.third.DeleteLogsResp
+	33, // 43: openim.third.IMThirdService.SearchLogs:output_type -> openim.third.SearchLogsResp
 	30, // [30:44] is the sub-list for method output_type
 	16, // [16:30] is the sub-list for method input_type
 	16, // [16:16] is the sub-list for extension type_name

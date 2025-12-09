@@ -212,7 +212,7 @@ message SearchLogsResp {
   uint32 total = 2;
 }
 
-service third {
+service IMThirdService {
   rpc PartLimit(PartLimitReq) returns (PartLimitResp);
   rpc PartSize(PartSizeReq) returns (PartSizeResp);
   rpc InitiateMultipartUpload(InitiateMultipartUploadReq) returns (InitiateMultipartUploadResp);

@@ -236,8 +236,8 @@ const file_push_push_proto_rawDesc = "" +
 	"\n" +
 	"platformID\x18\x02 \x01(\x05R\n" +
 	"platformID\"\x16\n" +
-	"\x14DelUserPushTokenResp2\xa7\x01\n" +
-	"\x0ePushMsgService\x12<\n" +
+	"\x14DelUserPushTokenResp2\xa9\x01\n" +
+	"\x10IMPushMsgService\x12<\n" +
 	"\aPushMsg\x12\x17.openim.push.PushMsgReq\x1a\x18.openim.push.PushMsgResp\x12W\n" +
 	"\x10DelUserPushToken\x12 .openim.push.DelUserPushTokenReq\x1a!.openim.push.DelUserPushTokenRespB$Z\"github.com/openimsdk/protocol/pushb\x06proto3"
 
@@ -263,10 +263,10 @@ var file_push_push_proto_goTypes = []any{
 }
 var file_push_push_proto_depIdxs = []int32{
 	4, // 0: openim.push.PushMsgReq.msgData:type_name -> openim.sdkws.MsgData
-	0, // 1: openim.push.PushMsgService.PushMsg:input_type -> openim.push.PushMsgReq
-	2, // 2: openim.push.PushMsgService.DelUserPushToken:input_type -> openim.push.DelUserPushTokenReq
-	1, // 3: openim.push.PushMsgService.PushMsg:output_type -> openim.push.PushMsgResp
-	3, // 4: openim.push.PushMsgService.DelUserPushToken:output_type -> openim.push.DelUserPushTokenResp
+	0, // 1: openim.push.IMPushMsgService.PushMsg:input_type -> openim.push.PushMsgReq
+	2, // 2: openim.push.IMPushMsgService.DelUserPushToken:input_type -> openim.push.DelUserPushTokenReq
+	1, // 3: openim.push.IMPushMsgService.PushMsg:output_type -> openim.push.PushMsgResp
+	3, // 4: openim.push.IMPushMsgService.DelUserPushToken:output_type -> openim.push.DelUserPushTokenResp
 	3, // [3:5] is the sub-list for method output_type
 	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
