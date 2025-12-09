@@ -559,10 +559,10 @@ func (*SetGlobalRecvMessageOptResp) Descriptor() ([]byte, []int) {
 }
 
 type SetConversationReq struct {
-	state            protoimpl.MessageState     `protogen:"open.v1"`
-	Conversation     *conversation.Conversation `protobuf:"bytes,1,opt,name=conversation,proto3" json:"conversation"`
-	NotificationType int32                      `protobuf:"varint,2,opt,name=notificationType,proto3" json:"notificationType"`
-	OperationID      string                     `protobuf:"bytes,3,opt,name=operationID,proto3" json:"operationID"`
+	state            protoimpl.MessageState          `protogen:"open.v1"`
+	Conversation     *conversation.ConversationModel `protobuf:"bytes,1,opt,name=conversation,proto3" json:"conversation"`
+	NotificationType int32                           `protobuf:"varint,2,opt,name=notificationType,proto3" json:"notificationType"`
+	OperationID      string                          `protobuf:"bytes,3,opt,name=operationID,proto3" json:"operationID"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -597,7 +597,7 @@ func (*SetConversationReq) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{12}
 }
 
-func (x *SetConversationReq) GetConversation() *conversation.Conversation {
+func (x *SetConversationReq) GetConversation() *conversation.ConversationModel {
 	if x != nil {
 		return x.Conversation
 	}
@@ -827,8 +827,8 @@ func (x *GetConversationReq) GetOperationID() string {
 }
 
 type GetConversationResp struct {
-	state         protoimpl.MessageState     `protogen:"open.v1"`
-	Conversation  *conversation.Conversation `protobuf:"bytes,2,opt,name=conversation,proto3" json:"conversation"`
+	state         protoimpl.MessageState          `protogen:"open.v1"`
+	Conversation  *conversation.ConversationModel `protobuf:"bytes,2,opt,name=conversation,proto3" json:"conversation"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -863,7 +863,7 @@ func (*GetConversationResp) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{17}
 }
 
-func (x *GetConversationResp) GetConversation() *conversation.Conversation {
+func (x *GetConversationResp) GetConversation() *conversation.ConversationModel {
 	if x != nil {
 		return x.Conversation
 	}
@@ -931,8 +931,8 @@ func (x *GetConversationsReq) GetOperationID() string {
 }
 
 type GetConversationsResp struct {
-	state         protoimpl.MessageState       `protogen:"open.v1"`
-	Conversations []*conversation.Conversation `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
+	state         protoimpl.MessageState            `protogen:"open.v1"`
+	Conversations []*conversation.ConversationModel `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -967,7 +967,7 @@ func (*GetConversationsResp) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{19}
 }
 
-func (x *GetConversationsResp) GetConversations() []*conversation.Conversation {
+func (x *GetConversationsResp) GetConversations() []*conversation.ConversationModel {
 	if x != nil {
 		return x.Conversations
 	}
@@ -1027,8 +1027,8 @@ func (x *GetAllConversationsReq) GetOperationID() string {
 }
 
 type GetAllConversationsResp struct {
-	state         protoimpl.MessageState       `protogen:"open.v1"`
-	Conversations []*conversation.Conversation `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
+	state         protoimpl.MessageState            `protogen:"open.v1"`
+	Conversations []*conversation.ConversationModel `protobuf:"bytes,2,rep,name=conversations,proto3" json:"conversations"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1063,7 +1063,7 @@ func (*GetAllConversationsResp) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{21}
 }
 
-func (x *GetAllConversationsResp) GetConversations() []*conversation.Conversation {
+func (x *GetAllConversationsResp) GetConversations() []*conversation.ConversationModel {
 	if x != nil {
 		return x.Conversations
 	}
@@ -1071,11 +1071,11 @@ func (x *GetAllConversationsResp) GetConversations() []*conversation.Conversatio
 }
 
 type BatchSetConversationsReq struct {
-	state            protoimpl.MessageState       `protogen:"open.v1"`
-	Conversations    []*conversation.Conversation `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
-	OwnerUserID      string                       `protobuf:"bytes,2,opt,name=OwnerUserID,proto3" json:"OwnerUserID"`
-	NotificationType int32                        `protobuf:"varint,3,opt,name=notificationType,proto3" json:"notificationType"`
-	OperationID      string                       `protobuf:"bytes,4,opt,name=OperationID,proto3" json:"OperationID"`
+	state            protoimpl.MessageState            `protogen:"open.v1"`
+	Conversations    []*conversation.ConversationModel `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
+	OwnerUserID      string                            `protobuf:"bytes,2,opt,name=OwnerUserID,proto3" json:"OwnerUserID"`
+	NotificationType int32                             `protobuf:"varint,3,opt,name=notificationType,proto3" json:"notificationType"`
+	OperationID      string                            `protobuf:"bytes,4,opt,name=OperationID,proto3" json:"OperationID"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -1110,7 +1110,7 @@ func (*BatchSetConversationsReq) Descriptor() ([]byte, []int) {
 	return file_user_user_proto_rawDescGZIP(), []int{22}
 }
 
-func (x *BatchSetConversationsReq) GetConversations() []*conversation.Conversation {
+func (x *BatchSetConversationsReq) GetConversations() []*conversation.ConversationModel {
 	if x != nil {
 		return x.Conversations
 	}
@@ -4146,9 +4146,9 @@ const file_user_user_proto_rawDesc = "" +
 	"\x1asetGlobalRecvMessageOptReq\x12\x16\n" +
 	"\x06userID\x18\x01 \x01(\tR\x06userID\x12*\n" +
 	"\x10globalRecvMsgOpt\x18\x03 \x01(\x05R\x10globalRecvMsgOpt\"\x1d\n" +
-	"\x1bsetGlobalRecvMessageOptResp\"\xa9\x01\n" +
-	"\x12setConversationReq\x12E\n" +
-	"\fconversation\x18\x01 \x01(\v2!.openim.conversation.ConversationR\fconversation\x12*\n" +
+	"\x1bsetGlobalRecvMessageOptResp\"\xae\x01\n" +
+	"\x12setConversationReq\x12J\n" +
+	"\fconversation\x18\x01 \x01(\v2&.openim.conversation.ConversationModelR\fconversation\x12*\n" +
 	"\x10notificationType\x18\x02 \x01(\x05R\x10notificationType\x12 \n" +
 	"\voperationID\x18\x03 \x01(\tR\voperationID\"\x15\n" +
 	"\x13setConversationResp\"\xca\x01\n" +
@@ -4164,22 +4164,22 @@ const file_user_user_proto_rawDesc = "" +
 	"\x12getConversationReq\x12&\n" +
 	"\x0econversationID\x18\x01 \x01(\tR\x0econversationID\x12 \n" +
 	"\vownerUserID\x18\x02 \x01(\tR\vownerUserID\x12 \n" +
-	"\voperationID\x18\x03 \x01(\tR\voperationID\"\\\n" +
-	"\x13getConversationResp\x12E\n" +
-	"\fconversation\x18\x02 \x01(\v2!.openim.conversation.ConversationR\fconversation\"\x83\x01\n" +
+	"\voperationID\x18\x03 \x01(\tR\voperationID\"a\n" +
+	"\x13getConversationResp\x12J\n" +
+	"\fconversation\x18\x02 \x01(\v2&.openim.conversation.ConversationModelR\fconversation\"\x83\x01\n" +
 	"\x13getConversationsReq\x12 \n" +
 	"\vownerUserID\x18\x01 \x01(\tR\vownerUserID\x12(\n" +
 	"\x0fconversationIDs\x18\x02 \x03(\tR\x0fconversationIDs\x12 \n" +
-	"\voperationID\x18\x03 \x01(\tR\voperationID\"_\n" +
-	"\x14getConversationsResp\x12G\n" +
-	"\rconversations\x18\x02 \x03(\v2!.openim.conversation.ConversationR\rconversations\"\\\n" +
+	"\voperationID\x18\x03 \x01(\tR\voperationID\"d\n" +
+	"\x14getConversationsResp\x12L\n" +
+	"\rconversations\x18\x02 \x03(\v2&.openim.conversation.ConversationModelR\rconversations\"\\\n" +
 	"\x16getAllConversationsReq\x12 \n" +
 	"\vownerUserID\x18\x01 \x01(\tR\vownerUserID\x12 \n" +
-	"\voperationID\x18\x02 \x01(\tR\voperationID\"b\n" +
-	"\x17getAllConversationsResp\x12G\n" +
-	"\rconversations\x18\x02 \x03(\v2!.openim.conversation.ConversationR\rconversations\"\xd3\x01\n" +
-	"\x18batchSetConversationsReq\x12G\n" +
-	"\rconversations\x18\x01 \x03(\v2!.openim.conversation.ConversationR\rconversations\x12 \n" +
+	"\voperationID\x18\x02 \x01(\tR\voperationID\"g\n" +
+	"\x17getAllConversationsResp\x12L\n" +
+	"\rconversations\x18\x02 \x03(\v2&.openim.conversation.ConversationModelR\rconversations\"\xd8\x01\n" +
+	"\x18batchSetConversationsReq\x12L\n" +
+	"\rconversations\x18\x01 \x03(\v2&.openim.conversation.ConversationModelR\rconversations\x12 \n" +
 	"\vOwnerUserID\x18\x02 \x01(\tR\vOwnerUserID\x12*\n" +
 	"\x10notificationType\x18\x03 \x01(\x05R\x10notificationType\x12 \n" +
 	"\vOperationID\x18\x04 \x01(\tR\vOperationID\"M\n" +
@@ -4523,7 +4523,7 @@ var file_user_user_proto_goTypes = []any{
 	(*sdkws.RequestPagination)(nil),           // 85: openim.sdkws.RequestPagination
 	(*sdkws.UserInfo)(nil),                    // 86: openim.sdkws.UserInfo
 	(*sdkws.UserInfoWithEx)(nil),              // 87: openim.sdkws.UserInfoWithEx
-	(*conversation.Conversation)(nil),         // 88: openim.conversation.Conversation
+	(*conversation.ConversationModel)(nil),    // 88: openim.conversation.ConversationModel
 	(*wrapperspb.StringValue)(nil),            // 89: openim.protobuf.StringValue
 }
 var file_user_user_proto_depIdxs = []int32{
@@ -4532,11 +4532,11 @@ var file_user_user_proto_depIdxs = []int32{
 	86, // 2: openim.user.getDesignateUsersResp.usersInfo:type_name -> openim.sdkws.UserInfo
 	86, // 3: openim.user.updateUserInfoReq.userInfo:type_name -> openim.sdkws.UserInfo
 	87, // 4: openim.user.updateUserInfoExReq.userInfo:type_name -> openim.sdkws.UserInfoWithEx
-	88, // 5: openim.user.setConversationReq.conversation:type_name -> openim.conversation.Conversation
-	88, // 6: openim.user.getConversationResp.conversation:type_name -> openim.conversation.Conversation
-	88, // 7: openim.user.getConversationsResp.conversations:type_name -> openim.conversation.Conversation
-	88, // 8: openim.user.getAllConversationsResp.conversations:type_name -> openim.conversation.Conversation
-	88, // 9: openim.user.batchSetConversationsReq.conversations:type_name -> openim.conversation.Conversation
+	88, // 5: openim.user.setConversationReq.conversation:type_name -> openim.conversation.ConversationModel
+	88, // 6: openim.user.getConversationResp.conversation:type_name -> openim.conversation.ConversationModel
+	88, // 7: openim.user.getConversationsResp.conversations:type_name -> openim.conversation.ConversationModel
+	88, // 8: openim.user.getAllConversationsResp.conversations:type_name -> openim.conversation.ConversationModel
+	88, // 9: openim.user.batchSetConversationsReq.conversations:type_name -> openim.conversation.ConversationModel
 	85, // 10: openim.user.getPaginationUsersReq.pagination:type_name -> openim.sdkws.RequestPagination
 	86, // 11: openim.user.getPaginationUsersResp.users:type_name -> openim.sdkws.UserInfo
 	86, // 12: openim.user.userRegisterReq.users:type_name -> openim.sdkws.UserInfo

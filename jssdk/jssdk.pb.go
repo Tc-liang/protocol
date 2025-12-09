@@ -39,14 +39,14 @@ const (
 )
 
 type ConversationMsg struct {
-	state         protoimpl.MessageState     `protogen:"open.v1"`
-	Conversation  *conversation.Conversation `protobuf:"bytes,1,opt,name=conversation,proto3" json:"conversation"`
-	LastMsg       *sdkws.MsgData             `protobuf:"bytes,2,opt,name=lastMsg,proto3" json:"lastMsg"`
-	User          *sdkws.UserInfo            `protobuf:"bytes,3,opt,name=user,proto3" json:"user"`
-	Friend        *relation.FriendInfoOnly   `protobuf:"bytes,4,opt,name=friend,proto3" json:"friend"`
-	Group         *sdkws.GroupInfo           `protobuf:"bytes,5,opt,name=group,proto3" json:"group"`
-	MaxSeq        int64                      `protobuf:"varint,6,opt,name=maxSeq,proto3" json:"maxSeq"`
-	ReadSeq       int64                      `protobuf:"varint,7,opt,name=readSeq,proto3" json:"readSeq"`
+	state         protoimpl.MessageState          `protogen:"open.v1"`
+	Conversation  *conversation.ConversationModel `protobuf:"bytes,1,opt,name=conversation,proto3" json:"conversation"`
+	LastMsg       *sdkws.MsgData                  `protobuf:"bytes,2,opt,name=lastMsg,proto3" json:"lastMsg"`
+	User          *sdkws.UserInfo                 `protobuf:"bytes,3,opt,name=user,proto3" json:"user"`
+	Friend        *relation.FriendInfoOnly        `protobuf:"bytes,4,opt,name=friend,proto3" json:"friend"`
+	Group         *sdkws.GroupInfo                `protobuf:"bytes,5,opt,name=group,proto3" json:"group"`
+	MaxSeq        int64                           `protobuf:"varint,6,opt,name=maxSeq,proto3" json:"maxSeq"`
+	ReadSeq       int64                           `protobuf:"varint,7,opt,name=readSeq,proto3" json:"readSeq"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -81,7 +81,7 @@ func (*ConversationMsg) Descriptor() ([]byte, []int) {
 	return file_jssdk_jssdk_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *ConversationMsg) GetConversation() *conversation.Conversation {
+func (x *ConversationMsg) GetConversation() *conversation.ConversationModel {
 	if x != nil {
 		return x.Conversation
 	}
@@ -342,9 +342,9 @@ var File_jssdk_jssdk_proto protoreflect.FileDescriptor
 
 const file_jssdk_jssdk_proto_rawDesc = "" +
 	"\n" +
-	"\x11jssdk/jssdk.proto\x12\fopenim.jssdk\x1a\x11sdkws/sdkws.proto\x1a\x17relation/relation.proto\x1a\x1fconversation/conversation.proto\"\xcf\x02\n" +
-	"\x0fConversationMsg\x12E\n" +
-	"\fconversation\x18\x01 \x01(\v2!.openim.conversation.ConversationR\fconversation\x12/\n" +
+	"\x11jssdk/jssdk.proto\x12\fopenim.jssdk\x1a\x11sdkws/sdkws.proto\x1a\x17relation/relation.proto\x1a\x1fconversation/conversation.proto\"\xd4\x02\n" +
+	"\x0fConversationMsg\x12J\n" +
+	"\fconversation\x18\x01 \x01(\v2&.openim.conversation.ConversationModelR\fconversation\x12/\n" +
 	"\alastMsg\x18\x02 \x01(\v2\x15.openim.sdkws.MsgDataR\alastMsg\x12*\n" +
 	"\x04user\x18\x03 \x01(\v2\x16.openim.sdkws.UserInfoR\x04user\x127\n" +
 	"\x06friend\x18\x04 \x01(\v2\x1f.openim.relation.FriendInfoOnlyR\x06friend\x12-\n" +
@@ -378,19 +378,19 @@ func file_jssdk_jssdk_proto_rawDescGZIP() []byte {
 
 var file_jssdk_jssdk_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_jssdk_jssdk_proto_goTypes = []any{
-	(*ConversationMsg)(nil),            // 0: openim.jssdk.ConversationMsg
-	(*GetActiveConversationsReq)(nil),  // 1: openim.jssdk.GetActiveConversationsReq
-	(*GetActiveConversationsResp)(nil), // 2: openim.jssdk.GetActiveConversationsResp
-	(*GetConversationsReq)(nil),        // 3: openim.jssdk.GetConversationsReq
-	(*GetConversationsResp)(nil),       // 4: openim.jssdk.GetConversationsResp
-	(*conversation.Conversation)(nil),  // 5: openim.conversation.Conversation
-	(*sdkws.MsgData)(nil),              // 6: openim.sdkws.MsgData
-	(*sdkws.UserInfo)(nil),             // 7: openim.sdkws.UserInfo
-	(*relation.FriendInfoOnly)(nil),    // 8: openim.relation.FriendInfoOnly
-	(*sdkws.GroupInfo)(nil),            // 9: openim.sdkws.GroupInfo
+	(*ConversationMsg)(nil),                // 0: openim.jssdk.ConversationMsg
+	(*GetActiveConversationsReq)(nil),      // 1: openim.jssdk.GetActiveConversationsReq
+	(*GetActiveConversationsResp)(nil),     // 2: openim.jssdk.GetActiveConversationsResp
+	(*GetConversationsReq)(nil),            // 3: openim.jssdk.GetConversationsReq
+	(*GetConversationsResp)(nil),           // 4: openim.jssdk.GetConversationsResp
+	(*conversation.ConversationModel)(nil), // 5: openim.conversation.ConversationModel
+	(*sdkws.MsgData)(nil),                  // 6: openim.sdkws.MsgData
+	(*sdkws.UserInfo)(nil),                 // 7: openim.sdkws.UserInfo
+	(*relation.FriendInfoOnly)(nil),        // 8: openim.relation.FriendInfoOnly
+	(*sdkws.GroupInfo)(nil),                // 9: openim.sdkws.GroupInfo
 }
 var file_jssdk_jssdk_proto_depIdxs = []int32{
-	5, // 0: openim.jssdk.ConversationMsg.conversation:type_name -> openim.conversation.Conversation
+	5, // 0: openim.jssdk.ConversationMsg.conversation:type_name -> openim.conversation.ConversationModel
 	6, // 1: openim.jssdk.ConversationMsg.lastMsg:type_name -> openim.sdkws.MsgData
 	7, // 2: openim.jssdk.ConversationMsg.user:type_name -> openim.sdkws.UserInfo
 	8, // 3: openim.jssdk.ConversationMsg.friend:type_name -> openim.relation.FriendInfoOnly

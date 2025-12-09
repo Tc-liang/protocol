@@ -3466,8 +3466,8 @@ func (x *GetServerTimeResp) GetServerTime() int64 {
 }
 
 type ClearMsgReq struct {
-	state         protoimpl.MessageState       `protogen:"open.v1"`
-	Conversations []*conversation.Conversation `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
+	state         protoimpl.MessageState            `protogen:"open.v1"`
+	Conversations []*conversation.ConversationModel `protobuf:"bytes,1,rep,name=conversations,proto3" json:"conversations"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -3502,7 +3502,7 @@ func (*ClearMsgReq) Descriptor() ([]byte, []int) {
 	return file_msg_msg_proto_rawDescGZIP(), []int{65}
 }
 
-func (x *ClearMsgReq) GetConversations() []*conversation.Conversation {
+func (x *ClearMsgReq) GetConversations() []*conversation.ConversationModel {
 	if x != nil {
 		return x.Conversations
 	}
@@ -5113,9 +5113,9 @@ const file_msg_msg_proto_rawDesc = "" +
 	"\x11GetServerTimeResp\x12\x1e\n" +
 	"\n" +
 	"serverTime\x18\x01 \x01(\x03R\n" +
-	"serverTime\"V\n" +
-	"\vClearMsgReq\x12G\n" +
-	"\rconversations\x18\x01 \x03(\v2!.openim.conversation.ConversationR\rconversations\"\x0e\n" +
+	"serverTime\"[\n" +
+	"\vClearMsgReq\x12L\n" +
+	"\rconversations\x18\x01 \x03(\v2&.openim.conversation.ConversationModelR\rconversations\"\x0e\n" +
 	"\fClearMsgResp\"E\n" +
 	"\x0fDestructMsgsReq\x12\x1c\n" +
 	"\ttimestamp\x18\x01 \x01(\x03R\ttimestamp\x12\x14\n" +
@@ -5362,7 +5362,7 @@ var file_msg_msg_proto_goTypes = []any{
 	(*sdkws.RequestPagination)(nil),              // 103: openim.sdkws.RequestPagination
 	(*sdkws.UserInfo)(nil),                       // 104: openim.sdkws.UserInfo
 	(*sdkws.GroupInfo)(nil),                      // 105: openim.sdkws.GroupInfo
-	(*conversation.Conversation)(nil),            // 106: openim.conversation.Conversation
+	(*conversation.ConversationModel)(nil),       // 106: openim.conversation.ConversationModel
 	(sdkws.PullOrder)(0),                         // 107: openim.sdkws.PullOrder
 	(*sdkws.PullMsgs)(nil),                       // 108: openim.sdkws.PullMsgs
 	(*sdkws.GetMaxSeqReq)(nil),                   // 109: openim.sdkws.GetMaxSeqReq
@@ -5400,7 +5400,7 @@ var file_msg_msg_proto_depIdxs = []int32{
 	102, // 26: openim.msg.SearchedMsgData.msgData:type_name -> openim.sdkws.MsgData
 	57,  // 27: openim.msg.SearchMessageResp.chatLogs:type_name -> openim.msg.SearchChatLog
 	102, // 28: openim.msg.batchSendMessageReq.msgData:type_name -> openim.sdkws.MsgData
-	106, // 29: openim.msg.ClearMsgReq.conversations:type_name -> openim.conversation.Conversation
+	106, // 29: openim.msg.ClearMsgReq.conversations:type_name -> openim.conversation.ConversationModel
 	71,  // 30: openim.msg.GetSeqMessageReq.conversations:type_name -> openim.msg.ConversationSeqs
 	107, // 31: openim.msg.GetSeqMessageReq.order:type_name -> openim.sdkws.PullOrder
 	99,  // 32: openim.msg.GetSeqMessageResp.msgs:type_name -> openim.msg.GetSeqMessageResp.MsgsEntry

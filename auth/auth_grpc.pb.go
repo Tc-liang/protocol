@@ -19,19 +19,19 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	AuthService_GetAdminToken_FullMethodName    = "/openim.auth.AuthService/getAdminToken"
-	AuthService_GetUserToken_FullMethodName     = "/openim.auth.AuthService/getUserToken"
-	AuthService_ForceLogout_FullMethodName      = "/openim.auth.AuthService/forceLogout"
-	AuthService_ParseToken_FullMethodName       = "/openim.auth.AuthService/parseToken"
-	AuthService_InvalidateToken_FullMethodName  = "/openim.auth.AuthService/invalidateToken"
-	AuthService_KickTokens_FullMethodName       = "/openim.auth.AuthService/kickTokens"
-	AuthService_GetExistingToken_FullMethodName = "/openim.auth.AuthService/getExistingToken"
+	Auth_GetAdminToken_FullMethodName    = "/openim.auth.Auth/getAdminToken"
+	Auth_GetUserToken_FullMethodName     = "/openim.auth.Auth/getUserToken"
+	Auth_ForceLogout_FullMethodName      = "/openim.auth.Auth/forceLogout"
+	Auth_ParseToken_FullMethodName       = "/openim.auth.Auth/parseToken"
+	Auth_InvalidateToken_FullMethodName  = "/openim.auth.Auth/invalidateToken"
+	Auth_KickTokens_FullMethodName       = "/openim.auth.Auth/kickTokens"
+	Auth_GetExistingToken_FullMethodName = "/openim.auth.Auth/getExistingToken"
 )
 
-// AuthServiceClient is the client API for AuthService service.
+// AuthClient is the client API for Auth service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type AuthServiceClient interface {
+type AuthClient interface {
 	// Generate token
 	GetAdminToken(ctx context.Context, in *GetAdminTokenReq, opts ...grpc.CallOption) (*GetAdminTokenResp, error)
 	// Admin retrieves user token
@@ -48,88 +48,88 @@ type AuthServiceClient interface {
 	GetExistingToken(ctx context.Context, in *GetExistingTokenReq, opts ...grpc.CallOption) (*GetExistingTokenResp, error)
 }
 
-type authServiceClient struct {
+type authClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAuthServiceClient(cc grpc.ClientConnInterface) AuthServiceClient {
-	return &authServiceClient{cc}
+func NewAuthClient(cc grpc.ClientConnInterface) AuthClient {
+	return &authClient{cc}
 }
 
-func (c *authServiceClient) GetAdminToken(ctx context.Context, in *GetAdminTokenReq, opts ...grpc.CallOption) (*GetAdminTokenResp, error) {
+func (c *authClient) GetAdminToken(ctx context.Context, in *GetAdminTokenReq, opts ...grpc.CallOption) (*GetAdminTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetAdminTokenResp)
-	err := c.cc.Invoke(ctx, AuthService_GetAdminToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_GetAdminToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) GetUserToken(ctx context.Context, in *GetUserTokenReq, opts ...grpc.CallOption) (*GetUserTokenResp, error) {
+func (c *authClient) GetUserToken(ctx context.Context, in *GetUserTokenReq, opts ...grpc.CallOption) (*GetUserTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetUserTokenResp)
-	err := c.cc.Invoke(ctx, AuthService_GetUserToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_GetUserToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) ForceLogout(ctx context.Context, in *ForceLogoutReq, opts ...grpc.CallOption) (*ForceLogoutResp, error) {
+func (c *authClient) ForceLogout(ctx context.Context, in *ForceLogoutReq, opts ...grpc.CallOption) (*ForceLogoutResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ForceLogoutResp)
-	err := c.cc.Invoke(ctx, AuthService_ForceLogout_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_ForceLogout_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) ParseToken(ctx context.Context, in *ParseTokenReq, opts ...grpc.CallOption) (*ParseTokenResp, error) {
+func (c *authClient) ParseToken(ctx context.Context, in *ParseTokenReq, opts ...grpc.CallOption) (*ParseTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ParseTokenResp)
-	err := c.cc.Invoke(ctx, AuthService_ParseToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_ParseToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) InvalidateToken(ctx context.Context, in *InvalidateTokenReq, opts ...grpc.CallOption) (*InvalidateTokenResp, error) {
+func (c *authClient) InvalidateToken(ctx context.Context, in *InvalidateTokenReq, opts ...grpc.CallOption) (*InvalidateTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(InvalidateTokenResp)
-	err := c.cc.Invoke(ctx, AuthService_InvalidateToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_InvalidateToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) KickTokens(ctx context.Context, in *KickTokensReq, opts ...grpc.CallOption) (*KickTokensResp, error) {
+func (c *authClient) KickTokens(ctx context.Context, in *KickTokensReq, opts ...grpc.CallOption) (*KickTokensResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(KickTokensResp)
-	err := c.cc.Invoke(ctx, AuthService_KickTokens_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_KickTokens_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *authServiceClient) GetExistingToken(ctx context.Context, in *GetExistingTokenReq, opts ...grpc.CallOption) (*GetExistingTokenResp, error) {
+func (c *authClient) GetExistingToken(ctx context.Context, in *GetExistingTokenReq, opts ...grpc.CallOption) (*GetExistingTokenResp, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetExistingTokenResp)
-	err := c.cc.Invoke(ctx, AuthService_GetExistingToken_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, Auth_GetExistingToken_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AuthServiceServer is the server API for AuthService service.
-// All implementations must embed UnimplementedAuthServiceServer
+// AuthServer is the server API for Auth service.
+// All implementations must embed UnimplementedAuthServer
 // for forward compatibility.
-type AuthServiceServer interface {
+type AuthServer interface {
 	// Generate token
 	GetAdminToken(context.Context, *GetAdminTokenReq) (*GetAdminTokenResp, error)
 	// Admin retrieves user token
@@ -144,218 +144,218 @@ type AuthServiceServer interface {
 	KickTokens(context.Context, *KickTokensReq) (*KickTokensResp, error)
 	// Get existing token
 	GetExistingToken(context.Context, *GetExistingTokenReq) (*GetExistingTokenResp, error)
-	mustEmbedUnimplementedAuthServiceServer()
+	mustEmbedUnimplementedAuthServer()
 }
 
-// UnimplementedAuthServiceServer must be embedded to have
+// UnimplementedAuthServer must be embedded to have
 // forward compatible implementations.
 //
 // NOTE: this should be embedded by value instead of pointer to avoid a nil
 // pointer dereference when methods are called.
-type UnimplementedAuthServiceServer struct{}
+type UnimplementedAuthServer struct{}
 
-func (UnimplementedAuthServiceServer) GetAdminToken(context.Context, *GetAdminTokenReq) (*GetAdminTokenResp, error) {
+func (UnimplementedAuthServer) GetAdminToken(context.Context, *GetAdminTokenReq) (*GetAdminTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAdminToken not implemented")
 }
-func (UnimplementedAuthServiceServer) GetUserToken(context.Context, *GetUserTokenReq) (*GetUserTokenResp, error) {
+func (UnimplementedAuthServer) GetUserToken(context.Context, *GetUserTokenReq) (*GetUserTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUserToken not implemented")
 }
-func (UnimplementedAuthServiceServer) ForceLogout(context.Context, *ForceLogoutReq) (*ForceLogoutResp, error) {
+func (UnimplementedAuthServer) ForceLogout(context.Context, *ForceLogoutReq) (*ForceLogoutResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ForceLogout not implemented")
 }
-func (UnimplementedAuthServiceServer) ParseToken(context.Context, *ParseTokenReq) (*ParseTokenResp, error) {
+func (UnimplementedAuthServer) ParseToken(context.Context, *ParseTokenReq) (*ParseTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ParseToken not implemented")
 }
-func (UnimplementedAuthServiceServer) InvalidateToken(context.Context, *InvalidateTokenReq) (*InvalidateTokenResp, error) {
+func (UnimplementedAuthServer) InvalidateToken(context.Context, *InvalidateTokenReq) (*InvalidateTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InvalidateToken not implemented")
 }
-func (UnimplementedAuthServiceServer) KickTokens(context.Context, *KickTokensReq) (*KickTokensResp, error) {
+func (UnimplementedAuthServer) KickTokens(context.Context, *KickTokensReq) (*KickTokensResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method KickTokens not implemented")
 }
-func (UnimplementedAuthServiceServer) GetExistingToken(context.Context, *GetExistingTokenReq) (*GetExistingTokenResp, error) {
+func (UnimplementedAuthServer) GetExistingToken(context.Context, *GetExistingTokenReq) (*GetExistingTokenResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetExistingToken not implemented")
 }
-func (UnimplementedAuthServiceServer) mustEmbedUnimplementedAuthServiceServer() {}
-func (UnimplementedAuthServiceServer) testEmbeddedByValue()                     {}
+func (UnimplementedAuthServer) mustEmbedUnimplementedAuthServer() {}
+func (UnimplementedAuthServer) testEmbeddedByValue()              {}
 
-// UnsafeAuthServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to AuthServiceServer will
+// UnsafeAuthServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to AuthServer will
 // result in compilation errors.
-type UnsafeAuthServiceServer interface {
-	mustEmbedUnimplementedAuthServiceServer()
+type UnsafeAuthServer interface {
+	mustEmbedUnimplementedAuthServer()
 }
 
-func RegisterAuthServiceServer(s grpc.ServiceRegistrar, srv AuthServiceServer) {
-	// If the following call pancis, it indicates UnimplementedAuthServiceServer was
+func RegisterAuthServer(s grpc.ServiceRegistrar, srv AuthServer) {
+	// If the following call pancis, it indicates UnimplementedAuthServer was
 	// embedded by pointer and is nil.  This will cause panics if an
 	// unimplemented method is ever invoked, so we test this at initialization
 	// time to prevent it from happening at runtime later due to I/O.
 	if t, ok := srv.(interface{ testEmbeddedByValue() }); ok {
 		t.testEmbeddedByValue()
 	}
-	s.RegisterService(&AuthService_ServiceDesc, srv)
+	s.RegisterService(&Auth_ServiceDesc, srv)
 }
 
-func _AuthService_GetAdminToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_GetAdminToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetAdminTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).GetAdminToken(ctx, in)
+		return srv.(AuthServer).GetAdminToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_GetAdminToken_FullMethodName,
+		FullMethod: Auth_GetAdminToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetAdminToken(ctx, req.(*GetAdminTokenReq))
+		return srv.(AuthServer).GetAdminToken(ctx, req.(*GetAdminTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_GetUserToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_GetUserToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetUserTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).GetUserToken(ctx, in)
+		return srv.(AuthServer).GetUserToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_GetUserToken_FullMethodName,
+		FullMethod: Auth_GetUserToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetUserToken(ctx, req.(*GetUserTokenReq))
+		return srv.(AuthServer).GetUserToken(ctx, req.(*GetUserTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_ForceLogout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_ForceLogout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ForceLogoutReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).ForceLogout(ctx, in)
+		return srv.(AuthServer).ForceLogout(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_ForceLogout_FullMethodName,
+		FullMethod: Auth_ForceLogout_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).ForceLogout(ctx, req.(*ForceLogoutReq))
+		return srv.(AuthServer).ForceLogout(ctx, req.(*ForceLogoutReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_ParseToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_ParseToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ParseTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).ParseToken(ctx, in)
+		return srv.(AuthServer).ParseToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_ParseToken_FullMethodName,
+		FullMethod: Auth_ParseToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).ParseToken(ctx, req.(*ParseTokenReq))
+		return srv.(AuthServer).ParseToken(ctx, req.(*ParseTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_InvalidateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_InvalidateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(InvalidateTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).InvalidateToken(ctx, in)
+		return srv.(AuthServer).InvalidateToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_InvalidateToken_FullMethodName,
+		FullMethod: Auth_InvalidateToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).InvalidateToken(ctx, req.(*InvalidateTokenReq))
+		return srv.(AuthServer).InvalidateToken(ctx, req.(*InvalidateTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_KickTokens_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_KickTokens_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(KickTokensReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).KickTokens(ctx, in)
+		return srv.(AuthServer).KickTokens(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_KickTokens_FullMethodName,
+		FullMethod: Auth_KickTokens_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).KickTokens(ctx, req.(*KickTokensReq))
+		return srv.(AuthServer).KickTokens(ctx, req.(*KickTokensReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AuthService_GetExistingToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Auth_GetExistingToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetExistingTokenReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthServiceServer).GetExistingToken(ctx, in)
+		return srv.(AuthServer).GetExistingToken(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: AuthService_GetExistingToken_FullMethodName,
+		FullMethod: Auth_GetExistingToken_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetExistingToken(ctx, req.(*GetExistingTokenReq))
+		return srv.(AuthServer).GetExistingToken(ctx, req.(*GetExistingTokenReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// AuthService_ServiceDesc is the grpc.ServiceDesc for AuthService service.
+// Auth_ServiceDesc is the grpc.ServiceDesc for Auth service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var AuthService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.auth.AuthService",
-	HandlerType: (*AuthServiceServer)(nil),
+var Auth_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "openim.auth.Auth",
+	HandlerType: (*AuthServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "getAdminToken",
-			Handler:    _AuthService_GetAdminToken_Handler,
+			Handler:    _Auth_GetAdminToken_Handler,
 		},
 		{
 			MethodName: "getUserToken",
-			Handler:    _AuthService_GetUserToken_Handler,
+			Handler:    _Auth_GetUserToken_Handler,
 		},
 		{
 			MethodName: "forceLogout",
-			Handler:    _AuthService_ForceLogout_Handler,
+			Handler:    _Auth_ForceLogout_Handler,
 		},
 		{
 			MethodName: "parseToken",
-			Handler:    _AuthService_ParseToken_Handler,
+			Handler:    _Auth_ParseToken_Handler,
 		},
 		{
 			MethodName: "invalidateToken",
-			Handler:    _AuthService_InvalidateToken_Handler,
+			Handler:    _Auth_InvalidateToken_Handler,
 		},
 		{
 			MethodName: "kickTokens",
-			Handler:    _AuthService_KickTokens_Handler,
+			Handler:    _Auth_KickTokens_Handler,
 		},
 		{
 			MethodName: "getExistingToken",
-			Handler:    _AuthService_GetExistingToken_Handler,
+			Handler:    _Auth_GetExistingToken_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

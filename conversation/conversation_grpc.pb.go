@@ -33,32 +33,32 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Conversation_GetConversation_FullMethodName                         = "/openim.conversation.conversation/GetConversation"
-	Conversation_GetSortedConversationList_FullMethodName               = "/openim.conversation.conversation/GetSortedConversationList"
-	Conversation_GetAllConversations_FullMethodName                     = "/openim.conversation.conversation/GetAllConversations"
-	Conversation_GetConversations_FullMethodName                        = "/openim.conversation.conversation/GetConversations"
-	Conversation_SetConversation_FullMethodName                         = "/openim.conversation.conversation/SetConversation"
-	Conversation_GetRecvMsgNotNotifyUserIDs_FullMethodName              = "/openim.conversation.conversation/GetRecvMsgNotNotifyUserIDs"
-	Conversation_CreateSingleChatConversations_FullMethodName           = "/openim.conversation.conversation/CreateSingleChatConversations"
-	Conversation_CreateGroupChatConversations_FullMethodName            = "/openim.conversation.conversation/CreateGroupChatConversations"
-	Conversation_SetConversationMaxSeq_FullMethodName                   = "/openim.conversation.conversation/SetConversationMaxSeq"
-	Conversation_SetConversationMinSeq_FullMethodName                   = "/openim.conversation.conversation/SetConversationMinSeq"
-	Conversation_GetConversationIDs_FullMethodName                      = "/openim.conversation.conversation/GetConversationIDs"
-	Conversation_SetConversations_FullMethodName                        = "/openim.conversation.conversation/SetConversations"
-	Conversation_GetUserConversationIDsHash_FullMethodName              = "/openim.conversation.conversation/GetUserConversationIDsHash"
-	Conversation_GetConversationsByConversationID_FullMethodName        = "/openim.conversation.conversation/GetConversationsByConversationID"
-	Conversation_GetConversationOfflinePushUserIDs_FullMethodName       = "/openim.conversation.conversation/GetConversationOfflinePushUserIDs"
-	Conversation_GetConversationNotReceiveMessageUserIDs_FullMethodName = "/openim.conversation.conversation/GetConversationNotReceiveMessageUserIDs"
-	Conversation_UpdateConversation_FullMethodName                      = "/openim.conversation.conversation/UpdateConversation"
-	Conversation_GetFullOwnerConversationIDs_FullMethodName             = "/openim.conversation.conversation/GetFullOwnerConversationIDs"
-	Conversation_GetIncrementalConversation_FullMethodName              = "/openim.conversation.conversation/GetIncrementalConversation"
-	Conversation_GetOwnerConversation_FullMethodName                    = "/openim.conversation.conversation/GetOwnerConversation"
-	Conversation_GetConversationsNeedClearMsg_FullMethodName            = "/openim.conversation.conversation/GetConversationsNeedClearMsg"
-	Conversation_GetNotNotifyConversationIDs_FullMethodName             = "/openim.conversation.conversation/GetNotNotifyConversationIDs"
-	Conversation_GetPinnedConversationIDs_FullMethodName                = "/openim.conversation.conversation/GetPinnedConversationIDs"
-	Conversation_ClearUserConversationMsg_FullMethodName                = "/openim.conversation.conversation/ClearUserConversationMsg"
-	Conversation_UpdateConversationsByUser_FullMethodName               = "/openim.conversation.conversation/UpdateConversationsByUser"
-	Conversation_DeleteConversations_FullMethodName                     = "/openim.conversation.conversation/DeleteConversations"
+	Conversation_GetConversation_FullMethodName                         = "/openim.conversation.Conversation/GetConversation"
+	Conversation_GetSortedConversationList_FullMethodName               = "/openim.conversation.Conversation/GetSortedConversationList"
+	Conversation_GetAllConversations_FullMethodName                     = "/openim.conversation.Conversation/GetAllConversations"
+	Conversation_GetConversations_FullMethodName                        = "/openim.conversation.Conversation/GetConversations"
+	Conversation_SetConversation_FullMethodName                         = "/openim.conversation.Conversation/SetConversation"
+	Conversation_GetRecvMsgNotNotifyUserIDs_FullMethodName              = "/openim.conversation.Conversation/GetRecvMsgNotNotifyUserIDs"
+	Conversation_CreateSingleChatConversations_FullMethodName           = "/openim.conversation.Conversation/CreateSingleChatConversations"
+	Conversation_CreateGroupChatConversations_FullMethodName            = "/openim.conversation.Conversation/CreateGroupChatConversations"
+	Conversation_SetConversationMaxSeq_FullMethodName                   = "/openim.conversation.Conversation/SetConversationMaxSeq"
+	Conversation_SetConversationMinSeq_FullMethodName                   = "/openim.conversation.Conversation/SetConversationMinSeq"
+	Conversation_GetConversationIDs_FullMethodName                      = "/openim.conversation.Conversation/GetConversationIDs"
+	Conversation_SetConversations_FullMethodName                        = "/openim.conversation.Conversation/SetConversations"
+	Conversation_GetUserConversationIDsHash_FullMethodName              = "/openim.conversation.Conversation/GetUserConversationIDsHash"
+	Conversation_GetConversationsByConversationID_FullMethodName        = "/openim.conversation.Conversation/GetConversationsByConversationID"
+	Conversation_GetConversationOfflinePushUserIDs_FullMethodName       = "/openim.conversation.Conversation/GetConversationOfflinePushUserIDs"
+	Conversation_GetConversationNotReceiveMessageUserIDs_FullMethodName = "/openim.conversation.Conversation/GetConversationNotReceiveMessageUserIDs"
+	Conversation_UpdateConversation_FullMethodName                      = "/openim.conversation.Conversation/UpdateConversation"
+	Conversation_GetFullOwnerConversationIDs_FullMethodName             = "/openim.conversation.Conversation/GetFullOwnerConversationIDs"
+	Conversation_GetIncrementalConversation_FullMethodName              = "/openim.conversation.Conversation/GetIncrementalConversation"
+	Conversation_GetOwnerConversation_FullMethodName                    = "/openim.conversation.Conversation/GetOwnerConversation"
+	Conversation_GetConversationsNeedClearMsg_FullMethodName            = "/openim.conversation.Conversation/GetConversationsNeedClearMsg"
+	Conversation_GetNotNotifyConversationIDs_FullMethodName             = "/openim.conversation.Conversation/GetNotNotifyConversationIDs"
+	Conversation_GetPinnedConversationIDs_FullMethodName                = "/openim.conversation.Conversation/GetPinnedConversationIDs"
+	Conversation_ClearUserConversationMsg_FullMethodName                = "/openim.conversation.Conversation/ClearUserConversationMsg"
+	Conversation_UpdateConversationsByUser_FullMethodName               = "/openim.conversation.Conversation/UpdateConversationsByUser"
+	Conversation_DeleteConversations_FullMethodName                     = "/openim.conversation.Conversation/DeleteConversations"
 )
 
 // ConversationClient is the client API for Conversation service.
@@ -972,7 +972,7 @@ func _Conversation_DeleteConversations_Handler(srv interface{}, ctx context.Cont
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Conversation_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "openim.conversation.conversation",
+	ServiceName: "openim.conversation.Conversation",
 	HandlerType: (*ConversationServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
