@@ -63,7 +63,7 @@ message setGlobalRecvMessageOptReq {
 message setGlobalRecvMessageOptResp {}
 
 message setConversationReq {
-  openim.conversation.Conversation conversation = 1;
+  openim.conversation.ConversationModel conversation = 1;
   int32 notificationType = 2;
   string operationID = 3;
 }
@@ -87,7 +87,7 @@ message getConversationReq {
 }
 
 message getConversationResp {
-  openim.conversation.Conversation conversation = 2;
+  openim.conversation.ConversationModel conversation = 2;
 }
 
 message getConversationsReq {
@@ -97,7 +97,7 @@ message getConversationsReq {
 }
 
 message getConversationsResp {
-  repeated openim.conversation.Conversation conversations = 2;
+  repeated openim.conversation.ConversationModel conversations = 2;
 }
 
 message getAllConversationsReq {
@@ -106,11 +106,11 @@ message getAllConversationsReq {
 }
 
 message getAllConversationsResp {
-  repeated openim.conversation.Conversation conversations = 2;
+  repeated openim.conversation.ConversationModel conversations = 2;
 }
 
 message batchSetConversationsReq {
-  repeated openim.conversation.Conversation conversations = 1;
+  repeated openim.conversation.ConversationModel conversations = 1;
   string OwnerUserID = 2;
   int32 notificationType = 3;
   string OperationID = 4;

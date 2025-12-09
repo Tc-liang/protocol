@@ -418,7 +418,7 @@ message BatchGetIncrementalGroupMemberResp {
   map<string, getIncrementalGroupMemberResp> respList = 1;
 }
 
-service group {
+service Group {
   // Create group
   rpc createGroup(CreateGroupReq) returns (CreateGroupResp);
   // Apply to join group

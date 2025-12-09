@@ -63,7 +63,7 @@ message GetExistingTokenResp {
 
 // ======== Service ========
 
-service AuthService {
+service Auth {
   // Generate token
   rpc getAdminToken(GetAdminTokenReq) returns (GetAdminTokenResp);
 
