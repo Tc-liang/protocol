@@ -21,7 +21,6 @@ import "wrapperspb/wrapperspb.proto";
 option go_package = "github.com/openimsdk/protocol/relation";
 
 option java_multiple_files = true;
-option java_package = "city.cn.im.proto.friend";
 option java_outer_classname = "IMFriendServiceOuterClass";
 
 

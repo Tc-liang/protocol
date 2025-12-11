@@ -20,7 +20,6 @@ import "sdkws/sdkws.proto";
 option go_package = "github.com/openimsdk/protocol/third";
 
 option java_multiple_files = true;
-option java_package = "city.cn.im.proto.third";
 option java_outer_classname = "IMThirdServiceOuterClass";
 
 
