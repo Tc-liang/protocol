@@ -3490,8 +3490,7 @@ const file_conversation_conversation_proto_rawDesc = "" +
 	"\x18GetPinnedConversationIDs\x120.openim.conversation.GetPinnedConversationIDsReq\x1a1.openim.conversation.GetPinnedConversationIDsResp\x12\x7f\n" +
 	"\x18ClearUserConversationMsg\x120.openim.conversation.ClearUserConversationMsgReq\x1a1.openim.conversation.ClearUserConversationMsgResp\x12\x82\x01\n" +
 	"\x19UpdateConversationsByUser\x121.openim.conversation.UpdateConversationsByUserReq\x1a2.openim.conversation.UpdateConversationsByUserResp\x12p\n" +
-	"\x13DeleteConversations\x12+.openim.conversation.DeleteConversationsReq\x1a,.openim.conversation.DeleteConversationsRespBn\n" +
-	"\x1dcity.cn.im.proto.conversationB\x1fIMConversationServiceOuterClassP\x01Z*github.com/openimsdk/protocol/conversationb\x06proto3"
+	"\x13DeleteConversations\x12+.openim.conversation.DeleteConversationsReq\x1a,.openim.conversation.DeleteConversationsRespBOB\x1fIMConversationServiceOuterClassP\x01Z*github.com/openimsdk/protocol/conversationb\x06proto3"
 
 var (
 	file_conversation_conversation_proto_rawDescOnce sync.Once

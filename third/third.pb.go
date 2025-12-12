@@ -2209,8 +2209,7 @@ const file_third_third_proto_rawDesc = "" +
 	"\n" +
 	"DeleteLogs\x12\x1b.openim.third.DeleteLogsReq\x1a\x1c.openim.third.DeleteLogsResp\x12G\n" +
 	"\n" +
-	"SearchLogs\x12\x1b.openim.third.SearchLogsReq\x1a\x1c.openim.third.SearchLogsRespBY\n" +
-	"\x16city.cn.im.proto.thirdB\x18IMThirdServiceOuterClassP\x01Z#github.com/openimsdk/protocol/thirdb\x06proto3"
+	"SearchLogs\x12\x1b.openim.third.SearchLogsReq\x1a\x1c.openim.third.SearchLogsRespBAB\x18IMThirdServiceOuterClassP\x01Z#github.com/openimsdk/protocol/thirdb\x06proto3"
 
 var (
 	file_third_third_proto_rawDescOnce sync.Once

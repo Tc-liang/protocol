@@ -1,3 +1,4 @@
+dubbo.apache.org/dubbo-go/v3 v3.3.1-0.20251028122905-48c55c00b702/go.mod h1:LB1N3QXiE1ZATzBgb899dQnSqjlQoi0DPPMyYMervSM=
 github.com/golang/protobuf v1.5.4 h1:i7eJL8qZTpSEXOPTxNKhASYpMn+8e5Q6AdndVa1dWek=
 github.com/golang/protobuf v1.5.4/go.mod h1:lnTiLA8Wa4RWRcIUkrtSVa5nRhsEGBg48fD6rSs7xps=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=

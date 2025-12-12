@@ -4405,8 +4405,7 @@ const file_user_user_proto_rawDesc = "" +
 	"\x13DelUserClientConfig\x12#.openim.user.DelUserClientConfigReq\x1a$.openim.user.DelUserClientConfigResp\x12c\n" +
 	"\x14PageUserClientConfig\x12$.openim.user.PageUserClientConfigReq\x1a%.openim.user.PageUserClientConfigResp\x12E\n" +
 	"\n" +
-	"GetBotUser\x12\x1a.openim.user.GetBotUserReq\x1a\x1b.openim.user.GetBotUserRespBV\n" +
-	"\x15city.cn.im.proto.userB\x17IMUserServiceOuterClassP\x01Z\"github.com/openimsdk/protocol/userb\x06proto3"
+	"GetBotUser\x12\x1a.openim.user.GetBotUserReq\x1a\x1b.openim.user.GetBotUserRespB?B\x17IMUserServiceOuterClassP\x01Z\"github.com/openimsdk/protocol/userb\x06proto3"
 
 var (
 	file_user_user_proto_rawDescOnce sync.Once
