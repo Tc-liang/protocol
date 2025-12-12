@@ -16,9 +16,9 @@
  */
 
 syntax = "proto3";
-package city_proto;
-option go_package = "github.com/openimsdk/protocol/city/proto;city_proto";
-option java_package = "city.java.mpaas.proto";
+package city.proto.mpaas;
+option go_package = "github.com/openimsdk/protocol/city/mpaas;mpaas";
+option java_package = "city.proto.mpaas";
 option java_multiple_files = true;
 option java_outer_classname = "GreetProto";
 

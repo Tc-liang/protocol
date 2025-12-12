@@ -18,9 +18,9 @@
 // versions:
 // 	protoc-gen-go v1.36.9
 // 	protoc        v3.19.1
-// source: city/proto/mpaaspush.proto
+// source: mpaas/mpaas.proto
 
-package city_proto
+package mpaas
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -39,14 +39,14 @@ const (
 
 type GreetRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name"`
+	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *GreetRequest) Reset() {
 	*x = GreetRequest{}
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[0]
+	mi := &file_mpaas_mpaas_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -58,7 +58,7 @@ func (x *GreetRequest) String() string {
 func (*GreetRequest) ProtoMessage() {}
 
 func (x *GreetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[0]
+	mi := &file_mpaas_mpaas_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -71,7 +71,7 @@ func (x *GreetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GreetRequest.ProtoReflect.Descriptor instead.
 func (*GreetRequest) Descriptor() ([]byte, []int) {
-	return file_city_proto_mpaaspush_proto_rawDescGZIP(), []int{0}
+	return file_mpaas_mpaas_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GreetRequest) GetName() string {
@@ -83,14 +83,14 @@ func (x *GreetRequest) GetName() string {
 
 type GreetResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Greeting      string                 `protobuf:"bytes,1,opt,name=greeting,proto3" json:"greeting"`
+	Greeting      string                 `protobuf:"bytes,1,opt,name=greeting,proto3" json:"greeting,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *GreetResponse) Reset() {
 	*x = GreetResponse{}
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[1]
+	mi := &file_mpaas_mpaas_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -102,7 +102,7 @@ func (x *GreetResponse) String() string {
 func (*GreetResponse) ProtoMessage() {}
 
 func (x *GreetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[1]
+	mi := &file_mpaas_mpaas_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -115,7 +115,7 @@ func (x *GreetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GreetResponse.ProtoReflect.Descriptor instead.
 func (*GreetResponse) Descriptor() ([]byte, []int) {
-	return file_city_proto_mpaaspush_proto_rawDescGZIP(), []int{1}
+	return file_mpaas_mpaas_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GreetResponse) GetGreeting() string {
@@ -127,14 +127,14 @@ func (x *GreetResponse) GetGreeting() string {
 
 type SayHelloRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name"`
+	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *SayHelloRequest) Reset() {
 	*x = SayHelloRequest{}
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[2]
+	mi := &file_mpaas_mpaas_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -146,7 +146,7 @@ func (x *SayHelloRequest) String() string {
 func (*SayHelloRequest) ProtoMessage() {}
 
 func (x *SayHelloRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[2]
+	mi := &file_mpaas_mpaas_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -159,7 +159,7 @@ func (x *SayHelloRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SayHelloRequest.ProtoReflect.Descriptor instead.
 func (*SayHelloRequest) Descriptor() ([]byte, []int) {
-	return file_city_proto_mpaaspush_proto_rawDescGZIP(), []int{2}
+	return file_mpaas_mpaas_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SayHelloRequest) GetName() string {
@@ -171,14 +171,14 @@ func (x *SayHelloRequest) GetName() string {
 
 type SayHelloResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Hello         string                 `protobuf:"bytes,1,opt,name=hello,proto3" json:"hello"`
+	Hello         string                 `protobuf:"bytes,1,opt,name=hello,proto3" json:"hello,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
 func (x *SayHelloResponse) Reset() {
 	*x = SayHelloResponse{}
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[3]
+	mi := &file_mpaas_mpaas_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -190,7 +190,7 @@ func (x *SayHelloResponse) String() string {
 func (*SayHelloResponse) ProtoMessage() {}
 
 func (x *SayHelloResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_city_proto_mpaaspush_proto_msgTypes[3]
+	mi := &file_mpaas_mpaas_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -203,7 +203,7 @@ func (x *SayHelloResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SayHelloResponse.ProtoReflect.Descriptor instead.
 func (*SayHelloResponse) Descriptor() ([]byte, []int) {
-	return file_city_proto_mpaaspush_proto_rawDescGZIP(), []int{3}
+	return file_mpaas_mpaas_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *SayHelloResponse) GetHello() string {
@@ -213,12 +213,11 @@ func (x *SayHelloResponse) GetHello() string {
 	return ""
 }
 
-var File_city_proto_mpaaspush_proto protoreflect.FileDescriptor
+var File_mpaas_mpaas_proto protoreflect.FileDescriptor
 
-const file_city_proto_mpaaspush_proto_rawDesc = "" +
+const file_mpaas_mpaas_proto_rawDesc = "" +
 	"\n" +
-	"\x1acity/proto/mpaaspush.proto\x12\n" +
-	"city_proto\"\"\n" +
+	"\x11mpaas/mpaas.proto\x12\x10city.proto.mpaas\"\"\n" +
 	"\fGreetRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\"+\n" +
 	"\rGreetResponse\x12\x1a\n" +
@@ -226,37 +225,37 @@ const file_city_proto_mpaaspush_proto_rawDesc = "" +
 	"\x0fSayHelloRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\"(\n" +
 	"\x10SayHelloResponse\x12\x14\n" +
-	"\x05hello\x18\x01 \x01(\tR\x05hello2\x97\x01\n" +
-	"\fGreetService\x12>\n" +
-	"\x05Greet\x12\x18.city_proto.GreetRequest\x1a\x19.city_proto.GreetResponse\"\x00\x12G\n" +
-	"\bSayHello\x12\x1b.city_proto.SayHelloRequest\x1a\x1c.city_proto.SayHelloResponse\"\x00BZ\n" +
-	"\x15city.java.mpaas.protoB\n" +
-	"GreetProtoP\x01Z3github.com/openimsdk/protocol/city/proto;city_protob\x06proto3"
+	"\x05hello\x18\x01 \x01(\tR\x05hello2\xaf\x01\n" +
+	"\fGreetService\x12J\n" +
+	"\x05Greet\x12\x1e.city.proto.mpaas.GreetRequest\x1a\x1f.city.proto.mpaas.GreetResponse\"\x00\x12S\n" +
+	"\bSayHello\x12!.city.proto.mpaas.SayHelloRequest\x1a\".city.proto.mpaas.SayHelloResponse\"\x00BP\n" +
+	"\x10city.proto.mpaasB\n" +
+	"GreetProtoP\x01Z.github.com/openimsdk/protocol/city/mpaas;mpaasb\x06proto3"
 
 var (
-	file_city_proto_mpaaspush_proto_rawDescOnce sync.Once
-	file_city_proto_mpaaspush_proto_rawDescData []byte
+	file_mpaas_mpaas_proto_rawDescOnce sync.Once
+	file_mpaas_mpaas_proto_rawDescData []byte
 )
 
-func file_city_proto_mpaaspush_proto_rawDescGZIP() []byte {
-	file_city_proto_mpaaspush_proto_rawDescOnce.Do(func() {
-		file_city_proto_mpaaspush_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_city_proto_mpaaspush_proto_rawDesc), len(file_city_proto_mpaaspush_proto_rawDesc)))
+func file_mpaas_mpaas_proto_rawDescGZIP() []byte {
+	file_mpaas_mpaas_proto_rawDescOnce.Do(func() {
+		file_mpaas_mpaas_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_mpaas_mpaas_proto_rawDesc), len(file_mpaas_mpaas_proto_rawDesc)))
 	})
-	return file_city_proto_mpaaspush_proto_rawDescData
+	return file_mpaas_mpaas_proto_rawDescData
 }
 
-var file_city_proto_mpaaspush_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_city_proto_mpaaspush_proto_goTypes = []any{
-	(*GreetRequest)(nil),     // 0: city_proto.GreetRequest
-	(*GreetResponse)(nil),    // 1: city_proto.GreetResponse
-	(*SayHelloRequest)(nil),  // 2: city_proto.SayHelloRequest
-	(*SayHelloResponse)(nil), // 3: city_proto.SayHelloResponse
+var file_mpaas_mpaas_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_mpaas_mpaas_proto_goTypes = []any{
+	(*GreetRequest)(nil),     // 0: city.proto.mpaas.GreetRequest
+	(*GreetResponse)(nil),    // 1: city.proto.mpaas.GreetResponse
+	(*SayHelloRequest)(nil),  // 2: city.proto.mpaas.SayHelloRequest
+	(*SayHelloResponse)(nil), // 3: city.proto.mpaas.SayHelloResponse
 }
-var file_city_proto_mpaaspush_proto_depIdxs = []int32{
-	0, // 0: city_proto.GreetService.Greet:input_type -> city_proto.GreetRequest
-	2, // 1: city_proto.GreetService.SayHello:input_type -> city_proto.SayHelloRequest
-	1, // 2: city_proto.GreetService.Greet:output_type -> city_proto.GreetResponse
-	3, // 3: city_proto.GreetService.SayHello:output_type -> city_proto.SayHelloResponse
+var file_mpaas_mpaas_proto_depIdxs = []int32{
+	0, // 0: city.proto.mpaas.GreetService.Greet:input_type -> city.proto.mpaas.GreetRequest
+	2, // 1: city.proto.mpaas.GreetService.SayHello:input_type -> city.proto.mpaas.SayHelloRequest
+	1, // 2: city.proto.mpaas.GreetService.Greet:output_type -> city.proto.mpaas.GreetResponse
+	3, // 3: city.proto.mpaas.GreetService.SayHello:output_type -> city.proto.mpaas.SayHelloResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -264,26 +263,26 @@ var file_city_proto_mpaaspush_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_city_proto_mpaaspush_proto_init() }
-func file_city_proto_mpaaspush_proto_init() {
-	if File_city_proto_mpaaspush_proto != nil {
+func init() { file_mpaas_mpaas_proto_init() }
+func file_mpaas_mpaas_proto_init() {
+	if File_mpaas_mpaas_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_city_proto_mpaaspush_proto_rawDesc), len(file_city_proto_mpaaspush_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_mpaas_mpaas_proto_rawDesc), len(file_mpaas_mpaas_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_city_proto_mpaaspush_proto_goTypes,
-		DependencyIndexes: file_city_proto_mpaaspush_proto_depIdxs,
-		MessageInfos:      file_city_proto_mpaaspush_proto_msgTypes,
+		GoTypes:           file_mpaas_mpaas_proto_goTypes,
+		DependencyIndexes: file_mpaas_mpaas_proto_depIdxs,
+		MessageInfos:      file_mpaas_mpaas_proto_msgTypes,
 	}.Build()
-	File_city_proto_mpaaspush_proto = out.File
-	file_city_proto_mpaaspush_proto_goTypes = nil
-	file_city_proto_mpaaspush_proto_depIdxs = nil
+	File_mpaas_mpaas_proto = out.File
+	file_mpaas_mpaas_proto_goTypes = nil
+	file_mpaas_mpaas_proto_depIdxs = nil
 }
