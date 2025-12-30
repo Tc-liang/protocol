@@ -302,7 +302,6 @@ const (
 	AppAdmin             = 2
 	AppNotificationAdmin = 3
 	AppRobotAdmin        = 4
-	AIShoppingAdmin      = 5
 
 	GroupOwner         = 100
 	GroupAdmin         = 60
