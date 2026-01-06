@@ -40,10 +40,12 @@ const (
 	ReactionMessageModifier      = 121
 	ReactionMessageDeleter       = 122
 	AIStreamMessage              = 123
-	Common                       = 200
-	GroupMsg                     = 201
-	SignalMsg                    = 202
-	CustomNotification           = 203
+	AIJSONMessage                = 124
+
+	Common             = 200
+	GroupMsg           = 201
+	SignalMsg          = 202
+	CustomNotification = 203
 
 	// SysRelated.
 	NotificationBegin = 1000
