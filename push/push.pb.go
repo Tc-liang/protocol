@@ -239,8 +239,7 @@ const file_push_push_proto_rawDesc = "" +
 	"\x14DelUserPushTokenResp2\xa9\x01\n" +
 	"\x10IMPushMsgService\x12<\n" +
 	"\aPushMsg\x12\x17.openim.push.PushMsgReq\x1a\x18.openim.push.PushMsgResp\x12W\n" +
-	"\x10DelUserPushToken\x12 .openim.push.DelUserPushTokenReq\x1a!.openim.push.DelUserPushTokenRespBY\n" +
-	"\x15city.cn.im.proto.pushB\x1aIMPushMsgServiceOuterClassP\x01Z\"github.com/openimsdk/protocol/pushb\x06proto3"
+	"\x10DelUserPushToken\x12 .openim.push.DelUserPushTokenReq\x1a!.openim.push.DelUserPushTokenRespBBB\x1aIMPushMsgServiceOuterClassP\x01Z\"github.com/openimsdk/protocol/pushb\x06proto3"
 
 var (
 	file_push_push_proto_rawDescOnce sync.Once

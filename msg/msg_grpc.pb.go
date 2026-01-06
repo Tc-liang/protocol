@@ -73,6 +73,7 @@ const (
 	IMMsgService_RevokeEmoji_FullMethodName                      = "/openim.msg.IMMsgService/RevokeEmoji"
 	IMMsgService_BotReadMsgsNotification_FullMethodName          = "/openim.msg.IMMsgService/BotReadMsgsNotification"
 	IMMsgService_AIStreamMsgNotification_FullMethodName          = "/openim.msg.IMMsgService/AIStreamMsgNotification"
+	IMMsgService_AIShoppingNotification_FullMethodName           = "/openim.msg.IMMsgService/AIShoppingNotification"
 )
 
 // IMMsgServiceClient is the client API for IMMsgService service.
@@ -133,6 +134,7 @@ type IMMsgServiceClient interface {
 	RevokeEmoji(ctx context.Context, in *RevokeEmojiReq, opts ...grpc.CallOption) (*RevokeEmojiResp, error)
 	BotReadMsgsNotification(ctx context.Context, in *BotReadMsgsNotificationReq, opts ...grpc.CallOption) (*BotReadMsgsNotificationResp, error)
 	AIStreamMsgNotification(ctx context.Context, in *AIStreamNotificationReq, opts ...grpc.CallOption) (*AIStreamNotificationResp, error)
+	AIShoppingNotification(ctx context.Context, in *AIShoppingNotificationReq, opts ...grpc.CallOption) (*AIShoppingNotificationResp, error)
 }
 
 type iMMsgServiceClient struct {
@@ -533,6 +535,16 @@ func (c *iMMsgServiceClient) AIStreamMsgNotification(ctx context.Context, in *AI
 	return out, nil
 }
 
+func (c *iMMsgServiceClient) AIShoppingNotification(ctx context.Context, in *AIShoppingNotificationReq, opts ...grpc.CallOption) (*AIShoppingNotificationResp, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(AIShoppingNotificationResp)
+	err := c.cc.Invoke(ctx, IMMsgService_AIShoppingNotification_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // IMMsgServiceServer is the server API for IMMsgService service.
 // All implementations must embed UnimplementedIMMsgServiceServer
 // for forward compatibility.
@@ -591,6 +603,7 @@ type IMMsgServiceServer interface {
 	RevokeEmoji(context.Context, *RevokeEmojiReq) (*RevokeEmojiResp, error)
 	BotReadMsgsNotification(context.Context, *BotReadMsgsNotificationReq) (*BotReadMsgsNotificationResp, error)
 	AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error)
+	AIShoppingNotification(context.Context, *AIShoppingNotificationReq) (*AIShoppingNotificationResp, error)
 	mustEmbedUnimplementedIMMsgServiceServer()
 }
 
@@ -717,6 +730,9 @@ func (UnimplementedIMMsgServiceServer) BotReadMsgsNotification(context.Context, 
 }
 func (UnimplementedIMMsgServiceServer) AIStreamMsgNotification(context.Context, *AIStreamNotificationReq) (*AIStreamNotificationResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AIStreamMsgNotification not implemented")
+}
+func (UnimplementedIMMsgServiceServer) AIShoppingNotification(context.Context, *AIShoppingNotificationReq) (*AIShoppingNotificationResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AIShoppingNotification not implemented")
 }
 func (UnimplementedIMMsgServiceServer) mustEmbedUnimplementedIMMsgServiceServer() {}
 func (UnimplementedIMMsgServiceServer) testEmbeddedByValue()                      {}
@@ -1441,6 +1457,24 @@ func _IMMsgService_AIStreamMsgNotification_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _IMMsgService_AIShoppingNotification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AIShoppingNotificationReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IMMsgServiceServer).AIShoppingNotification(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: IMMsgService_AIShoppingNotification_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IMMsgServiceServer).AIShoppingNotification(ctx, req.(*AIShoppingNotificationReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // IMMsgService_ServiceDesc is the grpc.ServiceDesc for IMMsgService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1603,6 +1637,10 @@ var IMMsgService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AIStreamMsgNotification",
 			Handler:    _IMMsgService_AIStreamMsgNotification_Handler,
+		},
+		{
+			MethodName: "AIShoppingNotification",
+			Handler:    _IMMsgService_AIShoppingNotification_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

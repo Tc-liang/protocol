@@ -3438,8 +3438,7 @@ const file_relation_relation_proto_rawDesc = "" +
 	"\x14GetIncrementalBlacks\x12(.openim.relation.GetIncrementalBlacksReq\x1a).openim.relation.GetIncrementalBlacksResp\x12k\n" +
 	"\x14GetFullFriendUserIDs\x12(.openim.relation.GetFullFriendUserIDsReq\x1a).openim.relation.GetFullFriendUserIDsResp\x12}\n" +
 	"\x1aNotificationUserInfoUpdate\x12..openim.relation.NotificationUserInfoUpdateReq\x1a/.openim.relation.NotificationUserInfoUpdateResp\x12V\n" +
-	"\rGetFriendInfo\x12!.openim.relation.GetFriendInfoReq\x1a\".openim.relation.GetFriendInfoRespB^\n" +
-	"\x17city.cn.im.proto.friendB\x19IMFriendServiceOuterClassP\x01Z&github.com/openimsdk/protocol/relationb\x06proto3"
+	"\rGetFriendInfo\x12!.openim.relation.GetFriendInfoReq\x1a\".openim.relation.GetFriendInfoRespBEB\x19IMFriendServiceOuterClassP\x01Z&github.com/openimsdk/protocol/relationb\x06proto3"
 
 var (
 	file_relation_relation_proto_rawDescOnce sync.Once
