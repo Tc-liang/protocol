@@ -640,5 +640,13 @@ message AIStreamMsgTips {
   int32  partIndex = 4;
   bool isFinal = 5;
   int32  seq = 6;
+}
 
+message AIShopMsgTips {
+  string conversationID = 1;
+  string clientMsgID = 2;
+  string content = 3;
+  int32  partIndex = 4;
+  bool   isFinal = 5;
+  int32  streamType = 6;
 }
