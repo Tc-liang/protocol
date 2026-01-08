@@ -212,6 +212,7 @@ message MsgData {
   string attachedInfo = 22;
   string ex = 23;
   int32 sort = 24;
+  bool isFinal = 25;
 }
 message PushMessages {
   map<string, PullMsgs> msgs = 1;

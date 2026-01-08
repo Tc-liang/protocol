@@ -1600,6 +1600,7 @@ type MsgData struct {
 	AttachedInfo     string                 `protobuf:"bytes,22,opt,name=attachedInfo,proto3" json:"attachedInfo"`
 	Ex               string                 `protobuf:"bytes,23,opt,name=ex,proto3" json:"ex"`
 	Sort             int32                  `protobuf:"varint,24,opt,name=sort,proto3" json:"sort"`
+	IsFinal          bool                   `protobuf:"varint,25,opt,name=isFinal,proto3" json:"isFinal"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -1793,6 +1794,13 @@ func (x *MsgData) GetSort() int32 {
 		return x.Sort
 	}
 	return 0
+}
+
+func (x *MsgData) GetIsFinal() bool {
+	if x != nil {
+		return x.IsFinal
+	}
+	return false
 }
 
 type PushMessages struct {
@@ -6103,7 +6111,7 @@ const file_sdkws_sdkws_proto_rawDesc = "" +
 	"\x0fUserSendMsgResp\x12 \n" +
 	"\vserverMsgID\x18\x01 \x01(\tR\vserverMsgID\x12 \n" +
 	"\vclientMsgID\x18\x02 \x01(\tR\vclientMsgID\x12\x1a\n" +
-	"\bsendTime\x18\x03 \x01(\x03R\bsendTime\"\xb6\x06\n" +
+	"\bsendTime\x18\x03 \x01(\x03R\bsendTime\"\xd0\x06\n" +
 	"\aMsgData\x12\x16\n" +
 	"\x06sendID\x18\x01 \x01(\tR\x06sendID\x12\x16\n" +
 	"\x06recvID\x18\x02 \x01(\tR\x06recvID\x12\x18\n" +
@@ -6130,7 +6138,8 @@ const file_sdkws_sdkws_proto_rawDesc = "" +
 	"\fatUserIDList\x18\x15 \x03(\tR\fatUserIDList\x12\"\n" +
 	"\fattachedInfo\x18\x16 \x01(\tR\fattachedInfo\x12\x0e\n" +
 	"\x02ex\x18\x17 \x01(\tR\x02ex\x12\x12\n" +
-	"\x04sort\x18\x18 \x01(\x05R\x04sort\x1a:\n" +
+	"\x04sort\x18\x18 \x01(\x05R\x04sort\x12\x18\n" +
+	"\aisFinal\x18\x19 \x01(\bR\aisFinal\x1a:\n" +
 	"\fOptionsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\bR\x05value:\x028\x01\"\xd4\x02\n" +
