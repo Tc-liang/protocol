@@ -40,7 +40,7 @@ const (
 	ReactionMessageModifier      = 121
 	ReactionMessageDeleter       = 122
 	AIStreamMessage              = 123
-	AIJSONMessage                = 124
+	SPUJSONMessage               = 124
 
 	Common             = 200
 	GroupMsg           = 201
@@ -124,7 +124,7 @@ const (
 	EmojiAddNotification        = 2301
 	EmojiRevocationNotification = 2302
 	AIStreamMsgNotification     = 2303
-	AIShopMsgNotification       = 2304
+	AISPUMsgNotification        = 2304
 
 	NotificationEnd = 5000
 
