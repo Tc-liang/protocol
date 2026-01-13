@@ -492,6 +492,10 @@ message UserCommandDeleteTips {
 }
 
 //////////////////////conversation/////////////////////
+message UpdateAIConversationTips {
+  string conversationID = 1;
+}
+
 message ConversationUpdateTips {
   string userID = 1;
   repeated string conversationIDList = 2;
