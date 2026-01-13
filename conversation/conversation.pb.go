@@ -3239,7 +3239,7 @@ func (*DeleteConversationsResp) Descriptor() ([]byte, []int) {
 
 type UpdateAIConversationReq struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	AIUserID      string                 `protobuf:"bytes,1,opt,name=AIUserID,proto3" json:"AIUserID"`
+	UserID        string                 `protobuf:"bytes,1,opt,name=userID,proto3" json:"userID"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -3274,9 +3274,9 @@ func (*UpdateAIConversationReq) Descriptor() ([]byte, []int) {
 	return file_conversation_conversation_proto_rawDescGZIP(), []int{56}
 }
 
-func (x *UpdateAIConversationReq) GetAIUserID() string {
+func (x *UpdateAIConversationReq) GetUserID() string {
 	if x != nil {
-		return x.AIUserID
+		return x.UserID
 	}
 	return ""
 }
@@ -3543,9 +3543,9 @@ const file_conversation_conversation_proto_rawDesc = "" +
 	"\vownerUserID\x18\x01 \x01(\tR\vownerUserID\x12&\n" +
 	"\x0eneedDeleteTime\x18\x02 \x01(\x03R\x0eneedDeleteTime\x12(\n" +
 	"\x0fconversationIDs\x18\x03 \x03(\tR\x0fconversationIDs\"\x19\n" +
-	"\x17DeleteConversationsResp\"5\n" +
-	"\x17UpdateAIConversationReq\x12\x1a\n" +
-	"\bAIUserID\x18\x01 \x01(\tR\bAIUserID\"\x1a\n" +
+	"\x17DeleteConversationsResp\"1\n" +
+	"\x17UpdateAIConversationReq\x12\x16\n" +
+	"\x06userID\x18\x01 \x01(\tR\x06userID\"\x1a\n" +
 	"\x18UpdateAIConversationResp2\x9e\x1b\n" +
 	"\x15IMConversationService\x12d\n" +
 	"\x0fGetConversation\x12'.openim.conversation.GetConversationReq\x1a(.openim.conversation.GetConversationResp\x12\x82\x01\n" +

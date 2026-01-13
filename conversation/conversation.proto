@@ -329,7 +329,7 @@ message DeleteConversationsReq {
 message DeleteConversationsResp {}
 
 message UpdateAIConversationReq {
-  string AIUserID = 1;
+  string userID = 1;
 }
 
 message UpdateAIConversationResp {
