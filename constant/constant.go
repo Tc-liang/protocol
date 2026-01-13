@@ -121,10 +121,11 @@ const (
 
 	HasReadReceipt = 2200
 
-	EmojiAddNotification        = 2301
-	EmojiRevocationNotification = 2302
-	AIStreamMsgNotification     = 2303
-	AISPUMsgNotification        = 2304
+	EmojiAddNotification             = 2301
+	EmojiRevocationNotification      = 2302
+	AIStreamMsgNotification          = 2303
+	AISPUMsgNotification             = 2304
+	UpdateAIConversationNotification = 2305
 
 	NotificationEnd = 5000
 
