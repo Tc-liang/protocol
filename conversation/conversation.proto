@@ -242,6 +242,7 @@ message UpdateConversationReq {
   openim.protobuf.BoolValue allowSendMessage = 16;
 }
 
+
 message UpdateConversationResp {}
 
 message GetFullOwnerConversationIDsReq {
@@ -327,6 +328,14 @@ message DeleteConversationsReq {
 }
 message DeleteConversationsResp {}
 
+message UpdateAIConversationReq {
+  string AIUserID = 1;
+}
+
+message UpdateAIConversationResp {
+}
+
+
 service IMConversationService {
   rpc GetConversation(GetConversationReq) returns (GetConversationResp);
   rpc GetSortedConversationList(GetSortedConversationListReq) returns (GetSortedConversationListResp);
@@ -354,4 +363,5 @@ service IMConversationService {
   rpc ClearUserConversationMsg(ClearUserConversationMsgReq) returns (ClearUserConversationMsgResp);
   rpc UpdateConversationsByUser(UpdateConversationsByUserReq) returns (UpdateConversationsByUserResp);
   rpc DeleteConversations(DeleteConversationsReq) returns (DeleteConversationsResp);
+  rpc UpdateAIConversation(UpdateAIConversationReq) returns (UpdateAIConversationResp);
 }

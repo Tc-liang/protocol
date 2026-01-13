@@ -59,6 +59,7 @@ const (
 	IMConversationService_ClearUserConversationMsg_FullMethodName                = "/openim.conversation.IMConversationService/ClearUserConversationMsg"
 	IMConversationService_UpdateConversationsByUser_FullMethodName               = "/openim.conversation.IMConversationService/UpdateConversationsByUser"
 	IMConversationService_DeleteConversations_FullMethodName                     = "/openim.conversation.IMConversationService/DeleteConversations"
+	IMConversationService_UpdateAIConversation_FullMethodName                    = "/openim.conversation.IMConversationService/UpdateAIConversation"
 )
 
 // IMConversationServiceClient is the client API for IMConversationService service.
@@ -91,6 +92,7 @@ type IMConversationServiceClient interface {
 	ClearUserConversationMsg(ctx context.Context, in *ClearUserConversationMsgReq, opts ...grpc.CallOption) (*ClearUserConversationMsgResp, error)
 	UpdateConversationsByUser(ctx context.Context, in *UpdateConversationsByUserReq, opts ...grpc.CallOption) (*UpdateConversationsByUserResp, error)
 	DeleteConversations(ctx context.Context, in *DeleteConversationsReq, opts ...grpc.CallOption) (*DeleteConversationsResp, error)
+	UpdateAIConversation(ctx context.Context, in *UpdateAIConversationReq, opts ...grpc.CallOption) (*UpdateAIConversationResp, error)
 }
 
 type iMConversationServiceClient struct {
@@ -361,6 +363,16 @@ func (c *iMConversationServiceClient) DeleteConversations(ctx context.Context, i
 	return out, nil
 }
 
+func (c *iMConversationServiceClient) UpdateAIConversation(ctx context.Context, in *UpdateAIConversationReq, opts ...grpc.CallOption) (*UpdateAIConversationResp, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UpdateAIConversationResp)
+	err := c.cc.Invoke(ctx, IMConversationService_UpdateAIConversation_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // IMConversationServiceServer is the server API for IMConversationService service.
 // All implementations must embed UnimplementedIMConversationServiceServer
 // for forward compatibility.
@@ -391,6 +403,7 @@ type IMConversationServiceServer interface {
 	ClearUserConversationMsg(context.Context, *ClearUserConversationMsgReq) (*ClearUserConversationMsgResp, error)
 	UpdateConversationsByUser(context.Context, *UpdateConversationsByUserReq) (*UpdateConversationsByUserResp, error)
 	DeleteConversations(context.Context, *DeleteConversationsReq) (*DeleteConversationsResp, error)
+	UpdateAIConversation(context.Context, *UpdateAIConversationReq) (*UpdateAIConversationResp, error)
 	mustEmbedUnimplementedIMConversationServiceServer()
 }
 
@@ -478,6 +491,9 @@ func (UnimplementedIMConversationServiceServer) UpdateConversationsByUser(contex
 }
 func (UnimplementedIMConversationServiceServer) DeleteConversations(context.Context, *DeleteConversationsReq) (*DeleteConversationsResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteConversations not implemented")
+}
+func (UnimplementedIMConversationServiceServer) UpdateAIConversation(context.Context, *UpdateAIConversationReq) (*UpdateAIConversationResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateAIConversation not implemented")
 }
 func (UnimplementedIMConversationServiceServer) mustEmbedUnimplementedIMConversationServiceServer() {}
 func (UnimplementedIMConversationServiceServer) testEmbeddedByValue()                               {}
@@ -968,6 +984,24 @@ func _IMConversationService_DeleteConversations_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
+func _IMConversationService_UpdateAIConversation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateAIConversationReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(IMConversationServiceServer).UpdateAIConversation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: IMConversationService_UpdateAIConversation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(IMConversationServiceServer).UpdateAIConversation(ctx, req.(*UpdateAIConversationReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // IMConversationService_ServiceDesc is the grpc.ServiceDesc for IMConversationService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1078,6 +1112,10 @@ var IMConversationService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteConversations",
 			Handler:    _IMConversationService_DeleteConversations_Handler,
+		},
+		{
+			MethodName: "UpdateAIConversation",
+			Handler:    _IMConversationService_UpdateAIConversation_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
